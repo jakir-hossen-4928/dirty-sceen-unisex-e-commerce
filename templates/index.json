@@ -351,7 +351,7 @@
             "line_height_heading": 40,
             "heading_spacing_bottom": 25,
             "color_heading": "#ffffff",
-            "slide-des": "<div class=\"shop-buttons\">\n\n  <a href=\"/t-shirts\" class=\"shop-btn\">\n    SHOP T-SHIRTS\n  </a>\n\n  <a href=\"/collections/hoodies\" class=\"shop-btn\">\n    SHOP HOODIE\n  </a>\n\n</div>\n\n<style>\n.shop-buttons{\n  display:flex;\n  gap:20px;\n  flex-wrap:wrap;\n  align-items:center;\n}\n\n.shop-btn{\n  color:#fff;\n  text-decoration:none;\n  padding-bottom:2px;\n  border-bottom:2px solid #fff;\n  display:inline-block;\n  transition:all 0.3s ease;\n  font-size:16px;\n}\n\n.shop-btn:hover{\n  color:#ccc;\n  border-bottom-color:#ccc;\n}\n\n/* Mobile Responsive */\n@media (max-width:768px){\n  .shop-buttons{\n    gap:15px;\n  }\n\n  .shop-btn{\n    font-size:14px;\n  }\n}\n</style>",
+            "slide-des": "<div class=\"shop-buttons\">\n\n  <a href=\"/collections/t-shirts\" class=\"shop-btn\">\n    SHOP T-SHIRTS\n  </a>\n\n  <a href=\"/collections/hoodies\" class=\"shop-btn\">\n    SHOP HOODIE\n  </a>\n\n</div>\n\n<style>\n.shop-buttons{\n  display:flex;\n  gap:20px;\n  flex-wrap:wrap;\n  align-items:center;\n}\n\n.shop-btn{\n  color:#fff;\n  text-decoration:none;\n  padding-bottom:2px;\n  border-bottom:2px solid #fff;\n  display:inline-block;\n  transition:all 0.3s ease;\n  font-size:16px;\n}\n\n.shop-btn:hover{\n  color:#ccc;\n  border-bottom-color:#ccc;\n}\n\n/* Mobile Responsive */\n@media (max-width:768px){\n  .shop-buttons{\n    gap:15px;\n  }\n\n  .shop-btn{\n    font-size:14px;\n  }\n}\n</style>",
             "font_size_des": 20,
             "line_height_des": 26,
             "des_spacing_bottom": 25,
