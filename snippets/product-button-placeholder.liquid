@@ -1,0 +1,49 @@
+{%- liquid
+    assign show_dynamic_checkout = block.settings.show_dynamic_checkout
+    assign atc_animation = block.settings.atc_animation
+    assign atc_color = block.settings.atc_color
+    assign atc_border_color = block.settings.atc_border_color
+    assign atc_bg_color = block.settings.atc_bg_color
+    assign atc_bg_color_gradient = block.settings.atc_bg_color_gradient
+    assign atc_color_hover = block.settings.atc_color_hover
+    assign atc_border_color_hover = block.settings.atc_border_color_hover
+    assign atc_bg_color_hover = block.settings.atc_bg_color_hover
+    assign atc_bg_color_gradient_hover = block.settings.atc_bg_color_gradient_hover
+    assign bin_color = block.settings.bin_color
+    assign bin_border_color = block.settings.bin_border_color
+    assign bin_bg_color = block.settings.bin_bg_color
+    assign bin_bg_color_gradient = block.settings.bin_bg_color_gradient
+    assign bin_color_hover = block.settings.bin_color_hover
+    assign bin_border_color_hover = block.settings.bin_border_color_hover
+    assign bin_bg_color_hover = block.settings.bin_bg_color_hover
+    assign bin_bg_color_hover_gradient = block.settings.bin_bg_color_hover_gradient
+-%}
+<div class="pvGroup-row" bis_skin_checked="1">
+    <quantity-input class="productView-quantity quantity__group quantity__group--1 quantity__style--1 clearfix">
+        <label class="form-label quantity__label" for="quantity-{{ product.id }}{%- if quantity_stt > 1 -%}-{{ quantity_stt }}{%- endif -%}">
+            Quantity:
+        </label>
+        <div class="quantity__container" bis_skin_checked="1">
+            <button type="button" name="minus" class="minus btn-quantity">
+                <span class="visually-hidden">{{ 'products.product.quantity.decrease' | t: product: product.title | escape }}</span>
+            </button>
+            <input class="form-input quantity__input" type="number" name="quantity" min="1" value="1" inputmode="numeric" pattern="[0-9]*" id="quantity-{{ product.id }}{%- if quantity_stt > 1 -%}-{{ quantity_stt }}{%- endif -%}" data-product="6835625853005" data-price="7900" data-inventory-quantity="0">
+            <button type="button" name="plus" class="plus btn-quantity">
+                <span class="visually-hidden">{{ 'products.product.quantity.decrease' | t: product: product.title | escape }}</span>
+            </button>
+        </div>
+    </quantity-input>
+    <div class="productView-groupTop" bis_skin_checked="1">
+        <div class="productView-action{% unless settings.show_wishlist %} productView-action-2{% endunless %}{% if settings.banner_animation == 'effect_fade_up' %} scroll-trigger animate--slide-in{% endif %}" style="--atc-color: {{ atc_color }};--atc-bg-color: {% if atc_bg_color_gradient != blank %}{{ atc_bg_color_gradient }}{% else %}{{ atc_bg_color }}{% endif %};--atc-border-color: {{ atc_border_color }};--atc-color-hover: {{ atc_color_hover }};--atc-bg-color-hover: {% if atc_bg_color_gradient_hover != blank %}{{ atc_bg_color_gradient_hover }}{% else %}{{ atc_bg_color_hover }}{% endif %};--atc-border-color-hover: {{ atc_border_color_hover }}">
+            <input type="hidden" name="id" value="{{ current_variant.id }}">
+            <div class="product-form__buttons" bis_skin_checked="1">
+                <button type="submit" name="add" data-btn-addtocart="" class="product-form__submit button" id="product-add-to-cart" disabled="">{{ 'products.product.sold_out' | t }}</button>
+            </div>
+        </div>
+        {%- if settings.show_wishlist -%}
+        <div class="productView-wishlist clearfix{% if settings.banner_animation == 'effect_fade_up' %} scroll-trigger animate--slide-in{% endif %}">
+            <a role="link" aria-disabled="true" data-wishlist data-wishlist-handle="{{ product.handle }}" data-product-id="{{ product.id }}"><span class="visually-hidden">{{ 'wishlist.general.add' | t }}</span>{% render 'icon-heart' %}</a>
+        </div>
+        {%- endif -%}
+    </div>
+</div>

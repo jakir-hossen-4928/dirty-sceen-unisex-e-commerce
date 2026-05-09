@@ -1,0 +1,419 @@
+{% render 'store-locator-style'
+  , section: section %}
+
+{% liquid
+  assign show_breadcrumb = section.settings.show_breadcrumb
+  assign breadcrumb_alignment = section.settings.breadcrumb_alignment
+  assign show_page_title = section.settings.show_page_title
+  assign page_title_alignment = section.settings.page_title_alignment
+  assign container = section.settings.container
+
+  assign address_fs = section.settings.address_font_size | append: 'px'
+  assign address_fw = section.settings.address_font_weight
+  assign address_color = section.settings.address_text_color
+  assign address_color_hover = section.settings.address_text_color_hover
+
+  assign info_fs = section.settings.info_font_size | append: 'px'
+  assign info_fw = section.settings.info_font_weight
+  assign info_color = section.settings.info_text_color
+%}
+
+<div
+  data-section-id="{{ section.id }}"
+  data-section-type="store-locator"
+  id="StoreLocatorSection-{{ section.id }}"
+  data-section="{{ section.id }}">
+  <div class="store-locator-container {% if container == '1170' %}container-1170{% elsif container == '1770' %}container-1770{% elsif container == 'fullwidth'%}container-full{% else %}container{% endif %}{% if settings.banner_animation == 'effect_fade_up' %} scroll-trigger animate--slide-in{% endif %}">
+    {%- if show_breadcrumb -%}
+      {% render 'breadcrumb'
+        , alignment: breadcrumb_alignment %}
+    {%- endif -%}
+    {%- if show_page_title -%}
+      <h1 class="page-header text-{{ page_title_alignment }}{% if settings.banner_animation == 'effect_fade_up' %} scroll-trigger animate--slide-in{% endif %}">
+        {{ page.title | escape }}
+      </h1>
+    {%- endif -%}
+    <section
+      id="find-a-store"
+      class="page-find-a-store"
+      style="
+        --address-fs: {{ address_fs }};
+        --address-fw: {{ address_fw }};
+        --address-color: {% if address_color != blank %}{{ address_color }}{% endif %};
+        --address-color-hover: {% if address_color_hover != blank %}{{ address_color_hover }}{% endif %};
+
+        --info-fs: {{ info_fs }};
+        --info-fw: {{ info_fw }};
+        --info-color: {% if info_color != blank %}{{ info_color }}{% endif %};
+    ">
+      {% if section.blocks.size > 0 %}
+        <store-locator class="page-content find-a-store{% if settings.banner_animation == 'effect_fade_up' %} scroll-trigger animate--slide-in{% endif %}">
+          <div class="bottom-content-find">
+            <div class="HL-ColLeft{% if settings.banner_animation == 'effect_fade_up' %} scroll-trigger animate--slide-in{% endif %}" data-listings-wrapper>
+              <div class="InfoFind">
+                <div class="InfoFindInner ENV_maps_list listings" id="listings">
+                  {%- for block in section.blocks -%}
+                    <div class="item{% if forloop.first %} active{% endif %}" data-map="{{ block.settings.map_iframe | escape }}">
+                      <h2 class="title">
+                        {{ block.settings.address }}
+                      </h2>
+                      <div class="text">
+                        {{ block.settings.cross_street }} {{ block.settings.city }} {{ block.settings.state }} {{ block.settings.postal_code }} {{ block.settings.country }}
+                      </div>
+                      {%- if block.settings.phone_formatted != blank -%}
+                        <div class="text">{{ block.settings.phone_formatted }}</div>
+                      {%- endif -%}
+                    </div>
+                  {%- endfor -%}
+                </div>
+              </div>
+            </div>
+            <div class="HL-ColRight{% if settings.banner_animation == 'effect_fade_up' %} scroll-trigger animate--slide-in{% endif %}">
+              <div
+                class="map"
+                id="map">
+                {%- if section.blocks[0].settings.map_iframe != blank -%}
+                  {{ section.blocks[0].settings.map_iframe }}
+                {%- endif -%}
+              </div>
+            </div>
+          </div>
+        </store-locator>
+      {% else %}
+        <div class="page-content find-a-store no-store text-center{% if settings.banner_animation == 'effect_fade_up' %} scroll-trigger animate--slide-in{% endif %}">
+          <h3>
+            {{ 'find_a_store.no_stores' | t }}
+          </h3>
+        </div>
+      {% endif %}
+    </section>
+  </div>
+</div>
+
+<script src="{{ 'store-locator.js' | asset_url }}" defer="defer"></script>
+
+{% schema %}
+  {
+    "name": "t:sections.store_locator.name",
+    "class": "section-find-a-store",
+    "settings": [
+      {
+        "type": "select",
+        "id": "container",
+        "label": "t:sections.layout.container.option",
+        "default": "fullwidth",
+        "options": [
+          {
+            "value": "container",
+            "label": "t:sections.layout.container.option1"
+          }, 
+          {
+            "value": "1170",
+            "label": "t:sections.layout.container.option4"
+          }, 
+          {
+            "value": "1770",
+            "label": "t:sections.layout.container.option3"
+          }, 
+          {
+            "value": "fullwidth",
+            "label": "t:sections.layout.container.option2"
+          }
+        ]
+      },
+      {
+            "type": "range",
+            "id": "padding_full_width",
+            "label": "t:sections.layout.container.padding_full_width",
+            "min": 0,
+            "max": 100,
+            "step": 5,
+            "unit": "t:sections.layout.fontsize.fontsize_title.unit",
+            "default": 0
+        },
+      {
+        "type": "checkbox",
+        "id": "show_breadcrumb",
+        "label": "t:sections.general.settings.breadcrumb.label__1",
+        "default": false
+      },
+      {
+        "type": "select",
+        "id": "breadcrumb_alignment",
+        "label": "t:sections.general.settings.breadcrumb.label__2",
+        "options": [
+          {
+            "value": "left",
+            "label": "t:settings_schema.typography.settings.type_button_font.left"
+          }, 
+          {
+            "value": "center",
+            "label": "t:settings_schema.typography.settings.type_button_font.center"
+          }, 
+          {
+            "value": "right",
+            "label": "t:settings_schema.typography.settings.type_button_font.right"
+          }
+        ],
+        "default": "left"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_page_title",
+        "label": "t:sections.general.settings.page-title.label__1",
+        "default": true
+      }, 
+      {
+        "type": "select",
+        "id": "page_title_alignment",
+        "label": "t:sections.general.settings.page-title.label__2",
+        "options": [
+          {
+            "value": "left",
+            "label": "t:settings_schema.typography.settings.type_button_font.left"
+          }, 
+          {
+            "value": "center",
+            "label": "t:settings_schema.typography.settings.type_button_font.center"
+          }, 
+          {
+            "value": "right",
+            "label": "t:settings_schema.typography.settings.type_button_font.right"
+          }
+        ],
+        "default": "center"
+      },
+      {
+        "type": "header",
+        "content": "t:sections.store_locator.settings.content__1"
+      }, 
+      {
+        "type": "paragraph",
+        "content": "t:sections.main_contact.settings.contact_info.label__4"
+      }, 
+      {
+        "type": "range",
+        "id": "address_font_size",
+        "label": "t:settings_schema.typography.settings.font_size.label",
+        "min": 1,
+        "max": 50,
+        "default": 16,
+        "step": 1,
+        "unit": "px"
+      }, 
+      {
+        "type": "select",
+        "id": "address_font_weight",
+        "label": "t:settings_schema.typography.settings.font_weight.label",
+        "default": "700",
+        "options": [
+          {
+            "value": "400",
+            "label": "t:settings_schema.typography.settings.font_weight.options__1"
+          },
+          {
+            "value": "500",
+            "label": "t:settings_schema.typography.settings.font_weight.options__2"
+          },
+          {
+            "value": "600",
+            "label": "t:settings_schema.typography.settings.font_weight.options__3"
+          },
+          {
+            "value": "700",
+            "label": "t:settings_schema.typography.settings.font_weight.options__4"
+          }, 
+          {
+            "value": "800",
+            "label": "t:settings_schema.typography.settings.font_weight.options__5"
+          }, 
+          {
+            "value": "900",
+            "label": "t:settings_schema.typography.settings.font_weight.options__6"
+          }
+        ]
+      }, 
+      {
+        "type": "color",
+        "id": "address_text_color",
+        "label": "t:settings_schema.typography.settings.typography.text_color",
+        "default": "#00853e"
+      }, 
+      {
+        "type": "color",
+        "id": "address_text_color_hover",
+        "label": "t:settings_schema.typography.settings.typography.text_color_hover",
+        "default": "#8cc63f"
+      }, 
+      {
+        "type": "paragraph",
+        "content": "t:sections.main-product.settings.header__7.content"
+      }, 
+      {
+        "type": "range",
+        "id": "info_font_size",
+        "label": "t:settings_schema.typography.settings.font_size.label",
+        "min": 1,
+        "max": 50,
+        "default": 16,
+        "step": 1,
+        "unit": "px"
+      }, 
+      {
+        "type": "select",
+        "id": "info_font_weight",
+        "label": "t:settings_schema.typography.settings.font_weight.label",
+        "default": "400",
+        "options": [
+          {
+            "value": "400",
+            "label": "t:settings_schema.typography.settings.font_weight.options__1"
+          },
+          {
+            "value": "500",
+            "label": "t:settings_schema.typography.settings.font_weight.options__2"
+          },
+          {
+            "value": "600",
+            "label": "t:settings_schema.typography.settings.font_weight.options__3"
+          },
+          {
+            "value": "700",
+            "label": "t:settings_schema.typography.settings.font_weight.options__4"
+          }, 
+          {
+            "value": "800",
+            "label": "t:settings_schema.typography.settings.font_weight.options__5"
+          }, 
+          {
+            "value": "900",
+            "label": "t:settings_schema.typography.settings.font_weight.options__6"
+          }
+        ]
+      }, 
+      {
+        "type": "color",
+        "id": "info_text_color",
+        "label": "t:settings_schema.typography.settings.typography.text_color",
+        "default": "#00853e"
+      },
+      {
+        "type": "header",
+        "content": "t:settings_schema.typography.settings.type_button_font.padding_top"
+      }, 
+      {
+        "type": "range",
+        "id": "mg_top_desktop",
+        "label": "t:sections.layout.mg_desktop.label",
+        "min": 0,
+        "max": 100,
+        "step": 5,
+        "unit": "t:sections.layout.mg_desktop.unit",
+        "default": 50
+      }, 
+      {
+        "type": "range",
+        "id": "mg_top_tablet",
+        "label": "t:sections.layout.mg_tablet.label",
+        "min": 0,
+        "max": 100,
+        "step": 5,
+        "unit": "t:sections.layout.mg_desktop.unit",
+        "default": 50
+      }, 
+      {
+        "type": "range",
+        "id": "mg_top_mobile",
+        "label": "t:sections.layout.mg_mobile.label",
+        "min": 0,
+        "max": 100,
+        "step": 5,
+        "unit": "t:sections.layout.mg_desktop.unit",
+        "default": 50
+      }, 
+      {
+        "type": "header",
+        "content": "t:settings_schema.typography.settings.type_button_font.padding_bottom"
+      }, 
+      {
+        "type": "range",
+        "id": "mg_bottom_desktop",
+        "label": "t:sections.layout.mg_desktop.label",
+        "min": 0,
+        "max": 100,
+        "step": 5,
+        "unit": "t:sections.layout.mg_desktop.unit",
+        "default": 50
+      }, 
+      {
+        "type": "range",
+        "id": "mg_bottom_tablet",
+        "label": "t:sections.layout.mg_tablet.label",
+        "min": 0,
+        "max": 100,
+        "step": 5,
+        "unit": "t:sections.layout.mg_desktop.unit",
+        "default": 50
+      }, 
+      {
+        "type": "range",
+        "id": "mg_bottom_mobile",
+        "label": "t:sections.layout.mg_mobile.label",
+        "min": 0,
+        "max": 100,
+        "step": 5,
+        "unit": "t:sections.layout.mg_desktop.unit",
+        "default": 50
+      }
+    ],
+    "blocks": [
+      {
+        "type": "item",
+        "name": "t:sections.store_locator.block.name",
+        "settings": [
+          {
+            "type": "text",
+            "id": "address",
+            "label": "t:sections.main_contact.settings.contact_info.label__4"
+          },
+          {
+            "type": "text",
+            "id": "cross_street",
+            "label": "t:sections.store_locator.block.settings.cross_street"
+          },
+          {
+            "type": "text",
+            "id": "city",
+            "label": "t:sections.store_locator.block.settings.city"
+          },
+          {
+            "type": "text",
+            "id": "state",
+            "label": "t:sections.store_locator.block.settings.state"
+          },
+          {
+            "type": "text",
+            "id": "postal_code",
+            "label": "t:sections.store_locator.block.settings.postal_code"
+          },
+          {
+            "type": "text",
+            "id": "country",
+            "label": "t:sections.store_locator.block.settings.country"
+          },
+          {
+            "type": "text",
+            "id": "phone_formatted",
+            "label": "t:sections.store_locator.block.settings.phone",
+            "info": "t:sections.store_locator.block.settings.info"
+          },
+          {
+            "type": "liquid",
+            "id": "map_iframe",
+            "label": "t:sections.store_locator.block.settings.map_iframe"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

@@ -1,0 +1,328 @@
+{{ 'vendor.js' | asset_url | script_tag }}
+{{ 'global.js' | asset_url | script_tag }}
+{{ 'lazysizes.min.js' | asset_url | script_tag }}
+<!-- {{ 'menu.js' | asset_url | script_tag }} -->
+
+{%- if settings.show_quick_search -%}
+    <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
+{%- endif -%}
+
+{%- if settings.banner_animation == 'effect_fade_up' -%}
+    <script src="{{ 'animations.js' | asset_url }}" defer="defer"></script>
+{%- endif -%}
+
+{% liquid
+    if settings.enable_currencies
+        if settings.currency_type == 'shopify_payment'
+            assign enable_shopify_payments_currencies = true
+            assign enable_multiple_currencies = false
+            assign enable_auto_currency = false 
+        elsif settings.currency_type == 'multiple_currencies'
+            assign enable_shopify_payments_currencies = false
+            assign enable_multiple_currencies = true
+            assign enable_auto_currency = false 
+        elsif settings.currency_type == 'auto_currencies'
+            assign enable_shopify_payments_currencies = false
+            assign enable_multiple_currencies = false
+            assign enable_auto_currency = true 
+        endif
+    else 
+        assign enable_shopify_payments_currencies = false
+        assign enable_multiple_currencies = false
+        assign enable_auto_currency = false 
+    endif
+
+    if settings.enable_layout_rtl
+        if settings.list_iso_rtl != blank
+            assign locale_iso_code = request.locale.iso_code
+            assign arr_list_rtl = settings.list_iso_rtl | remove:' ' | split:',' 
+            if arr_list_rtl contains locale_iso_code
+                assign enable_iso_rtl = true
+            else
+                assign enable_iso_rtl = false
+            endif
+        else
+            assign enable_iso_rtl = false 
+        endif
+    else 
+        assign enable_iso_rtl = false
+    endif
+%}
+
+<script>
+    window.lazySizesConfig = window.lazySizesConfig || {};
+    lazySizesConfig.loadMode = 1;
+    window.lazySizesConfig.init = false;
+    lazySizes.init();
+
+    window.rtl_slick = {{ enable_iso_rtl }};
+    window.mobile_menu = '{{ settings.mobile_menu }}';
+    window.iso_code = '{{ request.locale.iso_code }}';
+    {% if settings.currency_format_enable %}
+        window.money_format = '{{ shop.money_with_currency_format }}';
+    {% else %}
+        window.money_format = '{{ shop.money_format }}';
+    {% endif %}
+    window.shop_currency = '{{ shop.currency }}';
+    window.currencySymbol ="{{ cart.currency.symbol }}";
+    window.show_multiple_currencies = {{ enable_multiple_currencies }};
+    window.routes = {
+        root: '{{  routes.cart_url | split: "/cart" | first }}',
+        cart: '{{ routes.cart_url }}',
+        cart_add_url: '{{ routes.cart_add_url }}',
+        cart_change_url: '{{ routes.cart_change_url }}',
+        cart_update_url: '{{ routes.cart_update_url }}',
+        collection_all: '{{ routes.all_products_collection_url }}',
+        predictive_search_url: '{{ routes.predictive_search_url }}',
+        search_url: '{{ routes.search_url }}'
+    }; 
+    window.button_load_more = {
+        default: `{{ 'general.button_load_more.default' | t }}`,
+        loading: `{{ 'general.button_load_more.loading' | t }}`,
+        view_all: `{{ 'general.button_load_more.view_all' | t }}`,
+        no_more: `{{ 'general.button_load_more.no_more' | t }}`,
+        no_more_collection: `{{ 'general.button_load_more.no_more_collection' | t }}`
+    };
+    window.after_add_to_cart = {
+        type: '{{ settings.after_add_to_cart }}',
+        message: `{{ 'products.product.add_to_cart_success_message' | t : name : '[name]' }}`,
+        message_2: `{{ 'products.product.add_to_cart_success_message_2' | t }}`
+    };
+    window.variant_image_group_quick_view = {{ settings.show_quick_view_variant_image_group }};
+    window.quick_view = {
+        show: {{ settings.show_quick_view }},
+        show_mb: {{ settings.show_quick_view_mb }}
+    };
+    window.quick_shop = {
+        show: {{ settings.show_quick_shop }},
+        see_details: `{{ 'products.product.see_details' | t }}`,
+    };
+    window.quick_cart = {
+        show: {{ settings.show_quick_cart }}
+    };
+    window.cartStrings = {
+        error: `{{ 'sections.cart.cart_error' | t }}`,
+        quantityError: `{{ 'sections.cart.cart_quantity_error_html' | t }}`,
+        addProductOutQuantity: `{{ 'sections.cart.cart_quantity_error_alert' | t : maxQuantity: '[maxQuantity]'}}`,
+        addProductOutQuantity2: `{{ 'sections.cart.cart_quantity_error_alert_2' | t }}`,
+        cartErrorMessage: `{{ 'sections.cart.cart_quantity_error_prefix' | t }}`,
+        soldoutText: `{{ 'general.cart.soldout_text' | t }}`,
+        alreadyText: `{{ 'general.cart.already_text' | t }}`,
+        items: `{{ 'sections.cart.items' | t }}`,
+        item: `{{ 'sections.cart.item' | t }}`,
+        item_99: `{{ 'sections.cart.item_99' | t }}`,
+    };
+    window.variantStrings = {
+        addToCart: `{{ 'products.product.add_to_cart' | t }}`,
+        addingToCart: `{{ 'products.product.adding_to_cart' | t }}`,
+        addedToCart: `{{ 'products.product.added_to_cart' | t }}`,
+        submit: `{{ 'products.product.submit' | t }}`,
+        soldOut: `{{ 'products.product.sold_out' | t }}`,
+        unavailable: `{{ 'products.product.unavailable' | t }}`,
+        soldOut_message: `{{ 'products.product.sold_out_message' | t }}`,
+        unavailable_message: `{{ 'products.product.unavailable_message' | t }}`,
+        addToCart_message: `{{ 'products.product.add_to_cart_message' | t }}`,
+        select: `{{ 'products.product.select_variant' | t }}`,
+        preOrder: `{{ 'products.product.pre_order' | t }}`,
+        add: `{{ 'products.product.add.label__2' | t }}`,
+        unavailable_with_option: `{{ 'products.product.value_unavailable' | t: option_value: '[value]' }}`,
+        hide_variants_unavailable: {{ settings.hide_variants_unavailable }}
+    };
+    window.quickOrderListStrings = {
+        itemsAdded: `{{ 'sections.quick_order_list.items_added.other' | t: quantity: '[quantity]' }}`,
+        itemAdded: `{{ 'sections.quick_order_list.items_added.one' | t: quantity: '[quantity]' }}`,
+        itemsRemoved: `{{ 'sections.quick_order_list.items_removed.other' | t: quantity: '[quantity]' }}`,
+        itemRemoved: `{{ 'sections.quick_order_list.items_removed.one' | t: quantity: '[quantity]' }}`,
+        viewCart: `{{- 'sections.quick_order_list.view_cart' | t -}}`,
+        each: `{{- 'sections.quick_order_list.each' | t: money: '[money]' }}`,
+        min_error: `{{- 'sections.quick_order_list.min_error' | t: min: '[min]' }}`,
+        max_error: `{{- 'sections.quick_order_list.max_error' | t: max: '[max]' }}`,
+        step_error: `{{- 'sections.quick_order_list.step_error' | t: step: '[step]' }}`,
+    };
+    window.inventory_text = {
+        hotStock: `{{ 'products.product.hot_stock' | t : inventory: '[inventory]' }}`,
+        hotStock2: `{{ 'products.product.hot_stock_2' | t : inventory: '[inventory]' }}`,
+        warningQuantity: `{{ 'products.product.warning_quantity' | t : inventory: '[inventory]' }}`,
+        inStock: `{{ 'products.product.in_stock' | t : inventory: '[inventory]' }}`,
+        outOfStock: `{{ 'products.product.out_of_stock' | t : inventory: '[inventory]' }}`,
+        manyInStock: `{{ 'products.product.many_in_stock' | t : inventory: '[inventory]' }}`,
+        show_options: `{{ 'products.product.show_options' | t }}`,
+        hide_options: `{{ 'products.product.hide_options' | t }}`,
+        adding : `{{ 'products.product.adding' | t }}`,
+        thank_you : `{{ 'products.product.thank_you' | t }}`,
+        add_more : `{{ 'products.product.add_more' | t }}`,
+        cart_feedback : `{{ 'products.product.cart_feedback' | t }}`
+    };
+    {% if settings.show_calculator_free_shipping_message %}
+        {% if settings.calculator_free_shipping_message_price != blank %}
+            window.free_shipping_price = {{ settings.calculator_free_shipping_message_price }};
+        {% else %}
+            window.free_shipping_price = 0;
+        {% endif %}
+        window.free_shipping_text = {
+            free_shipping_message: `{{ 'calculator_free_shipping_message.general.free_shipping_message' | t }}`,
+            free_shipping_message_1: `{{ 'calculator_free_shipping_message.general.free_shipping_message_1' | t }}`,
+            free_shipping_message_2:`{{ 'calculator_free_shipping_message.general.free_shipping_message_2' | t }}`,
+            free_shipping_message_3: `{{ 'calculator_free_shipping_message.general.free_shipping_message_3' | t }}`,
+            free_shipping_message_4: `{{ 'calculator_free_shipping_message.general.free_shipping_message_4' | t }}`,
+            free_shipping_1: `{{ 'calculator_free_shipping_message.general.free_shipping_1' | t }}`,
+            free_shipping_2: `{{ 'calculator_free_shipping_message.general.free_shipping_2' | t }}`
+        };
+    {% endif %}
+    {% if settings.show_notify_form %}
+        window.notify_me = {
+            show: {{ settings.show_notify_form }},
+            success: `{{ 'notify_form.general.success' | t }}`,
+            error: `{{ 'notify_form.general.error' | t }}`,
+            button: `{{ 'notify_form.general.label' | t }}`
+        };
+    {% else %}
+        window.notify_me = {
+            show: {{ settings.show_notify_form }}
+        };
+    {% endif %}
+    window.compare = {
+        show: {{ settings.show_compare }},
+        add: `{{ 'compare.general.add' | t }}`,
+        added: `{{ 'compare.general.added' | t }}`,
+        message: `{{ 'compare.general.message' | t }}`
+    };
+    window.wishlist = {
+        show: {{ settings.show_wishlist }},
+        add: `{{ 'wishlist.general.add' | t }}`,
+        added: `{{ 'wishlist.general.added' | t }}`,
+        empty: `{{ 'wishlist.general.empty' | t }}`,
+        continue_shopping: `{{ 'wishlist.general.continue_shopping' | t }}`
+    };
+    window.pagination = {
+        style: {{ settings.pagination_style }},
+        next: `{{ 'general.pagination.next' | t}}`,
+        prev: `{{ 'general.pagination.previous' | t}}`
+    }
+    window.countdown = {
+        text: `{{ settings.countdown_text }}`,
+        day: `{{ 'countdown.general.day' | t }}`,
+        hour: `{{ 'countdown.general.hour' | t }}`,
+        min: `{{ 'countdown.general.min' | t }}`,
+        sec: `{{ 'countdown.general.sec' | t }}`,
+        day_2: `{{ 'countdown.general.day_2' | t }}`,
+        hour_2: `{{ 'countdown.general.hour_2' | t }}`,
+        min_2: `{{ 'countdown.general.min_2' | t }}`,
+        sec_2: `{{ 'countdown.general.sec_2' | t }}`,
+        days: `{{ 'countdown.general.days' | t }}`,
+        hours: `{{ 'countdown.general.hours' | t }}`,
+        mins: `{{ 'countdown.general.mins' | t }}`,
+        secs: `{{ 'countdown.general.secs' | t }}`,
+        d: `{{ 'countdown.general.d' | t }}`,
+        h: `{{ 'countdown.general.h' | t }}`,
+        m: `{{ 'countdown.general.m' | t }}`,
+        s: `{{ 'countdown.general.s' | t }}`
+    };
+    window.customer_view = {
+        text: `{{ 'customer_viewing.general.text' | t : number : '[number]' }}`
+    };
+
+    {% if settings.style_arrows == '02' %}
+        window.arrows = {
+            icon_next: `{{ '<button type="button" class="slick-next" aria-label="Next" role="button"><svg viewBox="0 0 75 40" role="img">
+<path id="Vector" d="M53.5733 38.3515C56.7201 35.1727 67.4355 24.3489 70.6029 21.1493H0V18.7754H70.5181C67.385 15.6103 56.7828 4.90093 53.6336 1.71975C54.2302 1.08991 54.7565 0.533959 55.2625 0C59.3681 4.14764 70.9356 15.832 75 19.938C70.9306 24.049 59.2482 35.8494 55.1397 40C54.652 39.4866 54.1292 38.9365 53.5733 38.3512V38.3515Z"></path>
+</svg></button>' }}`,
+            icon_prev: `{{ '<button type="button" class="slick-prev" aria-label="Previous" role="button"><svg viewBox="0 0 75 40" role="img">
+<path id="Vector" d="M53.5733 38.3515C56.7201 35.1727 67.4355 24.3489 70.6029 21.1493H0V18.7754H70.5181C67.385 15.6103 56.7828 4.90093 53.6336 1.71975C54.2302 1.08991 54.7565 0.533959 55.2625 0C59.3681 4.14764 70.9356 15.832 75 19.938C70.9306 24.049 59.2482 35.8494 55.1397 40C54.652 39.4866 54.1292 38.9365 53.5733 38.3512V38.3515Z"></path>
+</svg></button>' }}`
+        }
+    {% elsif settings.style_arrows == '03' %}
+        window.arrows = {
+            icon_next: `{{ '<button type="button" class="slick-next" aria-label="Next" role="button"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7.293 4.707 14.586 12l-7.293 7.293 1.414 1.414L17.414 12 8.707 3.293 7.293 4.707z"></path></svg></button>' }}`,
+            icon_prev: `{{ '<button type="button" class="slick-prev" aria-label="Previous" role="button"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7.293 4.707 14.586 12l-7.293 7.293 1.414 1.414L17.414 12 8.707 3.293 7.293 4.707z"></path></svg></button>' }}`
+        }
+    {% elsif settings.style_arrows == '04' %}
+        window.arrows = {
+            icon_next: `{{ '<button type="button" class="slick-next" aria-label="Next" role="button"><svg role="img" data-name="Layer 1" id="Layer_1" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><polygon points="150.46 478 129.86 456.5 339.11 256 129.86 55.49 150.46 34 382.14 256 150.46 478"/></svg></button>' }}`,
+            icon_prev: `{{ '<button type="button" class="slick-prev" aria-label="Previous" role="button"><svg role="img" data-name="Layer 1" id="Layer_1" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><polygon points="150.46 478 129.86 456.5 339.11 256 129.86 55.49 150.46 34 382.14 256 150.46 478"/></svg></button>' }}`
+        }
+    {% elsif settings.style_arrows == '05' %}
+        window.arrows = {
+            icon_next: `{{ '<button type="button" class="slick-next" aria-label="Next" role="button"><svg role="img" viewBox="0 0 280.66 62.99"><g id="Layer_1-2" data-name="Layer 1"><polygon points="280.66 55.65 225.01 0 219.82 5.19 270.27 55.65 0 55.65 0 62.99 280.66 62.99 280.66 55.65 280.66 55.65 280.66 55.65"/></g></svg></button>' }}`,
+            icon_prev: `{{ '<button type="button" class="slick-prev" aria-label="Previous" role="button"><svg role="img" viewBox="0 0 280.66 62.99"><g id="Layer_1-2" data-name="Layer 1"><polygon points="280.66 55.65 225.01 0 219.82 5.19 270.27 55.65 0 55.65 0 62.99 280.66 62.99 280.66 55.65 280.66 55.65 280.66 55.65"/></g></svg></button>' }}`
+        }
+    {% elsif settings.style_arrows == '06' %}
+        window.arrows = {
+            icon_next: `{{ '<button type="button" class="slick-next" aria-label="Next" role="button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 90 50" fill="none">
+                <path d="M65.1368 0L60.7782 4.37037L78.2639 21.9032L0 21.9032V28.0824H78.1391L60.6405 45.6296L64.9991 50L90 24.9302L65.1368 0Z"/>
+                </svg></button>' }}`,
+            icon_prev: `{{ '<button type="button" class="slick-prev" aria-label="Previous" role="button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 90 50" fill="none">
+                <path d="M65.1368 0L60.7782 4.37037L78.2639 21.9032L0 21.9032V28.0824H78.1391L60.6405 45.6296L64.9991 50L90 24.9302L65.1368 0Z"/>
+                </svg></button>' }}`
+        }
+    {% elsif settings.style_arrows == '07' %}
+        window.arrows = {
+            icon_next: `{{ '<button type="button" class="slick-next" aria-label="Next" role="button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 45 30" fill="none" role="img">
+                        <path d="M41.8693 15.8699H41.1989C34.6074 15.8699 7.91358 15.8617 1.32206 15.8617C1.15235 15.8617 0.980945 15.8683 0.812933 15.8502C0.346232 15.801 -0.00336969 15.4268 2.45036e-05 14.9951C0.00341869 14.5618 0.356414 14.1925 0.821418 14.1482C0.989431 14.1318 1.16084 14.14 1.33055 14.14C7.92206 14.14 34.6159 14.1482 41.2074 14.1482H41.8812C41.6877 13.9496 41.5808 13.8347 41.4688 13.7264C37.2719 9.71005 33.0732 5.69537 28.8729 1.6807C28.5963 1.41644 28.2806 1.1325 28.4232 0.735295C28.5131 0.482531 28.7507 0.229768 28.9934 0.0902552C29.3328 -0.106704 29.6858 0.0442981 29.9574 0.297062C30.5972 0.894503 31.2251 1.50343 31.8581 2.10908C35.9854 6.05646 40.1145 10.0055 44.2435 13.9529C44.3742 14.0776 44.5151 14.1909 44.6474 14.3156C45.1192 14.762 45.1175 15.2561 44.6423 15.7074C42.3156 17.9216 39.9855 20.1325 37.6639 22.3499C35.1522 24.7479 32.6456 27.1524 30.139 29.5569C29.881 29.8048 29.6146 30.0296 29.2259 29.9968C28.8594 29.9656 28.5997 29.7736 28.4571 29.4371C28.301 29.0662 28.4385 28.7642 28.7032 28.5081C29.4398 27.7909 30.1848 27.0818 30.9264 26.3711C34.4632 22.99 37.9999 19.6089 41.535 16.2277C41.6215 16.144 41.6996 16.0521 41.8693 15.8683V15.8699Z"/>
+                        </svg></button>' }}`,
+            icon_prev: `{{ '<button type="button" class="slick-prev" aria-label="Previous" role="button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 45 30" fill="none" role="img">
+                        <path d="M41.8693 15.8699H41.1989C34.6074 15.8699 7.91358 15.8617 1.32206 15.8617C1.15235 15.8617 0.980945 15.8683 0.812933 15.8502C0.346232 15.801 -0.00336969 15.4268 2.45036e-05 14.9951C0.00341869 14.5618 0.356414 14.1925 0.821418 14.1482C0.989431 14.1318 1.16084 14.14 1.33055 14.14C7.92206 14.14 34.6159 14.1482 41.2074 14.1482H41.8812C41.6877 13.9496 41.5808 13.8347 41.4688 13.7264C37.2719 9.71005 33.0732 5.69537 28.8729 1.6807C28.5963 1.41644 28.2806 1.1325 28.4232 0.735295C28.5131 0.482531 28.7507 0.229768 28.9934 0.0902552C29.3328 -0.106704 29.6858 0.0442981 29.9574 0.297062C30.5972 0.894503 31.2251 1.50343 31.8581 2.10908C35.9854 6.05646 40.1145 10.0055 44.2435 13.9529C44.3742 14.0776 44.5151 14.1909 44.6474 14.3156C45.1192 14.762 45.1175 15.2561 44.6423 15.7074C42.3156 17.9216 39.9855 20.1325 37.6639 22.3499C35.1522 24.7479 32.6456 27.1524 30.139 29.5569C29.881 29.8048 29.6146 30.0296 29.2259 29.9968C28.8594 29.9656 28.5997 29.7736 28.4571 29.4371C28.301 29.0662 28.4385 28.7642 28.7032 28.5081C29.4398 27.7909 30.1848 27.0818 30.9264 26.3711C34.4632 22.99 37.9999 19.6089 41.535 16.2277C41.6215 16.144 41.6996 16.0521 41.8693 15.8683V15.8699Z"/>
+                        </svg></button>' }}`
+        }
+    {% elsif settings.style_arrows == '08' %}
+        window.arrows = {
+            icon_next: `{{ '<button type="button" class="slick-next" aria-label="Next" role="button"><svg viewBox="0 0 70 40" fill="none" role="img">
+                        <path d="M65.13 21.3339H64.0872C53.8337 21.3339 12.31 21.3213 2.05654 21.3213C1.79255 21.3213 1.52591 21.3314 1.26456 21.3037C0.538583 21.2282 -0.00524173 20.6544 3.81167e-05 19.9925C0.00531797 19.3281 0.554422 18.7618 1.27776 18.6939C1.53911 18.6687 1.80575 18.6813 2.06974 18.6813C12.3232 18.6813 53.8469 18.6939 64.1004 18.6939H65.1485C64.8475 18.3894 64.6812 18.2132 64.507 18.0471C57.9784 11.8887 54.4473 8.7329 47.9134 2.57707C47.4831 2.17188 46.9921 1.73649 47.2139 1.12745C47.3538 0.739882 47.7234 0.35231 48.1009 0.138391C48.6289 -0.163612 49.178 0.0679236 49.6004 0.455495C50.5956 1.37157 51.5724 2.30527 52.5571 3.23393C58.9774 9.28658 62.4003 12.3417 68.8232 18.3944C69.0265 18.5857 69.2456 18.7593 69.4516 18.9506C70.1855 19.6351 70.1828 20.3927 69.4436 21.0847C65.8243 24.4798 65.1997 24.8698 61.5882 28.2698C57.6812 31.9467 53.782 35.6337 49.8828 39.3206C49.4816 39.7006 49.0671 40.0454 48.4625 39.9951C47.8923 39.9473 47.4884 39.6528 47.2667 39.1369C47.0238 38.5681 47.2376 38.1051 47.6494 37.7125C48.7952 36.6127 49.9541 35.5254 51.1077 34.4357C56.6094 29.2513 59.111 27.0669 64.6099 21.8825C64.7446 21.7542 64.866 21.6133 65.13 21.3314V21.3339Z"/>
+                        </svg></button>' }}`,
+            icon_prev: `{{ '<button type="button" class="slick-prev" aria-label="Previous" role="button"><svg viewBox="0 0 70 40" fill="none" role="img">
+                        <path d="M65.13 21.3339H64.0872C53.8337 21.3339 12.31 21.3213 2.05654 21.3213C1.79255 21.3213 1.52591 21.3314 1.26456 21.3037C0.538583 21.2282 -0.00524173 20.6544 3.81167e-05 19.9925C0.00531797 19.3281 0.554422 18.7618 1.27776 18.6939C1.53911 18.6687 1.80575 18.6813 2.06974 18.6813C12.3232 18.6813 53.8469 18.6939 64.1004 18.6939H65.1485C64.8475 18.3894 64.6812 18.2132 64.507 18.0471C57.9784 11.8887 54.4473 8.7329 47.9134 2.57707C47.4831 2.17188 46.9921 1.73649 47.2139 1.12745C47.3538 0.739882 47.7234 0.35231 48.1009 0.138391C48.6289 -0.163612 49.178 0.0679236 49.6004 0.455495C50.5956 1.37157 51.5724 2.30527 52.5571 3.23393C58.9774 9.28658 62.4003 12.3417 68.8232 18.3944C69.0265 18.5857 69.2456 18.7593 69.4516 18.9506C70.1855 19.6351 70.1828 20.3927 69.4436 21.0847C65.8243 24.4798 65.1997 24.8698 61.5882 28.2698C57.6812 31.9467 53.782 35.6337 49.8828 39.3206C49.4816 39.7006 49.0671 40.0454 48.4625 39.9951C47.8923 39.9473 47.4884 39.6528 47.2667 39.1369C47.0238 38.5681 47.2376 38.1051 47.6494 37.7125C48.7952 36.6127 49.9541 35.5254 51.1077 34.4357C56.6094 29.2513 59.111 27.0669 64.6099 21.8825C64.7446 21.7542 64.866 21.6133 65.13 21.3314V21.3339Z"/>
+                        </svg></button>' }}`
+        }
+    {% elsif settings.style_arrows == '09' %}
+        window.arrows = {
+            icon_next: `{{ '<button type="button" class="slick-next" aria-label="Next" role="button"><svg xmlns="http://www.w3.org/2000/svg" width="31" height="10" viewBox="0 0 31 10" fill="none">
+                        <path d="M25.8012 0L24.8801 0.884979L28.5157 4.37815H0V5.62997H28.4961L24.8686 9.1147L25.7897 10L31 4.99464L25.8012 0Z" fill="#1E3C32"/>
+                        </svg></button>' }}`,
+            icon_prev: `{{ '<button type="button" class="slick-prev" aria-label="Previous" role="button"><svg xmlns="http://www.w3.org/2000/svg" width="31" height="10" viewBox="0 0 31 10" fill="none">
+                        <path d="M25.8012 0L24.8801 0.884979L28.5157 4.37815H0V5.62997H28.4961L24.8686 9.1147L25.7897 10L31 4.99464L25.8012 0Z" fill="#1E3C32"/>
+                        </svg></button>' }}`
+        }
+    {% else %}
+        window.arrows = {
+            icon_next: `{{ '<button type="button" class="slick-next" aria-label="Next" role="button"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M 7.75 1.34375 L 6.25 2.65625 L 14.65625 12 L 6.25 21.34375 L 7.75 22.65625 L 16.75 12.65625 L 17.34375 12 L 16.75 11.34375 Z"></path></svg></button>' }}`,
+            icon_prev: `{{ '<button type="button" class="slick-prev" aria-label="Previous" role="button"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M 7.75 1.34375 L 6.25 2.65625 L 14.65625 12 L 6.25 21.34375 L 7.75 22.65625 L 16.75 12.65625 L 17.34375 12 L 16.75 11.34375 Z"></path></svg></button>' }}`
+        }
+    {% endif %}
+
+    window.dynamic_browser_title = {
+        show: {{ settings.show_dynamic_browser_title }},
+        text: '{{ settings.dynamic_browser_title_content | replace: "'","\'" }}'
+    };
+    
+    window.show_more_btn_text = {
+        show_more: `{{ 'sections.collection_template.show_more' | t }}`,
+        show_less: `{{ 'sections.collection_template.show_less' | t }}`,
+        show_all: `{{ 'sections.collection_template.show_all' | t }}`,
+    };
+
+    function getCookie(cname) {
+        let name = cname + "=";
+        let decodedCookie = decodeURIComponent(document.cookie);
+        let ca = decodedCookie.split(';');
+        for(let i = 0; i <ca.length; i++) {
+          let c = ca[i];
+          while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+          }
+          if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+          }
+        }
+        return "";
+    }
+    
+    const cookieAnnouncemenClosed = getCookie('announcement');
+    window.announcementClosed = cookieAnnouncemenClosed === 'closed'
+</script>
+
+{%- if template contains 'collection' -%}
+    <script>
+      const currentCollection = "{{ collection.handle }}";
+      document.cookie = `currentCollection=${currentCollection}; path=/`;
+    </script>
+{%- endif -%}

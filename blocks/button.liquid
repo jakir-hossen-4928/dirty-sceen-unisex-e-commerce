@@ -1,0 +1,148 @@
+{% stylesheet %}
+    .button.button--style {
+        color: var(--color-button-style);
+        background: var(--bg-button-style);
+        border: 1px solid var(--border-button-style);
+        max-width: var(--width-button-style);
+
+        @media (min-width: 1025px) {
+            &:hover {
+                color: var(--color-button-hover-style);
+                background: var(--bg-button-hover-style);
+                border-color: var(--border-button-hover-style);
+            }
+        }
+    }
+{% endstylesheet %}
+
+{% assign button_link = button_link | default: block.settings.button_link %}
+<a
+    {% if button_link == blank %}
+    role="link" aria-disabled="true"
+    {% else %}
+    href="{{ button_link }}"
+    {% endif %}
+    class="button button--style m-zero{% if settings.banner_animation == 'effect_fade_up' %} scroll-trigger animate--slide-in{% endif %}"
+    style="
+        --color-button-style: {{ block.settings.button_color }};
+        --bg-button-style: {% if block.settings.button_bg_gradient != blank %}{{ block.settings.button_bg_gradient }}{% else %}{{ block.settings.button_bg_color }}{% endif %};
+        --border-button-style: {{ block.settings.button_border_color }};
+        --color-button-hover-style: {{ block.settings.button_color_hover }};
+        --bg-button-hover-style: {% if block.settings.button_bg_gradient_hover != blank %}{{ block.settings.button_bg_gradient_hover }}{% else %}{{ block.settings.button_bg_color_hover }}{% endif %};
+        --border-button-hover-style: {{ block.settings.button_border_color_hover }};
+        --width-button-style: {{ block.settings.button_width }};
+        {% if block.settings.enable_underline_button %}
+        text-decoration: underline;
+        text-underline-offset: 4px;
+        text-decoration-color: var(--color-button-style);
+        {% endif %}"
+    {%- if block.settings.open_in_new_tab -%}
+    target="_blank"
+    rel="noopener noreferrer"
+    {%- endif -%}
+    {{ block.shopify_attributes }}
+>
+    {{ block.settings.button_label | escape }}
+</a>
+
+{% schema %}
+{
+    "name": "t:sections.rich-text.blocks.button.name",
+    "tag": null,
+    "settings": [
+        {
+            "id": "button_label",
+            "type": "text",
+            "label": "t:settings_schema.ask_an_expert.settings.option_1.label__1",
+            "default": "Button label"
+        },
+        {
+            "id": "button_link",
+            "type": "url",
+            "label": "t:settings_schema.colors.settings.colors_link.label__4"
+        },
+        {
+            "type": "checkbox",
+            "id": "open_in_new_tab",
+            "label": "t:flex_section.settings.open_new_tab",
+            "default": false
+        },
+        {
+            "type": "checkbox",
+            "id": "enable_underline_button",
+            "label": "t:sections.rich-text.blocks.button.settings.button_enable_underline",
+            "default": false
+        },
+        {
+            "type": "header",
+            "content": "t:flex_section.content.layout"
+        },
+        {
+            "type" : "text",
+            "id" : "button_width",
+            "label" : "t:sections.rich-text.blocks.button.settings.width_info",
+            "info" : "t:sections.rich-text.blocks.button.settings.info__1",
+            "default" : "270px"
+        },
+        {
+            "type": "header",
+            "content": "t:flex_section.content.appearance"
+        },
+        {
+            "type" : "color",
+            "id" : "button_color",
+            "label" : "t:sections.rich-text.blocks.button.settings.label_color",
+            "default" : "#fff"
+        },
+        {
+            "type" : "color",
+            "id" : "button_border_color",
+            "label" : "t:settings_schema.colors.settings.colors_name.border_color",
+            "default" : "#000"
+        },
+        {
+            "type" : "color",
+            "id" : "button_bg_color",
+            "label" : "t:settings_schema.colors.settings.colors_name.background_color_2",
+            "default" : "#000"
+        },
+        {
+            "type" : "color_background",
+            "id" : "button_bg_gradient",
+            "label" : "t:settings_schema.colors.settings.colors_name.background_color_gradient"
+        },
+        {
+            "type" : "color",
+            "id" : "button_color_hover",
+            "label" : "t:sections.rich-text.blocks.button.settings.label_hover_color",
+            "default" : "#000"
+        },
+        {
+            "type" : "color",
+            "id" : "button_border_color_hover",
+            "label" : "t:settings_schema.colors.settings.colors_name.border_hover",
+            "default" : "#000"
+        },
+        {
+            "type" : "color",
+            "id" : "button_bg_color_hover",
+            "label" : "t:settings_schema.colors.settings.colors_name.background_hover",
+            "default" : "#fff"
+        },
+        {
+            "type" : "color_background",
+            "id" : "button_bg_gradient_hover",
+            "label" : "t:settings_schema.colors.settings.colors_name.background_hover_gradient"
+        }
+    ],
+    "presets": [
+        {
+            "name": "t:sections.rich-text.blocks.button.name",
+            "category": "t:flex_section.categories.basic",
+            "settings": {
+                "button_link": "shopify://collections/all"
+            }
+        }
+    ]
+}
+{% endschema %}

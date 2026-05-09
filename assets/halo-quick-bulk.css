@@ -1,0 +1,107 @@
+body.quickshop-popup-show .halo-quick-bulk-popup {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: all;
+  transform: translate(-50%,-50%);
+}
+
+.halo-quick-bulk-popup .halo-popup-wrapper {
+  padding: 20px 0;
+}
+
+.halo-quick-bulk-popup .halo-popup-content {
+  padding: 0 20px;
+}
+
+.quick-add__product-media img {
+  width: 100%;
+  height: auto;
+}
+
+.quick-add-modal__content-info--bulk-details {
+  margin-bottom: 30px;
+}
+
+.quick-add-modal__content-info--bulk-details h3 {
+  margin: 0 0 15px 0;
+  font-size: calc(var(--font-body-size) + 4px);
+}
+
+.quick-add-modal__content-info--bulk-details .price  {
+  justify-content: flex-start;
+}
+
+.quick-add__info .product__view-details {
+  margin-top: 12px;
+}
+
+.quick-add__info .product__view-details:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.quick-add__info .product__view-details .icon {
+  width: 15px;
+  height: 15px;
+  margin-left: 7px;
+}
+
+@media screen and (min-width: 768px) {
+  .halo-quick-bulk-popup {
+    width: calc(100% - 30px);
+    max-width: 1230px;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .large-up-hide {
+    display: none !important;
+  }
+
+  .halo-quick-bulk-popup .halo-popup-wrapper {
+    padding: 30px 0;
+  }
+  
+  .halo-quick-bulk-popup .halo-popup-content {
+    padding: 0 30px;
+  }
+
+  .halo-quick-bulk {
+    display: flex;
+    column-gap: 30px;
+  }
+  
+  .quick-add__content-info__media {
+    width: 200px;
+  }
+  
+  .halo-quick-bulk > div:nth-child(2) {
+    width: calc(100% - 230px);
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .large-down-hide {
+    display: none !important;
+  }
+
+  .quick-add__content-info__media {
+    display: flex;
+    column-gap: 20px;
+    margin-bottom: 30px;
+  }
+
+  .quick-add__product-media {
+    min-width: 60px;
+    max-width: 100px;
+  }
+
+  .quick-add-modal__content-info--bulk-details {
+    margin-bottom: 0;
+  }
+
+  .quick-add-modal__content-info--bulk-details h3 {
+    margin-bottom: 10px;
+    font-size: calc(var(--font-body-size) + 2px);
+  }
+}

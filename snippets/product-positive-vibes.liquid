@@ -1,0 +1,23 @@
+{%- liquid
+    assign fontsize_text = block.settings.fontsize_text
+    assign color_text = block.settings.color_text
+    assign text_font_weight = block.settings.text_font_weight
+-%}
+{%- if product.metafields.custom.positive_vibes_new_arrivals or product.metafields.custom.positive_vibes_people_purchased or product.metafields.custom.positive_vibes_sold_in_the_last or product.metafields.custom.positive_vibes_over_people -%}
+<positive-vibes class="productView-positive_vibes positive_vibes" style="--color-text: {{ color_text }}; --font-size: {{ fontsize_text | append: 'px' }}; --fonr-weight: {{text_font_weight}}">
+    <div class="text-vibes">
+        {%- if product.metafields.custom.positive_vibes_new_arrivals -%}
+            <div class="text-vibes--child"><p><span class="new-arrivals">{{ 'products.product.new_arrivals' | t }}</span>{{product.metafields.custom.positive_vibes_new_arrivals}}</p></div>
+        {%- endif -%}
+        {%- if product.metafields.custom.positive_vibes_people_purchased -%}
+            <div class="text-vibes--child"><p>{% render 'icon-like' %} {{product.metafields.custom.positive_vibes_people_purchased}}</p></div>
+        {%- endif -%}
+        {%- if product.metafields.custom.positive_vibes_sold_in_the_last -%}
+            <div class="text-vibes--child"><p>{% render 'icon-fire-3' %} {{product.metafields.custom.positive_vibes_sold_in_the_last}}</p></div>
+        {%- endif -%}
+        {%- if product.metafields.custom.positive_vibes_over_people -%}
+            <div class="text-vibes--child"><p>{% render 'icon-heart-4' %} {{product.metafields.custom.positive_vibes_over_people}}</p></div>
+        {%- endif -%}
+    </div>
+</positive-vibes>
+{%- endif -%}

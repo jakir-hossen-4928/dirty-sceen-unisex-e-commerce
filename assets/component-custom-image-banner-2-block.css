@@ -1,0 +1,186 @@
+.custom-image-banner-block-bottom {
+	background: var(--bg-color-style);
+}
+
+.customImageBanner--wrapper {
+	display: flex;
+    width: 100%;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-top: -225px;
+    padding-bottom: 110px;
+}
+
+.customImageBanner--wrapper .customImageBanner-image {
+	width: calc(100% - 924px);
+	animation: moveUpDown 2s alternate infinite ease-in-out !important;
+    will-change: transform;
+}
+
+.customImageBanner--wrapper .customImageBanner-item {
+	width: 770px;
+}
+
+.customImageBanner-item .content .title {
+	color: var(--color-text-style);
+	font-size: var(--fontsize-text-style);
+	margin-bottom: var(--mg-bottom-title-style);
+}
+
+.customImageBanner-item .content .des {
+	color: var(--color-text-style);
+	font-size: var(--fontsize-text-style);
+	margin-bottom: var(--margin-bottom-des-style);
+}
+
+.customImageBanner-item .content .button {
+	color: var(--color-button-style);
+	background: var(--bg-color-button-style);
+	border-color: var(--border-color-button-style);
+	background-origin: border-box;
+	width: var(--button-width-style);
+	max-width: var(--button-width-style);
+}
+
+.btn_1_br_outside .customImageBanner-item .content .button:after {
+	border: 1px solid var(--border-color-button-style);
+}
+
+.customImageBanner-item .img-box-content {
+	position: relative;
+	margin-bottom: 104px;
+}
+
+.customImageBanner-item .content.text-left .button {
+	margin-left: 0;
+}
+
+.customImageBanner-item .content.text-right .button {
+	margin-right: 0;
+}
+
+.customImageBanner--wrapper .adaptive_height img.lazyload+.data-lazy-loading, 
+.customImageBanner--wrapper .adaptive_height img.lazyloading+.data-lazy-loading {
+	background-color: transparent;
+}
+
+.customImageBanner-image img {
+	margin: 0 auto;
+	width: auto;
+    height: auto;
+}
+
+.customImageBanner-item .video-open-popup .video-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 2;
+    line-height: 0;
+    padding: 0;
+    border-radius: 50%;
+    background: transparent;
+    color: var(--color);
+    border: none;
+}
+
+.customImageBanner-item .video-open-popup svg {
+    width: 80px;
+    height: 80px;
+    fill: currentColor;
+    stroke: currentColor;
+}
+
+@media (max-width: 1024px) {
+	.customImageBanner--wrapper {
+		margin-top: -110px;
+    	padding-bottom: 20px;
+	}
+
+	.customImageBanner--wrapper .customImageBanner-image {
+	    width: calc(100% - 640px);
+	}
+
+	.customImageBanner--wrapper .customImageBanner-item {
+	    width: 500px;
+	}
+
+	.customImageBanner-item .img-box-content {
+	    margin-bottom: 60px;
+	}
+}
+
+@media (max-width: 991px) {
+	.customImageBanner--wrapper {
+		flex-direction: column;
+		margin-top: -150px;
+    	padding-bottom: 20px;
+	}
+
+	.customImageBanner--wrapper .customImageBanner-image {
+	    width: 100%;
+	}
+
+	.customImageBanner--wrapper .customImageBanner-item {
+	    width: 100%;
+	    margin-bottom: 40px;
+	}
+
+}
+
+@media (max-width: 551px) {
+	.customImageBanner--wrapper {
+	    margin-top: -250px;
+	}
+
+	.customImageBanner-item .content .title {
+		font-size: var(--fontsize-mobile-text-style);
+		margin-bottom: var(--mg-bottom-title-style-mb);
+	}
+
+	.customImageBanner-item .content .des {
+		margin-bottom: var(--margin-bottom-des-style-mb);
+	}
+
+	.block__custom--text {
+		flex-wrap: nowrap !important;
+    	overflow-x: auto;
+    	justify-content: flex-start !important;
+	}
+
+	.wrapper-text {
+	    flex: 0 0 auto;
+	    margin-right: 0;
+	    margin-bottom: 10px;
+	}
+
+	.customImageBanner-item .img-box-content {
+	    margin-bottom: 28px;
+	}
+
+	.customImageBanner--wrapper .customImageBanner-image {
+	    padding-bottom: 20px;
+	}
+
+	.customImageBanner-item .video-open-popup svg {
+	    width: 44px;
+	    height: 44px;
+	}
+}
+
+@media (min-width: 1025px) {
+	.customImageBanner-item .content .button:hover {
+		color: var(--color-button-hover-style);
+		background: var(--bg-color-button-hover-style);
+		border-color: var(--border-color-button-hover-style);
+		background-origin: border-box;
+	}
+
+	.btn_1_br_outside .customImageBanner-item .content .button:hover:after {
+		border: 1px solid var(--border-color-button-hover-style);
+	}
+
+	.customImageBanner-item .content .title a:hover {
+		color: var(--color-text-style);
+	}
+}

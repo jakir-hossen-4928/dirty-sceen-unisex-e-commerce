@@ -1,0 +1,124 @@
+{% doc %}
+  Renders a video background for a section or block.
+
+  @param {object} background_video - The video object
+  @param {string} background_video_position - The position of the video background
+{% enddoc %}
+
+{% stylesheet %}
+  .video-background,
+  .video-background * {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .video-background--cover * {
+    object-fit: cover;
+  }
+
+  .video-background--contain * {
+    object-fit: contain;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    video-background-component video {
+      display: none;
+    }
+  }
+{% endstylesheet %}
+
+{% liquid
+  assign video_classes = 'video-background video-background--' | append: background_video_position
+
+  assign show_background = false
+  if style_video == 'mp4'
+    if background_video != blank
+      assign show_background = true
+    endif
+  elsif style_video == 'youtube'
+    if background_video_ytb != blank
+      assign show_background = true
+    endif
+  endif
+%}
+
+{%- if show_background -%}
+  <video-background-component class="{{ video_classes }}">
+    {% if style_video == 'youtube' %}
+      {%- liquid
+        assign autoplay_youtube = 0
+        if autoplay_video
+          assign autoplay_youtube = 1
+        endif
+      -%}
+      <div data-video-youtube class="item slide-youtube embed-responsive item-video">
+        <div class="fluid-width-video-wrapper">
+          <iframe
+            class="youtube-player{% if background_video_ytb_mb != blank %} slide-pc{% endif %}"
+            id="player_{{ background_video_ytb }}"
+            src="https://www.youtube.com/embed/{{ background_video_ytb }}?enablejsapi=1&rel=0&autoplay={{ autoplay_youtube }}&mute=1&controls=0&loop=1&playlist={{ background_video_ytb }}"
+            frameborder="0"
+            allowfullscreen
+          ></iframe>
+          {%- if background_video_ytb_mb != blank -%}
+            <iframe
+              class="youtube-player slide-mobile"
+              id="player_mb_{{ background_video_ytb_mb }}"
+              src="https://www.youtube.com/embed/{{ background_video_ytb_mb }}?enablejsapi=1&rel=0&autoplay={{ autoplay_youtube }}&mute=1&controls=0&loop=1&playlist={{ background_video_ytb_mb }}"
+              frameborder="0"
+              allowfullscreen
+            ></iframe>
+          {%- endif -%}
+        </div>
+      </div>
+    {% else %}
+      {% liquid
+        assign media_width_desktop = 100 | append: 'vw'
+        assign media_width_mobile = '100vw'
+        assign sizes = '(min-width: 750px) ' | append: media_width_desktop | append: ', ' | append: media_width_mobile
+        assign widths = '300, 450, 600, 750, 900, 1050, 1200, 1350, 1500, 1650, 1800, 1950, 2000, 2500, 3000, 3500, 4000, 5000'
+      %}
+      {{ background_video.preview_image | image_url: width: 3840 | image_tag: width: 1100, widths: widths, sizes: sizes }}
+      <video
+        class="video{% if background_video_mb != blank %} slide-pc{% endif %}"
+        playsinline
+        muted
+        {% if autoplay_video %}autoplay{% endif %}
+        loop
+        ref="videoElement"
+      >
+        {%- for sourceElement in background_video.sources -%}
+          <source
+            src="{{ sourceElement.url }}"
+            type="{{ sourceElement.mime_type }}"
+          >
+        {%- endfor -%}
+      </video>
+      {%- if background_video_mb != blank -%}
+        <video
+          class="video slide-mobile"
+          playsinline
+          muted
+          {% if autoplay_video %}autoplay{% endif %}
+          loop
+          ref="videoElement"
+        >
+          {%- for sourceElement in background_video_mb.sources -%}
+            <source
+              src="{{ sourceElement.url }}"
+              type="{{ sourceElement.mime_type }}"
+            >
+          {%- endfor -%}
+        </video>
+      {%- endif -%}
+    {% endif %}
+  </video-background-component>
+{%- else -%}
+  <div class="{{ video_classes }} placeholder" style="--height_placeholder: 100%;">
+    {{ 'hero-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
+  </div>
+{%- endif -%}

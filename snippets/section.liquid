@@ -1,0 +1,165 @@
+{% doc %}
+    Renders a wrapper section
+
+    @param {section} section - The section object
+    @param {string} children - The children of the section
+{% enddoc %}
+
+{%- if section.settings.container != 'container' -%}
+    {%- assign container = 'container' | append: '-' | append: section.settings.container -%}
+{%- endif -%}
+
+{% stylesheet %}
+    .section-content-wrapper.section-content-wrapper {
+        min-height: calc(var(--section-min-height, 'auto') - var(--section-height-offset, 0px));
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+
+    .section-wrapper .section {
+        min-height: var(--section-min-height, 'auto');
+    }
+
+    .section[data-shopify-visual-preview] {
+        min-height: var(--section-preview-height);
+        padding-top: 0;
+    }
+
+    .section[data-shopify-visual-preview] .custom-section-background {
+        display: none;
+    }
+
+    body:has(> #header-group > .header-section > #header-component[transparent]):not(
+        :has(> #header-group > .header-section + .shopify-section)
+        )
+        > main
+        > .section-wrapper:first-child {
+        --section-height-offset: var(--header-group-height, 0);
+    }
+
+    .section-wrapper .custom-section-background {
+        grid-column: 1 / -1;
+    }
+
+    .custom-section-content {
+        z-index: var(--layer-flat);
+    }
+
+    @media screen and (width >= 1025px) {
+        .custom-section .container-full {
+            padding-left: var(--padding-left-full-width);
+            padding-right: var(--padding-right-full-width);
+        }
+    }
+
+    .layout-panel-flex {
+        display: flex !important;
+        gap: var(--gap);
+        height: 100%;
+    }
+
+    .layout-panel-flex--row {
+        flex-flow: row var(--flex-wrap);
+        justify-content: var(--horizontal-alignment);
+        align-items: var(--vertical-alignment);
+    }
+
+    .layout-panel-flex--column {
+        flex-flow: column var(--flex-wrap);
+        align-items: var(--horizontal-alignment);
+        justify-content: var(--vertical-alignment);
+    }
+
+    @media screen and (width < 750px) {
+        .mobile-column {
+            flex-flow: column nowrap;
+            align-items: var(--horizontal-alignment);
+            justify-content: var(--vertical-alignment-mobile);
+        }
+
+        .layout-panel-flex--row:not(.mobile-column) {
+            .text-block {
+                flex: 1 1 var(--max-width--display-tight);
+            }
+
+            .image-block {
+                flex: 1 1 var(--size-style-width-mobile-min);
+            }
+
+            .button {
+                flex: 0 0 fit-content;
+            }
+        }
+    }
+
+    @media (width >= 750px) {
+        .layout-panel-flex {
+            flex-direction: var(--flex-direction);
+        }
+    }
+{% endstylesheet %}
+
+<div
+    class="section custom-section p-relative"
+    {% if request.visual_preview_mode %}
+    data-shopify-visual-preview
+    {% endif %}
+
+    style="
+    {% if section.settings.section_height == 'custom' %}
+        --section-min-height: {{ section.settings.section_height_custom }}svh;
+    {% elsif section.settings.section_height == 'full-screen' %}
+        --section-min-height: 100svh;
+    {% elsif section.settings.section_height != '' %}
+        --section-min-height: var(--section-height-{{ section.settings.section_height }});
+    {% endif %}
+
+    {% if section.settings.section_height != '' %}
+        --section-preview-height: 600px;
+    {% endif %}
+    "
+>
+    <div class="custom-section-background">
+        {% render 'background-media',
+            background_media: section.settings.background_media,
+            style_video: section.settings.style_video,
+            background_video: section.settings.video,
+            background_video_mb: section.settings.video_mb,
+            background_video_ytb: section.settings.video_ytb,
+            background_video_ytb_mb: section.settings.video_ytb_mb,
+            background_video_position: section.settings.video_position,
+            autoplay_video: section.settings.autoplay_video,
+            background_image: section.settings.background_image,
+            background_image_position: section.settings.background_image_position
+        %}
+    </div>
+
+    <div class="border-style custom-section-content">
+        {% if section.settings.toggle_overlay %}
+            {% render 'overlay', settings: section.settings, layer: '0' %}
+        {% endif %}
+
+        <div
+            class="
+            container {{ container }}
+            spacing-style
+            layout-panel-flex
+            layout-panel-flex--{{ section.settings.content_direction }}
+            section-content-wrapper
+            {% if section.settings.vertical_on_mobile %} mobile-column{% endif %}
+            "
+            style="
+            {% render 'layout-panel-style', settings: section.settings %}
+            {% render 'spacing-padding', settings: section.settings %}
+            {% if section.settings.container == 'full' %}
+            --padding-left-full-width: {{ section.settings.padding_full_width | append: 'px' }};
+            --padding-right-full-width: {{ section.settings.padding_full_width | append: 'px' }};
+            {% endif %}
+            "
+            data-testid="section-content"
+        >
+            {{ children }}
+        </div>
+    </div>
+</div>

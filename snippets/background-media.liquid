@@ -1,0 +1,7 @@
+{% liquid
+  if background_media == 'video'
+    render 'background-video', style_video: style_video, background_video: background_video, background_video_mb: background_video_mb, background_video_position: background_video_position, background_video_ytb: background_video_ytb, background_video_ytb_mb: background_video_ytb_mb, autoplay_video: autoplay_video
+  elsif background_media == 'image'
+    render 'background-image', background_image: background_image, background_image_position: background_image_position
+  endif
+%}

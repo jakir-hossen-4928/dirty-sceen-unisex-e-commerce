@@ -1,0 +1,115 @@
+{%- if request.design_mode == false and settings.enable_preloading_screen -%}
+  <style>
+    .preload-screen {
+      background-color: {{settings.preloading_screen_bg}};
+      z-index: 9999;
+      opacity: 1;
+      visibility: visible;
+      transition: opacity .35s ease, visibility .35s ease;
+      overflow: hidden;
+      left: 0;
+      top: 0;
+      align-items: center;
+      justify-content: center;
+      pointer-events: none;
+      height: 100vh;
+      width: 100vw;
+      position: fixed;
+      display: flex;
+    }
+  
+    .preload-screen.loaded {
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    .preload-screen .icon {
+      width: 7rem;
+      height: 7rem;
+    }
+  
+    .preload-screen__loading-bar {
+      width: 13rem;
+      height: 0.2rem;
+      border-radius: 0.2rem;
+      background-color: #ebebeb;
+      overflow: hidden;
+      position: relative;
+      display: block;
+    }
+  
+    .preload-screen__loading-bar::after {
+      content: "";
+      height: 100%;
+      width: 6.8rem;
+      position: absolute;
+      transform: translate(-3.4rem);
+      background-color: #212326;
+      border-radius: 0.2rem;
+      animation: initial-loading 1s ease infinite;
+    }
+
+    .preload-screen__rolling {
+      display: inline-block;
+      border: 5px solid #f6f6f6;
+      border-radius: 50%;
+      border-top: 5px solid var(--spinner-top-color);
+      border-right: 5px solid var(--spinner-right-color);
+      border-bottom: 5px solid var(--spinner-bottom-color);
+      border-left: 5px solid var(--spinner-left-color);
+      width: 50px;
+      height: 50px;
+      animation: spin-icon 1.4s linear infinite;
+    }
+  
+    @keyframes initial-loading {
+      0% {
+        transform: translate(-6.8rem);
+      }
+      100% {
+        transform: translate(13rem);
+      }
+    }
+  </style>
+
+  <preload-screen class="preload-screen no-js-hidden">
+    {%- if settings.preloading_screen_image != blank -%}
+      <div class="preload-screen__image">
+        {%- assign logo_alt = settings.preloading_screen_image.alt | default: shop.name | escape -%}
+        {%- assign logo_height = settings.preloading_screen_image.width | divided_by: settings.preloading_screen_image.aspect_ratio -%}
+        {% capture sizes %}(max-width: {{ settings.preloading_screen_image.width | times: 2 }}px) 50vw, {{ settings.preloading_screen_image.width }}px{% endcapture %}
+        {% capture widths %}{{ settings.preloading_screen_image.width }}, {{ settings.preloading_screen_image.width | times: 1.5 | round }}, {{ settings.preloading_screen_image.width | times: 2 }}{% endcapture %}
+        {{ settings.preloading_screen_image | image_url: width: 600 | image_tag:
+          class: 'header__heading-logo motion-reduce',
+          widths: widths,
+          height: logo_height,
+          width: settings.preloading_screen_image.width,
+          alt: logo_alt,
+          sizes: sizes,
+          preload: true
+        }}
+      </div>
+    {%- else -%}
+      {%- case settings.preloading_screen_icon -%}
+        {%- when 'loading-bar' -%}
+          <span class="preload-screen__loading-bar"></span>
+        {%- when 'rolling' -%}
+          <span class="preload-screen__rolling"></span>
+      {%- endcase -%}
+    {%- endif -%}
+  </preload-screen>
+  
+  <script>
+    class PreloadScreen extends HTMLElement {
+      constructor() {
+        super();
+        document.addEventListener("DOMContentLoaded", () => {this.show()});
+      }
+  
+      show() {
+        this.classList.add('loaded');
+      }
+    }
+    customElements.define('preload-screen', PreloadScreen);
+  </script>
+{%- endif -%}

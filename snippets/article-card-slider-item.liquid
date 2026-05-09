@@ -1,0 +1,31 @@
+{%- comment -%}
+    Format date Publish Blog
+    {{- article.published_at | date: "%a, %b %d, %y" -}}
+{%- endcomment -%}
+<div class="article-card">
+    <div class="article-card__image-wrapper">
+    {%- if article.image -%}
+        {%- assign image_alt = article.title | escape -%}
+        {%- assign preview_img = article.image -%}
+        <a href="{{article.url}}" class="image-zoom adaptive_height"  style="padding-top: {{ 1 | divided_by: preview_img.aspect_ratio | times: 100 }}%">
+            <img {% if settings.enable_lazyload %}data-{% endif %}srcset="
+            {%- if article.image.src.width >= 165 -%}{{ article.image.src | img_url: '165x' }} 165w,{%- endif -%}
+            {%- if article.image.src.width >= 360 -%}{{ article.image.src | img_url: '360x' }} 360w,{%- endif -%}
+            {%- if article.image.src.width >= 1210 -%}{{ article.image.src | img_url: '1210x' }} 1210w{%- endif -%}" sizes="(min-width: 1100px) 535px, (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)" alt="{{ image_alt }}"{% if settings.enable_lazyload %} class="lazyload"{% endif %} />{% if settings.enable_lazyload %}<span class="data-lazy-loading"></span>{% endif %}
+        </a>
+    {%- else -%}
+        <a href="{{article.url}}" class="image-zoom">
+            <div class="placeholder" style="--height_placeholder: clamp(450px, calc(770 / 1920 * 100vw), 770px);">
+                {{ 'blog-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
+            </div>
+        </a>
+    {%- endif -%}
+    </div>
+    <div class="article-card__info text-left">
+        <h3 class="article-card__title"><a class="link-effectt p-relative" href="{{ article.url }}"><span class="text">{{ article.title }}</span></a></h3>
+        {%- if blog_show_des -%}
+            <div class="article-card__des">{{ article.excerpt_or_content | strip_html | truncatewords: limit_content_des }}</div>  
+        {%- endif -%}
+        <div class="article-card__author"><span class="article__date"><span class="text_on">{{ 'blogs.article.on' | t }} </span>{{- article.published_at | date: "%b %d, %Y" -}}</span></div>
+    </div>
+</div>

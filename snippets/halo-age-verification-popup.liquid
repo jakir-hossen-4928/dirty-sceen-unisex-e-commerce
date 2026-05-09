@@ -1,0 +1,53 @@
+{{ 'component-age-verification-popup.css' | asset_url | stylesheet_tag }}
+
+{% liquid
+    assign age_verification_popup_expire = settings.age_verification_popup_expire
+
+    assign age_verification_logo = settings.age_verification_logo
+    assign age_verification_logo_width = settings.age_verification_logo_width
+    assign age_verification_logo_mg_bottom = settings.age_verification_logo_mg_bottom
+
+    assign age_verification_popup_title = settings.age_verification_popup_title
+    assign age_verification_popup_title_color = settings.age_verification_popup_title_color
+    assign age_verification_title_font_size = settings.age_verification_title_font_size
+    assign age_verification_title_mg_bottom = settings.age_verification_title_mg_bottom
+
+    assign age_verification_popup_desc = settings.age_verification_popup_desc
+    assign age_verification_popup_desc_color = settings.age_verification_popup_desc_color
+    assign age_verification_desc_font_size = settings.age_verification_desc_font_size
+    
+    assign age_verification_eligible = settings.age_verification_eligible
+    assign age_verification_not_eligible = settings.age_verification_not_eligible
+    assign not_eligible_link = settings.not_eligible_link
+%}
+
+<age-verification-popup
+  class="halo-popup halo-age-verification-popup halo-age-verification-popup custom-scrollbar"
+  data-delay="0"
+  data-expire="{{ age_verification_popup_expire }}"
+  id="halo-age-verification-popup"
+>
+    <div class="popup-content text-center" style="--age_verification_logo_width: {{ age_verification_logo_width }}px;
+                                                    --age_verification_logo_mg_bottom: {{ age_verification_logo_mg_bottom }}px;
+                                                    --age_verification_popup_title_color: {{ age_verification_popup_title_color }};
+                                                    --age_verification_title_font_size: {{ age_verification_title_font_size }}px;
+                                                    --age_verification_title_mg_bottom: {{ age_verification_title_mg_bottom }}px;
+                                                    --age_verification_popup_desc_color: {{ age_verification_popup_desc_color }};
+                                                    --age_verification_desc_font_size: {{ age_verification_desc_font_size }}px;">
+        {% if age_verification_logo != blank %}
+        <div class="logo"><img src="{{ age_verification_logo | img_url: 'master' }}"/></div>
+        {% endif %}
+        {% if age_verification_popup_title != blank %}
+        <div class="heading">{{ age_verification_popup_title }}</div>
+        {% endif %}
+        {% if age_verification_popup_desc != blank %}
+        <div class="description">{{ age_verification_popup_desc }}</div>
+        {% endif %}
+    </div>
+    <div class="popup-action">
+        <a class="button button-2 not-eligible" href="{{ not_eligible_link }}">{{ age_verification_not_eligible }}</a>
+        <div class="button button-1 eligible" data-close-age-verification-popup>{{ age_verification_eligible }}</div>
+    </div>
+</age-verification-popup>
+
+<script src="{{ 'halo-age-verification-popup.js' | asset_url }}" defer="defer"></script>

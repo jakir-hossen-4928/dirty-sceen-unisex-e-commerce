@@ -1,0 +1,97 @@
+.halo-productBadges{
+    position: absolute;
+    top: var(--badge-postion-top);
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+}
+
+.halo-productBadges .badge{
+    font-family: var(--badge-font);
+    font-size: var(--badge-font-size);
+    font-weight: var(--badge-font-weight);
+    text-transform: var(--badge-text-transform);
+    letter-spacing: var(--badge-letter-spacing);
+    line-height: var(--badge-line-height);
+    border-radius: var(--badge-border-radius);
+    height: auto;
+    padding: var(--badge-padding-top) var(--badge-padding-left-right) var(--badge-padding-bottom) var(--badge-padding-left-right);
+    text-align: center;
+    word-break: break-word;
+}
+
+.badge-leaf .halo-productBadges .badge{
+    border-radius: 20px 0px;
+    border: none!important;
+}
+
+.halo-productBadges .badge.sale-badge{
+    color: var(--sale-badge-color);
+    background-color: var(--sale-badge-bg);
+}
+
+.halo-productBadges .badge.new-badge{
+    color: var(--new-badge-color);
+    background-color: var(--new-badge-bg);
+}
+
+.style-arrows-6:not(.badge-leaf) .halo-productBadges .badge.new-badge {
+    border: 1px solid var(--new-badge-color);
+    padding-top: 1px;
+    padding-bottom: 2px;
+}
+
+.halo-productBadges .badge.sold-out-badge{
+    color: var(--sold-out-badge-color);
+    background-color: var(--sold-out-badge-bg);
+}
+
+.halo-productBadges .badge.custom-badge{
+    color: var(--custom-badge-color);
+    background-color: var(--custom-badge-bg);
+}
+
+.halo-productBadges .badge.custom-badge:has(svg){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 4px;
+}
+
+.halo-productBadges .badge.custom-badge svg{
+    width: max(calc(var(--badge-line-height) - 8px), 10px);
+    height: max(calc(var(--badge-line-height) - 8px), 10px);
+}
+
+.halo-productBadges .badge.bundle-badge{
+    color: var(--bundle-badge-color);
+    background-color: var(--bundle-badge-bg);
+}
+
+.halo-productBadges .badge + .badge{
+    margin-top: 5px;
+}
+
+.halo-productBadges--left{
+    left: var(--badge-postion-left-right);
+    align-items: flex-start;
+}
+
+.halo-productBadges--right{
+    right: var(--badge-postion-left-right);
+    align-items: flex-end;
+}
+
+@media (max-width: 767px) {
+    .product-item.enable_custom_layout_card_1 .halo-productBadges {
+        top: 10px;
+    }
+
+    .product-item.enable_custom_layout_card_1 .halo-productBadges--left{
+        left: 10px;
+    }
+
+    .product-item.enable_custom_layout_card_1 .halo-productBadges--right{
+        right: 10px;
+    }
+}

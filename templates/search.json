@@ -1,0 +1,92 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-search",
+      "blocks": {
+        "ef14fdc7-ce7b-4dbc-be5b-00f7ec30317b": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "heading": "Recent Post",
+            "link": ""
+          }
+        },
+        "5a0fb7c5-12a4-42a9-b392-71bff2428b7c": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "heading": "Custom Block",
+            "text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+          }
+        },
+        "ac51c45c-4e78-4292-8cc6-51a9b2151175": {
+          "type": "category",
+          "settings": {
+            "heading": "Categories",
+            "type": "show_all",
+            "link_list": "main-menu"
+          }
+        }
+      },
+      "block_order": [
+        "ef14fdc7-ce7b-4dbc-be5b-00f7ec30317b",
+        "5a0fb7c5-12a4-42a9-b392-71bff2428b7c",
+        "ac51c45c-4e78-4292-8cc6-51a9b2151175"
+      ],
+      "settings": {
+        "container": "1770",
+        "side_padding_full_width": 0,
+        "show_breadcrumb": false,
+        "breadcrumb_alignment": "left",
+        "show_page_title": true,
+        "page_title_alignment": "center",
+        "show_infinite_scrolling": "infinite",
+        "sidebar_collapse": "collapse",
+        "enable_sticky": false,
+        "sidebar_layout": "layout_1",
+        "sidebar_collapse_default": "expand",
+        "sidebar_type": "vertical",
+        "sidebar_position": "left",
+        "sidebar_heading_font": "font_1",
+        "sidebar_heading_font_size": 14,
+        "sidebar_heading_font_weight": "700",
+        "sidebar_heading_text_transform": "uppercase",
+        "show_filter": true,
+        "filter_swatch": "Color",
+        "filter_swatch_type": "color",
+        "filter_rectangle": "Size",
+        "filter_display_type": "show-more",
+        "max_item_per_filter": 10,
+        "filter_hidden_tag_list": "",
+        "show_toolbar": true,
+        "show_sorting": false,
+        "show_view_as": false,
+        "products_per_page": "15",
+        "layout": "3",
+        "article_page_per_load": "10",
+        "product_space_between_vert_desk": 30,
+        "product_space_between_vert_mb": 16,
+        "product_space_between_horiz_desk": 60,
+        "product_space_between_horiz_mb": 30,
+        "mg_top_desktop": 20,
+        "mg_top_tablet": 20,
+        "mg_top_mobile": 15,
+        "mg_bottom_desktop": 45,
+        "mg_bottom_tablet": 45,
+        "mg_bottom_mobile": 40
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

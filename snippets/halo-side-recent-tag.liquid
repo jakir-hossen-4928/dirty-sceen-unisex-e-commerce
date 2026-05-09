@@ -1,0 +1,54 @@
+{%- liquid
+    assign heading = block.settings.heading
+    assign number = block.settings.number
+    assign show_tag_count = block.settings.show_tag_count
+-%}
+<div class="sidebarBlock sidebar-recent-tag sidebarBlock-{{show_collapse}}">
+    {%- if show_collapse == 'collapse' or show_collapse == 'slide'  -%}
+        <div class="sidebarBlock-headingWrapper{% if show_collapse == 'slide' %}-slide{% endif %}">
+    {%- endif -%}
+        {%- if heading != blank -%}
+            <h2 class="sidebarBlock-heading{% if show_collapse %}{% if sidebar_collapse == 'expand' %} is-clicked{% endif %}{% endif %}">{{ heading | escape }}</h2>
+        {%- else -%}
+            {%- if show_collapse == 'collapse' or show_collapse == 'slide'  -%}
+                <h2 class="sidebarBlock-heading{% if sidebar_collapse == 'expand' %} is-clicked{% endif %}">BLock Heading</h2>
+            {%- endif -%}
+        {%- endif -%}
+        {%- if show_collapse == 'slide' -%}
+            {% render 'icon-arrow-left' %}
+        {%- endif -%}
+    {%- if show_collapse == 'collapse' or show_collapse == 'slide' -%}
+        </div>
+    {%- endif -%}
+    {%- if show_collapse == 'collapse' -%}
+        <div class="sidebarBlock-contentWrapper" {% if sidebar_collapse == 'expand' %} style="display: block;"{% endif %}>
+    {%- endif -%}
+        <div class="sidebarBlock-content{% if show_collapse == 'slide' %} sidebarBlock-slide__content{% endif %}">
+            {%- if show_collapse == 'slide' -%}
+                <button type="button" class="sidebarBlock-slide__content-close">
+                    {% render 'icon-arrow-left' %}
+                    {%- if heading != blank -%}
+                        {{ heading | escape }}
+                    {%- else -%}
+                        BLock Heading
+                    {%- endif -%}
+                </button>
+            {%- endif -%}
+            <ul class="recentTags-list list-unstyled{% if show_collapse == 'slide' %} sidebarBlock-slide__content-list{% endif %}">
+                {%- for tag in blog.all_tags limit: number -%}
+                    {%- liquid
+                        assign tagCount = 0
+                        for article in blog.articles
+                            if article.tags contains tag
+                                assign tagCount = tagCount | plus: 1
+                            endif
+                        endfor
+                    -%}
+                    <li class="tags-list-item"><a href="{{ blog.url }}/tagged/{{ tag | handle }}" class="link"><span class="text">{{ tag }}{% if show_tag_count %} ({{ tagCount }}){% endif %}</span></a></li>
+                {%- endfor -%}
+            </ul>
+        </div>
+    {%- if show_collapse == 'collapse' -%}
+        </div>
+    {%- endif -%}
+</div>

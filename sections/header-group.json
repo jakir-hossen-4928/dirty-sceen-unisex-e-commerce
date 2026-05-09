@@ -1,0 +1,265 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "type": "header",
+  "name": "Header Group",
+  "sections": {
+    "announcement-bar": {
+      "type": "announcement-bar",
+      "blocks": {
+        "announcement-bar-0": {
+          "type": "announcement",
+          "settings": {
+            "type": "html",
+            "text": "FREE SHIPPING ON ORDERS AU$250+",
+            "text_rich": "<p>Welcome to our store</p>",
+            "btn_color": "#f84248",
+            "btn_border_color": "#ffffff",
+            "btn_bg_color": "#ffffff",
+            "btn_bg_color_gradient": ""
+          }
+        }
+      },
+      "block_order": [
+        "announcement-bar-0"
+      ],
+      "settings": {
+        "layout": "slider",
+        "enable_close": false,
+        "color_text": "#ffffff",
+        "bg_color_text": "#000000",
+        "bg_color_text_gradient": "",
+        "font_size_text": 14,
+        "font_style_text": "normal",
+        "font_weight_text": "500",
+        "arrow_active": true,
+        "content_max_width": 38,
+        "padding_top": 8,
+        "padding_top_tablet": 6,
+        "padding_top_mobile": 15,
+        "padding_bottom": 8,
+        "padding_bottom_tablet": 6,
+        "padding_bottom_mobile": 5
+      }
+    },
+    "header_navigation_hamburger_34aApg": {
+      "type": "header-navigation-hamburger",
+      "blocks": {
+        "logo_zpR8Tz": {
+          "type": "logo",
+          "settings": {
+            "logo_position": "always",
+            "logo": "shopify://shop_images/dirty-scene_logo_c6dbafe6-9592-4429-84ee-350ccd718797.png",
+            "logo_width": 70,
+            "logo_width_fixed": 100,
+            "logo_text": "",
+            "logo_font_size": 20,
+            "logo_font_weight": "900",
+            "logo_text_transform": "uppercase",
+            "logo_color": "#000000"
+          }
+        },
+        "main_menu_cm6rQx": {
+          "type": "main_menu",
+          "settings": {
+            "menu": "header_dev",
+            "menu_top_spacing": 10,
+            "menu_bottom_spacing": 10,
+            "grid_gap_menu_item": 15,
+            "alignment": "center",
+            "bg_mega_menu": "#ffffff",
+            "bg_mega_menu_gradient": "",
+            "lv_1_color": "#232323",
+            "lv_1_color_hover": "#232323",
+            "lv_2_color": "#232323",
+            "lv_2_color_hover": "#232323",
+            "lv_3_color": "#3c3c3c",
+            "lv_3_color_hover": "#3c3c3c",
+            "sale_item_1": "",
+            "sale_item_2": "",
+            "sale_item_3": "",
+            "sale_item_color": "#d12442",
+            "label_position": "main_menu",
+            "show_label_blink": false,
+            "new_label_1": "",
+            "new_label_2": "",
+            "new_label_3": "",
+            "new_label_color": "#ffffff",
+            "new_label_bg": "#bae4ed",
+            "new_label_bg_gradient": "",
+            "sale_label_1": "",
+            "sale_label_2": "",
+            "sale_label_3": "",
+            "sale_label_color": "#ffffff",
+            "sale_label_bg": "#d12442",
+            "sale_label_bg_gradient": "",
+            "hot_label_1": "",
+            "hot_label_2": "",
+            "hot_label_3": "",
+            "hot_label_color": "#ffffff",
+            "hot_label_bg": "#fff993",
+            "hot_label_bg_gradient": ""
+          }
+        },
+        "header_icons_9bjU98": {
+          "type": "header_icons",
+          "settings": {
+            "icons_width": 24,
+            "icons_layout": "text",
+            "icons_bold": "bold",
+            "show_search": true,
+            "search_icon": "1",
+            "search_dropdown": "default",
+            "use_search_input": false,
+            "search_input_style": "1",
+            "show_customer": true,
+            "customer_icon": "2",
+            "text_font_size": 15,
+            "show_wishlist": true,
+            "show_wishlist_number": true,
+            "wishlist_icon": "1",
+            "show_cart": true,
+            "show_cart_number": true,
+            "show_cart_number_position": false,
+            "cart_icon": "6",
+            "show_language_currency": false,
+            "language_currency_style": "style_1",
+            "lang_cur_icon": "1",
+            "show_search_sticky": true,
+            "show_customer_sticky": true,
+            "show_wishlist_sticky": true,
+            "show_cart_sticky": true,
+            "show_language_currency_sticky": true,
+            "header_icons_color": "#232323",
+            "header_icons_color_hover": "#232323",
+            "search_input_color": "#232323",
+            "search_input_bg": "#f0f0f0",
+            "search_input_border": "#ffffff",
+            "cart_count_bubble_color": "#323232",
+            "cart_count_bubble_bg": "#ffe5e8",
+            "cart_count_bubble_bg_gradient": "",
+            "wishlist_color_item": "#ffffff",
+            "wishlist_bg_item": "#232323"
+          }
+        }
+      },
+      "block_order": [
+        "logo_zpR8Tz",
+        "main_menu_cm6rQx",
+        "header_icons_9bjU98"
+      ],
+      "custom_css": [
+        "@media (min-width: 993px) {.header-nav-hamburger .header-icons.header-icons-text {gap: 25px; }}",
+        ".header-nav-hamburger {border: 1px solid transparent; box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.12);}"
+      ],
+      "name": "t:sections.header.settings.navigation.name_3",
+      "settings": {
+        "container": "1770",
+        "padding_full_width": 0,
+        "header_layout_style": "style_1",
+        "header_navigation_bg": "#ffffff",
+        "header_navigation_bg_gradient": "",
+        "sticky_header_type": "always",
+        "sticky_header_width": "default",
+        "enable_transparent": false,
+        "transparent_color": "#ffffff",
+        "transparent_color_hover": "#ffffff",
+        "border_color": "",
+        "padding_top": 10,
+        "padding_bottom": 10
+      }
+    },
+    "header-mobile": {
+      "type": "header-mobile",
+      "blocks": {
+        "7de2266e-0cd4-4fda-9f09-06f75a17f944": {
+          "type": "menu",
+          "settings": {
+            "color": "#232323",
+            "menu_tab_bg": "#000000"
+          }
+        },
+        "163e2cb5-14f2-4af6-9ac3-77193c082f53": {
+          "type": "search",
+          "disabled": true,
+          "settings": {
+            "icon": "1",
+            "popup_action": true,
+            "color": "#232323"
+          }
+        },
+        "550fbd21-75fb-4051-9dee-77d91b5239f0": {
+          "type": "logo",
+          "settings": {
+            "logo_mobile": "shopify://shop_images/dirty-scene_logo_c6dbafe6-9592-4429-84ee-350ccd718797.png",
+            "logo_width_mobile": 50,
+            "logo_text": "",
+            "logo_font_size": 20,
+            "logo_font_weight": "900",
+            "logo_text_transform": "uppercase",
+            "logo_color": "#232323",
+            "alignment": "center"
+          }
+        },
+        "wishlist_tR97t3": {
+          "type": "wishlist",
+          "disabled": true,
+          "settings": {
+            "color": "#232323",
+            "show_wishlist_number": false,
+            "wishlist_color_item": "#ffffff",
+            "wishlist_bg_item": "#232323"
+          }
+        },
+        "20dae707-64c0-4ea3-a05e-561cae9836d8": {
+          "type": "customer",
+          "disabled": true,
+          "settings": {
+            "icon": "2",
+            "color": "#232323"
+          }
+        },
+        "633f9dae-3f65-4bda-9ca8-9d3e231aaf9d": {
+          "type": "cart",
+          "settings": {
+            "icon": "3",
+            "show_cart_count_bubble": false,
+            "color": "#232323",
+            "color_bubble": "#ffffff",
+            "bg_bubble": "#232323"
+          }
+        }
+      },
+      "block_order": [
+        "7de2266e-0cd4-4fda-9f09-06f75a17f944",
+        "163e2cb5-14f2-4af6-9ac3-77193c082f53",
+        "550fbd21-75fb-4051-9dee-77d91b5239f0",
+        "wishlist_tR97t3",
+        "20dae707-64c0-4ea3-a05e-561cae9836d8",
+        "633f9dae-3f65-4bda-9ca8-9d3e231aaf9d"
+      ],
+      "settings": {
+        "background": "#ffffff",
+        "gradient": "",
+        "sticky_header_type": "on_scroll",
+        "enable_transparent": false,
+        "transparent_color": "#ffffff",
+        "transparent_border_color": "",
+        "padding_top": 10,
+        "padding_bottom": 10
+      }
+    }
+  },
+  "order": [
+    "announcement-bar",
+    "header_navigation_hamburger_34aApg",
+    "header-mobile"
+  ]
+}

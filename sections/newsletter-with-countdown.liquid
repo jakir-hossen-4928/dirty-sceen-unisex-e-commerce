@@ -1,0 +1,734 @@
+{%- if section.blocks.size > 0 -%}
+  {{ 'component-newsletter-countdown-section.css' | asset_url | stylesheet_tag }}
+  {%- liquid
+    assign padding_top = section.settings.mg_top_desktop | append: 'px'
+    assign padding_top_tablet = section.settings.mg_top_tablet | append: 'px'
+    assign padding_top_mobile = section.settings.mg_top_mobile | append: 'px'
+
+    assign padding_bottom = section.settings.mg_bottom_desktop | append: 'px'
+    assign padding_bottom_tablet = section.settings.mg_bottom_tablet | append: 'px'
+    assign padding_bottom_mobile = section.settings.mg_bottom_mobile | append: 'px'
+
+    assign padding_full_width = section.settings.padding_full_width | append: 'px'
+    assign container = section.settings.container
+    assign section_item_distance = section.settings.section_item_distance
+    assign background_gradient = section.settings.background_gradient
+    assign background = section.settings.background
+  -%}
+
+  <style>
+    @media (min-width: 1200px) {.section-block-{{section.id}} {padding-top: {{ padding_top }};padding-bottom: {{ padding_bottom }}}}
+    @media (min-width: 1025px) { {%- if container == 'full' -%}.section-block-{{section.id}} .container-full {padding-left: {{ padding_full_width }};padding-right: {{ padding_full_width }}}{%- endif -%}}
+    @media (min-width: 768px) and (max-width: 1199px) {.section-block-{{ section.id }} {padding-top: {{ padding_top_tablet }};padding-bottom: {{ padding_bottom_tablet }}}}
+    @media (max-width: 1024px) {
+      {%- if container == 'full' -%}.section-block-{{section.id}} .container-full {padding-left: 15px;padding-right: 15px}{%- endif -%}
+    }
+    @media (max-width: 767px) {
+      .section-block-{{ section.id }} {padding-top: {{ padding_top_mobile }};padding-bottom: {{ padding_bottom_mobile }}}
+      {%- if container == 'full' -%}.section-block-{{section.id}} .container-full {padding-left: 10px;padding-right: 10px}{%- endif -%}
+    }
+  </style>
+
+  <div class="new-subscriber isolate color-{{ section.settings.color_scheme }} section-block-{{ section.id }} bg-attachment-none" 
+    style="
+    {%- if background_gradient != blank -%}
+        --background-style: {{ background_gradient }};
+    {%- else -%}
+        --background-style: {{ background }};
+    {%- endif -%}"
+  >
+    <div class="{% if container == 'container' %}container{% else %}container-{{ container }}{% endif %}">
+      <div class="new-subscriber__wrapper{% if section.blocks.size == 1 %} center{% endif %}{% if settings.banner_animation == 'effect_fade_up' %} scroll-trigger animate--slide-in{% endif %}" style="--items-distance: {{ section_item_distance |  append: 'px' }};--justify-content-wrapper: {{ section.settings.justify_section_content }};">
+        {%- for block in section.blocks -%}
+          {%- case block.type -%}
+          {%- when 'heading' -%}
+            {%- liquid
+              assign text_1 = block.settings.text_1
+              assign text_2 = block.settings.text_2
+              assign text_font_size = block.settings.text_font_size
+              assign text_font_size_mb = block.settings.text_font_size_mb
+              assign text_font_weight = block.settings.text_font_weight
+              assign text_title_color = block.settings.text_title_color
+            -%}
+            <type-writer class="new-subscriber__item new-subscriber__text-typing" data-period="2000" data-type='[ "{{ text_1 }}", "{{ text_2}}"]'
+              style="--text-font-size: {{ text_font_size |  append: 'px' }}; --text-font-weight: {{ text_font_weight }}; --text-font-size-mb: {{ text_font_size_mb |  append: 'px' }}; --color-text: {{ text_title_color }};"
+            >
+              <h2 class="mar-0" {{ block.shopify_attributes }} data-text-convert>
+                <span class="text">{{ text_1 | escape }}</span>
+              </h2>
+            </type-writer>
+            {% comment %} <div class="new-subscriber__item new-subscriber__heading">
+              <h2 class="{{ heading_size }}" style="--mar-a-a: 0;">{{ heading | escape }}</h2>
+            </div> {% endcomment %}
+          {%- when 'countdown' -%}
+            {%- liquid
+              assign text = block.settings.block_title
+              assign text_size = block.settings.block_title_font_size
+              assign text_size_mb = block.settings.block_title_font_size_mb
+              assign text_title_color = block.settings.text_title_color
+              assign block_title_font_weight = block.settings.block_title_font_weight
+            -%}
+            <count-down class="new-subscriber__item new-subscriber__countdown" data-countdown-time="{{ block.settings.time }}" style="--color-text: {{ text_title_color }};">
+              {%- if text != blank -%}
+                <div class="new-subscriber__countdown-text"
+                    style="--text-size: {{ text_size | append: 'px' }};
+                    --text-size-mb: {{ text_size_mb | append: 'px' }};
+                    --text-font-weight: {{ block_title_font_weight }};"
+                >
+                    <span class="text">{{ text | escape }}</span>
+                </div>
+              {%- endif -%}
+              <div class="countdown"></div>
+            </count-down>
+          {%- when 'email_form' -%}
+            {%- liquid
+              assign text = block.settings.block_title
+              assign text_size = block.settings.block_title_font_size
+              assign text_size_mb = block.settings.block_title_font_size_mb
+              assign block_title_color = block.settings.block_title_color
+              assign block_title_font_weight = block.settings.block_title_font_weight
+
+              assign button_label = block.settings.button_label
+              assign button_font_size = block.settings.button_font_size | append: 'px'
+              assign button_width = block.settings.button_width | append: 'px'
+              assign button_text_color = block.settings.button_text_color
+              assign button_border_color = block.settings.button_border_color
+              assign button_background_color = block.settings.button_background_color
+              assign button_gradient_color = block.settings.button_gradient_color
+              assign button_text_color_hover = block.settings.button_text_color_hover
+              assign button_border_color_hover = block.settings.button_border_color_hover
+              assign button_background_color_hover = block.settings.button_background_color_hover
+              assign button_gradient_color_hover = block.settings.button_gradient_color_hover
+  
+              assign input_placeholder = block.settings.input_placeholder
+              assign input_placeholder_color = block.settings.input_placeholder_color
+              assign input_background_color = block.settings.input_background_color
+              assign input_border_color = block.settings.input_border_color
+              assign form_gap = block.settings.form_gap | append: 'px'
+            -%}
+            <details-disclosure class="new-subscriber__item new-subscriber__email" style="--pad-t-xl: 1rem; --pad-b-xl: 1rem">
+              <details id="Details-{{ section.id }}" class="newsletter__details">
+                <summary id="Summary-{{ section.id }}" class="new-subscriber__summary" style="--c-gap-a: 7rem">
+                  <div class="new-subscriber__text"
+                    style="--text-size: {{ text_size | append: 'px' }};
+                    --text-size-mb: {{ text_size_mb | append: 'px' }};
+                    --text-font-weight: {{ block_title_font_weight }};
+                    --color-text: {{ block_title_color }};"
+                  >
+                    <span class="text">{{ text | escape }}</span>
+                  </div>
+                  <span class="button button--{{ settings.button_design_styles }} new-subscriber__button f-w-normal" aria-label="{{ button_label }}" 
+                    style="
+                      --min-h-a: calc(4.8rem + var(--buttons-border-width) * 2);
+                      --button-width: {{ button_width }};
+                      --button-font-size: {{ button_font_size }};
+                      --button-text-color: {% if button_text_color != blank %}{{ button_text_color }}{% endif %};
+                      --button-border-color: {% if button_border_color != blank %}{{ button_border_color }}{% endif %};
+                      --button-background: {% if button_gradient_color != blank %}{{ button_gradient_color }}{% elsif button_background_color != blank %}{{ button_background_color }}{% endif %};
+                      --button-text-color-hover: {% if button_text_color_hover != blank %}{{ button_text_color_hover }}{% endif %};
+                      --button-border-color-hover: {% if button_border_color_hover != blank %}{{ button_border_color_hover }}{% endif %};
+                      --button-background-hover: {% if button_gradient_color_hover != blank %}{{ button_gradient_color_hover }}{% elsif button_background_color_hover != blank %}{{ button_background_color_hover }}{% endif %};"
+                  >
+                    <span>{{ button_label}}</span>
+                  </span>
+                </summary>
+                <div class="new-subscriber__content " id="CollapsibleAccordion-{{ section.id }}" role="region" aria-labelledby="Summary-{{ section.id }}">
+                  {%- form 'customer', class: 'newsletter-form' -%}
+                    <input type="hidden" name="contact[tags]" value="newsletter">
+                    <div class="new-subscriber-form__field-wrapper newsletter-form__field-wrapper" 
+                      style="--placeholder-color: {% if input_placeholder_color != blank %}{{ input_placeholder_color }}{% endif %};
+                        --form-input-bg: {% if input_background_color != blank %}{{ input_background_color }}{% endif %};
+                        --form-gap: {{ form_gap }};
+                        --form-input-border: {% if input_border_color != blank %}{{ input_border_color }}{% endif %};"
+                    >
+                      <div class="new-subscriber-form__field">
+                        <div class="field" style="--c-gap-a: .5rem">
+                          <label class="field__label hiddenLabels" for="NewsletterForm--{{ section.id }}">{{ 'newsletter.label' | t }}</label>
+                          <input
+                            id="NewsletterForm--{{ section.id }}"
+                            type="email"
+                            name="contact[email]"
+                            class="field__input f-grow left form-input-placeholder"
+                            value="{{ form.email }}"
+                            aria-required="true"
+                            autocorrect="off"
+                            autocapitalize="off"
+                            autocomplete="email"
+                            {% if form.errors %}
+                              autofocus
+                              aria-invalid="true"
+                              aria-describedby="Newsletter-error--{{ section.id }}"
+                            {% elsif form.posted_successfully? %}
+                              aria-describedby="Newsletter-success--{{ section.id }}"
+                            {% endif %}
+                            placeholder="{{ input_placeholder }}"
+                            required
+                            style="--pad-r-a: 5rem; --hei-a: 5rem"
+                          >
+                          <div class="effect_placeholder"><span class="input_placeholder" style="font-size: var(--input-text-font-size, var(--font-body-size));">{{ input_placeholder }}</span></div>
+                        </div>
+                        {% comment %} <label class="field__label field__label--fixed pos-absolute e-none" for="NewsletterForm--{{ section.id }}" style="--p-top-a: 1.4rem; --p-left-a: 2rem">{{ 'newsletter.label' | t }}</label> {% endcomment %}
+                        <button type="submit" class="new-subscriber__button f-w-normal button button--{{ settings.button_design_styles }}" name="commit" id="Subscribe--{{ section.id }}" aria-label="{{ 'newsletter.button_label' | t }}" 
+                          style="
+                          --button-width: {{ button_width }};
+                          --button-font-size: {{ button_font_size }};
+                          --button-text-color: {% if button_text_color != blank %}{{ button_text_color }}{% endif %};
+                          --button-border-color: {% if button_border_color != blank %}{{ button_border_color }}{% endif %};
+                          --button-background: {% if button_gradient_color != blank %}{{ button_gradient_color }}{% elsif button_background_color != blank %}{{ button_background_color }}{% endif %};
+                          --button-text-color-hover: {% if button_text_color_hover != blank %}{{ button_text_color_hover }}{% endif %};
+                          --button-border-color-hover: {% if button_border_color_hover != blank %}{{ button_border_color_hover }}{% endif %};
+                          --button-background-hover: {% if button_gradient_color_hover != blank %}{{ button_gradient_color_hover }}{% elsif button_background_color_hover != blank %}{{ button_background_color_hover }}{% endif %};"
+                        >
+                          <span>{{ 'newsletter.button_label' | t }}</span>
+                        </button>
+                      </div>
+                      {%- if form.errors -%}
+                        <small class="newsletter-form__message form__message dis-flex" id="Newsletter-error--{{ section.id }}">
+                          {%- render 'icon-error' -%}
+                          {{- form.errors.translated_fields.email | capitalize }}
+                          {{ form.errors.messages.email -}}
+                        </small>
+                      {%- endif -%}
+                    </div>
+                    {%- if form.posted_successfully? -%}
+                      <h3 class="newsletter-form__message newsletter-form__message--success form__message dis-flex" id="Newsletter-success--{{ section.id }}" tabindex="-1" autofocus>
+                        {% render 'icon-success' -%}
+                        {{- 'newsletter.success' | t }}
+                      </h3>
+                    {%- endif -%}
+                  {%- endform -%}
+                </div>
+              </details>
+            </details-disclosure>
+          {%- endcase -%}
+        {%- endfor -%}
+      </div>
+    </div>
+  </div>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "t:sections.newsletter_with_countdown.name",
+  "max_blocks": 2,
+  "tag": "section",
+  "class": "section-newsletter-countdown",
+  "blocks": [
+  {
+    "type": "heading",
+    "name": "t:sections.newsletter_with_countdown.blocks.text_typing.name",
+    "limit": 1,
+    "settings": [
+    {
+      "type": "text",
+      "id": "text_1",
+      "default": "New subscribers sale 20% off",
+      "label": "t:sections.header.settings.header_top_custom.text_1"
+    },
+    {
+      "type": "text",
+      "id": "text_2",
+      "default": "New collections and exclusive offers",
+      "label": "t:sections.header.settings.header_top_custom.text_2"
+    },
+    {
+      "type": "range",
+      "id": "text_font_size",
+      "label": "t:settings_schema.typography.settings.typography.text_font_size",
+      "min": 10,
+      "max": 80,
+      "step": 1,
+      "default": 32,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "text_font_size_mb",
+      "label": "t:settings_schema.typography.settings.typography.text_font_size_mb",
+      "min": 10,
+      "max": 80,
+      "step": 1,
+      "default": 18,
+      "unit": "px"
+    },
+    {
+      "type": "select",
+      "id": "text_font_weight",
+      "label": "t:settings_schema.typography.settings.typography.text_font_weight",
+      "default": "600",
+      "options": [
+        {
+          "value": "400",
+          "label": "t:settings_schema.typography.settings.font_weight.options__1"
+        },
+        {
+          "value": "500",
+          "label": "t:settings_schema.typography.settings.font_weight.options__2"
+        },
+        {
+          "value": "600",
+          "label": "t:settings_schema.typography.settings.font_weight.options__3"
+        },
+        {
+          "value": "700",
+          "label": "t:settings_schema.typography.settings.font_weight.options__4"
+        },
+        {
+          "value": "800",
+          "label": "t:settings_schema.typography.settings.font_weight.options__5"
+        },
+        {
+          "value": "900",
+          "label": "t:settings_schema.typography.settings.font_weight.options__6"
+        }
+      ]
+    },
+    {
+      "type": "color",
+      "id": "text_title_color",
+      "label": "t:settings_schema.typography.settings.typography.text_color",
+      "default": "#191919"
+    }]
+  },
+  {
+    "type": "countdown",
+    "name": "t:settings_schema.countdown.name",
+    "limit": 1,
+    "settings": [
+    {
+      "type": "text",
+      "id": "block_title",
+      "label": "t:settings_schema.newsletter_popup.settings.general.label__6",
+      "default": "Upcoming Sale"
+    },
+    {
+      "type": "range",
+      "id": "block_title_font_size",
+      "label": "t:settings_schema.typography.settings.typography.title_font_size",
+      "min": 10,
+      "max": 80,
+      "step": 1,
+      "default": 32,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "block_title_font_size_mb",
+      "label": "t:settings_schema.typography.settings.typography.title_font_size_mb",
+      "min": 10,
+      "max": 80,
+      "step": 1,
+      "default": 18,
+      "unit": "px"
+    },
+    {
+      "type": "select",
+      "id": "block_title_font_weight",
+      "label": "t:settings_schema.typography.settings.typography.title_font_weight",
+      "default": "600",
+      "options": [
+        {
+          "value": "400",
+          "label": "t:settings_schema.typography.settings.font_weight.options__1"
+        },
+        {
+          "value": "500",
+          "label": "t:settings_schema.typography.settings.font_weight.options__2"
+        },
+        {
+          "value": "600",
+          "label": "t:settings_schema.typography.settings.font_weight.options__3"
+        },
+        {
+          "value": "700",
+          "label": "t:settings_schema.typography.settings.font_weight.options__4"
+        },
+        {
+          "value": "800",
+          "label": "t:settings_schema.typography.settings.font_weight.options__5"
+        },
+        {
+          "value": "900",
+          "label": "t:settings_schema.typography.settings.font_weight.options__6"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "id": "time",
+      "default": "12\/12\/2025 0:0:00",
+      "label": "t:settings_schema.countdown.settings.general.label__3",
+      "info": "t:settings_schema.countdown.settings.general.info__1"
+    },
+    {
+      "type": "color",
+      "id": "text_title_color",
+      "label": "t:settings_schema.typography.settings.typography.text_color",
+      "default": "#191919"
+    }]
+  },
+  {
+    "type": "email_form",
+    "name": "t:sections.footer.blocks.newsletter.name",
+    "limit": 1,
+    "settings": [
+    {
+      "type": "text",
+      "id": "block_title",
+      "label": "t:settings_schema.newsletter_popup.settings.general.label__6",
+      "default": "Sign up for our newsletter"
+    },
+    {
+      "type": "range",
+      "id": "block_title_font_size",
+      "label": "t:settings_schema.typography.settings.typography.title_font_size",
+      "min": 10,
+      "max": 80,
+      "step": 1,
+      "default": 32,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "block_title_font_size_mb",
+      "label": "t:settings_schema.typography.settings.typography.title_font_size_mb",
+      "min": 10,
+      "max": 80,
+      "step": 1,
+      "default": 18,
+      "unit": "px"
+    },
+    {
+      "type": "color",
+      "id": "block_title_color",
+      "label": "t:settings_schema.typography.settings.typography.title_color",
+      "default": "#191919"
+    },
+    {
+      "type": "select",
+      "id": "block_title_font_weight",
+      "label": "t:settings_schema.typography.settings.typography.title_font_weight",
+      "default": "600",
+      "options": [
+        {
+          "value": "400",
+          "label": "t:settings_schema.typography.settings.font_weight.options__1"
+        },
+        {
+          "value": "500",
+          "label": "t:settings_schema.typography.settings.font_weight.options__2"
+        },
+        {
+          "value": "600",
+          "label": "t:settings_schema.typography.settings.font_weight.options__3"
+        },
+        {
+          "value": "700",
+          "label": "t:settings_schema.typography.settings.font_weight.options__4"
+        },
+        {
+          "value": "800",
+          "label": "t:settings_schema.typography.settings.font_weight.options__5"
+        },
+        {
+          "value": "900",
+          "label": "t:settings_schema.typography.settings.font_weight.options__6"
+        }
+      ]
+    },
+    {
+      "type": "header",
+      "content": "t:sections.newsletter_with_countdown.blocks.email_form.name"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "t:settings_schema.typography.settings.typography.button_text",
+      "default": "Subscribe"
+    },
+    {
+      "type": "range",
+      "id": "button_font_size",
+      "label": "t:settings_schema.typography.settings.typography.button_font_size",
+      "min": 10,
+      "max": 50,
+      "step": 1,
+      "unit": "t:sections.layout.fontsize.fontsize_title.unit",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "button_width",
+      "label": "t:settings_schema.typography.settings.typography.button_width",
+      "min": 100,
+      "max": 600,
+      "step": 5,
+      "unit": "t:sections.layout.mg_desktop.unit",
+      "default": 150
+    },
+    {
+      "type": "color",
+      "id": "button_text_color",
+      "label": "t:settings_schema.typography.settings.typography.button_color",
+      "default": "#fff"
+    },
+    {
+      "type": "color",
+      "id": "button_border_color",
+      "label": "t:sections.rich-text.blocks.button.settings.button_border",
+      "default": "#232323"
+    },
+    {
+      "type": "color",
+      "id": "button_background_color",
+      "label": "t:sections.rich-text.blocks.button.settings.button_bg",
+      "default": "#232323"
+    },
+    {
+      "type": "color_background",
+      "id": "button_gradient_color",
+      "label": "t:sections.rich-text.blocks.button.settings.button_bg_gradient"
+    },
+    {
+      "type": "color",
+      "id": "button_text_color_hover",
+      "label": "t:sections.rich-text.blocks.button.settings.button_color_hover",
+      "default": "#fff"
+    },
+    {
+      "type": "color",
+      "id": "button_border_color_hover",
+      "label": "t:sections.rich-text.blocks.button.settings.button_border_hover",
+      "default": "#232323"
+    },
+    {
+      "type": "color",
+      "id": "button_background_color_hover",
+      "label": "t:sections.rich-text.blocks.button.settings.button_bg_hover",
+      "default": "#232323"
+    },
+    {
+      "type": "color_background",
+      "id": "button_gradient_color_hover",
+      "label": "t:sections.rich-text.blocks.button.settings.button_bg_gradient_hover"
+    },
+    {
+      "type": "text",
+      "id": "input_placeholder",
+      "label": "t:sections.general.settings.article.label__8",
+      "default": "Your email address"
+    },
+    {
+      "type": "color",
+      "id": "input_placeholder_color",
+      "label": "t:settings_schema.colors.settings.colors_placeholder.label",
+      "default": "#191919"
+    },
+    {
+      "type": "color",
+      "id": "input_background_color",
+      "label": "t:sections.footer.blocks.newsletter.settings.input_color_bg",
+      "default": "transparent"
+    },
+    {
+      "type": "color",
+      "id": "input_border_color",
+      "label": "t:sections.footer.blocks.newsletter.settings.input_color_border",
+      "default": "#333333"
+    },
+    {
+      "type": "range",
+      "id": "form_gap",
+      "label": "t:sections.footer.blocks.newsletter.settings.spacing_input",
+      "min": 0,
+      "max": 50,
+      "step": 1,
+      "default": 15,
+      "unit": "px"
+    }]
+  }],
+  "settings": [
+    {
+      "type": "header",
+      "content": "t:settings_schema.general.name"
+    },
+    {
+      "type": "select",
+      "id": "container",
+      "label": "t:sections.layout.container.option",
+      "default": "container",
+      "options": [
+        {
+          "value": "container",
+          "label": "t:sections.layout.container.option1"
+        },
+        {
+            "value": "1170",
+            "label": "t:sections.layout.container.option4"
+        },
+        {
+            "value": "1370",
+            "label": "t:sections.layout.container.option8"
+        },
+        {
+            "value": "1470",
+            "label": "t:sections.layout.container.option5"
+        },
+        {
+            "value": "1570",
+            "label": "t:sections.layout.container.option6"
+        },
+        { 
+            "value": "1770",
+            "label": "t:sections.layout.container.option3"
+        },
+        {
+            "value": "1920",
+            "label": "t:sections.layout.container.option9"
+        },
+        {
+            "value": "full",
+            "label": "t:sections.layout.container.option2"
+        }
+      ]
+    },
+    {
+      "type": "range",
+      "id": "padding_full_width",
+      "label": "t:sections.layout.container.padding_full_width",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "t:sections.layout.fontsize.fontsize_title.unit",
+      "default": 0
+    },
+    {
+      "id": "background",
+      "type": "color",
+      "label": "t:settings_schema.colors.settings.colors_name.background_color_2",
+      "default": "#fff"
+    },
+    {
+      "id": "background_gradient",
+      "type": "color_background",
+      "label": "t:settings_schema.colors.settings.colors_name.background_color_gradient"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.image-banner.blocks.image.settings.content.label__18"
+    },
+    {
+      "type": "select",
+      "id": "justify_section_content",
+      "label": "t:settings_schema.typography.settings.typography.justify_content_desktop",
+      "default": "center",
+      "options": [
+        {
+          "label": "t:sections.image-banner.blocks.smallImg.settings.style.justify_content.option_1",
+          "value": "space-between"
+        },
+        {
+          "label": "t:sections.image-banner.blocks.smallImg.settings.style.justify_content.option_2",
+          "value": "flex-start"
+        },
+        {
+          "label": "t:sections.image-banner.blocks.smallImg.settings.style.justify_content.option_3",
+          "value": "flex-end"
+        },
+        {
+          "label": "t:sections.image-banner.blocks.smallImg.settings.style.justify_content.option_4",
+          "value": "center"
+        }
+      ]
+    },
+    {
+      "type": "range",
+      "id": "section_item_distance",
+      "label": "t:settings_schema.typography.settings.typography.grid_gap",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "t:sections.layout.fontsize.fontsize_title.unit",
+      "default": 20
+    },
+    {
+      "type": "header",
+      "content": "t:sections.layout.margin_top"
+    },
+    {
+      "type": "range",
+      "id": "mg_top_desktop",
+      "label": "t:sections.layout.mg_desktop.label",
+      "min": 0,
+      "max": 200,
+      "step": 5,
+      "unit": "t:sections.layout.mg_desktop.unit",
+      "default": 50
+    },
+    {
+      "type": "range",
+      "id": "mg_top_tablet",
+      "label": "t:sections.layout.mg_tablet.label",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "t:sections.layout.mg_desktop.unit",
+      "default": 50
+    },
+    {
+      "type": "range",
+      "id": "mg_top_mobile",
+      "label": "t:sections.layout.mg_mobile.label",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "t:sections.layout.mg_desktop.unit",
+      "default": 50
+    },
+    {
+      "type": "header",
+      "content": "t:sections.layout.margin_bottom"
+    },
+    {
+      "type": "range",
+      "id": "mg_bottom_desktop",
+      "label": "t:sections.layout.mg_desktop.label",
+      "min": 0,
+      "max": 200,
+      "step": 5,
+      "unit": "t:sections.layout.mg_desktop.unit",
+      "default": 50
+    },
+    {
+      "type": "range",
+      "id": "mg_bottom_tablet",
+      "label": "t:sections.layout.mg_tablet.label",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "t:sections.layout.mg_desktop.unit",
+      "default": 50
+    },
+    {
+      "type": "range",
+      "id": "mg_bottom_mobile",
+      "label": "t:sections.layout.mg_mobile.label",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "t:sections.layout.mg_desktop.unit",
+      "default": 50
+    }
+    ],
+  "presets": [
+    {
+      "name": "t:sections.newsletter_with_countdown.name",
+      "blocks": [
+        {
+          "type": "email_form"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

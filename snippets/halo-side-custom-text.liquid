@@ -1,0 +1,41 @@
+{%- liquid
+    assign heading = block.settings.heading
+    assign text = block.settings.text
+-%}
+<div class="sidebarBlock sidebar-custom-text sidebarBlock-{{show_collapse}}">
+    {%- if show_collapse == 'collapse' or show_collapse == 'slide'  -%}
+        <div class="sidebarBlock-headingWrapper{% if show_collapse == 'slide' %}-slide{% endif %}">
+    {%- endif -%}
+        {%- if heading != blank -%}
+            <h2 class="sidebarBlock-heading{% if show_collapse %}{% if sidebar_collapse == 'expand' %} is-clicked{% endif %}{% endif %}">{{ heading | escape }}</h2>
+        {%- else -%}
+            {%- if show_collapse == 'collapse' or show_collapse == 'slide'  -%}
+                <h2 class="sidebarBlock-heading{% if sidebar_collapse == 'expand' %} is-clicked{% endif %}">BLock Heading</h2>
+            {%- endif -%}
+        {%- endif -%}
+        {%- if show_collapse == 'slide' -%}
+            {% render 'icon-arrow-left' %}
+        {%- endif -%}
+    {%- if show_collapse == 'collapse' or show_collapse == 'slide' -%}
+        </div>
+    {%- endif -%}
+    {%- if show_collapse == 'collapse' -%}
+        <div class="sidebarBlock-contentWrapper" {% if sidebar_collapse == 'expand' %} style="display: block;"{% endif %}>
+    {%- endif -%}
+        <div class="sidebarBlock-content{% if show_collapse == 'slide' %} sidebarBlock-slide__content{% endif %}">
+            {%- if show_collapse == 'slide' -%}
+                <button type="button" class="sidebarBlock-slide__content-close">
+                    {% render 'icon-arrow-left' %}
+                    {%- if heading != blank -%}
+                        {{ heading | escape }}
+                    {%- else -%}
+                        BLock Heading
+                    {%- endif -%}
+                </button>
+            {%- endif -%}
+            <div class="advertisement-text halo-text-format{% if show_collapse == 'slide' %} sidebarBlock-slide__content-list{% endif %}">{{ text }}</div>
+        </div>
+    {%- if show_collapse == 'collapse' -%}
+        </div>
+    {%- endif -%}
+</div>

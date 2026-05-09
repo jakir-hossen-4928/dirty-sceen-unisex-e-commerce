@@ -1,0 +1,660 @@
+<link rel="stylesheet" href="{{ 'component-faqs.css' | asset_url }}" media="print" onload="this.media='all'">
+<noscript>{{ 'component-faqs.css' | asset_url | stylesheet_tag }}</noscript>
+
+{%- if section.blocks.size > 0 -%}
+	<style>
+	    {%- liquid
+	        assign collapsible_bg = section.settings.collapsible_bg
+	        assign collapsible_bg_gradient = section.settings.collapsible_bg_gradient
+
+	        assign color_title = section.settings.color_title
+	        assign fontsize_title = section.settings.fontsize_title
+	        assign fontsize_title_mb = section.settings.fontsize_title_mb
+
+	        assign color_des = section.settings.color_des
+	        assign fontsize_des = section.settings.fontsize_des
+	        assign fontsize_des_mb = section.settings.fontsize_des_mb
+	        assign max_width_des = section.settings.max_width_des
+
+	        assign mg_top_desktop = section.settings.mg_top_desktop
+	        assign mg_top_tablet = section.settings.mg_top_tablet
+	        assign mg_top_mobile = section.settings.mg_top_mobile
+
+	        assign mg_bottom_desktop = section.settings.mg_bottom_desktop
+	        assign mg_bottom_tablet = section.settings.mg_bottom_tablet
+	        assign mg_bottom_mobile = section.settings.mg_bottom_mobile
+
+	        assign image_right = section.settings.image_right
+	        assign enable_image_right = section.settings.enable_image_right
+	        assign bg_content_color = section.settings.bg_content_color
+	        assign title_color = section.settings.title_color
+	        assign content_color = section.settings.content_color
+	        assign icon_color = section.settings.icon_color
+	        assign border_color = section.settings.border_color
+	    -%}
+
+        .section-block-{{section.id}},
+        .section-block-{{section.id}} .halo-block-header .title .text {
+            background: {% if collapsible_bg_gradient != blank %}{{ collapsible_bg_gradient }}{% else %}{{ collapsible_bg }}{% endif %};
+        }
+
+	    .section-block-{{section.id}} .halo-block-header .title {
+	        color: {{ color_title }};
+	        font-size: {{ fontsize_title | append: 'px'  }};
+	        line-height: 1;
+    		margin-bottom: 40px;
+	    }
+
+	    .section-block-{{section.id}} .halo-block-header .title:before {
+	        display: none;
+	    }
+
+	    .section-block-{{section.id}} .halo-block-header .rte {
+	        font-size: {{ fontsize_des | append: 'px' }};
+	        color: {{ color_des }};
+	        max-width: {{ max_width_des | append: 'px' }};
+	    }
+
+	    .section-block-{{section.id}} .halo-block-header.text-right .title {
+	    	display: block;
+	    }
+
+	    .section-block-{{section.id}} .halo-block-header.text-center .rte,
+	    .section-block-{{section.id}} .halo-block-header.text-right .rte {
+	    	display: inline-block;
+	    }
+
+	    .section-block-{{section.id}} .collapsible-content {
+	    	display: flex;
+		    width: 100%;
+		    align-items: flex-start;
+		    justify-content: space-between;
+		    margin-top: 45px;
+	    }
+
+	    .section-block-{{section.id}} .collapsible-grid {
+	    	width: 47.14%;
+	    }
+
+	    .section-block-{{section.id}} .not_image_right .collapsible-grid {
+	    	width: 100%;
+	    }
+
+	    .section-block-{{section.id}} .collapsible-grid .faqs-item {
+	    	background-color: {{ bg_content_color }};
+	    }
+
+	    .section-block-{{section.id}} .collapsible-grid .faqs-item+.faqs-item {
+	    	margin-top: 0;
+	    }
+
+	    .section-block-{{section.id}} .collapsible-grid .collapsible-grid__item {
+	    	border-bottom: 2px solid {{ border_color }};
+	    }
+
+	    .section-block-{{section.id}} .collapsible-grid .card-header {
+	    	border-top: 2px solid {{ border_color }};
+	    }
+
+	    .section-block-{{section.id}} .collapsible-grid .faqs-item .title {
+	    	color: {{ title_color }};
+	    	background-color: transparent;
+	    	padding-left: 0;
+	    	font-size: 20px;
+		    font-weight: 700;
+		    text-transform: uppercase;
+		    padding-top: 30px;
+    		padding-bottom: 30px;
+	    }
+
+	    .section-block-{{section.id}} .collapsible-grid .faqs-item .title:after {
+	    	content: none;
+	    }
+
+	    .section-block-{{section.id}} .collapsible-grid .card-header .arrow{
+	    	border: none;
+		    transform: none;
+		    top: 27%;
+	    }
+
+	    .section-block-{{section.id}} .collapsible-grid .card-header .arrow svg{
+	    	fill: {{ icon_color }};
+		    width: 34px;
+		    height: 34px;
+		    transform: rotate(90deg);
+	    }
+
+	    .section-block-{{section.id}} .collapsible-grid .card-header:not(.collapsed) .arrow svg {
+	    	transform: rotate(-90deg);
+	    }
+
+	    .section-block-{{section.id}} .collapsible-grid .faqs-item .card-body {
+	    	color: {{ content_color }};
+	    	padding-left: 0;
+	    	margin-top: 0;
+	    }
+
+	    .section-block-{{section.id}} .card-body table {
+	    	border-collapse: collapse;
+    		border-spacing: 0;
+    		width: 100%;
+    		margin-bottom: 36px;
+	    }
+
+	    .section-block-{{section.id}} .card-body table tr:nth-child(odd) {
+		    background: #121212;
+		}
+
+		.section-block-{{section.id}} .card-body table td {
+			padding: 16px 10px 14px;
+    		text-align: left;
+		}
+
+		.section-block-{{section.id}} .card-body table tr td:first-child {
+			padding: 16px 30px 14px;
+			max-width: 142px;
+		}
+
+	    .section-block-{{section.id}} .collapsible-image {
+	    	width: calc(52.86% - 129px);
+	    	margin-top: -56px;
+	    	animation: moveUpDown 2s alternate infinite ease-in-out !important;
+    		will-change: transform;
+	    }
+
+	    @media (max-width: 1400px) {
+	    	.section-block-{{section.id}} .collapsible-image {
+		    	width: calc(52.86% - 40px);
+		    	margin-top: -10px;
+		    }
+	    }
+
+	    @media (max-width: 1024px) {
+	    	.section-block-{{section.id}} .collapsible-image {
+		    	width: calc(52.86% - 20px);
+		    	margin-top: 0;
+		    }
+
+	    	.section-block-{{section.id}} .card-body table tr td:first-child {
+				padding: 16px 10px 14px;
+				max-width: 100%;
+			}
+
+			.section-block-{{section.id}} .card-body table {
+	    		margin-bottom: 0;
+		    }
+
+		    .section-block-{{section.id}} .collapsible-grid .card-header .arrow svg{
+			    width: 24px;
+			    height: 24px;
+		    }
+	    }
+
+	    @media (max-width: 991px) {
+	    	.section-block-{{section.id}} .collapsible-content {
+		    	flex-direction: column-reverse;
+		    }
+
+		    .section-block-{{section.id}} .collapsible-image {
+		    	width: 60%;
+                margin-bottom: 60px;
+                margin-left: auto;
+                margin-right: auto;
+		    }
+
+		    .section-block-{{section.id}} .collapsible-grid {
+	    		width: 100%;
+	    	}
+
+	    	.section-block-{{section.id}} .collapsible-image img {
+	    		width: 100%;
+    			margin: 0 auto;
+	    	}
+	    }
+
+	    @media (max-width: 767px) {
+	        .section-block-{{section.id}} {
+	            padding-top: {{ mg_top_mobile | append: 'px' }};
+	            padding-bottom: {{ mg_bottom_mobile | append: 'px' }};
+	        }
+
+	        .section-block-{{section.id}} .halo-block-header .title {
+	            font-size: {{ fontsize_title_mb | append: 'px'  }};
+	            margin-bottom: 20px;
+	        }
+
+	        .section-block-{{section.id}} .halo-block-header .rte {
+		        font-size: {{ fontsize_des_mb | append: 'px' }};
+		        line-height: 24px;
+		    }
+
+            .section-block-{{section.id}} .collapsible-image {
+		    	width: 85%;
+		    }
+
+		    .section-block-{{section.id}} .collapsible-image img {
+	    		width: 100%;
+	    	}
+
+	    	.section-block-{{section.id}} .collapsible-grid .faqs-item .title {
+			    padding-top: 16px;
+	    		padding-bottom: 16px;
+		    }
+
+		    .section-block-{{section.id}} .collapsible-grid .card-header .arrow{
+	    		top: 25%;
+		    }
+
+		    .section-block-{{section.id}} .collapsible-grid .faqs-item .card-body {
+		    	padding-bottom: 20px;
+		    }
+
+		    .cart-count-bubble, .wishlist-count-bubble {
+		    	font-size: calc(var(--font-body-size) - 2px);
+		    }
+	    }
+
+	    @media (min-width: 1200px) {
+	        .section-block-{{section.id}} {
+	            padding-top: {{ mg_top_desktop | append: 'px' }};
+	            padding-bottom: {{ mg_bottom_desktop | append: 'px' }};
+	        }
+	    }
+
+	    @media (min-width: 1025px) {
+	        {% if section.settings.container == 'fullwidth' %}
+	            .section-block-{{section.id}} .container-full {
+	                padding-left: {{ padding_full_width | append: 'px' }};
+	                padding-right: {{ padding_full_width | append: 'px' }};
+	            }
+	        {% endif %}
+	    }
+
+	    @media (min-width: 768px) and (max-width: 1199px) {
+	        .section-block-{{section.id}} {
+	            padding-top: {{ mg_top_tablet | append: 'px' }};
+	            padding-bottom: {{ mg_bottom_tablet | append: 'px' }};
+	        }
+	    }
+	</style>
+    <faqs-item class="halo-collapsible-content section-block-{{section.id}}{% if settings.banner_animation == 'effect_fade_up' %} scroll-trigger animate--slide-in{% endif %}"{% if section.settings.id_section != blank %} id="{{ section.settings.id_section }}"{% else %} id="halo-collapsible-content-{{ section.id }}"{% endif %}>
+    	<div class="{% if section.settings.container == 'fullwidth' %}container-full{% elsif section.settings.container == '1770' %}container-1770{% elsif section.settings.container == '1170' %}container-1170{% else %}container{% endif %}">
+    		 {% if section.settings.collapsible_title != blank or section.settings.collapsible_des != blank %}
+                <div class="halo-block-header text-{{ section.settings.title_align }}">
+                    {% if section.settings.collapsible_title != blank %}
+                        <h3 class="title">
+                            <span class="text">
+                            {{ section.settings.collapsible_title }}
+                            </span>
+                        </h3>
+                    {% endif %}
+                    {% if section.settings.collapsible_des != blank %}
+                        <div class="rte">
+                            {{ section.settings.collapsible_des }}
+                        </div>
+                    {% endif %}
+                </div>
+            {% endif %}
+            <div class="halo-block-content">
+            	<div class="collapsible-content faqs{% unless enable_image_right %} not_image_right{% endunless %}">
+            		<div class="collapsible-grid">
+	            		<div class="collapsible-grid__item">
+	            			{%- for block in section.blocks -%}
+	            				{%- liquid
+            						assign heading = block.settings.heading
+                                    assign content = block.settings.content
+                                    assign content_page = block.settings.page.content
+                                   
+	            				-%}
+	            				{%- if content != blank or content_page != blank -%}
+		            				<div class="faqs-item{% if settings.banner_animation == 'effect_fade_up' %} scroll-trigger animate--slide-in{% endif %}">
+                                        <div class="card" id="#accordion-{{ block.id }}-{{ forloop.index }}">
+                                            <div class="card-header {% unless forloop.first %}collapsed{% endunless %}" id="question-{{ block.id }}-{{ forloop.index }}" data-toggle="collapse" data-target="#collapse-{{ block.id }}-{{ forloop.index }}" aria-expanded="true" aria-controls="collapse-{{ block.id }}-{{ forloop.index }}" role="button">
+                                                <div class="title" role="button" tabindex="0">
+                                                    {{ heading }}
+                                                </div>
+                                                <span class="icon-plus arrow" role="none"><svg aria-hidden="true" focusable="false" role="presentation" data-name="Layer 1" id="Layer_1" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><polygon points="150.46 478 129.86 456.5 339.11 256 129.86 55.49 150.46 34 382.14 256 150.46 478"/></svg></span>
+                                            </div>
+                                            <div id="collapse-{{ block.id }}-{{ forloop.index }}" class="collapse" data-parent="#accordion"{% if forloop.first %} style="max-height: max-content"{% endif %}>
+                                                <div class="card-body" id="answer-{{ block.id }}-{{ forloop.index }}">
+                                                      {{ content }}
+                                                      {{ content_page }}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+		            			{%- endif -%}
+	            			{%- endfor -%}
+	            		</div>
+	            	</div>
+	            	{%- if enable_image_right != blank -%}
+		            	<div class="collapsible-image">
+			            	{%- if image_right != blank -%}
+				                <a class="image image-custom image-adapt adaptive_height{% if settings.banner_animation == 'effect_fade_up' %} scroll-trigger animate--fade-in{% endif %}"{% if button_link_block_bottom == blank %} role="link" aria-disabled="true"{% else %} href="{{ button_link_block_bottom }}"{% endif %} style="padding-top: {% unless image_right.presentation.focal_point == '50.0% 50.0%' %}{{ 1 | divided_by: image_right.aspect_ratio | times: 200 | append: '%' }}{% else %}{{ 1 | divided_by: image_right.aspect_ratio | times: 100 | append: '%' }}{% endunless %}" title="{{ image.alt | default: shop.name | escape }}">
+				                {%- assign preview_img = image_right -%}
+                                {%- assign height_dsk = preview_img.width | divided_by: preview_img.aspect_ratio | round  -%}
+				                <img width="{{preview_img.width}}" height="{{height_dsk}}" {% render 'lazyload',preview_img: preview_img  %} />
+				                {%- if settings.enable_lazyload -%}<span class="data-lazy-loading"></span>{%- endif -%}
+				                </a>
+				            {%- else -%}
+				                <a class="image"{% if button_link_block_bottom == blank %} role="link" aria-disabled="true"{% else %} href="{{ button_link_block_bottom }}"{% endif %}>
+									<div class="placeholder" style="--height_placeholder: clamp(300px, calc(640 / 1920 * 100vw), 640px);">
+										{{ 'detailed-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
+									</div>
+				                </a>
+				            {%- endif -%}
+			            </div>
+		            {%- endif -%}
+            	</div>
+            </div>
+    	</div>
+    </faqs-item>
+{%- endif -%}
+<script src="{{ 'halo-faqs.js' | asset_url }}" defer></script>
+{% schema %}
+	{
+		"name": "t:sections.collapsible_content.name",
+		"settings": [
+			{
+		        "type": "header",
+		        "content": "t:settings_schema.general.name"
+		    },
+		    {
+                "type": "text",
+                "id": "id_section",
+                "label": "t:sections.image-banner.blocks.image.settings.content.id_section",
+                "info": "t:sections.image-banner.blocks.image.settings.content.id_section_note"
+            },
+		    {
+		        "type": "select",
+		        "id": "container",
+		        "label": "t:sections.layout.container.option",
+		        "default": "container",
+		        "options": [
+		            {
+		                "value": "container",
+		                "label": "t:sections.layout.container.option1"
+		            },
+		            {
+		                "value": "1170",
+		                "label": "t:sections.layout.container.option4"
+		            },
+		            {
+		                "value": "1770",
+		                "label": "t:sections.layout.container.option3"
+		            },
+		            {
+		                "value": "fullwidth",
+		                "label": "t:sections.layout.container.option2"
+		            }
+		        ]
+		    },
+		    {
+		        "type": "range",
+		        "id": "padding_full_width",
+		        "label": "t:sections.layout.container.padding_full_width",
+		        "min": 0,
+		        "max": 100,
+		        "step": 5,
+		        "unit": "t:sections.layout.fontsize.fontsize_title.unit",
+		        "default": 0
+		    },
+		    {
+		        "type" : "color",
+		        "id" : "collapsible_bg",
+		        "label" : "t:settings_schema.colors.settings.colors_name.background_color_2",
+		        "default" : "#fff"
+		    },
+		    {
+		        "type" : "color_background",
+		        "id" : "collapsible_bg_gradient",
+		        "label" : "t:settings_schema.colors.settings.colors_name.background_color_gradient"
+		    },
+		    {
+		        "type": "text",
+		        "id": "collapsible_title",
+		        "label": "t:sections.image-banner.blocks.image.settings.content.label__1"
+		    },
+		    {
+		        "type" : "color",
+		        "id" : "color_title",
+		        "label": "t:settings_schema.typography.settings.typography.title_color",
+		        "default" : "#232323"
+		    },
+		    {
+		        "type": "range",
+		        "id": "fontsize_title",
+		        "label": "t:settings_schema.typography.settings.typography.title_font_size",
+		        "min": 10,
+		        "max": 100,
+		        "step": 1,
+		        "unit": "t:sections.layout.fontsize.fontsize_title.unit",
+		        "default": 16
+		    },
+		    {
+		        "type": "range",
+		        "id": "fontsize_title_mb",
+		        "label": "t:settings_schema.typography.settings.typography.title_font_size_mb",
+		        "min": 10,
+		        "max": 50,
+		        "step": 1,
+		        "unit": "t:sections.layout.fontsize.fontsize_title.unit",
+		        "default": 16
+		    },
+		    {
+		        "type" : "inline_richtext",
+		        "id" : "collapsible_des",
+		        "label" : "t:sections.image-banner.blocks.image.settings.content.label__2"
+		    },
+		    {
+		        "type" : "color",
+		        "id" : "color_des",
+		        "label": "t:settings_schema.typography.settings.typography.des_color",
+		        "default" : "#3c3c3c"
+		    },
+		    {
+		        "type": "range",
+		        "id": "fontsize_des",
+		        "label": "t:settings_schema.typography.settings.typography.des_font_size",
+		        "min": 10,
+		        "max": 50,
+		        "step": 1,
+		        "unit": "t:sections.layout.fontsize.fontsize_title.unit",
+		        "default": 16
+		    },
+		    {
+                "type": "range",
+                "id": "fontsize_des_mb",
+                "label": "t:settings_schema.typography.settings.typography.des_font_size_mb",
+                "min": 10,
+                "max": 50,
+                "step": 1,
+                "unit": "t:sections.layout.fontsize.fontsize_title.unit",
+                "default": 12
+            },
+		    {
+                "type": "range",
+                "id": "max_width_des",
+                "label": "t:sections.main-about-page.blocks.content.settings.content_max_width",
+                "min": 100,
+                "max": 1000,
+                "step": 10,
+                "unit": "t:sections.layout.mg_desktop.unit",
+                "default": 700
+            },
+		    {
+		        "type": "select",
+		        "id": "title_align",
+		        "label": "t:sections.general.settings.alignment.label__1",
+		        "options": [
+		        {
+		            "value": "left",
+		            "label": "t:settings_schema.typography.settings.type_button_font.left"
+		        },
+		        {
+		            "value": "center",
+		            "label": "t:settings_schema.typography.settings.type_button_font.center"
+		        },
+		        {
+		            "value": "right",
+		            "label": "t:settings_schema.typography.settings.type_button_font.right"
+		        }],
+		        "default": "center"
+		    },
+		    {
+                "type": "checkbox",
+                "id": "enable_image_right",
+                "label": "t:settings_schema.typography.settings.typography.image_enable",
+                "default": true
+            },
+            {
+                "type" : "image_picker",
+                "id" : "image_right",
+                "label" : "t:sections.header.settings.mega_menu.banner__img"
+            },
+            {
+                "type": "header",
+                "content": "t:sections.customer_review.settings.layout_block.color_content"
+            },
+            {
+                "type" : "color",
+                "id" : "bg_content_color",
+                "label" : "t:settings_schema.colors.settings.colors_name.background_color",
+                "default": "#ffffff"
+            },
+            {
+                "type" : "color",
+                "id" : "content_color",
+                "label" : "t:settings_schema.typography.settings.typography.text",
+                "default": "#232323"
+            },
+            {
+                "type" : "color",
+                "id" : "title_color",
+                "label" : "t:sections.product_block.settings.general.label__6",
+                "default": "#232323"
+            },
+            {
+                "type" : "color",
+                "id" : "icon_color",
+                "label" : "t:settings_schema.typography.settings.typography.icon",
+                "default": "#232323"
+            },
+            {
+                "type" : "color",
+                "id" : "border_color",
+                "label" : "t:settings_schema.typography.settings.typography.border",
+                "default": "#232323"
+            },
+            {
+		        "type": "header",
+		        "content": "t:sections.layout.margin_top"
+		    },
+		    {
+		        "type": "range",
+		        "id": "mg_top_desktop",
+		        "label": "t:sections.layout.mg_desktop.label",
+		        "min": 0,
+		        "max": 200,
+		        "step": 5,
+		        "unit": "t:sections.layout.mg_desktop.unit",
+		        "default": 50
+		    },
+		    {
+		        "type": "range",
+		        "id": "mg_top_tablet",
+		        "label": "t:sections.layout.mg_tablet.label",
+		        "min": 0,
+		        "max": 200,
+		        "step": 5,
+		        "unit": "t:sections.layout.mg_desktop.unit",
+		        "default": 50
+		    },
+		    {
+		        "type": "range",
+		        "id": "mg_top_mobile",
+		        "label": "t:sections.layout.mg_mobile.label",
+		        "min": 0,
+		        "max": 100,
+		        "step": 5,
+		        "unit": "t:sections.layout.mg_desktop.unit",
+		        "default": 50
+		    },
+		    {
+		        "type": "header",
+		        "content": "t:sections.layout.margin_bottom"
+		    },
+		    {
+		        "type": "range",
+		        "id": "mg_bottom_desktop",
+		        "label": "t:sections.layout.mg_desktop.label",
+		        "min": 0,
+		        "max": 200,
+		        "step": 5,
+		        "unit": "t:sections.layout.mg_desktop.unit",
+		        "default": 50
+		    },
+		    {
+		        "type": "range",
+		        "id": "mg_bottom_tablet",
+		        "label": "t:sections.layout.mg_tablet.label",
+		        "min": 0,
+		        "max": 200,
+		        "step": 5,
+		        "unit": "t:sections.layout.mg_desktop.unit",
+		        "default": 50
+		    },
+		    {
+		        "type": "range",
+		        "id": "mg_bottom_mobile",
+		        "label": "t:sections.layout.mg_mobile.label",
+		        "min": 0,
+		        "max": 100,
+		        "step": 5,
+		        "unit": "t:sections.layout.mg_desktop.unit",
+		        "default": 50
+		    }
+		],
+		"blocks": [
+			{
+				"type": "content",
+				"name": "t:sections.collapsible_content.settings.collapsible_row_2",
+				"settings": [
+					{
+			          	"type": "text",
+			          	"id": "heading",
+			          	"default": "Collapsible Row",
+			          	"label": "t:sections.image-banner.blocks.image.settings.content.label__19"
+			        },
+			        {
+			          	"type": "richtext",
+			          	"id": "content",
+			          	"label": "t:sections.main-about-page.blocks.content.settings.information.label__2",
+			          	"default": "<p>Nam tempus turpis at metus scelerisque placerat nulla deumantos solicitud felis. Pellentesque diam dolor, elementum etos lobortis des mollis ut risus. Sedcus faucibus an sullamcorper mattis drostique des commodo pharetras loremos.</p>"
+			        },
+                    {
+                        "type": "page",
+                        "id": "page",
+                        "label": "t:sections.collapsible_content.settings.collapsible_content"
+                    }
+				]
+			}
+		],
+		"presets": [
+			{
+                "name": "t:sections.collapsible_content.settings.collapsible_row",
+                "blocks": [
+                    {
+                        "type": "content"
+                    },
+                    {
+                        "type": "content"
+                    }
+                ]
+            }
+		],
+        "disabled_on": {
+            "groups": ["header", "footer"]
+        }
+	}
+{% endschema %}

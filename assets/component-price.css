@@ -1,0 +1,194 @@
+.price {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.price dl {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.price dd {
+    margin: 0 10px 0 0;
+}
+
+.style-arrows-7 .price dd {
+    margin: 0 5px 0 0;
+}
+
+.price .price__last:last-of-type {
+    margin: 0;
+}
+
+.price__availability,
+.price__regular {
+    display: block;
+}
+
+.price__sale,
+.price__availability,
+.price--on-sale .price__regular,
+.price--on-sale .price__availability,
+.price--no-compare .price__compare {
+    display: none;
+}
+
+.price--on-sale .price__sale {
+    display: flex !important;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.price-style-2.price--on-sale .price__sale {
+    flex-direction: row-reverse;
+    column-gap: 8px;
+}
+
+.price-style-2.price--on-sale .price__sale .price__compare {
+    margin: 0;
+}
+
+.card .card-information__wrapper.text-center .price--on-sale .price__sale.show_saved_price {
+    justify-content: center;
+}
+
+.price--center {
+    display: flex;
+    justify-content: center;
+}
+
+.price-item{
+    display: inline-flex;
+    font-size: var(--product-price-font-size);
+    letter-spacing: var(--product-price-letter-spacing);
+    font-weight: var(--product-price-font-weight);
+    line-height: var(--product-price-line-height);
+}
+
+.price-item .text{
+    display: inline-block;
+    vertical-align: middle;
+    font-family: var(--product-price-font);
+    font-size: var(--font-body-size);
+    font-weight: var(--font-weight-normal);
+    color: var(--product-compare-price-color);
+    letter-spacing: 0;
+    line-height: var(--product-price-line-height);
+    margin: -2px 10px 0 0;
+}
+
+.style-arrows-7 .price-item .text{
+   margin: -2px 2px 0 0;
+   text-transform: lowercase;
+}
+
+.price-item .money{
+    display: inline-block;
+    vertical-align: middle;
+    font-family: var(--product-price-font);
+    font-size: var(--product-price-font-size);
+    font-weight: var(--product-price-font-weight);
+    letter-spacing: var(--product-price-letter-spacing);
+    line-height: var(--product-price-line-height);
+    color: var(--product-price-color);
+}
+
+.unit-price {
+    font-size: calc(var(--font-body-size) - 2px);
+    font-weight: var(--font-weight-normal);
+    color: var(--product-compare-price-color);
+    letter-spacing: var(--body-letter-spacing);
+    line-height: var(--body-line-height);
+    margin-top: 0.2rem;
+    text-transform: uppercase;
+}
+
+.price.price--unavailable {
+    visibility: hidden;
+}
+
+.price.price--end {
+    justify-content: flex-end;
+}
+
+.price-item--sale {
+    color: var(--product-sale-price-color);
+}
+
+.price.price--on-sale .price-item--sale .money{
+    color: var(--product-sale-price-color);
+}
+
+.price.price--on-sale .price-item--regular .money{
+    text-decoration: line-through;
+    /*font-size: calc(var(--font-body-size) + 2px)!important;*/
+    font-weight: var(--font-weight-normal)!important;
+    color: var(--product-compare-price-color);
+}
+
+.price.price--medium .price-item .money{
+    font-size: 18px;
+    letter-spacing: 0;
+}
+
+.price.price--large .price-item .money{
+    font-size: 30px;
+    letter-spacing: -0.04em;
+}
+
+.price.price--large.price--on-sale .price__sale{
+    align-items: center;
+}
+
+.price__last.price_percent{
+    margin-right: 0;
+}
+
+.price__label_sale.price__label_percent {
+    line-height: var(--product-price-line-height);
+    clip-path: unset;
+    height: initial;
+}
+
+.price__label_sale.price__label_percent .label_sale:not(.label_sale_percent){
+    font-size: var(--product-price-font-size);
+    padding: 0;
+}
+
+.template-product .productView-moreItem .price__label_sale.price__label_percent{
+    display: none;
+}
+
+.card .price__saved {
+    display: block;
+    width: 100%;
+    margin: 5px 0 0 0;
+    padding: 0;
+}
+
+.enable_custom_layout_card_1 .card .price__saved {
+    margin: 10px 0 0;
+}
+
+.card .price__saved .price-item {
+    color: #fff;
+    padding: 2px 8px 3px;
+    background-color: var(--product-sale-price-color);
+    border-radius: 5px;
+    line-height: 1;
+    font-weight: var(--font-weight-normal);
+    font-size: calc(var(--product-price-font-size) - 2px);
+}
+
+.card .price__saved .price-item .money {
+    color: #fff;
+    font-weight: var(--font-weight-normal);
+    font-size: calc(var(--product-price-font-size) - 2px);
+    line-height: normal;
+    vertical-align: unset;
+}

@@ -1,0 +1,132 @@
+<newsletter-popup
+  class="halo-popup halo-newsletter-popup style-2"
+  data-newsletter-popup
+  data-delay="{{ settings.newsletter_popup_delay | times:1000 }}"
+  data-expire="{{ settings.newsletter_popup_expire }}"
+  id="halo-newsletter-popup"
+>
+  <div class="overflow-custom">
+    <button
+      type="button"
+      class="halo-popup-close clearfix"
+      data-close-newsletter-popup
+      aria-label="{{ 'general.common.close' | t }}"
+    >
+      {% render 'icon-close' %}
+    </button>
+    <div class="halo-popup-banner">
+      {%- assign image = settings.promotion_popup_image -%}
+      <div class="banner__media">
+        {%- if settings.promotion_popup_image != blank -%}
+        <img srcset="{{ image | img_url: '1000x' }}" src="{{ image | img_url: '1000x' }}"{% if settings.enable_lazyload %} loading="lazy"{% endif %} alt="{{ image.alt | default: shop.name | escape }}">
+        {%- else -%}
+        <div class="placeholder" style="--height_placeholder: 580px;">
+          {{ 'blog-apparel-3' | placeholder_svg_tag: 'placeholder-svg' }}
+        </div>
+        {%- endif -%}
+      </div>
+      <div class="banner__content">
+        <div class="banner__box">
+          {%- if settings.promotion_popup_title != blank -%}
+            <h3 class="newsletter-popup-title text-center">{{ settings.promotion_popup_title }}</h3>
+          {%- endif -%}
+          {%- if settings.promotion_popup_discount_label != blank -%}
+            <span class="halo-popup-desc text-center">
+              <span class="discount_label">{{ settings.promotion_popup_discount_label }}</span>
+              <p class="discount_info">{{ settings.promotion_popup_discount_info }}</p>
+            </span>
+          {%- endif -%}
+          {% if settings.promotion_popup_discount_code_text != blank %}
+            <div class="code-input_wrapper">
+            <div class="code__input">
+              <input
+                class="field__input"
+                type="text"
+                value="{{ settings.promotion_popup_discount_code_text }}"
+                readonly
+              >
+              <button class="button-code--copy">
+                {% render 'icon-copy' %}
+                <span class="tooltip" data-success_message="{{ 'popup.promotion.success_message_copy' | t }}">
+                  {{- 'popup.promotion.copy' | t -}}
+                </span>
+              </button>
+            </div>
+            <div class="code-popup__desc">
+              <p>{{ settings.promotion_popup_discount_code_des }}</p>
+            </div>
+            </div>
+          {% endif %}
+          {% if settings.button_promotion_text != blank %}
+            <a class="button button--primary newsletter-form__button" {% if settings.button_promotion_link == blank %}href="{{ routes.all_products_collection_url }}"{% else %}href="{{ settings.button_promotion_link }}"{% endif %}>
+              {{- settings.button_promotion_text -}}
+            </a>
+          {% endif %}
+          {% if settings.show_social_promotion %}
+            {% render 'halo-social-media-icons' %}
+          {% endif %}
+          {%- if settings.promotion_popup_note != blank -%}
+            <div class="newsletter--checked text-center">
+              <input id="dismiss" type="checkbox" name="dismiss" hidden>
+              <label for="dismiss" class="form-label--checkbox" role="text">
+                {{- settings.promotion_popup_note -}}
+              </label>
+            </div>
+          {%- endif -%}
+        </div>
+      </div>
+    </div>
+    {% if settings.show_recommended_products %}
+      <div class="halo-popup-wrapper">
+        <div class="popup__product">
+          {% if settings.promotion_products_recommended_text != blank %}
+            <h3 class="popup__product-title">{{ settings.promotion_products_recommended_text }}</h3>
+          {% endif %}
+          <div class="products-grid column-2" style="--product-vendor-font-size: 12px;
+                                                    --product-vendor-line-height: 1.3;
+                                                    --product-title-font-size: 16px;
+                                                    --product-title-line-height: 1.3;
+                                                    --product-price-font-size: 14px;
+                                                    --product-price-line-height: 1.3;">
+          {% if settings.promotion_products_recommended_list != blank %}
+              {%- for product in settings.promotion_products_recommended_list -%}
+                <div class="product">
+                  {% render 'promotion-product-card',
+                    product_card_product: product,
+                    portrait_aspect_ratio: portrait_aspect_ratio,
+                    complementary_product_button_atc: true,
+                    serial: forloop.index,
+                    sectionId: section.id,
+                    loading: true
+                  %}
+                </div>
+              {%- endfor -%}
+          {% else %}
+            {%- for i in (1..2) -%}
+            <div class="product{% if swipe %} slider__slide grid__item{% endif %}">
+              {% capture current %}{% cycle 1, 2, 3, 4 %}{% endcapture %}
+              {% render 'product-card-placeholder', index: current %}
+            </div>
+            {%- endfor -%}
+          {% endif %}
+          </div>
+          {% if settings.continue_shopping_label != blank %}
+            <a
+              {% if settings.continue_shopping_link == blank %}
+                href="{{ routes.all_products_collection_url }}"
+              {% else %}
+                href="{{ settings.continue_shopping_link }}"
+              {% endif %}
+              class="button button--primary button-continue"
+            >
+              {{- settings.continue_shopping_label -}}
+              {% render 'icon-arrow-right' %}
+            </a>
+          {% endif %}
+        </div>
+      </div>
+    {% endif %}
+  </div>
+</newsletter-popup>
+
+<script src="{{ 'halo-newsletter-popup.js' | asset_url }}" defer="defer"></script>

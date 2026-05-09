@@ -1,0 +1,143 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-article",
+      "blocks": {
+        "bced6fd1-310d-4026-8786-1f886c51eec2": {
+          "type": "category",
+          "settings": {
+            "heading": "Categories",
+            "type": "1_level",
+            "link_list": "industrial-tool"
+          }
+        },
+        "96861bf3-10df-4b31-82bd-61aee2e9bc30": {
+          "type": "recent_post",
+          "settings": {
+            "heading": "Recent Post",
+            "number": 3
+          }
+        },
+        "441f2329-1d0c-4d63-bcff-c7281f41bf54": {
+          "type": "product_block",
+          "settings": {
+            "heading": "Featured Products",
+            "position": "sidebar",
+            "column": "1",
+            "product_block_collection": "industrial-tool-featured-products-gardening",
+            "product_block_layout": "slider",
+            "product_block_limit": 2,
+            "product_block_dots": false,
+            "product_block_arrows": true
+          }
+        },
+        "c04b7f25-8b25-4edb-a6fc-ed43934d98b4": {
+          "type": "text",
+          "settings": {
+            "heading": "Custom Block",
+            "text": "<p>Custom CMS block displayed at the left sidebar on the Catalog Page. Put your own content here: text, html, images, media... or whatever you like.</p>\n<p>There are many similar sample content placeholders across the store. All editable from admin panel.</p>"
+          }
+        },
+        "73becaeb-c487-4f3b-93aa-39f4bef40c07": {
+          "type": "block_quote",
+          "settings": {
+            "enable_bg_color": true,
+            "bg_color_content": "#fafafa",
+            "title": "Sample Block Quote",
+            "color_title": "#232323",
+            "fontsize_title": 14,
+            "margin_bottom_title": 12,
+            "content": "Praesent vestibulum congue tellus at fringilla. Curabitur vitae semper sem, eu convallis est. Cras felis nunc commodo eu convallis vitae interdum non nisl. Maecenas ac est sit amet augue pharetra convallis.",
+            "color_content": "#3c3c3c",
+            "fontsize_content": 12,
+            "margin_bottom": 40
+          }
+        },
+        "df6f199c-e8b4-46e7-8d3f-12e6302e295c": {
+          "type": "block_quote",
+          "settings": {
+            "enable_bg_color": false,
+            "bg_color_content": "#fafafa",
+            "title": "Sample Paragraph Text",
+            "color_title": "#232323",
+            "fontsize_title": 14,
+            "margin_bottom_title": 12,
+            "content": "Praesent vestibulum congue tellus at fringilla. Curabitur vitae semper sem, eu convallis est. Cras felis nunc commodo eu convallis vitae interdum non nisl. Maecenas ac est sit amet augue pharetra convallis nec danos dui. Cras suscipit quam et turpis eleifend vitae malesuada magna congue. Damus id ullamcorper neque. Sed vitae mi a mi pretium aliquet ac sed elitos. Pellentesque nulla eros accumsan quis justo at tincidunt lobortis deli denimes, suspendisse vestibulum lectus in lectus volutpate.",
+            "color_content": "#3c3c3c",
+            "fontsize_content": 12,
+            "margin_bottom": 40
+          }
+        }
+      },
+      "block_order": [
+        "bced6fd1-310d-4026-8786-1f886c51eec2",
+        "96861bf3-10df-4b31-82bd-61aee2e9bc30",
+        "441f2329-1d0c-4d63-bcff-c7281f41bf54",
+        "c04b7f25-8b25-4edb-a6fc-ed43934d98b4",
+        "73becaeb-c487-4f3b-93aa-39f4bef40c07",
+        "df6f199c-e8b4-46e7-8d3f-12e6302e295c"
+      ],
+      "settings": {
+        "container": "1170",
+        "padding_full_width": 0,
+        "show_breadcrumb": false,
+        "breadcrumb_alignment": "left",
+        "breadcrumb_bg": "rgba(0,0,0,0)",
+        "breadcrumb_gradient": "",
+        "breadcrumb_bg_mb": "#f6f6f6",
+        "breadcrumb_gradient_mb": "",
+        "show_page_title": true,
+        "page_title_alignment": "left",
+        "show_collapse": false,
+        "enable_sticky": false,
+        "sidebar_layout": "layout_1",
+        "sidebar_collapse_default": "expand",
+        "sidebar_position": "left",
+        "sidebar_heading_font": "font_1",
+        "sidebar_heading_font_size": 14,
+        "sidebar_heading_font_weight": "700",
+        "sidebar_heading_text_transform": "uppercase",
+        "show_main_img": false,
+        "show_author": true,
+        "show_date": true,
+        "show_tags": true,
+        "show_share": true,
+        "show_next_prev": true,
+        "background_color": "",
+        "title_font": "font_2",
+        "title_font_size": 18,
+        "title_mobile_font_size": 18,
+        "title_font_weight": "600",
+        "title_text_transform": "capitalize",
+        "title_color": "#232323",
+        "text_font_size": 12,
+        "text_font_weight": "400",
+        "text_text_transform": "none",
+        "text_color": "#3c3c3c",
+        "info_font_size": 12,
+        "info_font_weight": "400",
+        "info_text_transform": "capitalize",
+        "info_font_style": "normal",
+        "info_color": "#999999",
+        "mg_top_desktop": 0,
+        "mg_top_tablet": 0,
+        "mg_top_mobile": 0,
+        "mg_bottom_desktop": 0,
+        "mg_bottom_tablet": 0,
+        "mg_bottom_mobile": 0
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

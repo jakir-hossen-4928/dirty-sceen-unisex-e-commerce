@@ -1,0 +1,14 @@
+{% layout none %}
+
+<div class="product">
+    {% render 'product-grid-layout',
+        product_card_product: product,
+        portrait_aspect_ratio: '125',
+        complementary_product_button_atc: true,
+        serial: 1,
+        sectionId: sectionId,
+        media_size: image_ratio,
+        hasCountdown: hasCountdown,
+        loading: true
+    %}
+</div>

@@ -1,0 +1,15 @@
+<link rel="stylesheet" href="{{ 'component-card-mobile-popup.css' | asset_url }}" media="print" onload="this.media='all'">
+<noscript>{{ 'component-card-mobile-popup.css' | asset_url | stylesheet_tag }}</noscript>
+<div class="halo-popup halo-card-mobile-popup halo-popup-topDown" data-card-mobile-popup id="halo-card-mobile-popup">
+  <div class="halo-popup-wrapper">
+      <h2 class="mobile-popup-header"><span>{{ 'products.product.select_options' | t }}</span><button type="button" data-close-product-list-popup class="close close-modal" aria-label="{{ 'general.common.close' | t }}">{% render 'icon-close' %}</button></h2>
+      <div class="halo-popup-content custom-scrollbar halo-card-mobile-content"></div>
+  </div>    
+</div>
+<script>
+    const closePopupButton = document.querySelector('[data-close-product-list-popup]')
+    closePopupButton.addEventListener('click', (e) => {
+        document.body.classList.remove('quick_shop_popup_mobile');
+        document.querySelector('#halo-card-mobile-popup.show').classList.remove('show');
+    })
+</script>

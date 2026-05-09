@@ -1,0 +1,368 @@
+.newsletter-section-banner-collapsible  {
+    background: var(--footer-top-bg);
+}
+
+.newsletter-section-banner-collapsible .section-content-wrapper {
+    display: flex;  
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    padding-bottom: 130px;
+    width: 100%;
+}
+
+.newsletter-section-banner-collapsible .section-content-wrapper.no-banner {
+    padding-bottom: 0;
+}
+
+.newsletter-section-banner-collapsible .section-content .title {
+    font-size: var(--title-font-size); 
+    color: var(--title-color); 
+    font-weight: var(--title-font-weight);
+    margin-top: 0;
+    margin-bottom: var(--title-margin-bottom);
+    text-transform: var(--title-text-transform);
+    font-style: var(--title-font-style);
+    line-height: 1.26;
+}
+
+.newsletter-section-banner-collapsible .newsletter-form__field-wrapper {
+    display: flex;
+    gap: var(--form-gap);
+}
+
+.newsletter-section-banner-collapsible .newsletter-form__field-wrapper .field {
+    width: var(--input-max-width);
+    max-width: 90%;
+    flex: 1 1;
+}
+    
+.newsletter-section-banner-collapsible .newsletter-form__field-wrapper .field__input {
+    background: var(--input-background);
+    border: 1px solid var(--input-border-color);
+    border-radius: var(--input-border-radius);
+    font-size: var(--input-text-font-size, var(--font-body-size));
+    line-height: var(--btn-1-line-height);
+    position: relative;
+}   
+
+.newsletter-form__field-wrapper .form-input-placeholder::placeholder {
+    color: var(--placeholder-color);
+    opacity: 1;
+}
+
+.newsletter-form__field-wrapper .effect_placeholder {
+    position: absolute;
+    left: 15px;
+    right: 15px;
+    bottom: var(--btn-1-padding-bottom);
+    width: calc(100% - 30px);
+    -webkit-transition: 1.4s;
+    -o-transition: 1.4s;
+    transition: 1.4s;
+    pointer-events: none;
+    white-space: nowrap;
+    overflow: hidden;
+    transition-delay: 300ms;
+    text-align: left;
+}
+
+.newsletter-form__field-wrapper .input_placeholder {
+    pointer-events: none;
+    color: var(--placeholder-color);
+    font-size: var(--input-text-font-size, var(--font-body-size));
+    line-height: var(--btn-1-line-height);
+    width: 100%;
+    display: inline-block;
+    -webkit-transition: 0.7s;
+    -o-transition: 0.7s;
+    transition: 0.7s;
+}
+
+.newsletter-form__field-wrapper .input_placeholder {
+    width: 100%;
+}
+
+.newsletter-form__field-wrapper .field__input:not(:placeholder-shown) + .effect_placeholder .input_placeholder{
+    opacity: 0;
+}
+
+.newsletter-form__field-wrapper .field__input:focus + .effect_placeholder .input_placeholder {
+    opacity: 0;
+    transform: translate(0, 0) scale(1.1);
+    -webkit-transition: 0.7s;
+    -o-transition: 0.7s;
+    transition: 0.7s;
+}
+
+.newsletter-section-banner-collapsible .newsletter-form__button {
+    width: var(--button-width); 
+    font-size: var(--button-font-size);
+    font-weight: var(--button-font-weight);     
+    text-transform: var(--button-text-transform);
+    color: var(--button-text-color);
+    border: 1px solid var(--button-border-color);
+    background: var(--button-background);
+    min-width: unset;
+    max-width: unset;
+    background-origin: border-box;
+}
+
+.btn_1_br_outside .newsletter-section-banner-collapsible .newsletter-form__button span:after {
+    border: 1px solid var(--button-border-color);
+}
+
+.newsletter-section-banner-collapsible .newsletter-form__button svg {
+    fill: var(--button-text-color);
+    width: 26px;
+    height: 26px;
+    position: relative;
+    top: 5px;
+}
+
+.newsletter-section-banner-collapsible .newsletter-form__button:hover {
+    color: var(--button-text-color-hover);
+    border: 1px solid var(--button-border-color-hover);
+    background: var(--button-background-hover);
+    background-origin: border-box;
+}
+
+.btn_1_br_outside .newsletter-section-banner-collapsible .newsletter-form__button:hover span:after {
+    border: 1px solid var(--button-border-color-hover);
+}
+
+.newsletter-section-banner-collapsible .newsletter-form__button:hover svg {
+    fill: var(--button-text-color-hover);
+    top: 0;
+    animation: scrollArrow 1.5s 0.8s infinite
+}
+
+.newsletter-section-banner-collapsible .footer-block__item {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.newsletter-section-banner-collapsible .faqs-item,
+.newsletter-section-banner-collapsible .faqs .faqs-item .card-header .title {
+    background-color: transparent;
+}
+
+.newsletter-section-banner-collapsible .faqs .faqs-item .card-header .title {
+    position: relative;
+    padding: 24px 50px 24px 0;
+    font-weight: var(--font-weight-medium);
+    color: var(--heading_color);
+    border-bottom: 1px solid var(--heading_border_color);
+}
+
+.newsletter-section-banner-collapsible .faqs .faqs-item .card-header .title:before,
+.newsletter-section-banner-collapsible .faqs .faqs-item .card-header .title:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    z-index: 2;
+    transform: translateY(-50%) rotate(0);
+    background-color: var(--icon_color);
+    transition: var(--anchor-transition);
+}
+
+.newsletter-section-banner-collapsible .faqs .faqs-item .card-header .title:before {
+    right: 6px;
+    width: 2px;
+    height: 14px;
+}
+
+.newsletter-section-banner-collapsible .faqs .faqs-item .card-header .title:after {
+    right: 0;
+    left: auto;
+    width: 14px;
+    height: 2px;
+}
+
+.newsletter-section-banner-collapsible .faqs .faqs-item .card-header:not(.collapsed) .title:before {
+    transform: translateY(-50%) rotate(90deg);
+}
+
+.newsletter-section-banner-collapsible .faqs .faqs-item .card-header:not(.collapsed) .title:after {
+    transform: translateY(-50%);
+}
+
+.newsletter-section-banner-collapsible .faqs .faqs-item+.faqs-item {
+    margin-top: 0;
+}
+
+.newsletter-section-banner-collapsible .faqs .faqs-item .card-body {
+    margin-top: 0;
+    padding: 0;
+    font-size: var(--font-body-size);
+}
+
+.newsletter-section-banner-collapsible .newsletter-form__field-wrapper .effect_placeholder {
+    line-height: 1;
+}
+
+@media screen and (max-width: 1300px) {
+    .newsletter-section-banner-collapsible .section-content-wrapper{
+        display: inline-block;
+        font-size: 0;
+        padding-bottom: 60px;
+    }
+
+    .newsletter-section-banner-collapsible .section-content {
+        padding-bottom: 40px;
+    }
+
+    .newsletter-section-banner-collapsible .section-banner,
+    .newsletter-section-banner-collapsible .section-collapsible {
+        display: inline-block;
+        vertical-align: middle;
+        width: 50%;
+    }
+
+    .newsletter-section-banner-collapsible .section-collapsible {
+        padding-left: 30px;
+    }
+
+    .newsletter-section-banner-collapsible .section-banner .slick-dots {
+        bottom: -50px;
+    }
+
+    .newsletter-section-banner-collapsible .section-banner .slick-arrow {
+        display: none !important;
+    }
+
+    .newsletter-section-banner-collapsible .no-banner .section-content,
+    .newsletter-section-banner-collapsible .no-banner .section-banner,
+    .newsletter-section-banner-collapsible .no-banner .section-collapsible,
+    .newsletter-section-banner-collapsible .no-collapsible .section-content,
+    .newsletter-section-banner-collapsible .no-collapsible .section-banner {
+        width: 100%;
+    }
+
+    .newsletter-section-banner-collapsible .no-banner .section-collapsible {
+        padding-left: 0px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .newsletter-section-banner-collapsible .section-content .title {
+        font-size: var(--title-font-size-mb);
+        margin-bottom: var(--title-margin-bottom-mb);
+    }
+
+    .newsletter-section-banner-collapsible .newsletter-form__field-wrapper .field,
+    .newsletter-section-banner-collapsible .section-form-wrapper {
+        width: 100%;
+    }
+}
+                            
+@media screen and (max-width: 767px) {
+    .newsletter-section-banner-collapsible .section-banner, 
+    .newsletter-section-banner-collapsible .section-collapsible {
+        display: block;
+        width: 100%;
+    }
+
+    .newsletter-section-banner-collapsible .section-content-wrapper{
+        padding-bottom: 0;
+    }
+
+    .newsletter-section-banner-collapsible .section-banner {
+        padding-bottom: 60px;
+    }
+
+    .newsletter-section-banner-collapsible .section-collapsible {
+        padding-left: 0;
+    }
+
+    .newsletter-section-banner-collapsible .faqs .faqs-item .card-header .title {
+        padding: 20px 30px 20px 0;
+    }
+}   
+
+@media (max-width: 551px) {
+    .newsletter-section-banner-collapsible .newsletter-form__field-wrapper .effect_placeholder {
+        bottom: 11px;
+    }
+}
+
+@media screen and (min-width: 1300px) {
+    .newsletter-section-banner-collapsible .section-content,
+    .newsletter-section-banner-collapsible .section-collapsible {
+        width: 32%;
+    }
+
+    .newsletter-section-banner-collapsible .section-banner {
+        width: 36%;
+    }
+
+    .newsletter-section-banner-collapsible .section-banner .slick-dots {
+        bottom: -115px;
+    }
+
+    .newsletter-section-banner-collapsible .section-banner .slick-arrow {
+        bottom: -150px;
+        top: auto;
+    } 
+
+    .newsletter-section-banner-collapsible .section-banner .slick-arrow.slick-next {
+        right: 2% !important;
+    }
+
+    .newsletter-section-banner-collapsible .section-banner .slick-arrow.slick-prev {
+        left: 2% !important;
+    }
+
+    .newsletter-section-banner-collapsible .no-banner .section-content,
+    .newsletter-section-banner-collapsible .no-banner .section-banner,
+    .newsletter-section-banner-collapsible .no-collapsible .section-content,
+    .newsletter-section-banner-collapsible .no-collapsible .section-banner {
+        width: 50%;
+    }
+
+    .newsletter-section-banner-collapsible .no-banner.no-collapsible .section-content {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 1500px) {
+    .newsletter-section-banner-collapsible .section-banner .slick-arrow.slick-next {
+        right: 8% !important;
+    }
+
+    .newsletter-section-banner-collapsible .section-banner .slick-arrow.slick-prev {
+        left: 8% !important;
+    } 
+}
+
+@media screen and (min-width: 1800px) {
+    .newsletter-section-banner-collapsible .no-banner .section-content,
+    .newsletter-section-banner-collapsible .no-banner .section-banner,
+    .newsletter-section-banner-collapsible .no-collapsible .section-content,
+    .newsletter-section-banner-collapsible .no-collapsible .section-banner {
+        width: 50%;
+    }
+
+    .newsletter-section-banner-collapsible .no-banner.no-collapsible .section-content {
+        width: 100%;
+    }
+
+    .newsletter-section-banner-collapsible .section-banner .slick-arrow.slick-next {
+        right: 126px !important;
+    }
+
+    .newsletter-section-banner-collapsible .section-banner .slick-arrow.slick-prev {
+        left: 126px !important;
+    }
+}
+
+@media screen and (min-width: 2000px) {
+    .newsletter-section-banner-collapsible .section-content,
+    .newsletter-section-banner-collapsible .section-collapsible {
+        width: 30%;
+    }
+
+    .newsletter-section-banner-collapsible .section-banner {
+        width: 40%;
+    }
+}

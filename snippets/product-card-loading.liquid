@@ -1,0 +1,48 @@
+{%- liquid
+    if settings.show_vendor
+        assign vendor_img_png = product_card_product.vendor | downcase | replace: ' ', '-' | append: '.png' | prepend : 'vendor-'
+        assign vendor_img_jpg = product_card_product.vendor | downcase | replace: ' ', '-' | append: '.jpg' | prepend : 'vendor-'
+        assign vendor_img_webp = product_card_product.vendor | downcase | replace: ' ', '-' | append: '.webp' | prepend : 'vendor-'
+        if images[vendor_img_webp] != blank
+            assign vendor_img = vendor_img_webp
+        elsif images[vendor_img_png] != blank
+            assign vendor_img = vendor_img_png
+        elsif images[vendor_img_jpg] != blank
+            assign vendor_img = vendor_img_jpg
+        endif
+    endif
+-%}
+<div class="product-item product-item-loading{% if settings.banner_animation == 'effect_fade_up' %} scroll-trigger animate--slide-in{% endif %}"{% if settings.banner_animation == 'effect_fade_up' %} data-cascade style="--animation-order: {{ forloop.index }};"{% endif %}>
+    <div class="card">
+        <div class="card-product">
+            <div class="card-product__wrapper">
+                {%- liquid
+                    assign featured_media_aspect_ratio = product_card_product.featured_media.aspect_ratio
+                    if product_card_product.featured_media.aspect_ratio == nil
+                        assign featured_media_aspect_ratio = 1
+                    endif
+                -%}
+                <div class="card-media animated-loading"{% if product_card_product.featured_media %}{% if media_size == 'adapt' %} style="padding-bottom: {{ 1 | divided_by: featured_media_aspect_ratio | times: 100 }}%;"{% elsif media_size == 'square' %} style="padding-bottom: 100%;"{% elsif media_size == 'portrait' %}{% if portrait_aspect_ratio != blank %} style="padding-bottom: {{ portrait_aspect_ratio | append: '%' }};"{% endif %}{% endif %}
+                    {%- else -%} style="padding-bottom: 100%;"{%- endif -%}>
+                </div>
+            </div>
+        </div>
+        <div class="card-information">
+            <div class="card-information__wrapper text-{{ settings.product_content_text_align }}">
+                <div class="card-information__group card-information__group-2">
+                        {%- if settings.show_vendor -%}
+                        {%- if vendor_img != blank -%}
+                            <a class="vendor-image" href="/collections/vendors?q={{ product_card_product.vendor }}" title="{{ product_card_product.vendor }}">
+                                <img src="{{ vendor_img | file_url }}" alt="{{ product_card_product.vendor }}">
+                            </a>
+                        {%- else -%}
+                            {{ product_card_product.vendor | link_to_vendor: class: 'vendor-text' }}
+                        {%- endif -%}
+                        {%- endif -%}
+                        <a class="card-title link-underline{% if settings.product_title_line_text != 'full' %} card-title-ellipsis{% endif %}" href="{{ product_card_product.url }}">{{ product_card_product.title | escape }}</a>
+                    </div>
+                <div class="card-price">{% render 'price', product: product_card_product %}</div>
+            </div>
+        </div>
+    </div>
+</div>

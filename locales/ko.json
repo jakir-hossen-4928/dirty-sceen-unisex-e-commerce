@@ -1,0 +1,895 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin language editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "general": {
+    "breadcrumb": {
+      "home": "집"
+    },
+    "common": {
+      "close": "닫다",
+      "menu": "메뉴",
+      "categories": "카테고리",
+      "log_in": "로그인",
+      "account": "계정",
+      "search": "찾다",
+      "wishlist": "위시리스트",
+      "video": "동영상을 보려면 클릭하세요.",
+      "video_alt": "비디오 대체",
+      "scroll_down": "아래로 스크롤",
+      "lang_cur": "언어/통화 사이드바"
+    },
+    "password_page": {
+      "login_form_heading": "비밀번호를 사용하여 매장에 입장하세요:",
+      "login_password_button": "비밀번호를 사용하여 입력",
+      "login_form_password_label": "비밀번호",
+      "login_form_password_placeholder": "귀하의 비밀번호",
+      "login_form_error": "비밀번호가 틀렸습니다!",
+      "login_form_submit": "입력하다",
+      "modal": "비밀번호 모달",
+      "admin_link_html": "당신이 가게 주인이신가요? <a href=\"/admin\" class=\"link underlined-link\">여기에 로그인하세요</a>",
+      "powered_by_shopify_html": "이 가게는 {{ shopify }}",
+      "label": "조기 접속 로그인",
+      "label_2": "조기 접속 로그인*",
+      "input": "얼리 액세스 비밀번호...",
+      "input_2": "비밀번호를 입력하세요",
+      "submit": "입력하다"
+    },
+    "social": {
+      "alt_text": {
+        "share_on_facebook": "페이스북에 공유",
+        "share_on_twitter": "트위터로 트윗하기",
+        "share_on_pinterest": "핀터레스트에 있는 핀"
+      },
+      "links": {
+        "twitter": "지저귀다",
+        "facebook": "페이스북",
+        "pinterest": "핀터레스트",
+        "instagram": "인스타그램",
+        "tumblr": "텀블러",
+        "snapchat": "스냅챗",
+        "youtube": "유튜브",
+        "vimeo": "비메오",
+        "tiktok": "틱톡",
+        "google_plus": "구글 플러스",
+        "telegram": "전보",
+        "email": "이메일",
+        "whatsapp": "왓츠앱"
+      }
+    },
+    "continue_shopping": "계속 쇼핑하기",
+    "back_to_previous_page": "이전 페이지로 돌아가기",
+    "pagination": {
+      "label": "쪽수 매기기",
+      "page": "페이지 {{ number }}",
+      "next": "다음",
+      "previous": "이전",
+      "prev": "이전"
+    },
+    "search": {
+      "search": "찾다",
+      "title": "찾다",
+      "close": "닫다",
+      "search_product": "제품 검색...",
+      "search_a_product": "제품 검색...",
+      "search_the_store": "매장 검색",
+      "search_the_store_2": "여기에서 전체 매장을 검색하세요...",
+      "im_looking_for": "나는 찾고있다",
+      "label": "라벨 검색",
+      "search_result_title": "제품 결과",
+      "search_no_result": "검색",
+      "search_more": "더 검색해 보세요",
+      "view_all": "모든 결과 보기({{ count }})"
+    },
+    "cart": {
+      "cart": "카트",
+      "shopping_cart": "장바구니",
+      "my_cart": "내 장바구니",
+      "view": "내 장바구니 보기({{ count }})",
+      "item_added": "장바구니에 추가된 상품",
+      "shipping_calculator_button": "배송비 계산",
+      "shipping_calculator_calculating": "계산 중...",
+      "shipping_calculator_error_message": "오류: 올바른 배송 정보를 입력하세요.",
+      "shipping_calculator_success_many_rates": {
+        "there_are": "있다",
+        "shipping_rates_available_for": "배송료 사용 가능",
+        "starting_at": ", 시작 시간:"
+      },
+      "shipping_calculator_success_one_rate": "에 대해 하나의 배송비가 제공됩니다.",
+      "shipping_calculator_success_no_rate": "이 주문과 목적지에는 적용 가능한 배송비가 없습니다.",
+      "shipping_calculator_success_at": "~에",
+      "cart_countdown": "제발, 서둘러! ",
+      "cart_countdown_minutes": "분.",
+      "note": "추가 의견",
+      "note_placeholder": "판매자를 위한 특별 지침...",
+      "secure_text": "안전한 쇼핑 보장",
+      "save": "구하다",
+      "cancel": "취소",
+      "gift_cart_add": "추가하다",
+      "gift_cart_adding": "첨가...",
+      "add_a_gift_wrap": "선물 포장 추가",
+      "order_summary": "주문 요약",
+      "subtotal": "소계",
+      "shipping": "배송 견적 받기:",
+      "coupon_code": "쿠폰 코드",
+      "total": "총:",
+      "coupon_code_text": "쿠폰 코드는 결제 페이지에 적용됩니다.",
+      "estimate_shipping": "예상 배송료",
+      "country": "국가/지역",
+      "state": "상태",
+      "zip_code": "우편 번호",
+      "postal_code": "우편번호",
+      "enter_coupo_code": "쿠폰 코드를 입력하세요",
+      "soldout_text": "매진",
+      "already_text": "모두",
+      "are_saving": "할인:"
+    },
+    "share": {
+      "copy_to_clipboard": "링크 복사",
+      "share": "공유하다",
+      "share_url": "링크",
+      "success_message": "링크가 클립보드에 복사되었습니다!"
+    },
+    "navigation": {
+      "go_to": "이동",
+      "new_label": "새로운",
+      "sale_label": "판매",
+      "hot_label": "더운",
+      "all": "모두"
+    },
+    "button_load_more": {
+      "default": "더 보기",
+      "loading": "로드 중...",
+      "view_all": "모든 컬렉션 보기",
+      "no_more": "더 이상 제품이 없습니다",
+      "no_more_collection": "더 이상 컬렉션이 없습니다."
+    }
+  },
+  "brands_page": {
+    "general": {
+      "az_title": "브랜드 A~Z",
+      "all": "모두"
+    }
+  },
+  "newsletter": {
+    "label": "귀하의 이메일",
+    "placeholder": "이메일 주소를 입력하세요",
+    "placeholder_2": "귀하의 이메일 주소",
+    "success": "구독해주셔서 감사합니다!",
+    "error": "이 이메일은 등록되었습니다!",
+    "button_label": "제출하다",
+    "button_label_2": "가입하세요",
+    "start_now": "지금 시작하세요",
+    "dont_miss_out_this_sale": "이번 세일을 놓치지 마세요"
+  },
+  "accessibility": {
+    "skip_to_text": "콘텐츠로 건너뛰기",
+    "skip_to_product_info": "제품정보로 건너뛰기",
+    "close": "닫다",
+    "unit_price_separator": "당",
+    "vendor": "공급업체:",
+    "error": "오류",
+    "refresh_page": "선택 항목을 선택하면 전체 페이지가 새로 고쳐집니다.",
+    "link_messages": {
+      "new_window": "새 창에서 열립니다.",
+      "external": "외부 웹사이트를 엽니다."
+    },
+    "of": "~의",
+    "next_slide": "오른쪽으로 슬라이드",
+    "previous_slide": "왼쪽으로 슬라이드",
+    "loading": "로드 중..."
+  },
+  "blogs": {
+    "article": {
+      "blog": "블로그",
+      "read_more_title": "더 읽어보세요: {{ title }}",
+      "read_more": "세부정보 보기",
+      "author": "{{ author }}",
+      "comments": {
+        "one": "{{ count }} 논평",
+        "other": "{{ count }} 댓글"
+      },
+      "moderated": "댓글은 게시되기 전에 승인을 받아야 합니다.",
+      "moderated-all": "모든 블로그 댓글은 게시 전에 확인됩니다.",
+      "comment_form_title": "댓글을 남겨주세요",
+      "name": "이름",
+      "email": "이메일",
+      "message": "논평",
+      "post": "댓글 게시",
+      "back_to_blog": "블로그로 돌아가기",
+      "share": "이 기사를 공유하세요",
+      "success": "귀하의 댓글이 성공적으로 게시되었습니다! ",
+      "success_moderated": "귀하의 댓글이 성공적으로 게시되었습니다. ",
+      "on": "~에",
+      "by": "~에 의해",
+      "featured": "특집",
+      "older_post": "이전 게시물",
+      "newer_post": "최신 게시물",
+      "prev_post": "이전 게시물",
+      "next_post": "다음 게시물",
+      "tags": "태그:"
+    }
+  },
+  "onboarding": {
+    "product_title": "제품 제목 예시",
+    "collection_title": "컬렉션 이름"
+  },
+  "products": {
+    "product": {
+      "add_to_cart": "장바구니에 추가",
+      "adding_to_cart": "장바구니에 추가 중...",
+      "add_all_to_cart": "장바구니에 모두 추가",
+      "adding_all_to_cart": "장바구니에 모두 추가 중...",
+      "added_to_cart": "장바구니에 추가됨",
+      "add_to_cart_message": "추가할 제품을 하나 이상 선택해야 합니다!",
+      "add_to_cart_success_message": "장바구니에 추가되었습니다.",
+      "add_to_cart_success_message_2": "제품이 장바구니에 성공적으로 추가되었습니다.",
+      "description": "설명",
+      "on_sale": "판매",
+      "product_variants": "제품 변형",
+      "details": "세부",
+      "submit": "제출하다",
+      "cancel": "취소",
+      "select_variant": "옵션 선택",
+      "more_sizes": "더 많은 크기 사용 가능",
+      "measurements": "측정",
+      "media": {
+        "media_alt": "갤러리 뷰어에 미디어를 로드하고, {{ mediaAlt }}",
+        "video_alt": "갤러리 뷰어에서 비디오를 로드하고, {{ mediaAlt }}",
+        "model_alt": "갤러리 뷰어에서 3D 모델을 로드하고, {{ mediaAlt }}"
+      },
+      "add": {
+        "label": "더 추가",
+        "label__2": "추가하다"
+      },
+      "quantity": {
+        "label": "수량",
+        "label_1": "수량:",
+        "label__2": "수량:",
+        "input_label": "수량 {{ product }}",
+        "increase": "수량 늘리기 {{ product }}",
+        "decrease": "수량 감소 {{ product }}",
+        "minimum_of": "최소 {{ quantity }}",
+        "maximum_of": "최대 {{ quantity }}",
+        "multiples_of": "증분 {{ quantity }}",
+        "min_of": "최소 {{ quantity }}",
+        "max_of": "맥스 {{ quantity }}",
+        "in_cart_html": "<span class=\"quantity-cart\">{{ quantity }}</span> 장바구니에",
+        "note": "수량 규칙 보기"
+      },
+      "volume_pricing": {
+        "title": "볼륨 가격",
+        "note": "대량 가격 책정 가능",
+        "minimum": "{{ quantity }}+",
+        "price_at_each": "~에 {{ price }}/개",
+        "price_range": "{{ minimum }} - {{ maximum }}"
+      },
+      "pickup_availability": {
+        "view_store_info": "매장정보 보기",
+        "check_other_stores": "다른 매장의 재고 확인",
+        "pick_up_available": "픽업 가능",
+        "pick_up_available_at_html": "픽업 가능 장소: <span class=\"strong\">{{ location_name }}</span>",
+        "pick_up_unavailable_at_html": "현재 픽업이 불가능합니다. <span class=\"strong\">{{ location_name }}</span>",
+        "unavailable": "수령 가능 여부를 로드할 수 없습니다.",
+        "refresh": "새로 고치다"
+      },
+      "price": {
+        "from_price_html": "<span class=\"text\">에서</span> {{ price }}",
+        "regular_price": "정가",
+        "sale_price": "판매 가격",
+        "unit_price": "단가",
+        "saved_price_html": "구하다 {{ price }}"
+      },
+      "read_less": "덜 읽으세요",
+      "read_more": "더 읽어보세요",
+      "share": "이 제품을 공유하세요",
+      "sold_out": "매진",
+      "sold_out_message": "이 변형은 매진되었습니다!",
+      "custom": "맞춤 라벨",
+      "new": "새로운",
+      "bundle": "묶음",
+      "unavailable": "없는",
+      "unavailable_message": "이 변형은 사용할 수 없습니다!",
+      "value_unavailable": "{{ option_value }} (없는)",
+      "out_of_stock": "품절",
+      "vendor": "공급업체",
+      "video_exit_message": "{{ title }} 같은 창에서 전체 화면 비디오를 엽니다.",
+      "xr_button": "내 공간에서 보기",
+      "xr_button_label": "귀하의 공간에서 보기, 증강 현실 창에 항목 로드",
+      "pre_order": "선주문",
+      "quick_view": "빠른 보기",
+      "quick_view_2": "빠른 보기",
+      "quick_shop": "빠른 추가",
+      "select": "선택 {{ name }}",
+      "shop_now": "지금 쇼핑하세요",
+      "select_options": "옵션을 선택하세요",
+      "select_options_plus": "+ 옵션 선택",
+      "sub_total": "장바구니에 담기 - {{ value }}",
+      "hot_stock": "서둘러요!  {{ inventory }} 왼쪽",
+      "hot_stock_2": "서둘러주세요!  {{ inventory }} 재고가 남아있습니다",
+      "warning_quantity": "최대 수량: {{ inventory}}",
+      "in_stock": "재고 있음",
+      "many_in_stock": "재고가 많음",
+      "on_sale_text": "판매",
+      "off_text": " 끄다",
+      "description_placeholder": " metus scelerisque placerat nulla deumantos solicitud felis의 Nam tempus turpis. ",
+      "color": "색상:",
+      "hot_stock_text": "뜨거운 주식",
+      "new_arrivals": "새로 도착",
+      "sold_in_last": {
+        "text_1": "지난번에 판매됨",
+        "text_2": "시간"
+      },
+      "text": {
+        "sku": "SKU:",
+        "barcode": "바코드:",
+        "vendor": "공급업체:",
+        "availability": "유효성:",
+        "type": "제품 유형:"
+      },
+      "show_options": "변형 표시",
+      "hide_options": "변형 숨기기",
+      "adding": "첨가",
+      "thank_you": "감사합니다",
+      "add_more": "더 추가",
+      "cart_feedback": "추가됨",
+      "see_details": "전체 세부정보 보기",
+      "bundle_block": {
+        "add_all_to_cart": "장바구니에 모두 추가",
+        "add_item_to_cart": "장바구니에 ([항목]) 항목 추가",
+        "add_items_to_cart": "장바구니에 ([항목]) 항목 추가",
+        "include": "포함하다",
+        "included": "포함",
+        "select_options": "옵션을 선택하세요",
+        "total_price": "총 가격:"
+      },
+      "view_full_details": "전체 세부정보 보기",
+      "step_by_step": {
+        "next": "다음 단계",
+        "previous": "이전 단계"
+      }
+    },
+    "modal": {
+      "label": "미디어 갤러리"
+    }
+  },
+  "portfolio_page": {
+    "general": {
+      "all": "모두"
+    }
+  },
+  "templates": {
+    "404": {
+      "title": "이런! ",
+      "subtext": "404",
+      "description": "죄송합니다! ",
+      "button": "매장으로 돌아가기"
+    },
+    "search": {
+      "no_results": "“에 대한 검색결과가 없습니다.{{ terms }}\". ",
+      "search_result_title_2": "있다 {{ count }} '에 대한 페이지 및 기사{{ terms }}'",
+      "view": "보다 {{ type }}",
+      "page": "페이지",
+      "results_with_count": {
+        "one": "{{ count }} “에 대한 결과를 찾았습니다.{{ terms }}”",
+        "other": "{{ count }} “에 대한 결과를 찾았습니다.{{ terms }}”"
+      },
+      "results_pages_with_count": {
+        "one": "{{ count }} 페이지",
+        "other": "{{ count }} 페이지"
+      },
+      "results_suggestions_with_count": {
+        "one": "{{ count }} 제안",
+        "other": "{{ count }} 제안"
+      },
+      "title": "당사 사이트에서 제품 검색",
+      "search_product_for": "“에 대한 검색결과가 없습니다.{{ terms }}”",
+      "search_product_check": "철자를 확인하거나 다른 단어나 문구를 사용하세요.",
+      "search_for": "“를 검색하세요.{{ terms }}”",
+      "suggestions": "제안",
+      "pages": "페이지"
+    },
+    "cart": {
+      "cart": "카트"
+    },
+    "contact": {
+      "form": {
+        "name": "이름",
+        "email": "이메일",
+        "phone": "전화 번호",
+        "comment": "논평",
+        "send": "연락처 제출",
+        "post_success": "문의해 주셔서 감사합니다. ",
+        "error_heading": "다음을 조정해 주세요:"
+      }
+    }
+  },
+  "faqs": {
+    "general": {
+      "all": "모두",
+      "filter": "주제별로 필터링"
+    }
+  },
+  "portfolio": {
+    "filter": "필터",
+    "close": "닫다",
+    "tab_all": "모든 갤러리를 표시하려면 탭하세요.",
+    "tab": "갤러리를 필터링하려면 탭하세요."
+  },
+  "sections": {
+    "header": {
+      "announcement": "발표",
+      "menu": "메뉴",
+      "cart_count": {
+        "one": "{{ count }} 목",
+        "other": "{{ count }} 아이템"
+      }
+    },
+    "term_condition": "이용약관",
+    "cart": {
+      "title": "장바구니",
+      "caption": "장바구니 항목",
+      "checkout": "점검",
+      "proceed_to_checkout": "결제를 진행하세요",
+      "my_cart": "장바구니",
+      "items": "아이템",
+      "item": "목",
+      "item_99": "99+",
+      "view_cart": "장바구니 보기",
+      "edit_title": "제거하다 {{ title }}",
+      "edit_cart_title": "편집 옵션",
+      "remove_title": "제거하다 {{ title }}",
+      "items_in_your_cart": "{{ count }} 장바구니에 담긴 품목",
+      "subtotal": "소계",
+      "new_subtotal": "새로운 소계",
+      "note": "특별 지침 주문",
+      "continue_shopping": "계속 쇼핑하기",
+      "shipping": "해운",
+      "shipping_text": "세금 및 배송비는 결제 시 계산됩니다.",
+      "empty": "장바구니가 비어 있습니다.",
+      "title_collection": "당신은 또한 좋아할 수도 있습니다",
+      "cart_error": "장바구니를 업데이트하는 중에 오류가 발생했습니다. ",
+      "cart_quantity_error_html": "장바구니에는 이 품목의 [수량]만 추가할 수 있습니다.",
+      "cart_quantity_error_alert": "추가만 가능합니다 {{maxQuantity}} 이 제품을 장바구니에 담으세요",
+      "cart_quantity_error_alert_2": "본 상품의 수량이 부족합니다.",
+      "quick_cart": "퀵카트",
+      "taxes_and_shipping_policy_at_checkout_html": "세금 및 <a href=\"{{ link }}\">해운</a> 결제 시 계산됨",
+      "taxes_included_but_shipping_at_checkout": "세금 포함 및 배송비는 결제 시 계산됩니다.",
+      "taxes_included_and_shipping_policy_html": "세금이 포함되어 있습니다. <a href=\"{{ link }}\">해운</a> 결제 시 계산됩니다.",
+      "taxes_and_shipping_at_checkout": "결제 시 계산되는 세금 및 배송비",
+      "taxes_included_shipping_at_checkout_without_policy": "세금이 포함되어 있습니다. ",
+      "duties_and_taxes_included_shipping_at_checkout_with_policy_html": "관세 및 세금이 포함되어 있습니다.  <a href=\"{{ link }}\">해운</a> 결제 시 계산됩니다.",
+      "duties_and_taxes_included_shipping_at_checkout_without_policy": "관세 및 세금이 포함되어 있습니다. ",
+      "taxes_included_shipping_at_checkout_with_policy_html": "세금이 포함되어 있습니다.  <a href=\"{{ link }}\">해운</a> 결제 시 계산됩니다.",
+      "duties_included_taxes_at_checkout_shipping_at_checkout_with_policy_html": "관세가 포함되어 있습니다.  <a href=\"{{ link }}\">해운</a> 결제 시 계산됩니다.",
+      "duties_included_taxes_at_checkout_shipping_at_checkout_without_policy": "관세가 포함되어 있습니다. ",
+      "taxes_at_checkout_shipping_at_checkout_with_policy_html": "세금, 할인 및 <a href=\"{{ link }}\">해운</a> 결제 시 계산됩니다.",
+      "taxes_at_checkout_shipping_at_checkout_without_policy": "세금, 할인, 배송비는 결제 시 계산됩니다.",
+      "headings": {
+        "product": "제품",
+        "price": "가격",
+        "total": "총",
+        "quantity": "수량"
+      },
+      "update": "업데이트",
+      "upsell": "다음 품목이 장바구니에 추가되었습니다:",
+      "your_order": "귀하의 주문",
+      "more_than_99": "99+"
+    },
+    "footer": {
+      "payment": "결제 방법"
+    },
+    "featured_blog": {
+      "view_all": "모두 보기",
+      "onboarding_title": "블로그 게시물",
+      "onboarding_content": "고객에게 블로그 게시물 요약을 제공하세요."
+    },
+    "featured_collection": {
+      "view_all": "모두 보기",
+      "view_all_label": "모든 제품 보기 {{ collection_name }} 수집"
+    },
+    "collection_list": {
+      "title": "컬렉션",
+      "view_all": "모두 보기",
+      "shop_the_collection": "컬렉션 쇼핑하기",
+      "count": "{{ count }} 제품"
+    },
+    "collection_template": {
+      "all_tags": "모든 제품",
+      "apply": "적용하다",
+      "clear": "분명한",
+      "clear_all": "모두 지우기",
+      "empty": "제품을 찾을 수 없습니다",
+      "end_count": " ~의 {{ count }} 총",
+      "from": "에서",
+      "filter_and_sort": "필터링 및 정렬",
+      "filter_by_label": "필터링 기준",
+      "filter_button": "필터",
+      "filters_selected": "{{ count }} 선택된",
+      "product_count_simple": {
+        "one": "{{ count }} 제품",
+        "other": "{{ count }} 제품"
+      },
+      "item_per_page": "페이지당 항목",
+      "load_more": "더 로드하기",
+      "show_more": "더 보기",
+      "show_less": "간략히 보기",
+      "show_all": "모두 표시",
+      "loading_more": "더 로드 중",
+      "no_more": "더 이상 제품이 없습니다",
+      "max": "맥스",
+      "max_price": "가장 높은 가격은 {{ price }}",
+      "min": "최소",
+      "product_count": "전시 {{ count }} ~의 {{ total }} 제품",
+      "read_more": "더 읽어보세요",
+      "read_less": "덜 읽으세요",
+      "refined_by": "정제자",
+      "reset": "분명한",
+      "start_count": "전시",
+      "sort_button": "종류",
+      "sort_by_label": "정렬 기준",
+      "title": "수집",
+      "to": "에게",
+      "use_fewer_filters_html": "더 적은 수의 필터를 사용하거나 <a class=\"{{ class }}\" href=\"{{ link }}\">모두 지우기</a>",
+      "view_as": "다음으로 보기",
+      "image": "이미지",
+      "product": "제품",
+      "price": "가격",
+      "qty": "수량",
+      "options": "옵션",
+      "show_variants": "변형 표시",
+      "results": "결과"
+    },
+    "collection_list_template": {
+      "product_count": "{{ count }} 제품"
+    },
+    "sidebar": {
+      "title": "사이드바"
+    },
+    "quick_order_list": {
+      "product_total": "제품 소계",
+      "view_cart": "장바구니 보기",
+      "each": "/개",
+      "product": "제품",
+      "variant": "변종",
+      "variant_total": "변형 합계",
+      "items_added": {
+        "one": "{{ quantity }} 항목이 추가됨",
+        "other": "{{ quantity }} 추가된 항목"
+      },
+      "items_removed": {
+        "one": "{{ quantity }} 삭제된 항목",
+        "other": "{{ quantity }} 제거된 항목"
+      },
+      "product_variants": "제품 변형",
+      "total_items": "총 품목",
+      "remove_all_single_item_confirmation": "장바구니에서 항목 1개를 삭제하시겠습니까?",
+      "remove_all_items_confirmation": "모두 제거 {{ quantity }} 장바구니에 담긴 상품이 있나요?",
+      "remove_all": "모두 제거",
+      "cancel": "취소",
+      "min_error": "이 항목은 최소 {{ min }}",
+      "max_error": "이 항목의 최대 개수는 다음과 같습니다. {{ max }}",
+      "step_error": "이 항목은 다음 단위로만 추가할 수 있습니다. {{ step }}"
+    }
+  },
+  "localization": {
+    "country_label": "국가/지역",
+    "language_label": "언어",
+    "update_language": "언어 업데이트",
+    "update_country": "국가/지역 업데이트"
+  },
+  "currency": {
+    "change_text": "상점의 통화가 다음으로 변경되었습니다.",
+    "currency": "통화"
+  },
+  "customer": {
+    "account": {
+      "welcome": "안녕, {{ name }}",
+      "title": "계정",
+      "my_account": "내 계정",
+      "details": "계정 세부정보",
+      "view_addresses": "주소 보기",
+      "return": "계정 세부정보로 돌아가기"
+    },
+    "account_fallback": "계정",
+    "activate_account": {
+      "title": "계정 활성화",
+      "subtext": "계정을 활성화하려면 비밀번호를 만드세요.",
+      "password": "비밀번호",
+      "password_confirm": "비밀번호 확인",
+      "submit": "계정 활성화",
+      "cancel": "초대 거절"
+    },
+    "addresses": {
+      "title": "구애",
+      "default": "기본",
+      "address_book": "고객 주소록",
+      "add_new": "새 주소 추가",
+      "edit_address": "주소 수정",
+      "first_name": "이름",
+      "last_name": "성",
+      "company": "회사",
+      "address1": "주소 1",
+      "address2": "주소 2",
+      "city": "도시",
+      "country": "국가/지역",
+      "province": "주",
+      "zip": "우편번호",
+      "phone": "핸드폰",
+      "set_default": "기본 주소로 설정",
+      "add": "주소 추가",
+      "update": "주소 업데이트",
+      "cancel": "취소",
+      "edit": "편집하다",
+      "delete": "제거하다",
+      "delete_confirm": "이 주소를 삭제하시겠습니까?",
+      "none": "집과 직장 주소를 아직 설정하지 않았다면 설정하세요."
+    },
+    "forgot_password": "비밀번호를 잊으셨나요?",
+    "log_in": "로그인",
+    "sign_in": "로그인",
+    "or": "또는",
+    "create_account": "계정 만들기",
+    "log_out": "로그아웃",
+    "hello": "안녕하세요",
+    "my_account": "내 계정",
+    "login_page": {
+      "cancel": "취소",
+      "create_account": "계정 만들기",
+      "email": "이메일 주소",
+      "forgot_password": "비밀번호를 분실하셨나요?",
+      "guest_continue": "계속하다",
+      "guest_title": "게스트로 계속하기",
+      "password": "비밀번호",
+      "title": "로그인",
+      "sign_in": "로그인",
+      "submit": "제출하다",
+      "register": "등록하다",
+      "text": "귀하의 계정에 접속하려면 아래에 귀하의 이메일과 비밀번호를 입력하십시오"
+    },
+    "order": {
+      "title": "주문하다 {{ name }}",
+      "date_html": "다음에 배치됨 {{ date }}",
+      "cancelled_html": "주문 취소 날짜 {{ date }}",
+      "cancelled_reason": "이유: {{ reason }}",
+      "billing_address": "청구서 수신 주소",
+      "payment_status": "결제 상태",
+      "shipping_address": "배송 주소",
+      "fulfillment_status": "이행 상태",
+      "discount": "할인",
+      "shipping": "해운",
+      "tax": "세",
+      "product": "제품",
+      "sku": "SKU",
+      "price": "가격",
+      "quantity": "수량",
+      "total": "총",
+      "fulfilled_at_html": "이행됨 {{ date }}",
+      "track_shipment": "배송 추적",
+      "tracking_url": "추적 링크",
+      "tracking_company": "담체",
+      "tracking_number": "추적 번호",
+      "subtotal": "소계"
+    },
+    "orders": {
+      "title": "주문 내역",
+      "order_number": "주문하다",
+      "order_number_link": "주문 번호 {{ number }}",
+      "date": "날짜",
+      "payment_status": "결제 상태",
+      "fulfillment_status": "이행 상태",
+      "total": "총",
+      "none": "아직 주문하지 않으셨습니다."
+    },
+    "recover_password": {
+      "title": "비밀번호 재설정",
+      "subtext": "비밀번호 재설정을 위한 이메일을 보내드리겠습니다.",
+      "success": "비밀번호를 업데이트할 수 있는 링크가 포함된 이메일을 보내드렸습니다."
+    },
+    "register": {
+      "title": "계정 만들기",
+      "first_name": "이름",
+      "last_name": "성",
+      "email": "이메일",
+      "you_email": "귀하의 이메일 주소",
+      "password": "비밀번호",
+      "you_password": "귀하의 비밀번호",
+      "register": "등록하다",
+      "submit": "계정 만들기",
+      "text": "계정을 만들려면 아래에서 등록하세요.",
+      "subscribe": "이메일 마케팅 구독"
+    },
+    "reset_password": {
+      "title": "계정 비밀번호 재설정",
+      "subtext": "다음에 대한 새 비밀번호를 입력하세요. {{ email }}",
+      "password": "비밀번호",
+      "password_confirm": "비밀번호 확인",
+      "submit": "비밀번호 재설정"
+    }
+  },
+  "gift_cards": {
+    "issued": {
+      "title": "여기 당신의 {{ value }} 기프트 카드 {{ shop }}!",
+      "subtext": "귀하의 기프트 카드",
+      "gift_card_code": "기프트 카드 코드",
+      "shop_link": "계속 쇼핑하기",
+      "remaining_html": "남은 {{ balance }}",
+      "add_to_apple_wallet": "애플 지갑에 추가",
+      "qr_image_alt": "QR 코드 — 스캔하여 기프트 카드 교환",
+      "copy_code": "코드 복사",
+      "expired": "만료됨",
+      "copy_code_success": "코드가 성공적으로 복사되었습니다.",
+      "print_gift_card": "인쇄"
+    }
+  },
+  "wishlist": {
+    "general": {
+      "wishlist": "위시리스트",
+      "title": "내 위시리스트",
+      "text_icon": "내 위시리스트",
+      "added": "위시리스트에 추가됨",
+      "product_image": "영상",
+      "product_name": "제품명",
+      "price": "가격",
+      "add_1": "추가하다",
+      "add": "위시리스트에 추가",
+      "remove": "제거하다",
+      "share": "내 위시리스트를 이메일로 공유하세요",
+      "empty": "위시리스트에 추가된 제품이 없습니다.",
+      "continue_shopping": "계속 쇼핑하기"
+    }
+  },
+  "compare": {
+    "general": {
+      "title": "비교하다",
+      "add": "비교에 추가",
+      "added": "비교를 위해 추가됨",
+      "remove_compare": "비교 삭제",
+      "remove_all": "모두 제거",
+      "product": "제품",
+      "sku": "SKU",
+      "review": "평가",
+      "description": "설명",
+      "collection": "수집",
+      "availability": "유효성",
+      "product_type": "제품 유형",
+      "other_details": "기타 세부사항",
+      "message": "비교할 제품을 2개 이상 선택해야 합니다!"
+    }
+  },
+  "someone_purcharse": {
+    "general": {
+      "text_1": "최근에 누군가가 구매한",
+      "ago": "전에,",
+      "from": "~에서"
+    }
+  },
+  "before_you_leave": {
+    "general": {
+      "recommended_product": "추천",
+      "back_to_store": "매장으로 돌아가기",
+      "continue_shopping": "계속 쇼핑하기"
+    }
+  },
+  "recently_viewed": {
+    "general": {
+      "product_title": "최근 본",
+      "no_product": "죄송합니다. 상품이 없습니다.",
+      "share_title": "사회의",
+      "newsletter": "뉴스레터 가입"
+    }
+  },
+  "calculator_free_shipping_message": {
+    "general": {
+      "free_shipping_message": "이상 주문 시 무료 배송",
+      "free_shipping_message_1": "무료 배송 혜택을 받으실 수 있습니다!",
+      "free_shipping_message_2": "오직",
+      "free_shipping_message_3": "멀리 떨어져",
+      "free_shipping_message_4": "무료 배송",
+      "free_shipping_1": "무료",
+      "free_shipping_2": "미정"
+    }
+  },
+  "notify_form": {
+    "general": {
+      "label": "나에게 알림",
+      "title": "이메일을 남겨주시면 제품/변형 상품이 재입고되는 대로 알려드리겠습니다.",
+      "placeholder": "이메일을 입력하세요",
+      "submit": "구독하다",
+      "success": "감사해요! ",
+      "error": "john@example.com과 같은 유효한 이메일 주소를 사용하세요."
+    }
+  },
+  "ask_an_expert": {
+    "general": {
+      "text": "전문가에게 물어보세요",
+      "name": "당신의 이름",
+      "mail": "귀하의 메일",
+      "phone": "귀하의 휴대전화",
+      "message": "오늘은 무엇을 도와드릴까요?",
+      "submit": "질문 보내기",
+      "success": "감사합니다. ",
+      "button": "전문가 양식을 요청하려면 클릭하세요."
+    }
+  },
+  "countdown": {
+    "general": {
+      "text": "기간 한정 혜택, 끝자리:",
+      "day": "디",
+      "hour": "시간",
+      "min": "중",
+      "sec": "에스",
+      "d": "디",
+      "h": "시간",
+      "m": "중",
+      "s": "에스",
+      "day_2": "날",
+      "hour_2": "시간",
+      "min_2": "분",
+      "sec_2": "초",
+      "days": "날",
+      "hours": "시간",
+      "mins": "분",
+      "secs": "초"
+    }
+  },
+  "customer_viewing": {
+    "general": {
+      "text": "{{ number }} 고객이 이 제품을 보고 있습니다."
+    }
+  },
+  "size_chart": {
+    "general": {
+      "title": "사이즈 차트",
+      "text": "사이즈 가이드"
+    }
+  },
+  "compare_color": {
+    "general": {
+      "title": "색상 비교",
+      "text": "비교하려면 색상/패턴을 클릭하고, 이미지를 클릭하고 드래그하여 재정렬하세요."
+    }
+  },
+  "lookbook": {
+    "view_all": "전체 모습 보기",
+    "shop_look": "룩 쇼핑하기"
+  },
+  "bulk_editor_page": {
+    "general": {
+      "all_collection": "모든 제품",
+      "select_collection": "카테고리 선택",
+      "submit": "편집자 제출",
+      "edit_metafields": "제품의 메타필드를 편집합니다."
+    }
+  },
+  "find_a_store": {
+    "no_stores": "죄송합니다. 지금 매장 프레젠테이션 작업 중입니다! "
+  },
+  "recipient": {
+    "form": {
+      "checkbox": "이거 선물로 보내고 싶어요",
+      "email_label": "수신자 이메일",
+      "email_label_optional": "수신자 이메일(선택사항)",
+      "email": "이메일",
+      "name_label": "수신자 이름(선택사항)",
+      "name": "이름",
+      "message_label": "메시지(선택사항)",
+      "message": "메시지",
+      "max_characters": "{{ max_chars }} 최대 문자 수",
+      "send_on": "YYYY-MM-DD",
+      "send_on_label": "보내기(선택사항)"
+    }
+  },
+  "popup": {
+    "promotion": {
+      "copy": "복사",
+      "success_message_copy": "복사됨"
+    }
+  }
+}

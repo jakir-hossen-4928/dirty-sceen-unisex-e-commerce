@@ -1,0 +1,204 @@
+.marquee {
+    display: flex;
+    overflow: hidden;
+    background: var(--background);
+    padding-top: var(--padding-top);
+    padding-bottom: var(--padding-bottom);
+    position: relative;
+    z-index: 2;
+    margin-bottom: var(--minus-spacing-bottom);
+}
+
+.marquee .center-banner {
+    position: absolute;
+    top: 0;
+    width: fit-content;
+    height: 100%;
+    z-index: 2;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.marquee .center-banner img {
+    height: 100%;
+    width: auto;
+}
+
+body.layout_rtl .marquee {
+    direction: ltr;
+}
+
+.marque-border--top {
+    border-top: 1px solid var(--border-color-mb);
+}
+
+.marque-border--bottom {
+    border-bottom: 1px solid var(--border-color-mb);
+}
+
+.marque-border--top_bottom {
+    border-top: 1px solid var(--border-color-mb);
+    border-bottom: 1px solid var(--border-color-mb);
+}
+
+.marquee__list {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    will-change: transform;
+    animation-delay: 2s;
+}
+
+.marquee.active-screen .marquee__list {
+    animation: marquee var(--time-scroll) infinite linear;
+}
+
+.marquee__icon {
+    padding: 0 var(--gap-blocks);
+    transition: all 0.2s ease-in-out;
+}
+
+.marquee__icon .icon {
+    fill: var(--icon-color-mb);
+    width: 24px;
+    height: 24px;
+}
+
+.marquee__icon .icon.icon-dot {
+    width: 20px;
+    height: 20px;
+}
+
+.marquee__item {
+    font-family: var(--font-tab);
+    color: var(--color-mb);
+    -webkit-text-stroke: 1px var(--stroke_color_mb);
+    font-weight: var(--font-weight);
+    position: relative;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+    font-size: var(--text-size-mb);
+    line-height: var(--text-line-height-mb);
+    padding: 0 var(--gap-blocks);
+    letter-spacing: var(--letter-spacing);
+}
+
+.marquee__item:has(svg) {
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+}
+
+.marquee__item.bg_color {
+    background-color: var(--bg-color);
+    padding: 8px 15px 10px;
+    border-radius: 8px;
+    letter-spacing: -.03em;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.marquee__item p {
+    margin: 0;
+}
+
+.marquee__item svg {
+    width: var(--icon_width);
+    height: var(--icon_height);
+}
+
+.marquee__item .border {
+    display: block;
+    border-width: var(--border_width);
+    border-color: var(--border_color);
+}
+
+.marquee__item .border-bottom {
+    border-bottom-style: solid;
+    padding: var(--align_items_spacing_tb) 0;
+}
+
+.marquee__item .border-all {
+    border-style: solid;
+    padding: var(--align_items_spacing_tb) var(--align_items_spacing_lr);
+    border-radius: var(--border_radius);
+}
+
+@media screen and (min-width: 1200px) {
+    .marquee {
+        margin-top: var(--minus-spacing-top);
+    }
+
+    .marquee:hover .marquee__list {
+        animation-play-state: paused;
+    }
+
+    .marquee__item:hover {
+        transition: all 0.2s ease-in-out;
+    }
+
+    .marque-border--top {
+        border-top: 1px solid var(--border-color);
+    }
+    
+    .marque-border--bottom {
+        border-bottom: 1px solid var(--border-color);
+    }
+    
+    .marque-border--top_bottom {
+        border-top: 1px solid var(--border-color);
+        border-bottom: 1px solid var(--border-color);
+    }
+
+    .marquee__icon .icon {
+        fill: var(--icon-color);
+    }
+
+    .marquee__item {
+        color: var(--color);
+        -webkit-text-stroke: 1px var(--stroke_color);
+        font-size: var(--text-size);
+        line-height: var(--text-line-height);
+    }
+
+    .marquee__item.bg_color {
+        padding: 18px 26px 19px;
+        margin-left: 29px;
+        margin-right: 26px;
+    }
+}
+
+@media screen and (max-width: 1199px) {
+    .marquee {
+        padding-top: var(--padding-top-tablet);
+        padding-bottom: var(--padding-bottom-tablet);
+    }
+
+    .marque-border--bottom.marquee {
+        padding-bottom: calc(var(--padding-bottom-tablet) - 1px);
+    }
+
+    .marquee.thunder_light {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .marquee__item svg {
+        width: var(--icon_width_mb);
+        height: var(--icon_height_mb);
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .marquee {
+        padding-top: var(--padding-top-mobile);
+        padding-bottom: var(--padding-bottom-mobile);
+    }
+
+    .marquee.thunder_light {
+        padding-top: 55px;
+        padding-bottom: 55px;
+    }
+}

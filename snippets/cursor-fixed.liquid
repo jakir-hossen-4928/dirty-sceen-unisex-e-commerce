@@ -1,0 +1,251 @@
+{%- if style_cursor == 'default' -%}
+    <cursor-fixed class="cursor-fixed top-0 left-0 pos-fixed e-none" style="--color-cursor: {{ settings.colors_following_cursor.red }},{{ settings.colors_following_cursor.green }},{{ settings.colors_following_cursor.blue }}">
+        <div class="cursor-fixed__wrap">
+            <div class="cursor cursor--large pos-fixed b-circle"></div>
+            <div class="cursor cursor--small pos-fixed b-circle"></div>
+        </div>
+    </cursor-fixed>
+{%- else -%}
+    <cursor-blur class="cursor-fixed top-0 left-0 pos-fixed e-none" style="--color-cursor: {{ settings.colors_following_cursor.red }},{{ settings.colors_following_cursor.green }},{{ settings.colors_following_cursor.blue }}">
+        <div class="cursor-fixed__wrap">
+            <div class="cursor cursor--blur pos-fixed b-circle"></div>
+        </div>
+    </cursor-blur>
+{%- endif -%}
+
+<style type="text/css">
+    /* Cursor fixed */
+    :root {
+        --duration-slow: 800ms;
+        --duration-long: 500ms;
+        --cubic: cubic-bezier(0.61, 0.22, 0.23, 1);
+        --cubic-out: cubic-bezier(0.5, 1, 0.89, 1);
+    }
+
+    .cursor-fixed {
+        opacity: 1;
+    }
+
+    .pos-fixed {
+        position: fixed;
+    }
+
+    .e-none {
+        pointer-events: none;
+    }
+
+    .b-circle {
+        border-radius: 50%;
+    }
+
+    body.cursor-fixed__show side-drawer-opener svg ,
+    body.cursor-fixed__show a svg,
+    body.cursor-fixed__show button svg,
+    body.cursor-fixed__show .header-classic__item .halo-top-currency .text,
+    body.cursor-fixed__show .header-classic__item .halo-top-currency .text+svg,
+    body.cursor-fixed__show .header-classic__item .halo-top-language .text+svg,
+    body.cursor-fixed__show .halo-top-currency .icon,
+    body.cursor-fixed__show .header-nav-multi-site .header-top--wrapper .header__iconItem .live-wrapper-icon>svg,
+    body.cursor-fixed__show .header-nav-compact .header__search-full svg,
+    body.cursor-fixed__show .header-nav-compact .header__search-full>.text,
+    body.cursor-fixed__show .header-nav-utility .top-language-currency .dropdown-label .text,
+    body.cursor-fixed__show .header-navigation .top-language-currency .dropdown-label .text+svg,
+    body.cursor-fixed__show .header-navigation .top-language-currency .dropdown-label .text,
+    body.cursor-fixed__show .card-wishlist .wishlist-icon .text,
+    body.cursor-fixed__show .card-quickview .quickview-icon .text,
+    body.cursor-fixed__show .card-compare .compare-label span,
+    body.cursor-fixed__show .previewCartItem-name .text,
+    body.cursor-fixed__show .select-icon .glyphicon:after,
+    body.cursor-fixed__show .select-icon .glyphicon:before,
+    body.cursor-fixed__show .select-icon:before,
+    body.cursor-fixed__show .arrow-icon-scroll svg,
+    body.cursor-fixed__show .recently-viewed-icon .icon,
+    body.cursor-fixed__show .card-title .text{
+        pointer-events: none;
+    }
+
+    body.cursor-fixed__show .footer__social .list-social__item {
+        border-radius: 0;
+        box-shadow: none;
+    }
+
+    body.cursor-fixed__show .footer__social .list-social__item .cursor-fixed__parallax-target{
+        border-radius: 50%;
+        box-shadow: 0 4px 10px #0000001a;
+    }
+
+    .cursor-fixed {
+        z-index: 10000;
+        opacity: 0;
+    }
+
+    .cursor-fixed .cursor {
+        width: var(--size);
+        height: var(--size);
+        display: block;
+    }
+
+    cursor-blur.cursor-fixed {
+        opacity: 1;
+    }
+
+    .cursor-fixed .cursor--blur {
+        --size: 40rem;
+        background-blend-mode: multiply;
+        opacity: .125;
+        background: rgba(var(--color-cursor), 1);
+        filter: blur(10rem);
+        -webkit-filter: blur(10rem);
+        -moz-filter: blur(10rem);
+    }
+
+    .cursor-fixed .cursor--large {
+        --size: 2.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(var(--color-cursor), 0.2);
+        transition: width var(--duration-slow) var(--cubic-out), height var(--duration-slow) var(--cubic-out);
+    }
+
+    .cursor-fixed.on-slider .cursor--large {
+        --size: 5rem;
+    }
+    .cursor-fixed .cursor--small {
+        --size: .8rem;
+        background: rgba(var(--color-cursor), 1);
+    }
+
+    /* Fix Cursor */
+    .cursor-fixed__parallax-target.on-hover:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        transform: scale(1.5);
+    }
+
+    .cursor-fixed.on-overlay .cursor--small {
+        background-color: transparent;
+    }
+
+    .cursor-fixed.on-overlay .cursor--small::before,
+    .cursor-fixed.on-overlay .cursor--small::after {
+        content: "";
+        background: #fff;
+        transform-origin: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%) rotate(45deg);
+    }
+
+    .cursor-fixed.on-overlay .cursor--small::before {
+        height: 0;
+        width: .2rem;
+        animation: cursorOverlayBefore 0.5s forwards;
+    }
+
+    .cursor-fixed__show .background-cursor-wrapper {
+        display: none;
+    }
+
+    .cursor-fixed.on-overlay .cursor--small::after {
+        width: 0;
+        height: .2rem;
+        animation: cursorOverlayAfter 0.5s forwards;
+        animation-delay: .35s;
+    }
+
+    .cursor-fixed__show .halo-video-popup .fluid-width-video-wrapper:before,
+    .cursor-fixed__show .slideshow .slide-youtube .fluid-width-video-wrapper:before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        width: 100%;
+        height: 100%;
+        z-index: 3;
+    }
+
+    body.cursor-fixed__show .lookbook-dialog::backdrop{
+        cursor: none;
+    }
+
+    body.cursor-fixed__show.active-cursor-fixed > cursor-fixed{
+        display: none;
+    }
+
+    @media screen and (max-width: 1199px){
+        .cursor-fixed {
+            display: none;
+        }
+    }
+
+    @media screen and (min-width: 1200px){
+        body.cursor-fixed__show ,
+        body.cursor-fixed__show * {
+            cursor: none !important;
+        }
+
+        body.cursor-fixed__show [no-effect-cursor] * {
+            cursor: pointer !important;
+        }
+
+        body.cursor-fixed__show:has([no-effect-cursor]:hover) cursor-fixed .cursor {
+            transform: scale(0) !important;
+        }
+
+        body.cursor-fixed__show .button > span {
+            pointer-events: none;
+        }
+
+        .cursor-fixed {
+            display: block;
+        }
+
+        .cursor-fixed__parallax-target.on-hover .list-social__link {
+            overflow: visible;
+        }
+
+        .cursor-fixed__parallax-target.on-hover .list-social__link:after {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            transform: scale(1.8);
+        }
+
+        .cursor-fixed__parallax-target.on-hover .button.button--style-diagonal-swipe:before,
+        .cursor-fixed__parallax-target.on-hover .shopify-challenge__button:before {
+            transform: translate(0);
+            transition: transform var(--duration-long) ease-out;
+            z-index: 1;
+        }
+
+        .cursor-fixed__parallax-target.on-hover .button,
+        .cursor-fixed__parallax-target.on-hover .shopify-challenge__button {
+            color: rgba(var(--button-color-text-hover),1);
+            border-color: rgba(var(--button-color-background-hover),1);
+        }
+    }
+
+    @keyframes cursorOverlayBefore {
+        to {
+            height: 2rem;
+        }
+    }
+    @keyframes cursorOverlayAfter {
+        to {
+            width: 2rem;
+        }
+    }
+</style>
+
+<script src="{{ 'gsap.js' | asset_url }}" defer="defer"></script>
+<script src="{{ 'animation-cursor.js' | asset_url }}" defer="defer"></script>

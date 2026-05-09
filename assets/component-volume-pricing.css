@@ -1,0 +1,114 @@
+volume-pricing {
+  display: block;
+  margin-top: 2rem;
+}
+
+volume-pricing li:nth-child(odd) {
+  background: #efefef;
+}
+
+volume-pricing ul {
+  margin-top: 1.2rem !important;
+  margin-bottom: 1.2rem !important;
+}
+
+volume-pricing li {
+  font-size: 1.4rem;
+  letter-spacing: 0.06rem;
+  padding: 0.6rem 0.8rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+div.volume-pricing-note {
+  margin-top: 6px;
+}
+
+.product--no-media .volume-pricing-note {
+  text-align: center;
+}
+
+.product--no-media volume-pricing {
+  width: 30rem;
+}
+
+.volume-pricing-note span,
+volume-pricing .label-show-more {
+  font-size: 1.2rem;
+  letter-spacing: 0.07rem;
+}
+
+volume-pricing show-more-button {
+  margin-top: 0.8rem;
+}
+
+volume-pricing show-more-button .button-show-more {
+    background: var(--btn-2-bg);
+    border-color: var(--btn-2-border);
+    color: var(--btn-2-color);
+    border: 0;
+}
+
+.product-form__input price-per-item,
+.price-per-item__container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.product-form__input .price-per-item {
+  color: rgba(var(--color-foreground));
+  font-size: 1.4rem;
+  letter-spacing: 0.06rem;
+}
+
+.price-per-item dl {
+  margin: 0;
+}
+
+.price-per-item dd {
+  margin-left: 0;
+}
+
+.price-per-item__container .variant-item__old-price,
+.price__regular .variant-item__old-price {
+  color: rgba(var(--color-foreground), 0.75);
+  font-size: 1.2rem;
+  letter-spacing: 0.07rem;
+}
+
+.quantity__rules.caption {
+  margin-top: 15px;
+}
+
+.wrapper-price-volumn {
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+.wrapper-price-volumn price-per-item {
+  margin-bottom: 12px;
+}
+
+.style-arrows-8 .volume-pricing-note span {
+  font-size: 1.3rem;
+}
+
+.style-arrows-8 .quantity__rules {
+  font-size: 1.4rem;
+}
+
+.productView-group .variant-item__old-price,
+.wrapper-price-volumn .variant-item__old-price {
+  display: none;
+}
+
+.productView-group .price-per-item {
+  margin-top: 12px;
+}
+
+.quantity__rules .divider + .divider::before {
+  content: '\2022';
+  margin: 0 0.5rem;
+}

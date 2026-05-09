@@ -1,0 +1,181 @@
+{% render 'text', block: block %}
+
+{% schema %}
+{
+  "name": "t:flex_section.names.text",
+  "tag": null,
+  "settings": [
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "t:settings_schema.typography.settings.typography.text",
+      "default": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>"
+    },
+    {
+      "type": "header",
+      "content": "t:flex_section.content.layout"
+    },
+    {
+      "type" : "text",
+      "id" : "text_width",
+      "label" : "t:settings_schema.typography.settings.typography.auto",
+      "info" : "t:sections.rich-text.blocks.text.settings.text.info__1",
+      "default" : "800px"
+    },
+    {
+      "type": "header",
+      "content": "t:flex_section.content.typography"
+    },
+    {
+      "type": "range",
+      "id": "text_size",
+      "label": "t:settings_schema.typography.settings.font_size.label",
+      "min": 10,
+      "max": 100,
+      "step": 1,
+      "unit": "t:settings_schema.typography.settings.font_size.unit",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "text_size_mb",
+      "label": "t:settings_schema.typography.settings.font_size.label_mb",
+      "min": 10,
+      "max": 50,
+      "step": 1,
+      "unit": "t:settings_schema.typography.settings.font_size.unit",
+      "default": 14
+    },
+    {
+      "type": "select",
+      "id": "text_font_weight",
+      "label": "t:settings_schema.typography.settings.font_weight.label",
+      "default": "400",
+      "options": [
+      {
+          "value": "400",
+          "label": "t:settings_schema.typography.settings.font_weight.options__1"
+      },
+      {
+          "value": "500",
+          "label": "t:settings_schema.typography.settings.font_weight.options__2"
+      },
+      {
+          "value": "600",
+          "label": "t:settings_schema.typography.settings.font_weight.options__3"
+      },
+      {
+          "value": "700",
+          "label": "t:settings_schema.typography.settings.font_weight.options__4"
+      },
+      {
+          "value": "800",
+          "label": "t:settings_schema.typography.settings.font_weight.options__5"
+      },
+      {
+          "value": "900",
+          "label": "t:settings_schema.typography.settings.font_weight.options__6"
+      }]
+    },
+    {
+      "type": "range",
+      "id": "text_line_height",
+      "label": "t:settings_schema.typography.settings.typography.label__1",
+      "min": 0,
+      "max": 10,
+      "step": 0.1,
+      "default": 1
+    },
+    {
+      "type" : "color",
+      "id" : "text_color",
+      "label" : "t:settings_schema.colors.settings.colors_name.color",
+      "default" : "#000000"
+    },
+    {
+      "type": "header",
+      "content": "t:settings_schema.typography.settings.type_button_font.padding_top"
+    },
+    {
+      "type": "range",
+      "id": "pd-top-desktop",
+      "label": "t:sections.layout.mg_desktop.label",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "t:sections.layout.mg_desktop.unit",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "pd-top-tablet",
+      "label": "t:sections.layout.mg_tablet.label",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "t:sections.layout.mg_desktop.unit",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "pd-top-mobile",
+      "label": "t:sections.layout.mg_mobile.label",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "t:sections.layout.mg_desktop.unit",
+      "default": 0
+    },
+    {
+      "type": "header",
+      "content": "t:settings_schema.typography.settings.type_button_font.padding_bottom"
+    },
+    {
+      "type": "range",
+      "id": "pd-bottom-desktop",
+      "label": "t:sections.layout.mg_desktop.label",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "t:sections.layout.mg_desktop.unit",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "pd-bottom-tablet",
+      "label": "t:sections.layout.mg_tablet.label",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "t:sections.layout.mg_desktop.unit",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "pd-bottom-mobile",
+      "label": "t:sections.layout.mg_mobile.label",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "t:sections.layout.mg_desktop.unit",
+      "default": 0
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:flex_section.names.text",
+      "category": "t:flex_section.categories.basic",
+      "settings": {
+        "text": "<p>We make things that work better and last longer. Our products solve real problems with clean design and honest materials.</p>"
+      }
+    },
+    {
+      "name": "t:flex_section.names.heading",
+      "category": "t:flex_section.categories.basic",
+      "settings": {
+        "text": "<h2>New arrivals</h2>"
+      }
+    }
+  ]
+}
+{% endschema %}

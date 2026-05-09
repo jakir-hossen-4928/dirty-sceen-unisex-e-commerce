@@ -1,0 +1,189 @@
+{%- liquid
+    assign picker_type = 'button'
+
+    if require_item != blank
+        for option in product.options_with_values
+            assign forloop_index = forloop.index0 | plus: 1
+        endfor
+        assign variant_type = product.options_with_values.size | plus: 1
+    else
+        assign variant_type = product.options_with_values.size
+    endif
+-%}
+
+<div class="productView-options" data-lang="{{ request.locale.iso_code | downcase }}" data-default-lang="{{ localization.country.iso_code | downcase }}">
+    {%- if variantCount > 0  and product.has_only_default_variant != true -%}
+        <step-indicator class="productView-variants-step-by-step no-js-hidden" id="product-option-{{ product.id }}" data-type="{{ picker_type }}" steps="{{ variant_type }}"
+            style="
+                --steps-color: {{ steps_color.red }},{{ steps_color.green }},{{ steps_color.blue }};
+                --steps-color-added: {{ steps_color_added.red }},{{ steps_color_added.green }},{{ steps_color_added.blue }};
+                --detail-variant-bg: {{ detail_variant_bg }};
+            "
+        >
+            {%- assign product_swatch_option = settings.swatch | downcase -%}
+            <variant-radios class="product-option has-default" data-product="{{ product.id }}" data-section="{{ section.id }}" data-url="{{ product.url }}">
+                <div class="steps{% unless variant_type > 1 %} hidden{% endunless %}">
+                    {%- for option in product.options_with_values -%}
+                        <div class="steps__step" data-step="{{ forloop.index0 }}">
+                            <div class="steps__step-number"><span class="checkmark"></span></div>
+                            <div class="steps__step-name"><legend class="form__label">{{ option.name }}</legend></div>
+                        </div>
+                    {%- endfor -%}
+                    {%- if require_item != blank -%}
+                        <div class="steps__step" data-step="{{ forloop_index }}">
+                            <div class="steps__step-number"><span class="checkmark"></span></div>
+                            <div class="steps__step-name"><legend class="form__label">{{ require_item }}</legend></div>
+                        </div>
+                    {%- endif -%}
+                </div>
+
+                <div class="tabs">
+                    {%- for option in product.options_with_values -%}
+                        {%- liquid
+                            assign option_name = option.name | escape | downcase | handle
+                            assign swatch_type = settings.swatch_type
+                            assign option_index = forloop.index0
+                        -%}
+                        <fieldset class="tab js product-form__input product-form__swatch clearfix" data-product-attribute="set-rectangle" data-option-index="{{ option_index }}" data-step="{{ option_index }}">
+                            <legend class="product-form__tab-label d-flex flex-jc-between flex-wrap">
+                                <div class="form__label">
+                                    {{ option.name | append: ':' |  prepend: 'Choose '  }}
+                                    <span data-header-option>
+                                        {{ option.selected_value }}
+                                    </span>
+                                </div>
+                                {% comment %} Start: Perks {% endcomment %}
+                                {%- if show_compare_color and compare_color_item != blank and isColor and compare_layout == '1' -%}
+                                    {%- if option_name contains compare_color_item -%}
+                                        <div class="productView-compareColor style-{{ compare_layout }}">
+                                            <button type="button" class="link link-underline" aria-label="{{ 'compare_color.general.title' | t }}" data-open-compare-color-popup>
+                                                {% render 'icon-compare-color-2' %}
+                                                <span class="text">
+                                                    {{ 'compare_color.general.title' | t }}
+                                                </span>
+                                            </button>
+                                        </div>
+                                    {%- endif -%}
+                                {%- endif -%}
+                                {%- if show_size_chart and size_chart_item != blank and has_size_chart -%}
+                                    {%- if option_name contains size_chart_item -%}
+                                        <div class="productView-sizeChart">
+                                            <a class="link link-underline" href="javascript:void(0)" data-open-size-chart-popup>
+                                                {% render 'icon-size-chart-2' %}
+                                                <span class="text">
+                                                    {{ 'size_chart.general.text' | t }}
+                                                </span>
+                                            </a>
+                                        </div>
+                                    {%- endif -%}
+                                {%- endif -%}
+                                {% comment %} Start: Perks {% endcomment %}
+                            </legend>
+                            <div class="product-form__tab-content">
+                                {%- assign values = '' -%}
+                                {%- liquid
+                                    assign variants_available_arr = product.variants | map: 'available'
+                                    assign variants_option1_arr = product.variants | map: 'option1'
+                                    assign variants_option2_arr = product.variants | map: 'option2'
+                                    assign variants_option3_arr = product.variants | map: 'option3'
+                                -%}
+                                {%- for variant in product.variants -%}
+                                    {%- assign value = variant.options[option_index] -%}
+                                    {%- unless values contains value -%}
+                                        {%- liquid
+                                            assign values = values | join: ';'
+                                            assign values = values | append: ';' | append: value
+                                            assign values = values | split: ';'
+                                            assign option_stock = 'soldout'
+
+                                            for option1_name in variants_option1_arr
+                                                case option.position
+                                                    when 1
+                                                        if variants_option1_arr[forloop.index0] == value and variants_available_arr[forloop.index0]
+                                                            assign option_stock = 'available'
+                                                        endif
+                                                    when 2
+                                                        if option1_name == product.selected_or_first_available_variant.option1 and variants_option2_arr[forloop.index0] == value and variants_available_arr[forloop.index0]
+                                                            assign option_stock = 'available'
+                                                        endif
+                                                    when 3
+                                                        if option1_name == product.selected_or_first_available_variant.option1 and variants_option2_arr[forloop.index0] == product.selected_or_first_available_variant.option2 and variants_option3_arr[forloop.index0] == value and variants_available_arr[forloop.index0]
+                                                            assign option_stock = 'available'
+                                                        endif
+                                                endcase
+                                            endfor
+                                        -%}
+                                        <input class="product-form__radio" type="radio" id="option-{{ product.id }}-{{ option.name }}-{{ forloop.index0 }}"
+                                            name="{{ option.name }}"
+                                            value="{{ value | escape }}"
+                                            {% if option.selected_value == value %}checked{% endif %}
+                                            data-variant-id="{{ variant.id }}"
+                                        >
+                                            {%- liquid
+                                                assign image_handle = value | handle | append: '.png'
+                                                if images[image_handle] != blank
+                                                    assign background_image = image_handle | handle
+                                                else
+                                                    assign background_image = variant.image.src | product_img_url: '250x'
+                                                endif
+                                            -%}
+                                            <label class="product-form__label {{ option_stock }}" name="{{ option.name }}" for="option-{{ product.id }}-{{ option.name }}-{{ forloop.index0 }}" data-variant-id="{{ variant.id }}">
+                                                <span
+                                                    class="pattern"
+                                                    style="background: url({{ background_image }});background-size: cover;background-repeat: no-repeat;"
+                                                ></span>
+                                                <span class="text">{{ value }}</span>
+                                            </label>
+                                    {%- endunless -%}
+                                {%- endfor -%}
+                            </div>
+                        </fieldset>
+                    {%- endfor -%}
+                    {%- if require_item != blank -%}
+                        <div class="tab clearfix" data-step="{{ forloop_index }}">
+                            {%- if step_option_1 != blank -%}
+                                {%- liquid
+                                    assign property_id = product.id | append: step_option_1 | handleize
+                                    assign property_name = step_option_1 | escape
+                                    assign property_value = property_name
+                                    unless settings.customization_option_hidden
+                                        assign property_value = property_value | prepend: '_'
+                                    endunless
+                                -%}
+                                <div class="product-step__input line-item-property__field">
+                                    <label for="{{ property_id }}" class="form-label form__label">{{ property_name }}</label>
+                                    <textarea id="{{ property_id }}" class="text-area field__input" rows="6" name="properties[{{ property_name }}]"></textarea>
+                                </div>
+                        {%- endif -%}
+                        </div>
+                    {%- endif -%}
+                </div>
+                <script type="application/json">
+                    {{ product.variants | json }}
+                </script>
+            </variant-radios>
+        </step-indicator>
+        <noscript>
+            <div class="product-form__input{% if product.has_only_default_variant %} hidden{% endif %}">
+                <label class="form__label" for="Variants-{{ section.id }}">
+                    {{ 'products.product.product_variants' | t }}
+                </label>
+                <div class="select">
+                    <select name="id" id="Variants-{{ section.id }}" class="select__select" form="product-form">
+                        {%- for variant in product.variants -%}
+                            <option
+                                {% if variant == product.selected_or_first_available_variant %}selected="selected"{% endif %}
+                                {% if variant.available == false %}disabled{% endif %}
+                                value="{{ variant.id }}"
+                            >
+                                {{ variant.title }}
+                                {%- if variant.available == false %} - {{ 'products.product.sold_out' | t }}{% endif %}
+                                - {{ variant.price | money | strip_html }}
+                            </option>
+                        {%- endfor -%}
+                    </select>
+                </div>
+            </div>
+        </noscript>
+    {%- endif -%}
+</div>

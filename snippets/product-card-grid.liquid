@@ -1,0 +1,82 @@
+{% comment %}
+    Renders a product card
+
+    Accepts:
+    - product_card_product: {Object} Product Liquid object (optional)
+    - media_size: {String} Size of the product image card. Values are "square" and "portrait". Default is "square" (optional)
+    - show_secondary_image: {Boolean} Show the secondary image on hover. Default: false (optional)
+    - add_image_padding: {Boolean} Enables padding on the image to space out the grid
+    - show_vendor: {Boolean} Show the product vendor. Default: false
+
+    Usage:
+    {% render 'product-card', show_vendor: section.settings.show_vendor %}
+{% endcomment %}
+
+{%- liquid
+    assign product_swatch_option = settings.swatch | downcase
+    assign isColor = false
+    assign variant_img = ''
+    for option in product_card_product.options_with_values
+        assign option_name = option.name | downcase
+        if product_swatch_option contains option_name
+            assign isColor = true
+            assign index = forloop.index0
+            assign position = forloop.index | minus: 1
+            assign variant_selected = option.selected_value
+            if settings.show_quick_shop
+                for variant in product_card_product.variants limit: 1
+                    if variant.image != null  
+                        assign variant_img = variant.image
+                    endif
+                endfor
+            endif
+          break
+        else 
+            assign position = 0
+            assign variant_selected = nil
+        endif
+    endfor
+
+    assign has_video = product_card_product.media | where: 'media_type','video'
+
+    if settings.currency_format_enable
+        assign money_price = product_card_product.price_min | money_with_currency
+    else
+        assign money_price = product_card_product.price_min | money
+    endif
+-%}
+<div class="product-item" data-product-id="{{ product_card_product.id }}" data-json-product='{"id": {{product_card_product.id}},"handle": "{{product_card_product.handle}}","media": {{product.media | json | escape}},"variants": {{ product_card_product.variants | json | escape }}}'>
+    <div class="card{% if product_card_product.media[0].media_type == 'video' %} has-first-video{% endif %}">
+        <div class="card-product{% if product_card_product.featured_media == nil %} card--text-only card--soft{% endif %}">
+            <div class="card-product__wrapper">
+                <div class="card-media card-media--{{ media_size }}{% if product_card_product.media[1] != nil and settings.show_image_swap %} media--hover-effect{% endif %}{% if settings.show_compare and settings.product_compare_type == 'default' %} has-compare{% endif %}{% if loading %} media--loading-effect{% endif %}" style="padding-top: {% if image_ratio == 'portrait' %}{{ portrait_height }}%{% else %}100%{% endif %};">
+                    {% render 'image-product-card',
+                        product_card_product: product_card_product,
+                        variant_img: variant_img,
+                        has_video: has_video,
+                        loading: loading
+                    %}
+                    <a class="card-link" href="{{ product_card_product.url }}" title="{{ product_card_product.title | escape }}"></a>
+                </div>
+            </div>
+            <div class="card-information">
+                <div class="card-information__wrapper text-{{ settings.product_content_text_align }}{% if settings.enable_infor_on_image %} hidden{% endif %}">
+                    <a class="card-title link-underline{% if settings.product_title_line_text != 'full' %} card-title-ellipsis{% endif %}{% if variant_selected != blank %} card-title-change{% endif %}" href="{{ product_card_product.url }}" data-product-title="{{ product_card_product.title | escape }}" data-product-url="{{ product_card_product.url }}">
+                        <span class="text">
+                            {{ product_card_product.title | escape }}
+                            {% if variant_selected != blank %}
+                                <span data-change-title> {% if settings.style_text_color_varriant == '01' %}-{% endif %} {{ variant_selected }}</span>
+                            {% endif %}
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <a class="card-price button-grid" href="{{ product_card_product.url }}">
+            <span class="price-item">
+                {{ 'products.product.price.from_price_html' | t: price: money_price }}
+            </span>
+            <svg class="icon arrow-icon" xmlns="http://www.w3.org/2000/svg" width="23" height="17" viewBox="0 0 23 17"><g clip-path="url(#clip0_58820_102)"><path d="M19.8809 7.81096L19.7458 7.6754C17.7675 5.6911 15.7887 3.70629 13.8104 1.72149C13.5591 1.46938 13.4938 1.18827 13.6174 0.905154C13.8064 0.472979 14.3774 0.360433 14.7106 0.694069C17.1451 3.13406 19.5782 5.57505 22.0113 8.01654C22.2751 8.28165 22.2776 8.70882 22.0148 8.97243C19.5797 11.4159 17.1441 13.8594 14.7076 16.3019C14.4517 16.5585 14.0438 16.5655 13.77 16.3234C13.5132 16.0958 13.4783 15.6892 13.6937 15.4055C13.7391 15.346 13.7915 15.292 13.8443 15.239C15.8097 13.2672 17.775 11.2954 19.7408 9.32407C19.7782 9.28656 19.8156 9.24904 19.8754 9.18902C19.8066 9.18452 19.7682 9.18002 19.7293 9.18002C13.4873 9.18252 7.24574 9.18452 1.0037 9.19002C0.724434 9.19002 0.481574 9.12699 0.324987 8.87989C0.17987 8.6508 0.171392 8.4077 0.30504 8.1686C0.434199 7.93701 0.640655 7.82697 0.900969 7.82647C1.88537 7.82396 2.86928 7.82446 3.85368 7.82396C9.14872 7.82146 14.4438 7.81946 19.7388 7.81646C19.7717 7.81646 19.8046 7.81396 19.8804 7.81046L19.8809 7.81096Z"/></g><defs><clipPath id="clip0_58820_102"><rect width="22" height="16" transform="translate(0.210938 0.5)"/></clipPath></defs></svg>
+        </a>
+    </div>
+</div>

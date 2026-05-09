@@ -1,0 +1,698 @@
+{%- liquid
+    assign color_title = section.settings.color_title
+    assign fontsize_title = section.settings.fontsize_title
+    assign fontsize_title_mb = section.settings.fontsize_title_mb
+    assign mg_bottom_title = section.settings.mg_bottom_title
+
+    assign minus_spacing_top = section.settings.minus_spacing_top
+    assign padding_full_width = section.settings.padding_full_width | append: 'px'
+    assign arrow_color = section.settings.arrow_color
+    assign dots_color = section.settings.dots_color
+-%}
+
+<style type="text/css">
+    {%- if section.settings.brand_bg_image != blank -%}
+        .section-block-{{ section.id }}{background: url({{ section.settings.brand_bg_image | img_url: '1920x' }});background-repeat: repeat-x;background-size: cover}
+    {%- else -%}
+        .section-block-{{ section.id }} {background: {% if section.settings.brand_bg_gradient != blank %}{{ section.settings.brand_bg_gradient }}{% else %}{{ section.settings.brand_bg }}{% endif %};
+        }
+    {%- endif -%}
+    .section-block-{{section.id}} .halo-block-header .title .text {background: transparent}
+    .section-block-{{section.id}} .halo-block-header .title {display: inline-block;color: {{ color_title }};font-size: {{ fontsize_title | append: 'px'  }};{%- if fontsize_title > headingLineHeight -%}line-height: {{ fontsize_title | plus: 8 | append: 'px' }}{%- endif -%}}
+    .section-block-{{section.id}} .halo-block-header > .title { margin-bottom: {{ mg_bottom_title | append: 'px' }}}
+    .section-block-{{section.id}} .halo-block-header .rte {color: {{ section.settings.color_des }};font-size: {{ section.settings.fontsize_des | append: 'px'  }};margin-bottom: {{ section.settings.mg_bottom_des | append: 'px' }}}
+    {%- if section.settings.view_all != blank -%}
+    .section-block-{{section.id}} .view_all {font-weight: var(--font-weight-view-all-style);margin-bottom: var(--mg-bottom-view-style);color: var(--color-view-all-style);font-size: var(--font-size-view-all-style);border-bottom: none;line-height: 1.2;max-width: 80px}
+    .section-block-{{section.id}} .view_all--border {text-decoration: underline;text-underline-offset: 3px}
+    {%- endif -%}
+    .section-block-{{section.id}} .halo-item .wrapper-image {background: {{section.settings.brand_bg}}}
+    .section-block-{{section.id}} .wrapper-image .adaptive_height img {top: 50%;left: 50%;transform: translate(-50%,-50%)}
+    {%- if section.settings.enable_border_title -%}
+        .section-block-{{section.id}} .halo-block-header .title:before {background: {{ section.settings.color_title }};left: 100%;right: auto;}
+        .section-block-{{section.id}} .halo-block-header .title:after {content: "";display: block;position: absolute;top: calc(50% - 1px);right: 100%;left: auto;width: 100%;height: var(--heading-border-height);background: {{ section.settings.color_title }}}
+    {%- else -%}
+        .section-block-{{section.id}} .halo-block-header .title {background: transparent}
+        .section-block-{{section.id}} .halo-block-header .title:before,
+        .section-block-{{section.id}} .halo-block-header .title:after {display: none}
+    {%- endif -%}
+    .section-block-{{section.id}} .brands-block--wrapper {display: flex;align-items: center;justify-content: space-between}
+    .section-block-{{section.id}} .brands-block--wrapper .brands-slider {width: 100%}
+    .section-block-{{section.id}} .halo-row .halo-item:hover .text{font-weight: var(--font-weight-medium)}
+    .section-block-{{section.id}} .halo-block-header .rte {margin-left: 0}
+    .section-block-{{section.id}} .halo-block-header {display: flex;flex-direction: column;justify-content: center;} 
+    {%- if section.settings.item_align == 'center' -%}
+        .section-block-{{section.id}} .halo-block-header {align-items: center;}
+        .section-block-{{section.id}} .halo-block-header .title,
+        .section-block-{{section.id}} .halo-block-header .rte{text-align: center;}
+    {%- endif -%}
+    {%- if section.settings.item_align == 'right' -%}
+        .section-block-{{section.id}} .halo-block-header {justify-content: flex-end;align-items: flex-end;}
+        .section-block-{{section.id}} .halo-block-header .title,
+        .section-block-{{section.id}} .halo-block-header .rte{text-align: right;}
+        .section-block-{{section.id}} .halo-block-header .title:before,
+        .section-block-{{section.id}} .halo-block-header .title:after {display: none}
+    {%- endif -%}
+    {%- if section.settings.item_align == 'left' -%}
+        .section-block-{{section.id}} .halo-block-header {justify-content: flex-start;align-items: flex-start;}
+        .section-block-{{section.id}} .halo-block-header .title,
+        .section-block-{{section.id}} .halo-block-header .rte{text-align: left;}
+        .section-block-{{section.id}} .halo-block-header .title:before,
+        .section-block-{{section.id}} .halo-block-header .title:after {display: none}
+    {%- endif -%}
+    .section-block-{{ section.id }} .brand-slider-nav .wrapper-image .adaptive_height img {opacity: 0.4 !important}
+    .section-block-{{ section.id }} .brand-slider-nav .halo-item.slick-current .wrapper-image .adaptive_height img {opacity: 1 !important}
+    {%- if section.blocks.size > 0 -%}
+        .section-block-{{section.id}} .halo-item:hover .text{text-decoration: underline;text-underline-offset: 0.3rem}
+        .section-block-{{section.id}} .halo-item .description{display: block;text-align: center;}
+        .brand-slider .halo-item .text {color: var(--title_color)}
+        .brand-slider .halo-item:hover .text {color: var(--title_color_hover)}
+        .brand-slider .halo-item .description {font-family: var(--font-heading-family); color: var(--color_des); font-size: var(--fontsize-des); line-height: var(--des-line-height-style);}
+    {%- endif -%}
+    {%- if arrow_color != blank -%}
+        .section-block-{{ section.id }} .slick-arrow.slick-disabled{display: none !important;}
+        .section-block-{{ section.id }} .brand-slider-for{padding-bottom: 25px;}
+        .section-block-{{ section.id }} .slick-arrow {width: 80px;height: 80px;border-color: {{arrow_color}};border-radius: 50%;bottom: 18px;top: auto;}
+        .section-block-{{ section.id }} .slick-arrow svg {fill: {{arrow_color}};}
+    {%- endif -%}
+    {%- if dots_color != blank -%}
+        .section-block-{{ section.id }} .slick-dots li.slick-active button {background: {{dots_color}};border-color: {{dots_color}};}
+        .section-block-{{ section.id }} .slick-dots li button {border-color: {{dots_color}};}
+    {%- endif -%}
+    {%- if minus_spacing_top < 0 -%} 
+        .scrolling-text__list a {line-height: 1;}
+    {%- endif -%}
+    .section-block-{{section.id}} .sm-column-1:not(.slick-slider) .halo-item:nth-child(n+2) {display: none}
+    @media (min-width: 1025px) {
+        .section-block-{{section.id}} .halo-row .halo-item{padding-left: var(--item-distance-style);padding-right: var(--item-distance-style)}
+        {%- if section.settings.container == 'fullwidth' -%}
+            .section-block-{{section.id}} .container-full {padding-left: {{ padding_full_width }};padding-right: {{ padding_full_width }}}
+            body.layout_rtl .section-block-{{section.id}} .container-full {padding-left: {{ padding_full_width }};padding-right: {{ padding_full_width }}}
+        {%- endif -%}
+        .section-block-{{section.id}} {padding-top: {{ section.settings.mg_top_desktop | append: 'px' }};padding-bottom: {{ section.settings.mg_bottom_desktop | append: 'px' }}}
+        .section-block-{{ section.id }} .slick-arrow.slick-next {right: -50px !important}
+        .section-block-{{ section.id }} .slick-arrow.slick-prev {left: -50px !important}
+        {%- if section.settings.container == 'fullwidth' -%}
+            .section-block-{{section.id}} {margin-left: {{ padding_full_width }};margin-right: {{ padding_full_width }};}
+        {%- endif -%}
+        .section-block-{{section.id}} .container-full .halo-row {max-width: 1250px;margin: 0 auto;}
+        .section-block-{{section.id}} .container-full .halo-row.brand-slider-nav {padding: 0 15px;}
+        {%- if minus_spacing_top < 0 -%} 
+            .section-block-{{section.id}} {position: relative;margin-top: {{ minus_spacing_top | append: 'px' }};z-index: 1;}
+            .scrolling-text__content {top: -68px;}
+            .scrolling-text__list {margin: 26px 0;}
+        {%- endif -%}
+        .section-block-{{section.id}} .image-zoom > a{transition: transform .64s ease; will-change: transform;}  
+        .section-block-{{section.id}} .image-zoom:hover > a {transform: translate3d(0,0,0) scale(1.06) !important}
+    }
+    @media (min-width: 768px) and (max-width: 1024px) {.section-block-{{section.id}} {padding-top: {{ section.settings.mg_top_tablet | append: 'px' }};padding-bottom: {{ section.settings.mg_bottom_tablet | append: 'px' }}}}
+    @media (min-width: 1900px) {
+        .section-block-{{ section.id }} .slick-arrow.slick-next {right: -130px !important}
+        .section-block-{{ section.id }} .slick-arrow.slick-prev {left: -130px !important}
+    }
+    @media (min-width: 1025px) and (max-width: 1480px) {
+        .section-block-{{section.id}} .container-full {padding-left: 0;padding-right: 0;}
+        .section-block-{{ section.id }} .slick-arrow{ bottom: -18px; }
+        .section-block-{{ section.id }} .slick-arrow.slick-next {right: 20px !important}
+        .section-block-{{ section.id }} .slick-arrow.slick-prev {left: 20px !important}
+    }
+    @media (max-width: 1200px) {
+        {%- if arrow_color != blank -%}
+            .section-block-{{ section.id }} .slick-arrow {width: 50px;height: 50px;}
+            .section-block-{{ section.id }} .slick-arrow svg {padding: 10px;}
+        {%- endif -%}
+    }
+    @media (max-width: 1024px) {
+        .section-block-{{section.id}} .container-full {padding-left: 15px;padding-right: 15px}
+        {%- if section.settings.brand_bg_image != blank -%}
+            .section-block-{{section.id}}{background-position: center top}
+        {%- endif -%}
+        {%- if section.settings.enable_border_title and section.settings.item_align == 'center' -%}
+            .section-block-{{section.id}} .halo-block-header .title .text { padding-left: 15px; padding-right: 15px;}
+        {%- endif -%}
+        {%- if section.settings.brand_title != blank and section.settings.view_all != blank -%}
+            .section-block-{{section.id}} .halo-block-header .title {line-height: 1.5}
+            .section-block-{{section.id}} .halo-block-header{margin: 0 0 20px 0}
+        {%- endif -%}
+        .section-block-{{section.id}} .brands-block--wrapper {flex-wrap: wrap}
+        .section-block-{{section.id}} .halo-slider {display: flex;flex: auto}
+        .section-block-{{ section.id }} .slick-arrow.slick-next {right: 40px !important}
+        .section-block-{{ section.id }} .slick-arrow.slick-prev {left: 40px !important}
+        .section-block-{{ section.id }} .brand-slider-for{padding-bottom: 50px;}
+        .brand-slider .halo-item .description {font-size: var(--fontsize-des-mb);}
+    }
+    @media (max-width: 767px) {
+        .section-block-{{section.id}} {padding-top: {{ section.settings.mg_top_mobile | append: 'px' }};padding-bottom: {{ section.settings.mg_bottom_mobile | append: 'px' }}}
+        .section-block-{{section.id}} .halo-block-header {flex-wrap: wrap}
+        .section-block-{{section.id}} .halo-block-header .rte {margin-left: 0}
+        .section-block-{{section.id}} .halo-block-header .title {font-size: {{ fontsize_title_mb | append: 'px' }}}
+        .section-block-{{section.id}} .container-full {padding-left: 10px;padding-right: 10px}
+        .section-block-{{ section.id }} .brand-slider-for{padding-bottom: 0px;}
+        .section-block-{{section.id}} .container-full .halo-row.brand-slider-nav {padding-bottom: 15px}
+    }
+    @media (max-width: 551px){
+        .section-block-{{section.id}} .brands-slider .halo-item .wrapper-content.animate--slide-in {animation: var(--animation-slide-in);animation-delay: calc(var(--animation-order) * .1s);}
+    }
+</style>
+{%- if section.blocks.size > 0 -%}
+<div class="brand-slider brand-slider-02 section-block-{{section.id}}" id="brands-02-{{section.id}}" data-loader-script="{{ 'halo.slide-brand-02.js' | asset_url }}">
+    <div class="brands-block brands-slider{% if settings.banner_animation == 'effect_fade_up' %} scroll-trigger animate--slide-in{% endif %}">
+        <div class="{% if section.settings.container == 'fullwidth' %}container-full{% elsif section.settings.container == '1170' %}container-1170{% elsif section.settings.container == '1470' %}container-1470{% elsif section.settings.container == '1770' %}container-1770{% else %}container{% endif %}">
+            {%- if section.settings.brand_title != blank -%}
+                <div class="halo-block-header">
+                    {%- if section.settings.brand_title != blank -%}
+                        <h3 class="title{% if settings.banner_animation == 'effect_fade_up' %} scroll-trigger animate--slide-in{% endif %}"><span class="text">{{ section.settings.brand_title }}</span></h3>
+                    {%- endif -%}
+                    {%- if section.settings.brand_des != blank -%}
+                        <div class="rte subtext-brand{% if settings.banner_animation == 'effect_fade_up' %} scroll-trigger animate--slide-in{% endif %}">{{ section.settings.brand_des }}</div> 
+                    {%- endif -%}
+                    {%- if section.settings.view_all != blank -%}
+                        <a class="view_all{% if section.settings.enable_border_view_all %} view_all--border{% endif %}"{% if section.settings.link_view_all == blank %} role="link" aria-disabled="true"{% else %} href="{{ section.settings.link_view_all }}"{% endif %} title="{{section.settings.view_all}}" style="--font-weight-view-all-style: {{ section.settings.font_weight_view_all }};--mg-bottom-view-style: {{ section.settings.mg_bottom_view | append: 'px' }};--color-view-all-style: {{ section.settings.color_view_all }};--font-size-view-all-style: {{ section.settings.view_all_fs | append: 'px' }}">
+                            {{ section.settings.view_all }}
+                        </a>
+                    {%- endif -%}
+                </div>
+            {%- endif -%}
+            <div class="halo-row brand-slider-for sm-column-1" data-brands-slider-for data-autoplay="{{ section.settings.enable_autoplay }}" style="--row-distance-style: {{ section.settings.item_distance | prepend: '-' | append: 'px' }}">
+                {%- for block in section.blocks -%}
+                    <div class="halo-item block-{{block.id}}" id="block-{{block.id}}" style="--item-distance-style: {{ section.settings.item_distance | append: 'px' }};--color_des:{{block.settings.color_des}};--fontsize-des:{{block.settings.fontsize_des_block | append: 'px'}};--fontsize-des-mb:{{block.settings.fontsize_des_block_mb | append: 'px'}};--des-line-height-style: {{ block.settings.des_line_height }}">
+                        <div class="wrapper-content{% if settings.banner_animation == 'effect_fade_up' %} scroll-trigger animate--slide-in{% endif %}" style="--animation-order: {{ forloop.index }};"{% if settings.banner_animation == 'effect_fade_up' %} data-cascade{% endif %}>
+                            {%- if block.settings.description != blank -%}
+                                <p class="description" role="link" aria-disabled="true">{{ block.settings.description }}</p>
+                            {%- endif -%}
+                        </div>
+                    </div>
+                {%- endfor -%}
+            </div>
+            <div class="halo-row brand-slider-nav" data-brands-slider-nav data-rows="{{ section.settings.brand_rows }}">
+                {%- for block in section.blocks -%}
+                    <div class="halo-item block-{{block.id}}" id="block-{{block.id}}" style="--item-distance-style: {{ section.settings.item_distance | append: 'px' }};--color_des:{{block.settings.color_des}}">
+                        <div class="wrapper-content{% if settings.banner_animation == 'effect_fade_up' %} scroll-trigger animate--slide-in{% endif %}" style="--animation-order: {{ forloop.index }};"{% if settings.banner_animation == 'effect_fade_up' %} data-cascade{% endif %}>
+                            {%- if block.settings.image != blank -%}
+                                {%- assign preview_img = block.settings.image -%}
+                                <div class="wrapper-image image-zoom">
+                                    <p class="adaptive_height" title="{% if block.settings.title != blank %}{{ block.settings.title }}{% else %}{{ preview_img.alt | escape }}{% endif %}" role="link" aria-disabled="true" style="padding-top: {{ 1 | divided_by: preview_img.aspect_ratio | times: 100 }}%;" aria-label="{{ preview_img.alt | default: shop.name | escape }}">
+                                        <img {% render 'lazyload', preview_img: preview_img  %}/>
+                                        {%- if settings.enable_lazyload -%}<span class="data-lazy-loading"></span>{%- endif -%}
+                                    </p>
+                                </div>
+                            {%- else -%}
+                                <p title="{% if block.settings.title != blank %}{{ block.settings.title }}{% else %}Coming Soon{% endif %}" role="link" aria-disabled="true">
+                                    {%- assign placeholder_image_index = forloop.index0 | modulo: 4 | plus: 1 -%}
+                                    {%- assign placeholder_image = 'collection-apparel-' | append: placeholder_image_index -%}
+                                    <div class="placeholder" style="--height_placeholder: 200px;">
+                                        {{ placeholder_image | placeholder_svg_tag: 'placeholder-svg' }}
+                                    </div>
+                                </p>
+                            {%- endif -%}
+                        </div>
+                    </div>
+                {%- endfor -%}
+            </div>
+        </div>
+    </div>
+</div>
+{%- endif -%}
+
+{% schema %}
+{
+    "name": "t:sections.brand.name_2",
+    "class": "sections-brand-slider-02",
+    "settings": [
+    {
+        "type": "header",
+        "content": "t:settings_schema.general.name"
+    },
+    {
+        "type": "select",
+        "id": "container",
+        "label": "t:sections.layout.container.option",
+        "default": "container",
+        "options": [
+            {
+                "value": "container",
+                "label": "t:sections.layout.container.option1"
+            },
+            {
+                "value": "1170",
+                "label": "t:sections.layout.container.option4"
+            },
+            {
+                "value": "1470",
+                "label": "t:sections.layout.container.option5"
+            },
+            {
+                "value": "1770",
+                "label": "t:sections.layout.container.option3"
+            },
+            {
+                "value": "fullwidth",
+                "label": "t:sections.layout.container.option2"
+            }
+        ]
+    },
+    {
+        "type": "range",
+        "id": "padding_full_width",
+        "label": "t:sections.layout.container.padding_full_width",
+        "min": 0,
+        "max": 200,
+        "step": 5,
+        "unit": "t:sections.layout.fontsize.fontsize_title.unit",
+        "default": 0
+    },
+    {
+        "type": "range",
+        "id": "minus_spacing_top",
+        "label": "t:sections.product_block.settings.general.minus_spacing_top",
+        "default": -100,
+        "min": -100,
+        "max": 0,
+        "step": 1,
+        "unit": "t:sections.layout.mg_desktop.unit"
+    },
+    {
+        "type" : "color",
+        "id" : "brand_bg",
+        "label" : "t:settings_schema.colors.settings.colors_name.background_color_2",
+        "default" : "#f5f5f5"
+    },
+    {
+        "type" : "color_background",
+        "id" : "brand_bg_gradient",
+        "label" : "t:settings_schema.colors.settings.colors_name.background_color_gradient"
+    },
+    {
+        "type" : "image_picker",
+        "id" : "brand_bg_image",
+        "label" : "t:settings_schema.colors.settings.colors_name.background_image"
+    },
+    {
+        "type": "header",
+        "content": "t:sections.image-banner.blocks.image.settings.content.section_header"
+    },
+    {
+        "type": "text",
+        "id": "brand_title",
+        "label": "t:sections.image-banner.blocks.image.settings.content.label__1"
+    },
+    {
+        "type" : "color",
+        "id" : "color_title",
+        "label": "t:settings_schema.typography.settings.typography.title_color",
+        "default" : "#232323"
+    },
+    {
+        "type": "range",
+        "id": "fontsize_title",
+        "label": "t:settings_schema.typography.settings.typography.title_font_size",
+        "min": 10,
+        "max": 50,
+        "step": 1,
+        "unit": "t:sections.layout.fontsize.fontsize_title.unit",
+        "default": 16
+    },
+    {
+        "type": "range",
+        "id": "fontsize_title_mb",
+        "label": "t:settings_schema.typography.settings.typography.title_font_size_mb",
+        "min": 10,
+        "max": 50,
+        "step": 1,
+        "unit": "t:sections.layout.fontsize.fontsize_title.unit",
+        "default": 16
+    },
+    {
+        "type": "range",
+        "id": "mg_bottom_title",
+        "label": "t:settings_schema.typography.settings.typography.title_margin_bottom",
+        "min": 0,
+        "max": 50,
+        "step": 1,
+        "unit": "t:sections.layout.mg_desktop.unit",
+        "default": 12
+    },
+    {
+        "type": "checkbox",
+        "id": "enable_border_title",
+        "label": "t:sections.spotlight_block.blocks.image.enable_border_title",
+        "default": false
+    },
+    {
+        "type" : "color",
+        "id" : "border_color_title",
+        "label": "t:settings_schema.typography.settings.typography.title_border_color",
+        "default" : "#051c42"
+    },
+    {
+        "type" : "inline_richtext",
+        "id" : "brand_des",
+        "label" : "t:sections.image-banner.blocks.image.settings.content.label__2"
+    },
+    {
+        "type" : "color",
+        "id" : "color_des",
+        "label": "t:settings_schema.typography.settings.typography.des_color",
+        "default" : "#3c3c3c"
+    },
+    {
+        "type": "range",
+        "id": "fontsize_des",
+        "label": "t:settings_schema.typography.settings.typography.des_font_size",
+        "min": 10,
+        "max": 50,
+        "step": 1,
+        "unit": "t:sections.layout.fontsize.fontsize_title.unit",
+        "default": 16
+    },
+    {
+        "type": "range",
+        "id": "mg_bottom_des",
+        "label": "t:settings_schema.typography.settings.typography.des_margin_bottom",
+        "min": 0,
+        "max": 50,
+        "step": 1,
+        "unit": "t:sections.layout.mg_desktop.unit",
+        "default": 0
+    },
+    {
+        "type": "text",
+        "id": "view_all",
+        "label": "t:settings_schema.typography.settings.typography.view_all"
+    },
+    {
+        "type": "range",
+        "id": "view_all_fs",
+        "label": "t:settings_schema.typography.settings.typography.view_all_font_size",
+        "min": 10,
+        "max": 50,
+        "step": 1,
+        "unit": "t:sections.layout.fontsize.fontsize_title.unit",
+        "default": 12
+    },
+    {
+        "type": "select",
+        "id": "font_weight_view_all",
+        "label": "t:settings_schema.typography.settings.typography.view_all_font_weight",
+        "default": "400",
+        "options": [
+        {
+            "value": "400",
+            "label": "t:settings_schema.typography.settings.font_weight.options__1"
+        },
+        {
+            "value": "500",
+            "label": "t:settings_schema.typography.settings.font_weight.options__2"
+        },
+        {
+            "value": "600",
+            "label": "t:settings_schema.typography.settings.font_weight.options__3"
+        },
+        {
+            "value": "700",
+            "label": "t:settings_schema.typography.settings.font_weight.options__4"
+        },
+        {
+            "value": "800",
+            "label": "t:settings_schema.typography.settings.font_weight.options__5"
+        },
+        {
+            "value": "900",
+            "label": "t:settings_schema.typography.settings.font_weight.options__6"
+        }]
+    },
+    {
+        "type": "range",
+        "id": "mg_bottom_view",
+        "label": "t:sections.layout.mg_bottom_view.label",
+        "min": 0,
+        "max": 60,
+        "step": 1,
+        "unit": "t:sections.layout.mg_desktop.unit",
+        "default": 0
+    },
+    {
+        "type" : "checkbox",
+        "id" : "enable_border_view_all",
+        "label": "t:settings_schema.typography.settings.typography.view_all_enable_border",
+        "default" : true
+    },
+    {
+        "type": "url",
+        "id": "link_view_all",
+        "label": "t:settings_schema.typography.settings.typography.view_all_link"
+    },
+    {
+        "type" : "color",
+        "id" : "color_view_all",
+        "label": "t:settings_schema.typography.settings.typography.view_all_color",
+        "default" : "#3c3c3c"
+    },
+    {
+        "type": "select",
+        "id": "item_align",
+        "label": "t:sections.general.settings.alignment.label__1",
+        "default": "center",
+        "options": [
+            {
+                "value": "left",
+                "label": "t:settings_schema.typography.settings.type_button_font.left"
+            },
+            {
+                "value": "center",
+                "label": "t:settings_schema.typography.settings.type_button_font.center"
+            },
+            {
+                "value": "right",
+                "label": "t:settings_schema.typography.settings.type_button_font.right"
+            }
+        ]
+    },
+    {
+        "type": "header",
+        "content": "t:sections.brand.settings.brand_item"
+    },
+    {
+        "type": "range",
+        "id": "item_distance",
+        "label": "t:settings_schema.typography.settings.typography.grid_gap",
+        "min": 0,
+        "max": 50,
+        "step": 1,
+        "unit": "t:sections.layout.fontsize.fontsize_title.unit",
+        "default": 15
+    },
+    {
+        "type": "checkbox",
+        "id": "enable_autoplay",
+        "label": "t:sections.slide-show.settings.autoplay",
+        "default": false
+    },
+    {
+        "type": "select",
+        "id": "brand_rows",
+        "label": "t:sections.instagram.settings.images_per_row.option",
+        "options": [
+            {
+                "value": "4",
+                "label": "t:sections.brand.settings.brand_rows.option4"
+            },
+            {
+                "value": "5",
+                "label": "t:sections.brand.settings.brand_rows.option5"
+            },
+            {
+                "value": "6",
+                "label": "t:sections.brand.settings.brand_rows.option6"
+            }
+        ],
+        "default": "4"
+    },
+    {
+        "type": "color",
+        "id": "arrow_color",
+        "label": "t:settings_schema.general.settings.pagination.navigation_arrow_color",
+        "default": "#ffffff"
+    },
+    {
+        "type": "color",
+        "id": "dots_color",
+        "label": "t:settings_schema.colors.settings.colors_dots.color_dots",
+        "default": "#ffffff"
+    },
+    {
+        "type": "header",
+        "content": "t:sections.layout.margin_top"
+    },
+    {
+        "type": "range",
+        "id": "mg_top_desktop",
+        "label": "t:sections.layout.mg_desktop.label",
+        "min": 0,
+        "max": 150,
+        "step": 5,
+        "unit": "t:sections.layout.mg_desktop.unit",
+        "default": 50
+    },
+    {
+        "type": "range",
+        "id": "mg_top_tablet",
+        "label": "t:sections.layout.mg_tablet.label",
+        "min": 0,
+        "max": 150,
+        "step": 5,
+        "unit": "t:sections.layout.mg_desktop.unit",
+        "default": 50
+    },
+    {
+        "type": "range",
+        "id": "mg_top_mobile",
+        "label": "t:sections.layout.mg_mobile.label",
+        "min": 0,
+        "max": 150,
+        "step": 5,
+        "unit": "t:sections.layout.mg_desktop.unit",
+        "default": 50
+    },
+    {
+        "type": "header",
+        "content": "t:sections.layout.margin_bottom"
+    },
+    {
+        "type": "range",
+        "id": "mg_bottom_desktop",
+        "label": "t:sections.layout.mg_desktop.label",
+        "min": 0,
+        "max": 150,
+        "step": 5,
+        "unit": "t:sections.layout.mg_desktop.unit",
+        "default": 50
+    },
+    {
+        "type": "range",
+        "id": "mg_bottom_tablet",
+        "label": "t:sections.layout.mg_tablet.label",
+        "min": 0,
+        "max": 150,
+        "step": 5,
+        "unit": "t:sections.layout.mg_desktop.unit",
+        "default": 50
+    },
+    {
+        "type": "range",
+        "id": "mg_bottom_mobile",
+        "label": "t:sections.layout.mg_mobile.label",
+        "min": 0,
+        "max": 150,
+        "step": 5,
+        "unit": "t:sections.layout.mg_desktop.unit",
+        "default": 50
+    }
+    ],
+    "blocks": [
+        {
+            "type": "image",
+            "name": "t:sections.image-banner.blocks.image.settings.content.label__15",
+            "settings": [
+            {
+                "type": "image_picker",
+                "id": "image",
+                "label": "t:sections.image-banner.blocks.image.settings.content.label__15",
+                "info" : "t:sections.brand.blocks.image.info"
+            },
+            {
+                "type" : "inline_richtext",
+                "id" : "description",
+                "label" : "t:sections.image-banner.blocks.image.settings.content.label__2",
+                "default": "At ELLA, we are committed to providing high-quality wigs that cater to a diverse array of needs and preferences. a trusted partner and a go-to source for anyone in search of the perfect wig."
+            },
+            {
+                "type": "range",
+                "id": "fontsize_des_block",
+                "label": "t:settings_schema.typography.settings.typography.des_font_size",
+                "min": 10,
+                "max": 100,
+                "step": 1,
+                "unit": "t:sections.layout.fontsize.fontsize_title.unit",
+                "default": 40
+            },
+            {
+                "type": "range",
+                "id": "fontsize_des_block_mb",
+                "label": "t:settings_schema.typography.settings.typography.des_font_size_mb",
+                "min": 0,
+                "max": 50,
+                "step": 1,
+                "unit": "t:sections.layout.mg_desktop.unit",
+                "default": 18
+            },
+            {
+                "type": "range",
+                "id": "des_line_height",
+                "label": "t:settings_schema.typography.settings.typography.label__1",
+                "min": 0,
+                "max": 10,
+                "step": 0.1,
+                "default": 1
+            },
+            {
+                "type": "color",
+                "id": "color_des",
+                "label": "t:settings_schema.typography.settings.typography.des_color",
+                "default": "#3c3c3c"
+            }
+            ]
+        }
+    ],
+    "presets": [
+        {
+            "name": "t:sections.brand.name_2",
+            "blocks": [
+                {
+                    "type": "image",
+                    "settings": {
+                        "image": "shopify:\/\/shop_images\/brand-logo-1-31.png",
+                        "description": "“At ELLA, we are committed to providing high-quality wigs that cater to a diverse array of needs and preferences. a trusted partner and a go-to source for anyone in search of the perfect wig.",
+                        "fontsize_des_block": 40,
+                        "fontsize_des_block_mb": 26,
+                        "des_line_height": 1.6,
+                        "color_des": "#000000"
+                    }
+                },
+                {
+                    "type": "image",
+                    "settings": {
+                        "image": "shopify:\/\/shop_images\/brand-logo-1-31.png",
+                        "description": "“At ELLA, we are committed to providing high-quality wigs that cater to a diverse array of needs and preferences. a trusted partner and a go-to source for anyone in search of the perfect wig.",
+                        "fontsize_des_block": 40,
+                        "fontsize_des_block_mb": 26,
+                        "des_line_height": 1.6,
+                        "color_des": "#000000"
+                    }
+                },
+                {
+                    "type": "image",
+                    "settings": {
+                        "image": "shopify:\/\/shop_images\/brand-logo-1-31.png",
+                        "description": "“At ELLA, we are committed to providing high-quality wigs that cater to a diverse array of needs and preferences. a trusted partner and a go-to source for anyone in search of the perfect wig.",
+                        "fontsize_des_block": 40,
+                        "fontsize_des_block_mb": 26,
+                        "des_line_height": 1.6,
+                        "color_des": "#000000"
+                    }
+                },
+                {
+                    "type": "image",
+                    "settings": {
+                        "image": "shopify:\/\/shop_images\/brand-logo-1-31.png",
+                        "description": "“At ELLA, we are committed to providing high-quality wigs that cater to a diverse array of needs and preferences. a trusted partner and a go-to source for anyone in search of the perfect wig.",
+                        "fontsize_des_block": 40,
+                        "fontsize_des_block_mb": 26,
+                        "des_line_height": 1.6,
+                        "color_des": "#000000"
+                    }
+                }
+            ]
+        }
+    ]
+}
+{% endschema %}

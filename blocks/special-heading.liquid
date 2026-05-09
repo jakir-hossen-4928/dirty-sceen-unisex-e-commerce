@@ -1,0 +1,294 @@
+{% stylesheet %}
+    :root {
+        --text-align-default: left;
+    }
+
+    [style*='--horizontal-alignment: center'] .special-heading-block {
+        --text-align-default: center;
+    }
+
+    [style*='--horizontal-alignment: flex-end'] .special-heading-block {
+        --text-align-default: right;
+    }
+
+    [style*='--horizontal-alignment: flex-start'] > .special-heading-block {
+        --text-align-default: left;
+    }
+
+    [style*='--horizontal-alignment: center'] > .special-heading-block {
+        --text-align-default: center;
+    }
+
+    [style*='--horizontal-alignment: flex-end'] > .special-heading-block {
+        --text-align-default: right;
+    }
+
+    .special-heading-block {
+        background-color: var(--background-color, transparent);
+        border-radius: var(--corner-radius, 0rem);
+    }
+
+    .special-heading-block.h2 > * {
+        font-size: var(--heading-size);
+        color: var(--color-heading);
+        line-height: var(--heading-line-height);
+        text-align: var(--text-align, var(--text-align-default));
+        overflow-wrap: anywhere;
+
+        @media (max-width: 767px) {
+            font-size: var(--heading-size-mb);
+        }
+    }
+
+    .special-heading-block.h2 p {
+        margin: unset;
+    }
+
+    .special-heading-block.h2 .special_text--color {
+        color: var(--special_heading_color);
+    }
+
+    .special-heading-block.h2 .special_text--background {
+        color: transparent;
+        background-image: var(--special_heading_image);
+        background-clip: text;
+        -webkit-background-clip: text;
+        background-position: center;
+        background-size: cover;
+    }
+{% endstylesheet %}
+
+{% liquid
+    capture text_block_classes
+        echo 'text-block--align-' | append: block.settings.alignment
+    endcapture
+
+    assign heading = block.settings.heading
+    assign special_text = block.settings.special_text
+
+    if special_text != blank
+        if block.settings.heading_style == 'image' and block.settings.special_heading_image != blank
+            assign special_text_code = special_text | prepend: '<span class="special_text--background">' | append: '</span>'
+        else
+            assign special_text_code = special_text | prepend: '<span class="special_text--color">' | append: '</span>'
+        endif
+        assign heading = heading | replace: special_text, special_text_code
+    endif
+%}
+<div
+    class="special-heading-block h2 special-heading-block--{{ block.id }} spacing-style {{ text_block_classes }}{% if settings.banner_animation == 'effect_fade_up' %} scroll-trigger animate--slide-in{% endif %}"
+    style="
+        {% render 'spacing-padding', settings: block.settings %}
+        --color-heading: {{ block.settings.heading_color }};
+        --special_heading_color: {{ block.settings.special_heading_color }};
+        {% if block.settings.special_heading_image != blank %}
+            --special_heading_image: url('{{ block.settings.special_heading_image | image_url: width: 2000 }}');
+        {% endif %}
+        --heading-size: {{ block.settings.heading_size | append: 'px' }};
+        --heading-size-mb: {{ block.settings.heading_size_mb | append: 'px' }};
+        --heading-line-height: {{ block.settings.heading_line_height }};
+
+        {% if block.settings.background %}
+            --background-color: {{ block.settings.background_color | default: 'rgb(255 255 255 / 1.0)' }};
+            --corner-radius: {{ block.settings.corner_radius }}px;
+        {% endif %}
+    "
+    {{ block.shopify_attributes }}
+>
+    {{ heading }}
+</div>
+
+{% schema %}
+{
+    "name": "t:sections.image-banner.blocks.image.settings.content.label__20",
+    "tag": null,
+    "settings": [
+        {
+            "type": "richtext",
+            "id": "heading",
+            "label": "t:sections.image-banner.blocks.image.settings.content.label__19"
+        },
+        {
+            "type": "text",
+            "id": "special_text",
+            "label": "t:sections.newsletter.special_text",
+            "info": "t:sections.newsletter.special_text_info_2"
+        },
+        {
+            "type": "header",
+            "content": "t:flex_section.content.typography"
+        },
+        {
+            "type": "range",
+            "id": "heading_size",
+            "label": "t:sections.slide-show.blocks.image.slider_content.font_size_heading",
+            "min": 12,
+            "max": 200,
+            "step": 2,
+            "unit": "t:sections.layout.mg_desktop.unit",
+            "default": 36
+        },
+        {
+            "type": "range",
+            "id": "heading_size_mb",
+            "label": "t:sections.slide-show.blocks.image.slider_content.font_size_heading_mb",
+            "min": 10,
+            "max": 100,
+            "step": 1,
+            "unit": "t:sections.layout.mg_desktop.unit",
+            "default": 24
+        },
+        {
+            "type": "range",
+            "id": "heading_line_height",
+            "label": "t:settings_schema.typography.settings.typography.label__1",
+            "min": 0,
+            "max": 2,
+            "step": 0.1,
+            "default": 1
+        },
+        {
+            "type" : "color",
+            "id" : "heading_color",
+            "label" : "t:sections.slide-show.blocks.image.slider_content.color_heading",
+            "alpha": true,
+            "default" : "#000000"
+        },
+        {
+            "type": "select",
+            "id": "heading_style",
+            "label": "t:flex_section.settings.overlay_style",
+            "options": [
+                {
+                    "value": "color",
+                    "label": "t:settings_schema.colors.settings.colors_name.color"
+                },
+                {
+                    "value": "image",
+                    "label": "t:flex_section.options.image"
+                }
+            ],
+            "default": "color"
+        },
+        {
+            "type" : "color",
+            "id" : "special_heading_color",
+            "label" : "t:sections.slide-show.blocks.image.slider_content.color_special_heading",
+            "alpha": true,
+            "default" : "#FCB129",
+            "visible_if": "{{ block.settings.special_text != blank and block.settings.heading_style == 'color' }}"
+        },
+        {
+            "type": "image_picker",
+            "id": "special_heading_image",
+            "label": "t:flex_section.settings.background_image",
+            "visible_if": "{{ block.settings.special_text != blank and block.settings.heading_style == 'image' }}"
+        },
+        {
+            "type": "header",
+            "content": "t:flex_section.content.appearance"
+        },
+        {
+            "type": "checkbox",
+            "id": "background",
+            "label": "t:flex_section.settings.background",
+            "default": false
+        },
+        {
+            "type": "color",
+            "id": "background_color",
+            "label": "t:flex_section.settings.background_color",
+            "alpha": true,
+            "default": "#ffffff87",
+            "visible_if": "{{ block.settings.background }}"
+        },
+        {
+            "type": "range",
+            "id": "corner_radius",
+            "label": "t:flex_section.settings.corner_radius",
+            "default": 0,
+            "min": 0,
+            "max": 100,
+            "step": 1,
+            "visible_if": "{{ block.settings.background }}"
+        },
+        {
+            "type": "header",
+            "content": "t:settings_schema.typography.settings.type_button_font.padding_top"
+        },
+        {
+            "type": "range",
+            "id": "pd-top-desktop",
+            "label": "t:sections.layout.mg_desktop.label",
+            "min": 0,
+            "max": 100,
+            "step": 1,
+            "unit": "t:sections.layout.mg_desktop.unit",
+            "default": 0
+        },
+        {
+            "type": "range",
+            "id": "pd-top-tablet",
+            "label": "t:sections.layout.mg_tablet.label",
+            "min": 0,
+            "max": 100,
+            "step": 1,
+            "unit": "t:sections.layout.mg_desktop.unit",
+            "default": 0
+        },
+        {
+            "type": "range",
+            "id": "pd-top-mobile",
+            "label": "t:sections.layout.mg_mobile.label",
+            "min": 0,
+            "max": 100,
+            "step": 1,
+            "unit": "t:sections.layout.mg_desktop.unit",
+            "default": 0
+        },
+        {
+            "type": "header",
+            "content": "t:settings_schema.typography.settings.type_button_font.padding_bottom"
+        },
+        {
+            "type": "range",
+            "id": "pd-bottom-desktop",
+            "label": "t:sections.layout.mg_desktop.label",
+            "min": 0,
+            "max": 100,
+            "step": 1,
+            "unit": "t:sections.layout.mg_desktop.unit",
+            "default": 0
+        },
+        {
+            "type": "range",
+            "id": "pd-bottom-tablet",
+            "label": "t:sections.layout.mg_tablet.label",
+            "min": 0,
+            "max": 100,
+            "step": 1,
+            "unit": "t:sections.layout.mg_desktop.unit",
+            "default": 0
+        },
+        {
+            "type": "range",
+            "id": "pd-bottom-mobile",
+            "label": "t:sections.layout.mg_mobile.label",
+            "min": 0,
+            "max": 100,
+            "step": 1,
+            "unit": "t:sections.layout.mg_desktop.unit",
+            "default": 0
+        }
+    ],
+    "presets": [
+        {
+            "name": "t:sections.image-banner.blocks.image.settings.content.label__20",
+            "category": "t:flex_section.categories.basic",
+            "settings": {
+                "heading": "<p>New arrivals</p>"
+            }
+        }
+    ]
+}
+{% endschema %}

@@ -1,0 +1,164 @@
+{% comment %} block__text_first: block__text_first, footer_top_title_color,  address_last: true / false {% endcomment %}
+
+{% liquid
+  assign show_social = block.settings.show_social
+
+  assign layout_style = block.settings.layout_style
+  assign custom_width = block.settings.custom_width | append: '%'
+  assign mg_bottom = block.settings.mg_bottom | append: 'px'
+
+  assign heading = block.settings.heading
+  assign subtext = block.settings.subtext
+  assign logo = block.settings.logo
+
+  assign logo_margin_bottom = block.settings.logo_margin_bottom | append: 'px'
+  assign show_social = block.settings.show_social
+  assign final_icon_color = footer_top_title_color
+  if block.settings.icon_color != blank
+    assign final_icon_color = block.settings.icon_color
+  endif
+
+  if address_last == null or address_last == blank
+    assign address_last = false
+  endif
+%}
+<style>
+  .footer-block__text[style^="--block-custom-width: 100%"] > div {text-align: center}
+  .footer-block__text[style^="--block-custom-width: 100%"] .image_logo {width: max-content;margin-left: auto;margin-right: auto}
+  {%- if block.settings.enable_side_border != blank -%}
+      .footer-block__text {padding-right: 4.5%;padding-left: 2.5%}
+      .footer-block__text .side-bordered {border-left: 1px solid {{ block.settings.side_border_color }};border-right: 1px solid {{ block.settings.side_border_color }};padding-left: {{ block.settings.side_border_spacing_left | append: 'px' }};padding-right: {{ block.settings.side_border_spacing_right | append: 'px' }}}
+  {%- endif -%}
+  {%- if block.settings.custom_width == '27.3' -%}
+      .footer-block__text {padding-right: 2%;padding-left: 2%}
+      .footer-block__newsletter .form--check {margin-top: 10px;}
+      .footer-block__newsletter .form--check label{padding-left: 30px;}
+      .footer-block__newsletter .form--check label:before{width: 20px;height: 20px;top: 5.5px;}
+      .footer-block__newsletter .form--check label:after{width: 13px;height: 7px;top: 9px;left: 4px;}
+      .footer-block__details .rte .content-piece.is-last {margin-top: 0px;}
+      .footer-block__bottom.not_flex .footer__column--info {margin-top: 15px;}
+  {%- endif -%}
+  {%- if logo_margin_bottom == '24px' -%}
+    .footer-block__details .rte {line-height: 30px;font-size: var(--footer-link-font-size);}
+    .footer-block__details.has-content-piece .rte>p:last-of-type {margin-bottom: 0px;}
+    .footer-block__newsletter .footer-block__subheading {line-height: 24px;}
+    .footer-block__app-store {margin-top: 40px;}
+    .footer-block__app-store .item a+a {margin-left: 10px;}
+    .footer-block__newsletter .footer-block__newsletter-form .newsletter-form__button {min-width: var(--button-width);}
+    .copyright__content p {line-height: 1.5em;}
+  {%- endif -%}
+  @media (max-width: 1200px) {
+      {%- if block.settings.enable_side_border != blank -%}
+          .footer-block__text .side-bordered{padding-left:0;padding-right:0;border:none;margin-left:15px;margin-right:15px}.footer-block__text{padding-right:0;padding-left:0}
+      {%- endif -%}
+      {%- if block.settings.custom_width == '27.3' or block.settings.custom_width == '25.3' -%}
+        .footer-block__newsletter .newsletter-form__field-wrapper {flex-wrap: nowrap}
+      {%- endif -%}
+  }
+  @media (max-width: 1024px) {.footer-block__newsletter .newsletter-form__field-wrapper {flex-wrap: nowrap}}
+  @media (max-width: 767px) {
+    .footer-block__text{margin-bottom:30px}.footer-block__text:not(.block__text_first){margin-top:25px}
+    {%- if block.settings.custom_width == '27.3' -%}
+      .copyright__content p{line-height: 1.5em;}
+      .footer-block__column .footer-block__heading{line-height: 1}
+      .footer-block__list-social {margin-top: 18px}
+      .footer-block__item.footer-block__newsletter {margin-bottom: 10px;margin-top: 0px;}
+    {%- endif -%}
+  }
+  @media (min-width: 768px) and (max-width: 1200px) {.column-5 .footer-block__item.footer-block__text{width:100%}.column-5 .footer-block__item.footer-block__text.block__text_first{width:34%}}
+  @media (min-width: 1025px) and (max-width: 1200px) {
+    .btn_1_br_outside .footer-block__newsletter .newsletter-form__field-wrapper {flex-wrap: nowrap}
+  }
+  @media (min-width: 1300px) {
+    {%- if block.settings.custom_width == '27.3' -%}
+      .footer-block__text .side-bordered {
+          padding-bottom: 125px;
+      }
+    {%- endif -%}
+  }
+</style>
+<div class="footer-block__item footer-block__column text-{{ text_align }} footer-block__{{ block.type }}{% if block.type == 'text' %} block_text--{{ layout_style }}{% endif %} {{ block__text_first }}{% if settings.banner_animation == 'effect_fade_up' %} scroll-trigger animate--slide-in{% endif %}{% if block.settings.show_border_left %} border-left{% endif %}{% if block.settings.show_border_right %} border-right{% endif %}" style="--block-custom-width: {{custom_width}};--block-margin-bottom: {{ mg_bottom }};{% if block.settings.show_border_left %}--border_left_color:{{block.settings.border_left_color}};{% endif %}{% if block.settings.show_border_right %}--border_right_color:{{block.settings.border_right_color}};{% endif %}">
+  <div class="{% if block.settings.enable_side_border %}side-bordered{% endif %}">
+    {%- if heading != blank -%}
+      <h2 class="footer-block__heading" data-toggle-column-footer>{{- heading | escape -}}</h2>
+    {%- endif -%}
+    <div class="footer-block__details{% if block.settings.enable_custom_position_icon != blank %} enable_custom_position_icon{% endif %}{% if block.settings.phone_text != blank or block.settings.address_text != blank or block.settings.email_text != blank %} has-content-piece{% endif %}" style="--icon-color: {{ final_icon_color }}; --icon-size: {{ block.settings.icon_size | append: 'px' }}; --content-spacing: {{ block.settings.content_spacing | append: 'px' }}">
+      {%- if logo != blank -%}
+        <div class="image_logo" style="--margin-bottom: {{ logo_margin_bottom }}">
+          {%- assign logo_height = logo.width | divided_by: logo.aspect_ratio | round -%}
+          <img data-srcset="{{ logo | img_url: '420x' }}" class="lazyload" alt="{{ logo.alt | default: shop.name | escape }}" width="{{ logo.width }}" height="{{ logo_height }}">
+        </div>
+      {%- endif -%}
+      <div class="rte">
+        {% if subtext != blank %}
+          {{ subtext | default: ' ' }}
+        {% endif %}
+        {%- if block.settings.address_text != blank and address_last == false -%}
+          <div class="address-wrapper content-piece 12">
+            {%- if block.settings.show_address_icon -%}
+              <span class="icon">
+                {%- if block.settings.address_icon == 'point_icon' -%}
+                  {% render 'icon-point' %}
+                {%- endif -%}
+              </span>
+            {%- endif -%}
+            <div>{{ block.settings.address_text | default: ' ' }}</div>
+          </div>
+        {%- endif -%}
+        {%- if block.settings.enable_custom_position_icon != blank -%}
+        <div class="content-wrapper">
+        {%- endif -%}
+          {%- if block.settings.phone_text != blank -%}
+            <div class="phone-wrapper content-piece">
+              {%- if block.settings.show_phone_icon -%}
+                <span class="icon">
+                  {%- if block.settings.phone_icon == 'message_icon' -%}
+                    {% render 'icon-message' %}
+                  {%- elsif block.settings.phone_icon == 'phone_icon' -%}
+                    {% render 'icon-mobile-phone' %}
+                  {%- elsif block.settings.phone_icon == 'message_icon_2' -%}
+                    {% render 'icon-message-2' %}
+                  {%- endif -%}
+                </span>
+              {%- endif -%}
+              <div>{{ block.settings.phone_text | default: ' ' }}</div>
+            </div>
+          {%- endif -%}
+          {%- if block.settings.email_text != blank -%}
+            <div class="email-wrapper content-piece">
+              {%- if block.settings.show_email_icon -%}
+                <span class="icon">
+                  {%- if block.settings.email_icon == 'envelope_icon' -%}
+                    {% render 'icon-envelop' %}
+                  {%- elsif block.settings.email_icon == 'envelope_outline_icon' -%}
+                    {% render 'icon-outline-envelope' %}
+                  {%- elsif block.settings.email_icon == 'envelope_outline_icon_2' -%}
+                    {% render 'icon-outline-envelope-2' %}
+                  {%- endif -%}
+                </span>
+              {%- endif -%}
+              <div>{{ block.settings.email_text | default: ' ' }}</div>
+            </div>
+          {%- endif -%}
+        {%- if block.settings.enable_custom_position_icon != blank -%}
+        </div>
+        {%- endif -%}
+        {%- if block.settings.address_text != blank and address_last == true -%}
+          <div class="address-wrapper content-piece is-last">
+            {%- if block.settings.show_address_icon -%}
+              <span class="icon">
+                {%- if block.settings.address_icon == 'point_icon' -%}
+                  {% render 'icon-point' %}
+                {%- endif -%}
+              </span>
+            {%- endif -%}
+            {{ block.settings.address_text | default: ' ' }}
+          </div>
+        {%- endif -%}
+      </div>
+    </div>
+  </div>
+  {%- if show_social -%}
+    {% render 'footer-social', block: block, social_is_nested: true %}
+  {%- endif -%}
+</div>

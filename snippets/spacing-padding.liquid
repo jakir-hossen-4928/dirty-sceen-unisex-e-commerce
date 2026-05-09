@@ -1,0 +1,15 @@
+{%- comment -%}
+  Intended for blocks and sections that provide values for all the referenced settings.
+
+  <div style="{%  render 'spacing-padding', settings: section.settings %}">
+
+  Accepts:
+    settings: {block.settings || section.settings}
+{%- endcomment -%}
+
+--pd-top-desktop: {{- settings.pd-top-desktop | default: 0 -}}px;
+--pd-top-tablet: {{- settings.pd-top-tablet | default: 0 -}}px;
+--pd-top-mobile: {{- settings.pd-top-mobile | default: 0 -}}px;
+--pd-bottom-desktop:{{- settings.pd-bottom-desktop | default: 0 -}}px;
+--pd-bottom-tablet:{{- settings.pd-bottom-tablet | default: 0 -}}px;
+--pd-bottom-mobile:{{- settings.pd-bottom-mobile | default: 0 -}}px;

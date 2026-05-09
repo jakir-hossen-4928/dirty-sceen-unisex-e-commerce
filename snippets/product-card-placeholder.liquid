@@ -1,0 +1,31 @@
+{% comment %}
+    Renders a product card placeholder
+    Usage:
+    {% render 'product-card-placeholder' %}
+{% endcomment %}
+<div class="product-item product-item-placeholder{% if settings.banner_animation == 'effect_fade_up' %} scroll-trigger animate--slide-in{% endif %}"{% if settings.banner_animation == 'effect_fade_up' %} data-cascade style="--animation-order: {{ forloop.index }};"{% endif %}>
+    <div class="card{% if card-mega-menu %} b-zero{% endif %}">
+        <div class="card-product card--text-only card--soft">
+            <div class="card-product__wrapper">
+                <div class="card-media card-media--square">
+                    {%- assign placeholder_image = 'product-apparel-' | append: index -%}
+                    {{ placeholder_image | placeholder_svg_tag: 'placeholder-svg' }}
+                </div>
+            </div>
+            {% if card-mega-menu %}</div>{% endif %}
+            <div class="card-information">
+                <div class="card-information__wrapper text-{% if card-mega-menu %}center{% else %}{{ settings.product_content_text_align }}{% endif %}">
+                    {%- if settings.show_vendor -%}
+                        <div class="card-vendor text-{{ settings.product_content_text_align }}"><span class="visually-hidden">{{ 'accessibility.vendor' | t }}</span>{{ 'products.product.vendor' | t }}</div>
+                    {%- endif -%}
+                    <h3 class="card__heading"><a class="card-title link-underline {{ settings.product_title_text_transform }}{% if settings.product_title_line_text != 'full' %} card-title-ellipsis{% endif %}{% unless card-mega-menu %} text-{{ settings.product_content_text_align }}{% endunless %}" role="link" aria-disabled="true" title="{{ 'onboarding.product_title' | t }}">{{ 'onboarding.product_title' | t }}</a></h3>
+                    {% if card-mega-menu %}
+                    <div class="card-price">{% render 'price' %}</div>
+                    {% else %}
+                    <div class="card-information__group"><div class="card-price">{% render 'price' %}</div></div>
+                    {% endif %}
+                </div>
+            </div>
+        {% unless card-mega-menu %}</div>{% endunless %}
+    </div>
+</div>

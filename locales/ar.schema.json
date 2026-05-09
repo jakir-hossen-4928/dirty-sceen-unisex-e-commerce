@@ -1,0 +1,5079 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin language editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "settings_schema": {
+    "colors": {
+      "name": "الألوان العامة",
+      "settings": {
+        "colors_name": {
+          "color_product": "ألوان المنتج",
+          "color": "اللون",
+          "text_color": "لون النص",
+          "label_color": "لون التسمية",
+          "label_hover_color": "لون التسمية عند التحويم",
+          "color_mobile": "لون الجوال",
+          "border_color": "لون الحدود",
+          "border_color_mb": "لون الحدود على الجوال",
+          "stroke_color": "لون الحدود",
+          "stroke_color_mb": "لون الحدود على الجوال",
+          "border_gradient_color": "لون تدرج الحدود",
+          "background_color": "الخلفية",
+          "background_color_2": "لون الخلفية",
+          "background_color_gradient": "تدرج الخلفية",
+          "color_hover": "لون التحويم",
+          "border_hover": "لون حدود التحويم",
+          "border_hover_2": "حدود التحويم",
+          "background_hover": "لون خلفية التحويم",
+          "background_hover_2": "خلفية التحويم",
+          "background_hover_gradient": "تدرج خلفية التحويم",
+          "background_image": "صورة الخلفية",
+          "background_color_mobile": "لون الخلفية على الجوال",
+          "background_gradient_mobile": "تدرج الخلفية على الجوال"
+        },
+        "header__1": {
+          "content": "لون التمييز"
+        },
+        "header__2": {
+          "content": "المحتوى"
+        },
+        "header__5": {
+          "content": "تنبيه"
+        },
+        "header__7": {
+          "content": "مسار التنقل"
+        },
+        "colors_arrow": {
+          "title_arrow": "الأسهم"
+        },
+        "colors_dots": {
+          "title_dots": "النقاط",
+          "color_dots": "لون النقاط"
+        },
+        "colors_text": {
+          "label__1": "النص الافتراضي",
+          "label__2": "النص البديل",
+          "label__3": "رمادي",
+          "label__4": "أبيض",
+          "label__5": "أسود"
+        },
+        "colors_placeholder": {
+          "label": "لون العنصر النائب",
+          "label_2": "العنصر النائب"
+        },
+        "colors_warning": {
+          "label": "تحذير"
+        },
+        "colors_alert": {
+          "label__1": "نص الخطأ",
+          "label__2": "خلفية الخطأ",
+          "label__3": "نص النجاح",
+          "label__4": "خلفية النجاح",
+          "label__5": "نص المعلومات",
+          "label__6": "خلفية المعلومات"
+        },
+        "colors_link": {
+          "label__1": "لون الرابط",
+          "label__2": "لون الرابط عند التحويم",
+          "label__3": "تحويم الرابط",
+          "label__4": "رابط"
+        },
+        "colors_global": {
+          "label": "عام",
+          "label__2": "حدود عامة",
+          "label__3": "خلفية عامة"
+        },
+        "colors_loading": {
+          "label__1": "لون التحميل",
+          "label__2": "لون أيقونة التحميل",
+          "label__3": "لون أيقونة التحميل للجوال"
+        },
+        "colors_breadcrumb": {
+          "label__4": "خلفية\/تدرج مسار التنقل للتخطيطات 2 و 3 فقط"
+        },
+        "spinner_colors": {
+          "content": "دوران التحميل",
+          "label__1": "الحد العلوي",
+          "label__2": "الحد الأيمن",
+          "label__3": "الحد السفلي",
+          "label__4": "الحد الأيسر"
+        }
+      }
+    },
+    "multiple_layouts": {
+      "name": "تخطيطات متعددة",
+      "settings": {
+        "general": {
+          "header": "الرأس",
+          "header_layout": "تخطيط الرأس",
+          "body": "المحتوى",
+          "footer": "التذييل",
+          "footer_layout": "تخطيط التذييل",
+          "mobile_menu_content": "قائمة الجوال",
+          "default": "افتراضي",
+          "full_width": "عرض كامل",
+          "boxed": "مربع",
+          "custom_width": "عرض مخصص",
+          "password_layout": "صفحة كلمة المرور",
+          "layout": "التخطيط",
+          "layout_1": "كلمة المرور 01",
+          "layout_2": "كلمة المرور 02",
+          "layout_boxed": "تخطيط مربع",
+          "select_banner_left": "البانر الأيسر",
+          "select_banner_right": "البانر الأيمن",
+          "link_banner_left": "رابط البانر الأيسر",
+          "link_banner_right": "رابط البانر الأيمن",
+          "layout_select": "التخطيط",
+          "blog_layout": "صفحات المدونة",
+          "blog_default": "افتراضي",
+          "blog_simple": "بسيط",
+          "blog_full_width": "عرض كامل",
+          "blog_masonry": "متداخل",
+          "blog_list": "قائمة",
+          "product_page_layout": "صفحات المنتج",
+          "product_page_default": "افتراضي",
+          "product_page_full_width": "عرض كامل",
+          "product_page_full_width_2": "عرض شبكي",
+          "product_page_gallery": "معرض",
+          "product_page_left_thumbs": "صور مصغرة عمودية يسار",
+          "product_page_right_thumbs": "صور مصغرة عمودية يمين",
+          "product_page_left_right_sidebar": "شريط جانبي يسار\/يمين",
+          "product_page_horizontal_tabs_no_sidebar": "تبويبات أفقية بدون شريط جانبي",
+          "product_page_step_by_step": "خطوة بخطوة",
+          "header_layout_rtl": "تخطيط من اليمين لليسار",
+          "enable_layout_rtl": "تفعيل التخطيط من اليمين لليسار",
+          "list_iso_rtl": "قائمة رموز ISO للغات من اليمين لليسار",
+          "list_iso_rtl_info": "افصل بين رموز ISO للغات بفاصلة '،'. مثال: ar, ha, he",
+          "list_iso_rtl_placeholder": "ar, ha, he",
+          "list_iso_rtl_note": "قائمة رموز ISO للغات للتبديل التلقائي إلى تخطيط RTL: ar:(العربية); dv:(الديفهي،المالديفية); ha:(الهوسا); he:(العبرية); ku:(الكردية\/السورانية); fa:(الفارسية); ur:(الأردية); ps:(البشتو); yi:(اليديشية)"
+        }
+      }
+    },
+    "typography": {
+      "name": "الخطوط",
+      "settings": {
+        "font_family__1": {
+          "content": "عائلة الخط #1"
+        },
+        "font_family__2": {
+          "content": "عائلة الخط #2"
+        },
+        "font_type": {
+          "label": "عائلة الخط",
+          "label__1": "مصدر الخط",
+          "options__1": "خطوط جوجل",
+          "options__2": "خطوط شوبيفاي",
+          "info": "لاستخدام خطوط جوجل، أضف اسم الخط. [اعرف المزيد](https:\/\/fonts.google.com\/)",
+          "info_shopify_font": "حسّن أداء موقعك باستخدام خطوط شوبيفاي!",
+          "info_language": "عند تكوين لغة في إعدادات التخصيص، من المهم أيضًا تعيين تفضيل اللغة نفسه في الإعدادات الإدارية."
+        },
+        "font_name": {
+          "label": "اسم خط جوجل"
+        },
+        "type_body_font": {
+          "title": "خط المحتوى",
+          "label": "خط شوبيفاي",
+          "info": "اختيار خط مختلف قد يؤثر على سرعة متجرك. [اعرف المزيد عن خطوط النظام.](https:\/\/help.shopify.com\/en\/manual\/online-store\/os\/store-speed\/improving-speed#fonts)"
+        },
+        "type_heading_font": {
+          "title": "خط العناوين",
+          "border_height": "ارتفاع الحدود"
+        },
+        "type_navigation_font": {
+          "title": "خط التنقل",
+          "title_menu_lv1": "القائمة المستوى 1",
+          "title_menu_lv2": "القائمة المستوى 2",
+          "title_menu_lv3": "القائمة المستوى 3",
+          "title_mega_menu_lv2": "القائمة الكبيرة المستوى 2",
+          "title_mega_menu_lv3": "القائمة الكبيرة المستوى 3",
+          "label": "عائلة خط التنقل",
+          "info": "اختيار خط مختلف قد يؤثر على سرعة متجرك. [اعرف المزيد عن خطوط النظام.](https:\/\/help.shopify.com\/en\/manual\/online-store\/os\/store-speed\/improving-speed#fonts)"
+        },
+        "type_product_item_font": {
+          "title": "خط عنصر المنتج",
+          "product_title": "عنوان المنتج",
+          "product_vendor": "بائع المنتج",
+          "product_price": "سعر المنتج",
+          "product_price_percent": "إظهار نسبة السعر",
+          "product_badge": "شارات المنتج",
+          "badge": "الشارات",
+          "product_quickview": "العرض السريع للمنتج"
+        },
+        "type_blog_item_font": {
+          "title": "خط عنوان المدونة"
+        },
+        "type_blog_info_font": {
+          "title": "خط معلومات المدونة"
+        },
+        "type_button_font": {
+          "info_1": "يطبق على جميع الأزرار باستثناء زري 'إضافة إلى السلة' و'اشتر الآن'.",
+          "info_2": "يطبق على زري 'إضافة إلى السلة' و'اشتر الآن' في صفحة تفاصيل المنتج.",
+          "info_3": "يطبق على أزرار 'إضافة إلى السلة'",
+          "title": "خط الزر الرئيسي",
+          "title_2": "خط الزر الثانوي",
+          "title_3": "خط الزر الثالث",
+          "border_radius": "نصف قطر الزوايا",
+          "border_width": "عرض الحدود",
+          "border_style": "نمط الحدود",
+          "solid": "صلب",
+          "dotted": "منقط",
+          "double": "مزدوج",
+          "text_align": "محاذاة النص",
+          "left": "يسار",
+          "center": "وسط",
+          "right": "يمين",
+          "middle": "منتصف",
+          "padding_top": "الهامش العلوي",
+          "padding_bottom": "الهامش السفلي",
+          "box_shadow": "ظل الصندوق",
+          "show_box_shadow": "إظهار ظل الصندوق",
+          "bg_box_shadow": "لون ظل الصندوق",
+          "bg_box_shadow_hover": "لون ظل الصندوق عند التحويم",
+          "horizontal_length": "الطول الأفقي",
+          "vertical_length": "الطول العمودي",
+          "blur_radius": "نصف قطر الضبابية",
+          "spread": "الانتشار",
+          "opacity": "الشفافية",
+          "opacity_info": "تتراوح قيمة الشفافية من 0.0 إلى 1.0، حيث تشير القيم المنخفضة إلى شفافية أعلى، والعكس صحيح، تشير القيم الأعلى إلى شفافية أقل.",
+          "show_inset_shadow": "إظهار الظل الداخلي",
+          "inset_shadow": "الظل الداخلي",
+          "yes": "نعم",
+          "no": "لا",
+          "label": "عائلة خط الزر 1",
+          "info": "اختيار خط مختلف قد يؤثر على سرعة متجرك. [اعرف المزيد عن خطوط النظام.](https:\/\/help.shopify.com\/en\/manual\/online-store\/os\/store-speed\/improving-speed#fonts)",
+          "enable_border_outside": "إظهار الإطار الخارجي",
+          "cta_button": "زر الدعوة للإجراء"
+        },
+        "font_size": {
+          "label": "حجم الخط",
+          "label_mb": "حجم الخط على الجوال",
+          "label_2": "حجم الأرقام",
+          "label_3": "حجم خط المحتوى",
+          "label_4": "حجم خط المحتوى على الهاتف المحمول",
+          "info": "اختيار حجم خط مختلف قد يؤثر على إمكانية الوصول لمتجرك.",
+          "unit": "بكسل"
+        },
+        "font_weight": {
+          "label": "سمك الخط",
+          "label_mb": "سمك الخط للجوال",
+          "active": "سمك الخط النشط",
+          "options__1": "عادي",
+          "options__2": "متوسط",
+          "options__3": "شبه غامق",
+          "options__4": "غامق",
+          "options__5": "غامق جداً",
+          "options__6": "أسود",
+          "info": "اختيار سمك خط مختلف قد يؤثر على إمكانية الوصول لمتجرك."
+        },
+        "font_style": {
+          "label": "نمط الخط",
+          "options__1": "عادي",
+          "options__2": "مائل",
+          "options__3": "منحرف"
+        },
+        "text_transform": {
+          "label": "نمط النص",
+          "options__1": "بدون",
+          "options__2": "أحرف كبيرة في بداية الكلمات",
+          "options__3": "أحرف كبيرة",
+          "options__4": "أحرف صغيرة"
+        },
+        "typography": {
+          "info": "مثال: 0.05em",
+          "label__1": "ارتفاع السطر",
+          "label__2": "تباعد الحروف",
+          "label__3": "المسافات",
+          "unit": "بكسل",
+          "unit_2": "%",
+          "sub_title_font_size": "حجم خط العنوان الفرعي",
+          "sub_title_font_size_mb": "حجم خط العنوان الفرعي على الجوال",
+          "sub_title_color": "لون العنوان الفرعي",
+          "sub_title_color_mb": "لون العنوان الفرعي على الجوال",
+          "sub_title_font_weight": "سمك خط العنوان الفرعي",
+          "sub_title_font_style": "نمط خط العنوان الفرعي",
+          "sub_title_letter_spacing": "تباعد حروف العنوان الفرعي",
+          "sub_title_margin_top": "الهامش العلوي للعنوان الفرعي",
+          "sub_title_margin_bottom": "الهامش السفلي للعنوان الفرعي",
+          "sub_title_margin_bottom_mb": "الهامش السفلي للعنوان الفرعي على الجوال",
+          "sub_title_position": "موضع العنوان الفرعي",
+          "title_enable": "إظهار العنوان",
+          "title_style": "نمط العنوان",
+          "title_font": "عائلة خط العنوان",
+          "title_font_size": "حجم خط العنوان",
+          "title_font_size_mb": "حجم خط العنوان على الجوال",
+          "title_line_height": "حجم ارتفاع السطر",
+          "title_line_height_mb": "حجم ارتفاع السطر على الجوال",
+          "title_font_weight": "سمك خط العنوان",
+          "title_letter_spacing": "تباعد حروف العنوان",
+          "title_color": "لون العنوان",
+          "title_color_hover": "لون العنوان عند التحويم",
+          "title_color_mb": "لون العنوان على الجوال",
+          "title_enable_border": "إظهار حدود العنوان",
+          "info_enable_border_title": "يطبق فقط عند تعطيل إعداد 'تمكين العنوان الثابت'.",
+          "title_enable_underline": "إظهار خط تحت العنوان",
+          "info_title_enable_underline": "يطبق فقط عند إضافة كتلة البانر.",
+          "title_underline_color": "لون خط تحت العنوان",
+          "title_underline_style": "نمط خط تحت العنوان",
+          "title_border": "نمط حدود العنوان",
+          "title_border_color": "لون حدود العنوان",
+          "title_border_color_mb": "لون حدود العنوان على الجوال",
+          "title_margin_top": "الهامش العلوي للعنوان",
+          "title_margin_bottom": "الهامش السفلي للعنوان",
+          "title_mg_bottom_mobile": "الهامش السفلي للعنوان على الجوال",
+          "title_custom_width": "العرض المخصص للعنوان",
+          "title_font_style": "نمط خط العنوان",
+          "des_font_size": "حجم خط الوصف",
+          "des_font_size_mb": "حجم خط الوصف على الجوال",
+          "des_color": "لون الوصف",
+          "des_color_mb": "لون الوصف على الجوال",
+          "des_color_hover": "لون الوصف عند التحويم",
+          "des_line_height": "ارتفاع سطر الوصف",
+          "des_line_height_mb": "ارتفاع سطر الوصف على الجوال",
+          "des_margin_bottom": "الهامش السفلي للوصف",
+          "des_margin_bottom_mb": "الهامش السفلي للوصف على الجوال",
+          "des_margin_top": "الهامش العلوي للوصف",
+          "des_position": "موضع الوصف",
+          "text": "النص",
+          "text_hover": "النص عند التحويم",
+          "text_active": "النص النشط",
+          "text_font": "عائلة خط النص",
+          "text_font_weight": "سمك خط النص",
+          "text_font_style": "نمط خط النص",
+          "text_letter_spacing": "تباعد حروف النص",
+          "text_color": "لون النص",
+          "text_color_mb": "لون النص على الجوال",
+          "text_color_hover": "لون النص عند التحويم",
+          "text_font_size": "حجم خط النص",
+          "text_font_size_mb": "حجم خط النص على الجوال",
+          "text_line_height": "ارتفاع سطر النص",
+          "text_line_height_mb": "ارتفاع سطر النص على الهاتف المحمول",
+          "text_mg_bottom": "المسافة السفلية للنص",
+          "text_mg_top": "المسافة العلوية للنص",
+          "sub_text": "النص الفرعي",
+          "sub_text_font_size": "حجم خط النص الفرعي",
+          "sub_text_font_size__mb": "حجم خط النص الفرعي على الجوال",
+          "sub_text_color": "لون النص الفرعي",
+          "sub_text_mg_bottom": "المسافة السفلية للنص الفرعي",
+          "input": "إدخال",
+          "button": "الزر",
+          "button_style": "نمط الزر",
+          "button_display": "إظهار الزر",
+          "button_view_more": "إظهار زر 'عرض المزيد'",
+          "button_text_transform": "نمط نص الزر",
+          "button_font_size": "حجم خط الزر",
+          "button_font_size_mb": "حجم خط الزر على الجوال",
+          "button_font_weight": "سمك خط الزر",
+          "button_background_opacity": "شفافية خلفية الزر",
+          "button_text": "نص الزر",
+          "button_link": "رابط الزر",
+          "button_icon": "أيقونة الزر",
+          "button_icon_color": "لون أيقونة الزر",
+          "button_margin_top": "الهامش العلوي للزر",
+          "button_margin_bottom": "المسافة السفلية للزر",
+          "button_padding_top": "الحشو العلوي للزر",
+          "button_padding_bottom": "الحشو السفلي للزر",
+          "button_width": "عرض الزر",
+          "button_width_2": "عرض الزر (وحدة % أو بكسل)",
+          "button_color": "لون نص الزر",
+          "button_more": "نص 'عرض المزيد'",
+          "button_less": "نص 'عرض أقل'",
+          "button_enable_icon": "إظهار أيقونة الزر",
+          "button_enable_shadow": "إظهار ظل الزر",
+          "view_all": "عرض الكل",
+          "view_all_style": "نمط 'عرض الكل'",
+          "info_view_all_style": "لا يتم تطبيق إعدادات 'عرض الكل' أدناه عند إضافة كتلة البانر.",
+          "view_all_link": "رابط 'عرض الكل'",
+          "view_all_link_hover": "لون رابط 'عرض الكل' عند التحويم",
+          "view_all_color": "لون رابط 'عرض الكل'",
+          "view_all_icon": "أيقونة 'عرض الكل'",
+          "view_all_icon_color": "لون أيقونة 'عرض الكل'",
+          "view_all_enable_border": "إظهار حدود 'عرض الكل'",
+          "view_all_font_weight": "سمك خط 'عرض الكل'",
+          "view_all_align": "محاذاة 'عرض الكل'",
+          "view_all_position": "موقع 'عرض الكل'",
+          "view_all_icon_side": "موضع أيقونة 'عرض الكل'",
+          "view_all_font_size": "حجم خط 'عرض الكل'",
+          "view_all_width": "عرض 'عرض الكل'",
+          "view_all_info": "اذهب إلى هذا الرابط [ابحث عن أيقونتك](https:\/\/fontawesome.com\/v5\/search). ابحث عن الأيقونة التي تريدها، ثم انسخ كود SVG والصقه هنا.",
+          "logo_icon_info": "يطبق فقط عندما تكون صورة الشعار فارغة. اذهب إلى هذا الرابط [ابحث عن أيقونتك](https:\/\/fontawesome.com\/v5\/search). ابحث عن الأيقونة التي تريدها، ثم انسخ كود SVG والصقه هنا.",
+          "item": "العناصر",
+          "item_padding_top_bottom": "الحشو العلوي\/السفلي",
+          "item_padding_left_right": "الحشو الأيسر\/الأيمن",
+          "item_padding_top": "الحشو العلوي للعنصر",
+          "item_padding_bottom": "الحشو السفلي للعنصر",
+          "item_width": "عرض العنصر",
+          "item_grid_gap": "المسافة بين عناصر الشبكة",
+          "item_border_radius": "نصف قطر زوايا العنصر",
+          "image_enable": "إظهار الصورة",
+          "image_mb_enable": "إظهار الصورة على الجوال",
+          "image_width": "الحد الأقصى لعرض الصورة",
+          "image_width_2": "أقصى عرض للصورة (%)",
+          "image_height": "الحد الأدنى لارتفاع الصورة",
+          "image_height_1": "ارتفاع الصورة",
+          "image_select_effects_hover": "اختيار تأثيرات تحويم الصورة",
+          "image_border_radius": "نصف قطر زوايا الصورة",
+          "image_margin_bottom": "الحشو السفلي للصورة",
+          "image_margin_bottom_mb": "الحشو السفلي للصورة على الجوال",
+          "image_enable_hover_zoom": "تمكين تكبير الصورة عند التحويم",
+          "image_zoom": "تكبير الصورة",
+          "image_fadeup": "ظهور تدريجي للصورة للأعلى",
+          "image_border": "حدود الصورة",
+          "hover_effect": "تأثير التحويم",
+          "image_circle": "صورة دائرية",
+          "arrows_enable": "إظهار أسهم التنقل",
+          "arrows_layout": "تخطيط الأسهم",
+          "arrows_position_horizontal": "الموضع الأفقي للأسهم",
+          "arrows_info_style_2": "يطبق عند اختيار خيار 'لف المنزلقات في المنتصف'.",
+          "dots_enable": "إظهار نقاط التنقل",
+          "center_mode_enable": "تمكين وضع التوسيط",
+          "icon": "أيقونة",
+          "icon_color": "لون الأيقونة",
+          "icon_hover": "تحويم الأيقونة",
+          "icon_color_hover": "لون الأيقونة عند التحويم",
+          "icon_color_mb": "لون الأيقونة على الجوال",
+          "icon_width": "عرض الأيقونات",
+          "icon_width_info": "يطبق عندما يتم ضبط إعداد عرض النص\/الأيقونة على أيقونة",
+          "icon_height": "ارتفاع الأيقونات",
+          "icon_width_1": "عرض الأيقونة",
+          "icon_height_1": "ارتفاع الأيقونة",
+          "icon_width_mb": "عرض الأيقونة على الجوال",
+          "icon_height_mb": "ارتفاع الأيقونة على الجوال",
+          "icon_mg_right": "الهامش الأيمن للنص\/أيقونة SVG",
+          "icon_mg_bottom": "المسافة السفلية للأيقونة",
+          "icon_spacing_mobile": "مسافة الأيقونة على الجوال",
+          "icon_type": "استخدام صورة أو نص\/أيقونة SVG",
+          "icons_type": "نوع الأيقونات",
+          "icons_type_info": "يطبق فقط عندما يتم ضبط إعداد 'نوع الأيقونات' على أيقونة.",
+          "text_svg_icon": "نص\/أيقونة SVG",
+          "layout_mobile": "تخطيط الجوال",
+          "layout_mobile_info": "يطبق فقط على تخطيط الشبكة",
+          "list": "قائمة",
+          "scroll": "تمرير",
+          "slider": "شريط التمرير",
+          "border": "الحدود",
+          "border_enable": "إظهار الحدود",
+          "border_enable_top": "إظهار الحد العلوي",
+          "border_enable_bottom": "إظهار خط تحت النص",
+          "border_enable_item": "إظهار الحدود بين العناصر",
+          "border_item": "حدود العناصر",
+          "border_between_items": "الحدود بين العناصر",
+          "border_item_color": "لون حدود العناصر",
+          "border_top_color": "لون الحد العلوي",
+          "border_bottom_color": "لون الحد السفلي",
+          "border_color_hover": "لون الحدود عند التحويم",
+          "underline_color_hover": "لون خط تحت الصورة عند التحويم",
+          "image_border_hover_color": "لون حدود الصورة عند التمرير",
+          "underline_info": "هذا الإعداد يعمل فقط مع خيار 'ظهور تدريجي للصورة للأعلى' في إعداد تأثير التحويم أعلاه.",
+          "border_radius": "نصف قطر الزوايا",
+          "bg_border_radius": "نصف قطر زوايا الخلفية",
+          "border_hover": "الحدود عند التحويم",
+          "border_width": "عرض الحدود",
+          "border_height": "ارتفاع الحدود",
+          "border_style": "نمط حدود العنصر",
+          "border_style1": "حدود كاملة",
+          "border_style2": "حدود سميكة",
+          "border_style3": "حدود قصيرة",
+          "border_none": "بدون",
+          "short_underline": "خط تحتي قصير",
+          "thin_underline": "خط تحتي رفيع",
+          "a_half_height_underline": "خط تحتي بنصف الارتفاع",
+          "full_border": "حدود كاملة",
+          "short_border": "حدود قصيرة",
+          "box": "صندوق",
+          "box_shadow": "ظل الصندوق",
+          "box_shadow_hover": "ظل الصندوق عند التحويم",
+          "style_layout": "نمط التخطيط",
+          "style_layout_vertical": "نمط التخطيط العمودي",
+          "block_items_style": "نمط عناصر الكتلة",
+          "layout_style": "تخطيط الكتلة",
+          "select_style": "النمط",
+          "select_layout": "التخطيط",
+          "style_1": "النمط 1",
+          "style_2": "النمط 2",
+          "style_3": "النمط 3",
+          "style_4": "النمط 4",
+          "grid_gap": "المسافة بين الشبكة",
+          "top": "أعلى",
+          "bottom": "أسفل",
+          "top_bottom": "أعلى وأسفل",
+          "space_between": "المسافة بين",
+          "auto": "تلقائي",
+          "width": "العرض",
+          "height": "الارتفاع",
+          "full_height": "ارتفاع كامل",
+          "collection": "المجموعة",
+          "disable_content_padding": "إزالة الحشو الأيمن للمحتوى",
+          "icon_size": "حجم الأيقونة",
+          "trust_image_align": "محاذاة صورة الثقة",
+          "show_shop_name": "إظهار اسم المتجر",
+          "shop_name": "اسم المتجر",
+          "enable_heading_sticky": "تمكين العنوان الثابت على سطح المكتب",
+          "text_on_the_right": "النص على يمين الصورة",
+          "text_below_image": "النص أسفل الصورة",
+          "text_with_progress_bar": "النص مع شريط التقدم",
+          "title_with_border_below": "العنوان مع حدود أسفله",
+          "title_with_border_around": "العنوان مع حدود حوله",
+          "top_right_the_section": "أعلى يمين القسم",
+          "wrap_the_sliders_between": "لف المنزلقات في المنتصف",
+          "newsletter_form_style": "نمط نموذج النشرة الإخبارية",
+          "justify_content_desktop": "توزيع المحتوى على سطح المكتب",
+          "under_the_title": "تحت العنوان",
+          "beside_the_title": "بجانب العنوان",
+          "width_on_desktop": "العرض على سطح المكتب",
+          "section_footer": "تذييل القسم",
+          "prev_next_button": "زر السابق\/التالي",
+          "info_mobile_layout": "يطبق فقط عندما يتم ضبط إعداد 'تخطيط الجوال' على شريط التمرير.",
+          "header_block": {
+            "option_1": "العنوان يسار مع 'عرض الكل' يسار",
+            "option_2": "العنوان يسار مع 'عرض الكل' يمين",
+            "option_3": "العنوان وسط مع 'عرض الكل' يسار",
+            "option_4": "العنوان وسط مع 'عرض الكل' يمين",
+            "option_5": "العنوان وسط مع 'عرض الكل' أسفل"
+          }
+        },
+        "footer": {
+          "content": "خط التذييل"
+        },
+        "footer_heading": {
+          "paragraph": "العنوان"
+        },
+        "footer_link": {
+          "paragraph": "الرابط"
+        },
+        "type_page_title_font": {
+          "title": "خط العنوان"
+        }
+      }
+    },
+    "styles": {
+      "name": "الأنماط",
+      "settings": {
+        "header__2": {
+          "content": "عناصر تزيينية"
+        },
+        "header__4": {
+          "content": "الزر الأول"
+        },
+        "header__5": {
+          "content": "الزر الثاني"
+        },
+        "header__6": {
+          "content": "الزر الثالث"
+        },
+        "button": {
+          "option__1": "الزر الأساسي",
+          "option__2": "الزر الثانوي",
+          "option__3": "الزر الثالث",
+          "option__4": "زر رباعي"
+        }
+      }
+    },
+    "social-media": {
+      "name": "Social media",
+      "settings": {
+        "facebook_label": "شارك على Facebook",
+        "twitter_label": "تغريد على Twitter",
+        "pinterest_label": "إعلان على Pinterest",
+        "tumblr_label": "شارك على Tumblr",
+        "telegram_label": "شارك على Telegram",
+        "email_label": "شارك على البريد الإلكتروني",
+        "whatsapp_label": "شارك على Whatsapp",
+        "header__2": "حسابات التواصل الاجتماعي",
+        "social_twitter_link_label": "رابط Twitter",
+        "social_twitter_link_info": "https:\/\/twitter.com\/shopify",
+        "social_facebook_link_label": "رابط Facebook",
+        "social_facebook_link_info": "https:\/\/facebook.com\/shopify",
+        "social_pinterest_link_label": "رابط Pinterest",
+        "social_pinterest_link_info": "https:\/\/pinterest.com\/shopify",
+        "social_instagram_link_label": "رابط Instagram",
+        "social_instagram_link_info": "http:\/\/instagram.com\/shopify",
+        "social_tiktok_link_label": "رابط TikTok",
+        "social_tiktok_link_info": "https:\/\/tiktok.com\/@shopify",
+        "social_tumblr_link_label": "رابط Tumblr",
+        "social_tumblr_link_info": "https:\/\/shopify.tumblr.com",
+        "social_snapchat_link_label": "رابط Snapchat",
+        "social_snapchat_link_info": "https:\/\/www.snapchat.com\/add\/shopify",
+        "social_youtube_link_label": "رابط YouTube",
+        "social_youtube_link_info": "https:\/\/www.youtube.com\/shopify",
+        "social_vimeo_link_label": "رابط Vimeo",
+        "social_vimeo_link_info": "https:\/\/vimeo.com\/shopify"
+      }
+    },
+    "general": {
+      "name": "عام",
+      "settings": {
+        "header__1": {
+          "content": "صورة المفضلة"
+        },
+        "header__3": {
+          "content": "قائمة المفضلة"
+        },
+        "header__4": {
+          "content": "الشروط والأحكام"
+        },
+        "header__5": {
+          "content": "الملصقات"
+        },
+        "header__6": {
+          "content": "الملصقات"
+        },
+        "header__7": {
+          "content": "تسجيل الدخول"
+        },
+        "header__8": {
+          "content": "المخزون الساخن"
+        },
+        "header__9": {
+          "content": "إضافة إلى السلة"
+        },
+        "header__10": {
+          "content": "صورة الثقة"
+        },
+        "header__11": {
+          "content": "زرات المشاركة الاجتماعية"
+        },
+        "header__12": {
+          "content": "شراء الآن"
+        },
+        "header__13": {
+          "content": "خاصية التخصيص"
+        },
+        "header__14": {
+          "content": "خاصية التخصيص",
+          "info": "خاصية التخصيص مستخدمة لجمع معلومات التخصيص لعنصر مضاف إلى السلة. يمكن جمع هذه المعلومات من المشتري على صفحة المنتج والرؤية السريعة. [تعلم المزيد](https:\/\/halosoft.gitbook.io\/ella-documentation\/theme-settings\/general\/customization-option)"
+        },
+        "favicon": {
+          "label": "صورة المفضلة",
+          "info": "سيتم تصغيرها إلى 32 × 32 بكسل"
+        },
+        "gdpr_cookie_consent": {
+          "label__1": "عرض سياسة الخصوصية للكوكيز GDPR",
+          "label__3": "العنوان",
+          "label__4": "المحتوى",
+          "label__5": "تسمية الزر لسياسة الخصوصية",
+          "label__7": "رابط سياسة الخصوصية",
+          "label__8": "تسمية الزر لقبول الكوكيز",
+          "color_privacy_policy": "لون زر سياسة الخصوصية",
+          "info__1": "[تعلم المزيد](https:\/\/help.shopify.com\/en\/manual\/your-account\/privacy\/cookies)",
+          "info__2": "مثال: https:\/\/policies.google.com"
+        },
+        "wishlist": {
+          "label": "تمكين قائمة المفضلة",
+          "link": "رابط الصفحة"
+        },
+        "close": {
+          "info": "المؤشر الشكل X",
+          "label": "تمكين المؤشر الشكل X",
+          "info__1": "سيظهر المؤشر الشكل X عند التحويم على الغلاف المغلق."
+        },
+        "global_checkbox": {
+          "label__1": "عرض الشروط والأحكام",
+          "label__3": "نص الرابط",
+          "label__4": "المحتوى"
+        },
+        "swatch": {
+          "title": "الملصقات",
+          "options__1": "الافتراضي",
+          "options__2": "اللون المتقدم",
+          "options__3": "الحقول المعلوماتية",
+          "options__4": "الكائنات الفوقية",
+          "info__2": "اللون المتقدم: استخدم أسماء الألوان أو الصور بصيغة PNG. الحقول المعلوماتية: استخدم أرقام الألوان أو الصور بصيغة PNG من الحقول المعلوماتية."
+        },
+        "variant": {
+          "label__3": "الخلفية النشطة",
+          "hide_unavailable_variants": "إخفاء الأصناف غير المتاحة",
+          "enable_combined_products_listing": "تمكين عرض المنتجات المجمعة"
+        },
+        "hot_stock": {
+          "label__1": "عرض المخزون الساخن",
+          "label__2": "الحد الأقصى للمخزون"
+        },
+        "scroll_down_section": {
+          "label__1": "التمرير للقسم التالي",
+          "label__2": "عرض زر التمرير للأسفل"
+        },
+        "view_documentation": {
+          "label__1": "عرض الوثائق",
+          "label__2": "تمكين عرض الوثائق"
+        },
+        "customer_login": {
+          "label__1": "عرض تسجيل الدخول",
+          "label__3": "زر تسجيل الدخول",
+          "label__4": "زر التسجيل"
+        },
+        "add_to_cart": {
+          "label": "بعد إضافة المنتج إلى السلة",
+          "options__1": "إعادة توجيه إلى صفحة السلة",
+          "options__2": "عرض سريع للسلة",
+          "options__3": "عرض إضافة المنتج إلى السلة (أقل)"
+        },
+        "lazyload": {
+          "info": "تحميل الصور بطيء",
+          "options__1": "تمكين تحميل الصور بطيء"
+        },
+        "style_dots": {
+          "info": "نقاط المنزلق",
+          "dots_width": "العرض",
+          "dots_height": "الارتفاع",
+          "dots_style2_opacity": {
+            "info": "لتخطيط النمط 2"
+          }
+        },
+        "style_arrows": {
+          "info": "أسهم المنزلق",
+          "options__1": "نصف قطر الزاوية",
+          "options__2": "حجم الأسهم",
+          "options__3": "حجم الأيقونات",
+          "options__4": "عرض زر الأسهم عند التعطيل",
+          "border_width": "عرض الحدود",
+          "style_01": "النمط 01",
+          "style_02": "النمط 02",
+          "style_03": "النمط 03",
+          "style_04": "النمط 04",
+          "style_05": "النمط 05",
+          "style_06": "النمط 06",
+          "style_07": "النمط 07",
+          "style_08": "النمط 08",
+          "style_09": "النمط 09",
+          "style_10": "النمط 10"
+        },
+        "trust_image": {
+          "info__1": "صفحة المنتج\/عرض سريع",
+          "info__2": "صفحة السلة"
+        },
+        "pagination": {
+          "label": "التنقل",
+          "layout": "تخطيط",
+          "item_color": "لون العنصر",
+          "item_bg_color": "لون الخلفية للعنصر",
+          "navigation_arrow_color": "لون السهام التنقل",
+          "arrow_color": "لون الأسهم",
+          "arrow_bg_color": "لون الخلفية للأسهم",
+          "arrow_border_color": "لون حدود الأسهم",
+          "arrow_color_mb": "لون الأسهم على الجوال"
+        },
+        "customization-option": {
+          "label__1": "عرض خاصية التخصيص",
+          "label__3": "عرض على صفحة السلة وصفحة الدفع",
+          "label__4": "قائمة العلامات",
+          "label__5": "المجموعة",
+          "label__6": "اسم الخيار",
+          "label__7": "اسم الخيار النصي",
+          "label__8": "اسم الخيار الملفي",
+          "options__1": "جميع المنتجات",
+          "options__2": "المنتجات بالعلامة",
+          "options__3": "المنتجات بالمجموعة",
+          "paragraph__1": {
+            "content": "تستخدم خيارات التخصيص لجمع معلومات التخصيص لعنصر مضاف إلى السلة. يمكن جمع هذه المعلومات من المشتري على صفحة المنتج وعرض سريع."
+          }
+        }
+      }
+    },
+    "product_card": {
+      "name": "بطايق المنتجات",
+      "settings": {
+        "header__1": {
+          "content": "وسائط المنتجات"
+        },
+        "header__2": {
+          "content": "العلامات المنتجات"
+        },
+        "header__6": {
+          "content": "تقييم المنتجات"
+        },
+        "header__7": {
+          "content": "الملصقات المنتجات"
+        },
+        "header__8": {
+          "content": "قائمة المفضلة"
+        },
+        "header__9": {
+          "content": "مقارنة المنتجات"
+        },
+        "header__10": {
+          "content": "عرض سريع"
+        },
+        "header__11": {
+          "content": "أجراءات المنتجات",
+          "action_button": "زر الأجراء"
+        },
+        "header__12": {
+          "content": "محتوى المنتجات"
+        },
+        "header__13": {
+          "content": "مجموعة أجراءات المنتجات"
+        },
+        "header__14": {
+          "content": "التسوق السريع"
+        },
+        "header__15": {
+          "content": "المخزون الساخن"
+        },
+        "product_media": {
+          "label__1": "تمكين تبديل الصور",
+          "label__3": "تشغيل الفيديو عند التحويم",
+          "label__4": "تمكين تحميل صورة المنتج",
+          "info": "استخدم لنسبة الصورة المناسبة.",
+          "info_label__3": "يعمل فقط مع الفيديو بصيغة MP4."
+        },
+        "product_badge": {
+          "normal_style": "عادي",
+          "leaf_style": "ورقة",
+          "label__2": "الموضع",
+          "label__3": "عرض علامة جديدة",
+          "label__4": "طريقة عرض علامة جديدة",
+          "label__5": "فترة حساب علامة جديدة",
+          "label__6": "الحد الأقصى لعرض علامة جديدة",
+          "label__9": "عرض علامة خصم",
+          "label__10": "طريقة عرض علامة خصم",
+          "label__13": "عرض علامة المخرج",
+          "label__16": "عرض علامة تخصيصية",
+          "label__19": "عرض علامة حزمة",
+          "label__23": "حجم الخط",
+          "label__24": "طول الزاوية",
+          "label__26": "البادئة اليسرى\/اليمنى",
+          "label__28": "الموضع العمودي",
+          "label__29": "الموضع الأفقي",
+          "options__3": "ديناميكي",
+          "options__4": "يدوي",
+          "options__5": "% خصم",
+          "options__9": "نص + % خصم",
+          "info__1": "الأولية في ترتيب المعلومات المعلوماتية.",
+          "unit__1": "يوم",
+          "unit__2": "منتج",
+          "unit__3": "px",
+          "paragraph__1": "علامة جديدة",
+          "paragraph__2": "علامة خصم",
+          "paragraph__3": "المخرج",
+          "paragraph__4": "علامة تخصيصية",
+          "paragraph__5": "علامة حزمة"
+        },
+        "product_title": {
+          "label__2": "حجم الخط",
+          "label__4": "طريقة النص",
+          "label__5": "طول النص",
+          "label__7": "عنوان التحويم",
+          "label__8": "الهامش السفلي",
+          "label__9": "الهامش العلوي",
+          "options__13": "كامل",
+          "unit": "px"
+        },
+        "product_vendor": {
+          "text_transform": "طريقة النص لمعرف المنتج"
+        },
+        "product_price": {
+          "label__2": "عرض السعر",
+          "label__3": "سعر الخصم",
+          "label__4": "سعر المقارنة"
+        },
+        "product_varriant_size": {
+          "label__1": "عرض أحجام المنتجات",
+          "label__2": "عرض النص 'أكثر من حجم متاح'",
+          "label__3": "خيار الحجم",
+          "label__4": "عرض اسم اللون في اسم المنتج",
+          "label__5": "طريقة اسم اللون",
+          "label__6": "طريقة أحجام المنتجات",
+          "label__7": "حجم اسم اللون",
+          "label__8": "حجم النص 'أكثر من حجم متاح'",
+          "info__1": "فقط لطريقة اسم اللون 2."
+        },
+        "product_swatch": {
+          "label__1": "عرض أحجام المنتجات",
+          "label__2": "حجم الملصق على الكمبيوتر",
+          "label__5": "حدود النشط",
+          "label__7": "حجم الملصق على الجوال",
+          "label__8": "خيار الملصق"
+        },
+        "product_wishlist": {
+          "label__1": "عرض قائمة المفضلة",
+          "label__4": "النشط \/ النص\/الأيقونة",
+          "label__5": "الخلفية النشطة",
+          "label__9": "حدود النشطة",
+          "label__10": "عرض قائمة المفضلة على الجوال",
+          "label__11": "عرض الخلفية للأيقونة"
+        },
+        "product_compare": {
+          "label__1": "عرض مقارنة المنتجات",
+          "label__2": "طريقة مقارنة المنتجات",
+          "label__3": "إخفاء مقارنة المنتجات على الصفحة الرئيسية",
+          "options__1": "الافتراضي",
+          "options__2": "الأيقونة"
+        },
+        "product_quick_view": {
+          "label__1": "عرض عرض سريع",
+          "label__2": "طريقة عرض سريع",
+          "label__3": "النص\/الأيقونة",
+          "label__5": "النص\/الأيقونة عند التحويم",
+          "label__6": "الخلفية النشطة",
+          "label__7": "موقع عرض سريع وقائمة المفضلة",
+          "label__8": "عرض عرض سريع على الجوال",
+          "options__1": "الافتراضي",
+          "options__2": "الأيقونة",
+          "enable_box_shadow": "عرض ظل المربع"
+        },
+        "product_action": {
+          "label__1": "عرض زر الأجراء",
+          "label__2": "إظهار زر الأيقونة",
+          "button_left_right_padding": "حشو الزر يمين/يسار على سطح المكتب"
+        },
+        "product_quick_shop": {
+          "label": "تمكين عرض سريع",
+          "option_1": "خيار 1",
+          "option_2": "خيار 2",
+          "option_3": "خيار 3",
+          "option_4": "حزمة",
+          "info": "الحزمة مثلية للعناصر المشتراة في كميات أعلى."
+        },
+        "product_marquee": {
+          "label": "المربع",
+          "label__1": "عرض المربع",
+          "info": "'النص' سيتم تطبيقه على جميع المنتجات. 'نص الخصم' و'خصم الخصم' سيتم تطبيقه على المنتجات المخصصة.",
+          "options__2": "نص الخصم",
+          "options__3": "خصم الخصم"
+        }
+      }
+    },
+    "multiple_language": {
+      "name": "اللغات المتعددة",
+      "settings": {
+        "enable_multilang_shopify": "تمكين اللغات المتعددة",
+        "lange_1": "اللغة 1",
+        "i-lang-1": "الأيقونة لللغة 1",
+        "lange_2": "اللغة 2",
+        "i-lang-2": "الأيقونة لللغة 2",
+        "lange_3": "اللغة 3",
+        "i-lang-3": "الأيقونة لللغة 3",
+        "lange_4": "اللغة 4",
+        "i-lang-4": "الأيقونة لللغة 4",
+        "lange_5": "اللغة 5",
+        "i-lang-5": "الأيقونة لللغة 5",
+        "lange_6": "اللغة 6",
+        "i-lang-6": "الأيقونة لللغة 6"
+      }
+    },
+    "multiple_currencie": {
+      "name": "العملات المتعددة",
+      "settings": {
+        "enable_currencies": "تمكين العملات",
+        "currency_format_enable": "تمكين تنسيق العملة",
+        "info_currency_format": "تظهر أسعار السلة وأسعار الدفع دائمًا برموز العملة. مثال: 1.00 USD.",
+        "enable_shopify_payments_currencies": "تمكين العملات المدفوعة بواسطة Shopify؟",
+        "info_1": "متاح فقط للمتاجر التي تستخدم عملات مدفوعة بواسطة Shopify. رابط [هنا](https:\/\/help.shopify.com\/en\/manual\/payments\/shopify-payments\/multi-currency\/setup)",
+        "enable_multiple_currencies": "تمكين العملات المتعددة؟",
+        "enable_auto_currency": "تمكين العملة التلقائية؟",
+        "info_2": "لا تختار جميع الخيارات الثلاثة في نفس الوقت أو اجمع عملات مدفوعة بواسطة Shopify مع الآخرين. رابط [هنا](https:\/\/help.shopify.com\/en\/manual\/payments\/shopify-payments\/multi-currency\/setup)",
+        "i-currency-1": "الأيقونة لرمز العملة 1",
+        "currency_1_unit": "رمز العملة 1",
+        "usd": "USD",
+        "i-currency-2": "الأيقونة لرمز العملة 2",
+        "currency_2_unit": "رمز العملة 2",
+        "uad": "AUD",
+        "i-currency-3": "الأيقونة لرمز العملة 3",
+        "currency_3_unit": "رمز العملة 3",
+        "uer": "EUR",
+        "i-currency-4": "الأيقونة لرمز العملة 4",
+        "currency_4_unit": "رمز العملة 4",
+        "i-currency-5": "الأيقونة لرمز العملة 5",
+        "currency_5_unit": "رمز العملة 5",
+        "i-currency-6": "الأيقونة لرمز العملة 6",
+        "currency_6_unit": "رمز العملة 6",
+        "i-currency-7": "الأيقونة لرمز العملة 7",
+        "currency_7_unit": "رمز العملة 7",
+        "i-currency-8": "الأيقونة لرمز العملة 8",
+        "currency_8_unit": "رمز العملة 8",
+        "i-currency-9": "الأيقونة لرمز العملة 9",
+        "currency_9_unit": "رمز العملة 9",
+        "i-currency-10": "الأيقونة لرمز العملة 10",
+        "currency_10_unit": "رمز العملة 10",
+        "paragraph_1": "قم بفصل رموز العملات بمسافة. استخدم رمز العملة 3 أحرف الموحد للعملات الموحدة. انقر [هنا](http:\/\/www.xe.com\/iso4217.php) للحصول على قائمة كاملة من رموز العملات. مثال: CAD USD.",
+        "paragraph_2": "لكي يعمل هذا الوظيفة في متجرك، يجب تعديل تنسيقات الأموال وفقًا ل[هذه الإرشادات](http:\/\/help.shopify.com\/en\/themes\/customization\/currencies). (يرجى تحديد مكان تنسيق الأموال.)",
+        "select_a_currency": "تحديد دالة العملة",
+        "option_1": "عملة Shopify",
+        "option_2": "عملات متعددة",
+        "option_3": "عملات تلقائية",
+        "option_4": "عملات متعددة وعملات تلقائية"
+      }
+    },
+    "quick_search": {
+      "name": "البحث السريع",
+      "settings": {
+        "header__2": {
+          "content": "البحث عن الاهتمام"
+        },
+        "header__3": {
+          "content": "المنتجات المشهورة"
+        },
+        "general": {
+          "label__1": "تمكين البحث السريع",
+          "label__2": "الحد الأقصى لعرض المنتجات"
+        },
+        "search_trending": {
+          "label__1": "عرض البحث عن الاهتمام",
+          "label__2": "العنوان",
+          "label__3": "كلمة البحث 1",
+          "label__4": "كلمة البحث 2",
+          "label__5": "كلمة البحث 3",
+          "label__6": "كلمة البحث 4",
+          "label__7": "كلمة البحث 5",
+          "label__8": "كلمة البحث 6",
+          "label__9": "كلمة البحث 7",
+          "label__10": "كلمة البحث 8",
+          "label__11": "كلمة البحث 9",
+          "label__12": "كلمة البحث 10",
+          "label__13": "كلمة البحث 11",
+          "label__14": "كلمة البحث 12",
+          "label__15": "كلمة البحث 13",
+          "label__16": "كلمة البحث 14",
+          "label__17": "كلمة البحث 15"
+        },
+        "search_product": {
+          "label__1": "عرض المنتجات المشهورة",
+          "label__2": "العنوان",
+          "label__3": "المجموعة"
+        },
+        "search_results": {
+          "label__1": "عرض على صفحة النتائج",
+          "options__1": "فقط المنتج",
+          "options__2": "جميع النتائج"
+        }
+      }
+    },
+    "quick_view": {
+      "name": "عرض سريع"
+    },
+    "quick_cart": {
+      "name": "سلة السريعة",
+      "settings": {
+        "header__2": {
+          "content": "عنصر سلة السريعة (النافذة)"
+        },
+        "header__3": {
+          "content": "عنصر سلة السريعة (الشريط الجانبي)"
+        },
+        "header__4": {
+          "content": "المنتجات المشهورة"
+        },
+        "header__5": {
+          "content": "تعديل سريع لسلة السريعة"
+        },
+        "general": {
+          "label__1": "تمكين سلة السريعة",
+          "label__3": "إعادة توجيه زر الاستمرارية",
+          "label__4": "رابط زر الاستمرارية",
+          "options__3": "رابط الإدخال للزر",
+          "options__4": "العودة للصفحة السابقة",
+          "options__5": "البقاء على نفس الصفحة",
+          "info": "فقط لرابط الإدخال للزر.",
+          "show_shipping_note": "عرض حول الشحن عند الدفع"
+        },
+        "item_sidebar": {
+          "label__3": "عرض حول الشحن عند الدفع",
+          "label__4": "أنواع الخط",
+          "options__1": "لا يوجد",
+          "options__2": "متقطع",
+          "options__3": "متقطع بنقطة",
+          "options__4": "مستمر",
+          "unit": "px"
+        },
+        "tool_cart": {
+          "content": "أداة سلة السريعة & صفحة سلة السريعة",
+          "content_1": "ملاحظة الطلب",
+          "content_2": "غلاف الهدية",
+          "content_3": "حساب الشحن",
+          "content_4": "رمز الخصم",
+          "label__1": "عرض ملاحظة الطلب",
+          "label__2": "عرض غلاف الهدية",
+          "label__3": "عرض حساب الشحن",
+          "label__4": "الدولة الافتراضية",
+          "label__5": "عرض حقل رمز الخصم",
+          "select_a_country": "-- يرجى الاختيار --",
+          "coupon_title": "عنوان أداة سلة السريعة",
+          "gift_content": "محتوى أداة سلة السريعة",
+          "cart_gift_content": "محتوى صفحة سلة السريعة",
+          "additional_checkout_buttons": "أزرار الدفع الإضافية",
+          "label__6": "إظهار أزرار الدفع الإضافية"
+        },
+        "product": {
+          "label__1": "عرض المنتجات المشهورة",
+          "label__3": "العنوان",
+          "label__4": "المجموعة"
+        },
+        "quick_edit_cart": {
+          "label__1": "عرض تعديل سريع لسلة السريعة",
+          "options__5": "زر\/المنسوجات"
+        }
+      }
+    },
+    "calculator_free_shipping_message": {
+      "name": "حساب الشحن المجاني",
+      "settings": {
+        "header__2": {
+          "content": "شريط التقدم"
+        },
+        "general": {
+          "label__1": "عرض حساب الشحن المجاني",
+          "label__3": "أدخل سعر الطلب الكلي لتقديم الشحن المجاني"
+        },
+        "progress_bar": {
+          "label__1": "الارتفاع",
+          "label__2": "عرض الحدود",
+          "label__4": "لون البديل النصي",
+          "label__7": "لون الخلفية < 30%",
+          "label__8": "لون الخلفية < 60%",
+          "label__9": "لون الخلفية < 100%",
+          "label__10": "لون الخلفية = 100%",
+          "label__11": "الحدود المستديرة",
+          "label__12": "عرض النسبة",
+          "label__13": "عرض أيقونة الشحن",
+          "unit": "px"
+        }
+      }
+    },
+    "someone_purchase": {
+      "name": "إعلام الشراء",
+      "settings": {
+        "general": {
+          "label__1": "عرض إعلام الشراء",
+          "label__2": "موقع المحتوى على الجهاز المكتبي",
+          "label__3": "تغيير الشريحة كل",
+          "label__4": "عرض إعلام الشراء على الجهاز المحمول",
+          "unit": "s"
+        },
+        "product": {
+          "label__1": "قائمة المنتجات",
+          "label__2": "المواقع",
+          "label__3": "المرات",
+          "label__4": "يتم فصل كل موقع ب |. مثال: blackburn, UK | melbourne, AU | sydney, AU",
+          "label__5": "يتم فصل كل موقع ب |. مثال: 20 دقيقة | 50 دقيقة | 2 ساعة"
+        }
+      }
+    },
+    "gdpr_popup": {
+      "name": "GDPR popup",
+      "settings": {
+        "content": {
+          "label__2": "الموقع",
+          "label__3": "الوقت"
+        }
+      }
+    },
+    "newsletter_popup": {
+      "name": "نافذة منبثقة",
+      "settings": {
+        "general": {
+          "styte_popup": "نمط النافذة المنبثقة",
+          "style__1": "النشرة الإخبارية",
+          "style__2": "الترويج",
+          "label__1": "إظهار النافذة",
+          "label__3": "عرض مرة أخرى بعد",
+          "label__4": "وقت التأخير",
+          "label__6": "العنوان",
+          "label__8": "ملاحظة",
+          "label__9": "عرض الصورة",
+          "label__13": "افتراضي",
+          "label__14": "رابط مخصص",
+          "unit__1": "يوم",
+          "unit__2": "s",
+          "info": "فقط على الجهاز المكتبي",
+          "info_2": "استخدم لرابط مخصص."
+        },
+        "header__1": {
+          "content": "النشرة الإخبارية"
+        },
+        "header__2": {
+          "content": "الترويج"
+        },
+        "promotion": {
+          "label__1": "العنوان",
+          "label__2": "ملصق الخصم",
+          "label__3": "معلومات إضافية عن الخصم",
+          "label__4": "نص رمز الخصم",
+          "label__5": "وصف رمز الخصم",
+          "label__6": "ملاحظة",
+          "label__7": "إظهار روابط وسائل التواصل الاجتماعي",
+          "label__8": "تسمية الزر",
+          "label__10": "قائمة المنتجات",
+          "label__11": "المنتجات الموصى بها",
+          "label__12": "إظهار المنتجات الموصى بها"
+        }
+      }
+    },
+    "before_you_leave": {
+      "name": "قبل أن تغادر",
+      "settings": {
+        "header__2": {
+          "content": "المحتوى"
+        },
+        "header__3": {
+          "content": "المنتجات الموصى بها"
+        },
+        "header__4": {
+          "content": "زر الاستمرارية"
+        },
+        "general": {
+          "label__1": "عرض قبل أن تغادر",
+          "label__2": "الموقع",
+          "label__3": "عرض بعد",
+          "unit": "دقيقة"
+        },
+        "content": {
+          "label__1": "الشعار",
+          "label__3": "المحتوى"
+        },
+        "recommend_product": {
+          "label__1": "المجموعة"
+        },
+        "back_to_store": {
+          "label__1": "عرض زر الاستمرارية",
+          "label__3": "الرابط",
+          "position_right": "الموقع الصحيح",
+          "position_bottom": "الموقع السفلي"
+        }
+      }
+    },
+    "recently_viewed": {
+      "name": "نشرة المشاهدة الأخيرة",
+      "settings": {
+        "header__3": {
+          "content": "روابط الوسائل الاجتماعية"
+        },
+        "header__4": {
+          "content": "زر العودة لأعلى"
+        },
+        "general": {
+          "label__1": "عرض نشرة المشاهدة الأخيرة",
+          "label__2": "تاريخ الإنتهاء",
+          "label__3": "محاذاة المحتوى على الجهاز المحمول",
+          "unit": "يوم"
+        },
+        "social_media": {
+          "label": "عرض روابط الوسائل الاجتماعية"
+        },
+        "back_to_top": {
+          "label": "عرض زر العودة لأعلى"
+        }
+      }
+    },
+    "age_verification": {
+      "name": "نافذة التحقق من العمر",
+      "settings": {
+        "general": {
+          "label__1": "إظهار نافذة التحقق من العمر",
+          "label__2": "إظهار مرة أخرى بعد",
+          "not_eligible_button": "زر غير مؤهل",
+          "link_when_not_eligible": "رابط عند عدم الأهلية",
+          "eligible_button": "زر مؤهل"
+        }
+      }
+    },
+    "notify_me": {
+      "name": "إعلامي عند عدم وجود المنتج",
+      "settings": {
+        "general": {
+          "label__1": "عرض 'إعلامي عند عدم وجود المنتج'",
+          "label__2": "البريد الإلكتروني",
+          "label__7": "النموذج",
+          "info": "يميز عنوان البريد الإلكتروني بروابط البريد الإلكتروني."
+        }
+      }
+    },
+    "ask_an_expert": {
+      "name": "استشاري",
+      "settings": {
+        "header__2": {
+          "content": "المحتوى"
+        },
+        "header__3": {
+          "content": "خيار 1"
+        },
+        "header__4": {
+          "content": "خيار 2"
+        },
+        "general": {
+          "label__1": "عرض استشاري",
+          "label__2": "عرض:",
+          "label__7": "البانر",
+          "options__1": "الكل",
+          "options__2": "صفحة المنتج",
+          "options__3": "يطبق على"
+        },
+        "option_1": {
+          "label__1": "العنوان",
+          "label__2": "معلومة 1",
+          "label__3": "معلومة 2",
+          "label__4": "معلومة 3"
+        }
+      }
+    },
+    "countdown": {
+      "name": "العداد",
+      "info": "يعرض العداد الفترة الزمنية عندما يكون المنتج في الترقية. [تعلم المزيد](https:\/\/halosoft.gitbook.io\/ella-documentation\/theme-settings\/countdown)",
+      "settings": {
+        "general": {
+          "label__1": "عرض العداد",
+          "label__3": "تاريخ الإنتهاء",
+          "label__4": "المجموعة",
+          "label__5": "تاريخ إنتهاء العداد",
+          "label__6": "نص العداد",
+          "options__1": "لجميع المنتجات",
+          "options__2": "لكل منتج",
+          "options__3": "للمجموعة",
+          "info": "Example: Dec 31, 2024 18:00:00",
+          "info__1": "يرجى استخدام هذا الشكل الدقيق بالضبط: yyyy\/mm\/dd hour\/minute\/second. Example: 2024\/12\/4 0:0:00."
+        }
+      }
+    },
+    "multiLevel_categories": {
+      "name": "فئات متعددة المستويات",
+      "settings": {
+        "enable_multilevel_categories": "تمكين فئات متعددة المستويات",
+        "info": "يتيح تصفية الفئات متعددة المستويات للعملاء تصفية المنتجات باستخدام قائمة منسدلة من 3 مستويات. يتم تحديث كل مستوى بناءً على التحديد السابق.",
+        "label": {
+          "category_filter_label1": "العنوان المستوى 1",
+          "category_filter_label2": "العنوان المستوى 2",
+          "category_filter_label3": "العنوان المستوى 3"
+        }
+      }
+    },
+    "dynamic_browser": {
+      "content": "العنوان المتحرك للمتصفح",
+      "info": "يتم تغيير العنوان المتحرك للمتصفح عندما يقوم المستخدم بتغيير الأطر.",
+      "label__1": "عرض العنوان المتحرك للمتصفح",
+      "label__2": "نص التذكير"
+    },
+    "custom_js": {
+      "content": "CSS/JS مخصص",
+      "info": "لإضافة JavaScript مخصص، في متجرك على الإنترنت، حدد الموضوع الذي تريد إضافته إليه، ثم اختر 'تحرير الكود'. في 'تحرير الكود'، ابحث عن ملف باسم 'custom.js' وأضف JavaScript المخصص هناك.",
+      "info__2": "لإضافة CSS مخصص، في متجرك على الإنترنت، حدد الموضوع الذي تريد إضافته إليه، ثم اختر 'تحرير الكود'. في 'تحرير الكود'، ابحث عن ملف باسم 'custom.css' وأضف CSS المخصص هناك.",
+      "label__1": "استخدام ملف JS مخصص",
+      "label__2": "استخدام ملف CSS مخصص"
+    },
+    "loading_animation": {
+      "name": "الرسوم المتحركة",
+      "settings": {
+        "content__1": "إظهار الأقسام عند التمرير.",
+        "label__1": "الرسوم المتحركة",
+        "option__1": "لا يوجد",
+        "option__3": "تضاؤل في الإظهار",
+        "info": "بسبب عدم وجود CSS المدعومة، لا يتم تطبيق إعدادات الرسوم المتحركة للبانر على Safari",
+        "content__2": "تأثير التمرير",
+        "info__2": "يؤثر على البطايق وزرات التمرير.",
+        "vertical_lift": "رفع عمودي",
+        "3d_lift": "3D رفع",
+        "following_cursor_effect": {
+          "label": "تأثير المؤشر المتحرك",
+          "label__1": "لون المؤشر",
+          "label__2": "أنماط تأثير المؤشر",
+          "options__1": "يتبع",
+          "options__2": "سحب"
+        }
+      }
+    },
+    "sticky_notification_bar": {
+      "name": "شريط الإعلام المثبت",
+      "settings": {
+        "content__1": "الخلفية",
+        "intro_text_desktop": "نص الإعلام على الجهاز المكتبي",
+        "intro_text_mobile": "نص الإعلام على الجهاز المحمول",
+        "link_text_desktop": "نص الرابط على الجهاز المكتبي",
+        "link_text_mobile": "نص الرابط على الجهاز المحمول",
+        "enable_animation": "تمكين الرسوم المتحركة",
+        "show_desktop": "عرض على الجهاز المكتبي",
+        "show_mobile": "عرض على الجهاز المحمول",
+        "show_notification_again_when": "عرض الإعلام مرة أخرى عند",
+        "option__1": "فترة الزمن",
+        "option__2": "كل تحديث الصفحة",
+        "time_interval": "فترة الزمن لعرض الإعلام مرة أخرى",
+        "info_time": "أدخل عدد الدقائق التي تريد عرض الإعلام بعد إغلاقها. مثال: 30",
+        "mobile_icon_size": "حجم الرسوم المتحركة على الجهاز المحمول",
+        "link_click_action": {
+          "label": "العملية التي يتم إجراؤها عند الضغط على الرابط",
+          "option__1": "إعادة توجيه",
+          "option__2": "فتح مفتاح جديد",
+          "option__3": "عرض النافذة المنبثقة"
+        },
+        "popup_content": {
+          "content": "محتوى النافذة المنبثقة",
+          "info": "تتضمن إعدادات المحتوى النافذة المنبثقة أدناه إعدادات العملية التي يتم إجراؤها عند الضغط على الرابط في الخيار 3: عرض النافذة المنبثقة",
+          "link_alignment": "محاذاة الرابط"
+        }
+      }
+    },
+    "preloading_screen": {
+      "name": "شاشة التحميل المسبق",
+      "settings": {
+        "enable_preloading_screen": {
+          "label": "تمكين شاشة التحميل المسبق"
+        },
+        "image": {
+          "label": "صورة الشعار",
+          "info": "صورة شعار بخلفية شفافة مناسبة."
+        },
+        "icon": {
+          "label": "الرمز",
+          "info": "إذا كنت تريد استخدام شريط تحميل أو تحريك، فقم بإزالة الصورة الشعار.",
+          "option__1": "شريط تحميل",
+          "option__2": "تحريك"
+        }
+      }
+    }
+  },
+  "sections": {
+    "general": {
+      "settings": {
+        "alignment": {
+          "label__1": "المحاذاة",
+          "label__2": "المحاذاة (العلوي\/المركزي\/السفلي)",
+          "label__3": "المحاذاة (اليساري\/المركزي\/اليميني\/المطابق)",
+          "label__4": "المحاذاة على الهاتف المحمول",
+          "label__5": "الموقع اليساري للمحتوى",
+          "options__4": "المطابق",
+          "options__5": "العلوي",
+          "options__6": "السفلي",
+          "options__7": "الوسطي",
+          "info__1": "ينطبق فقط على 'الموقع: مطلق'",
+          "unit": "الوحدة %"
+        },
+        "article": {
+          "label__1": "عرض العنوان الفرعي",
+          "label__2": "عرض الملخص",
+          "label__3": "عرض المؤلف",
+          "label__4": "عرض تاريخ النشر",
+          "label__5": "عرض رابط 'اقرأ المزيد'",
+          "label__6": "عرض عدد التعليقات",
+          "label__7": "عرض المكان المؤقت",
+          "label__8": "نص المكان المؤقت"
+        },
+        "header_image": {
+          "header_image_height": "ارتفاع صورة الخلفية",
+          "header_image_height_mb": "ارتفاع صورة الخلفية على الجهاز المحمول",
+          "header_image_height_info": "استخدم عند إضافة صورة الخلفية",
+          "enable_parallax": "تمكين التصوير المتحرك؟"
+        },
+        "breadcrumb": {
+          "title": "الخطوات",
+          "label__1": "عرض الخطوات",
+          "label__2": "محاذاة الخطوات",
+          "option__1": "فوق القسم بأكمله",
+          "option__2": "فوق المحتوى",
+          "breadcrumb_color": "لون الخطوات",
+          "breadcrumb_bg_color": "لون خلفية مسار التنقل",
+          "breadcrumb_bg_gradient": "تدرج خلفية مسار التنقل",
+          "breadcrumb_bg_color_mobile": "لون خلفية مسار التنقل على الجوال",
+          "breadcrumb_bg_gradient_mobile": "تدرج خلفية مسار التنقل على الجوال",
+          "breadcrumb_desktop_bg_info": "ينطبق فقط على الإعداد 'الموقع: فوق القسم بأكمله' على الجهاز المكتبي"
+        },
+        "color": {
+          "label__1": "لون المعلومات",
+          "label__2": "لون الحد الأيسر",
+          "label__3": "لون الحد الأيسر المثبت",
+          "label__15": "لون الحد الأيمن"
+        },
+        "padding": {
+          "unit": "px"
+        },
+        "content": {
+          "label__1": "العنوان",
+          "label__3": "الكتلة المخصصة"
+        },
+        "button": {
+          "label__1": "الزر",
+          "options__1": "زر 01",
+          "options__2": "زر 02",
+          "options__3": "زر 03"
+        },
+        "block-title": {
+          "label__3": "محاذاة المحتوى"
+        },
+        "grid": {
+          "label__2": "عرض ميزة التمرير اللانهائي"
+        },
+        "image-ratio": {
+          "label__1": "نسبة الصورة",
+          "label__2": "نسبة الصورة الطولية",
+          "options__1": "تناسب الصورة",
+          "options__2": "طولي",
+          "options__3": "مربع",
+          "options__4": "دائري",
+          "info": "ينطبق على الخيار 'طولي'",
+          "unit": "%"
+        },
+        "page-title": {
+          "label__1": "عرض العنوان الصفحة",
+          "label__2": "محاذاة العنوان الصفحة",
+          "label__3": "عنوان الصفحة: نمط النص",
+          "page_title_color": "لون عنوان الصفحة"
+        },
+        "position": {
+          "label__1": "الموقع",
+          "info": "ينطبق فقط على الجهاز المكتبي"
+        },
+        "page-content": {
+          "label__1": "عرض المحتوى الصفحة",
+          "label__2": "محاذاة المحتوى الصفحة",
+          "max_width": "عرض المحتوى الصفحة الأقصى",
+          "max_height": "أقصى ارتفاع للمجموعة",
+          "mg_top": "الهامش العلوي",
+          "mg_bottom": "الهامش السفلي",
+          "mg_left": "الهامش الموجود على اليسار",
+          "mg_right": "المسافة الصحيحة"
+        },
+        "typography": {
+          "paragraph__1": {
+            "content": "نمط العنوان\/الرأس"
+          },
+          "paragraph__2": {
+            "content": "نمط النص"
+          },
+          "paragraph__3": {
+            "content": "نمط تاريخ\/مؤلف\/تعليق"
+          },
+          "font_style": "نمط الخط"
+        }
+      }
+    },
+    "layout": {
+      "margin_top": "الهامش العلوي للقسم",
+      "margin_bottom": "الهامش السفلي للقسم",
+      "display_block": "تمكين",
+      "header": {
+        "settings_tab": "عنوان القسم"
+      },
+      "mg_desktop": {
+        "label": "الجهاز المكتبي",
+        "unit": "px"
+      },
+      "mg_tablet": {
+        "label": "الجهاز المحمول"
+      },
+      "mg_mobile": {
+        "label": "الجهاز المحمول",
+        "label_1": "يعمل فقط عند تحميل كل من الصورة 1 والصورة 2."
+      },
+      "mg_bottom_view": {
+        "label": "الهامش السفلي للرابط 'عرض الكل'",
+        "label_mb": "الهامش السفلي للرابط 'عرض الكل' على الجهاز المحمول",
+        "info__1": "ينطبق فقط عندما يكون 'محاذاة الرابط 'عرض الكل' معين إلى المركز."
+      },
+      "mg_top_view": {
+        "label": "الهامش العلوي للرابط 'عرض الكل'"
+      },
+      "mg_minus_desktop": {
+        "label": "الهامش العلوي السالب"
+      },
+      "mg_minus_mobile": {
+        "label": "هوامش علوية سالبة على الجوال"
+      },
+      "mg_input": {
+        "mg_top_input": "الهامش العلوي للإدخال",
+        "mg_bottom_input": "الهامش السفلي للإدخال"
+      },
+      "container": {
+        "slide_show_layout": "تمرير الشرائح:",
+        "enable_border_bottom": "عرض الحد السفلي",
+        "enable_border_top": "عرض الحد العلوي",
+        "option": "عرض القسم",
+        "option1": "الافتراضي",
+        "option2": "العرض الكامل",
+        "option3": "عرض (1770px)",
+        "option4": "عرض (1170px)",
+        "option5": "عرض (1470px)",
+        "option6": "عرض (1570px)",
+        "option7": "عرض (1320px)",
+        "option8": "عرض (1370px)",
+        "option9": "عرض (1920px)",
+        "option10": "عرض (1670px)",
+        "block_width": "عرض الكتلة",
+        "padding_full_width": "الهامش الداخلي للخيار 'العرض الكامل' على الجهاز المكتبي",
+        "info_full_width": "استخدم للعرض الكامل",
+        "info": "تستخدم الحاويات لتسهيل المحتوى داخلها"
+      },
+      "color": {
+        "title": "العنوان"
+      },
+      "fontsize": {
+        "fontsize_title": {
+          "label_tablet": "حجم الخط للعنوان على الجهاز المحمول",
+          "unit": "px"
+        },
+        "fontsize_tab": {
+          "label": "حجم الخط للقسم",
+          "label_mb": "حجم الخط للقسم على الجهاز المحمول",
+          "unit": "px"
+        }
+      }
+    },
+    "multilayer-image": {
+      "name": "صورة متعددة الطبقات",
+      "blocks": {
+        "name": "عنصر الصورة",
+        "settings": {
+          "link": "رابط"
+        }
+      }
+    },
+    "announcement-bar": {
+      "name": "شريط الإعلام",
+      "blocks": {
+        "announcement": {
+          "name": "الإعلام",
+          "settings": {
+            "text": {
+              "enable_close": "عرض زر الإغلاق",
+              "font_size": "حجم الخط",
+              "link": "الرابط",
+              "enable_arrows": "عرض السهم المتحرك",
+              "info": "ينطبق فقط عندما يكون إعداد التخطيط معين إلى التمرير.",
+              "text_type": "نوع النص",
+              "des_type": "نوع الوصف",
+              "option_1": "HTML",
+              "option_2": "نص منسق"
+            },
+            "color_scheme": {
+              "color_text": "لون النص"
+            },
+            "countdown": {
+              "label": "الرسالة العلوية",
+              "select_image": "اختر صورة الخلفية"
+            }
+          }
+        }
+      }
+    },
+    "apps": {
+      "name": "التطبيقات",
+      "settings": {
+        "include_margins": {
+          "label": "تطابق إعدادات الهامش للقسم بالقسم المثبت",
+          "app_store": "App store",
+          "show_app_store": "عرض App store"
+        }
+      },
+      "presets": {
+        "name": "التطبيقات"
+      }
+    },
+    "slide-show": {
+      "name": "الشرائح",
+      "blocks": {
+        "image": {
+          "name": "الشريحة الصورية",
+          "dpl_slide_img": "تمكين",
+          "info_image_slide": "صورة موصى بها: العرض x الارتفاع (1880 x 720)px",
+          "info_image_slide_mb": "صورة موصى بها: العرض x الارتفاع (638 x 870)px",
+          "enable_custom_position": "الموقع المخصص",
+          "enable_custom_position_content": "تخصيص موقع المحتوى على الجهاز المكتبي",
+          "enable_custom_position_button": "تخصيص موقع الزر",
+          "content_custom_position": "موقع المحتوى المخصص",
+          "overlap_the_banner": "تجاوز البنر",
+          "info_enable_custom_position": "تستخدم هذه الإعدادات فقط على الجهاز المكتبي",
+          "custom_horizontal": "الموقع الأفقي",
+          "custom_horizontal_button": "موقع الزر الأفقي (الوحدة %)",
+          "custom_horizontal_icon": "موقع الرمز الأفقي (الوحدة %)",
+          "custom_vertical": "الموقع العمودي",
+          "custom_vertical_button": "موقع الزر العمودي (الوحدة %)",
+          "custom_vertical_icon": "موقع الرمز العمودي (الوحدة %)",
+          "enable_content_outside": "عرض المحتوى أسفل الصور على الجهاز المحمول",
+          "enable_content_outside_info": "تستخدم هذه الإعدادات فقط على الجهاز المحمول",
+          "slider_layout": {
+            "content": "تخطيط الشرائح",
+            "alignment": {
+              "option": "موقع المحتوى",
+              "option_1": "محاذاة المحتوى",
+              "option_2": "محاذاة المحتوى على سطح المكتب",
+              "option_3": "محاذاة المحتوى على الهاتف المحمول",
+              "info__1": "تنطبق عندما تحتوي الكتل النصية على رموز أو صور أطول من النص أو العكس بالعكس."
+            },
+            "enable_border_line": "عرض حدود المحتوى",
+            "bg_color_content": "لون خلفية المحتوى",
+            "border_color_content": "لون حدود المحتوى",
+            "padding_vertical": "الهامش العمودي",
+            "enable_content_full": "جعل المحتوى عرض كامل",
+            "info__1": "لا ينطبق عندما يكون إعداد 'جعل المحتوى عرض كامل' محدد.",
+            "info__2": "تنطبق فقط عندما يكون إعداد 'عرض الزر كرابط' محدد وإعداد 'عرض خط النص' معطل."
+          },
+          "slider_content": {
+            "use_contrasting_colors": "استخدم ألوانًا متباينة لزرين",
+            "content": "محتوى سطح المكتب",
+            "content_mobile": "المحتوى المحمول",
+            "heading_letter_spacing": "مسافة الحرف في العنوان",
+            "font_size_heading": "حجم الخط في العنوان",
+            "font_size_heading_mb": "حجم الخط في العنوان على الجهاز المحمول",
+            "font_style_heading": "نمط الخط في العنوان",
+            "color_heading": "لون العنوان",
+            "color_special_heading": "لون عنوان خاص",
+            "color_heading_mb": "لون العنوان على الجهاز المحمول",
+            "heading_top_margin": "الهامش العلوي للعنوان",
+            "heading_bottom_margin": "هامش أسفل العنوان",
+            "heading_bottom_margin_mb": "الهامش السفلي للعنوان على الجهاز المحمول",
+            "heading_font_weight": "وزن الخط في العنوان",
+            "sub_heading": "العنوان الفرعي",
+            "sub_heading_letter_spacing": "مسافة الحرف في العنوان الفرعي",
+            "font_size_sub_heading": "حجم الخط في العنوان الفرعي",
+            "font_size_sub_heading_mb": "حجم الخط في العنوان الفرعي على الجهاز المحمول",
+            "color_sub_heading": "لون العنوان الفرعي",
+            "color_sub_heading_mb": "لون العنوان الفرعي على الجهاز المحمول",
+            "bottom_margin_sub_heading": "الهامش السفلي للعنوان الفرعي",
+            "button_slide": "الزرون على المحتوى",
+            "button_text_1": "تسمية الزر الأول",
+            "button_link_1": "رابط الزر الأول",
+            "button_style_1": "أنماط الزر الأول",
+            "button_text_2": "تسمية الزر الثاني",
+            "button_link_2": "رابط الزر الثاني",
+            "enable_icon": "عرض أيقونة السهم",
+            "line_height_heading": "ارتفاع سطر العنوان",
+            "sub_heading_font_family": "اختر عائلة الخط للعنوان الفرعي",
+            "sub_heading_spacing_bottom": "الهامش السفلي للعنوان الفرعي",
+            "font_weight_sub_heading": "وزن الخط للعنوان الفرعي",
+            "border_sub_heading": "حدود العنوان الفرعي",
+            "position_sub_heading": "موقع العنوان الفرعي",
+            "none": "بلا",
+            "solid": "مستقيم",
+            "enable_border_heading": "عرض حدود العنوان",
+            "heading_spacing_bottom": "الهامش السفلي للعنوان"
+          },
+          "slide_testimonial": {
+            "content": "الشهادة",
+            "profile_pic": "صورة المؤلف",
+            "author_name": "اسم المؤلف",
+            "profile_name": "اسم الملف",
+            "profile_name_color": "لون اسم الملف",
+            "profile_name_fs": "حجم الخط لاسم الملف",
+            "profile_name_fs_mb": "حجم الخط لاسم الملف على الجهاز المحمول",
+            "profile_name_fw": "وزن الخط لاسم الملف",
+            "profile_title": "الوظيفة الملفية",
+            "profile_title_color": "لون الوظيفة الملفية",
+            "profile_title_fs": "حجم الخط للوظيفة الملفية",
+            "profile_title_fs_mb": "حجم الخط للوظيفة الملفية على الجهاز المحمول",
+            "profile_title_fw": "وزن الخط للوظيفة الملفية"
+          },
+          "slider_look": {
+            "content": "منتجات Lookbook",
+            "lb_product": "المنتج",
+            "top_position": "الموقع العلوي",
+            "info_position": "(الوحدة %)",
+            "left_position": "الموقع الأيسر",
+            "dots_color": "لون الرمز",
+            "dots_bg_color": "لون خلفية الرمز",
+            "dots_shadow_color": "لون ظل الرمز"
+          }
+        },
+        "video": {
+          "name": "الشريحة المرئية",
+          "style_video": {
+            "option": "نوع الفيديو",
+            "option1": "YouTube",
+            "option2": "MP4"
+          },
+          "video_option": {
+            "use_action_button": "استخدام زر الإجراء",
+            "custom_horizontal": "الموضع الأفقي (وحدة %)",
+            "custom_vertical": "الموضع الرأسي (وحدة %)",
+            "button_color": "لون الزر",
+            "button_color_hover": "لون الزر عند التمرير"
+          },
+          "video_link": "رابط الفيديو",
+          "video_link_mb": "رابط الفيديو للجهاز المحمول",
+          "video_mp4_link": "رابط الفيديو",
+          "video_mp4_link_mb": "رابط الفيديو للجهاز المحمول",
+          "slider_content": {
+            "content": "محتوى الشريحة",
+            "info": "استخدم لفيديوهات MP4"
+          }
+        },
+        "image_for_dot": {
+          "info_1": "Only for 'dot with image' style",
+          "label_1": "Image for navigation dot"
+        }
+      },
+      "settings": {
+        "autoplay": "تدوير الشرائح تلقائيا",
+        "slideshow_speed": {
+          "option": "تغيير الشرائح كل",
+          "option1": "3 ثواني",
+          "option2": "4 ثواني",
+          "option3": "5 ثواني",
+          "option4": "6 ثواني",
+          "option5": "7 ثواني",
+          "option6": "8 ثواني",
+          "option7": "9 ثواني",
+          "option8": "10 ثواني",
+          "option9": "15 ثواني",
+          "option10": "20 ثواني",
+          "option11": "25 ثواني",
+          "option12": "30 ثواني",
+          "option13": "35 ثواني",
+          "option14": "40 ثواني",
+          "option15": "45 ثواني",
+          "option16": "50 ثواني"
+        },
+        "slideshow_transition": {
+          "option": "تأثير التحول",
+          "option1": "الشريحة",
+          "option2": "التدرج"
+        },
+        "dots": {
+          "option": "الرمز التنقل على الجهاز المكتبي",
+          "option1": "نعم",
+          "option2": "لا",
+          "option3": "عرض الرمز بالشكل",
+          "option4": "عرض الرمز بالرقم",
+          "content": "الرمز التنقل",
+          "content_2": "السهم التنقل",
+          "dots_opacity": "غموض الرمز (80%)",
+          "position_slick_dots": "الهامش السفلي",
+          "dots_direction": "الموقع على الجهاز المكتبي",
+          "dots_shape": {
+            "name": "أنماط الرمز",
+            "label__1": "القرص",
+            "label__2": "الخط",
+            "label__3": "الرقم",
+            "info": "ينطبق فقط عندما يكون إعداد 'الرمز التنقل على الجهاز المكتبي' محدد إلى المركز."
+          }
+        },
+        "arrows": {
+          "arrow_active": "عرض السهم التنقل على الجهاز المكتبي",
+          "custom_arrow": "تخصيص السهم التنقل",
+          "position_slick_arrow": "الموقع الأفقي (الوحدة % أو px)",
+          "position_horizontal_arrow": "الموقع الأفقي للسهم (الوحدة % أو px)",
+          "position_vertical_slick_arrow": "الموقع العمودي (الوحدة % أو px)",
+          "position_vertical_mobile": "الموقع العمودي على الجوال (وحدة % أو بكسل)",
+          "info_unit": "الوحدات هي % أو px"
+        },
+        "min_width_banner_button": "عرض الزر",
+        "video": {
+          "bg_video": "لون خلفية الفيديو",
+          "bg_overlay_opacity": "غموض",
+          "video_height": "ارتفاع الفيديو على الجهاز المكتبي",
+          "info_video_height": "يمكنك ضبط ارتفاع الفيديو ليناسب الصورة المحددة بالنسبة المئوية. مثال: 30%, 47.25%, 51%.",
+          "auto_playvideo": "تشغيل الفيديو تلقائيا"
+        },
+        "categories": {
+          "content": "الفئات اليسرى",
+          "enable_categories": "عرض الفئات اليسرى",
+          "enable_banner": "عرض البنر اليميني",
+          "title": "العنوان",
+          "title_bg_color": "لون خلفية العنوان",
+          "select_menu": "قائمة الفئات",
+          "recommen_image": "صورة موصى بها: 250 x 250px",
+          "banner_link": "رابط البنر",
+          "info__1": "قم بتحميل الصور بنفس اسم المعالج للفئات لعرض الصور لكل فئة. [تعلم المزيد](https:\/\/halosoft.gitbook.io\/ella-documentation\/sections\/all-sections-in-theme\/slideshow#how-to-show-category-block-for-slideshow-like-on-the-supermarket-homepage)"
+        }
+      },
+      "presets": {
+        "name": "الشرائح"
+      }
+    },
+    "image-banner": {
+      "name": "الصورة البنر",
+      "blocks": {
+        "image": {
+          "name": "الصورة الكبيرة",
+          "settings": {
+            "header__1": {
+              "content": "الصورة"
+            },
+            "header__2": {
+              "content": "المحتوى",
+              "content_layout": "تخطيط المحتوى"
+            },
+            "image": {
+              "label__2": "الصورة للجهاز المحمول",
+              "info_1": "صورة موصى بها: العرض x الارتفاع (1880 x 720)px",
+              "info_2": "صورة موصى بها: العرض x الارتفاع (638 x 870)px",
+              "info": "يمكنك ضبط الصور بحيث تكون ملائمة للجهاز المحمول.",
+              "enable_max_width_image": "تمكين العرض المخصص للصورة",
+              "enable_parallax_image": "تمكين الصورة المتحركة",
+              "enable_scroll_down": "تمكين التمرير لأسفل",
+              "enable_custom_image": "تمكين الصورة المتحركة",
+              "motion_image": "الصورة المتحركة"
+            },
+            "content": {
+              "label__1": "العنوان",
+              "label__2": "الوصف",
+              "label__3": "الزر",
+              "label__5": "رابط",
+              "label__6": "موقع المحتوى",
+              "label__7": "محاذاة المحتوى",
+              "label__8": "العرض الأقصى للمحتوى",
+              "label__12": "تشغيل",
+              "label__13": "تشغيل دائري",
+              "label__14": "العنوان الفرعي",
+              "label__15": "الصورة",
+              "label__16": "النص",
+              "label__17": "الأيقونة",
+              "label__17_1": "الأيقونة الرسومية",
+              "label__18": "المحتوى",
+              "label__19": "العنوان",
+              "label__20": "عنوان خاص",
+              "label__21": "محاذاة العنوان",
+              "label__22": "الهامش",
+              "label__24": "عرض الزر كرابط",
+              "label__25": "العرض الأقصى للعنوان",
+              "label__26": "العرض الأقصى للوصف",
+              "options__9": "العلوي",
+              "options__10": "السفلي",
+              "info": "اختياري",
+              "icon": "الأيقونة",
+              "countdown_style": "نمط العداد",
+              "hide_countdown_fc": "العمل بعد انتهاء العداد",
+              "hide_countdown": "إخفاء العداد",
+              "hide_section": "إخفاء القسم",
+              "countdown_square": "حدود مربع",
+              "countdown_round": "حدود مستديرة",
+              "countdown_position": "موقع العداد",
+              "countdown_above_desc": "فوق الوصف",
+              "countdown_below_desc": "تحت الوصف",
+              "horizontal_content": "أفقي مع محتوى",
+              "sub_title": "العنوان الفرعي",
+              "section_header": "العنوان القسمي",
+              "setting_block": "إعدادات القسم",
+              "text_blocks": "النصوص",
+              "info__bg_style": "لا ينطبق عند تحديد إعداد صورة الخلفية.",
+              "id_section": "معرف القسم",
+              "id_section_note": "ملاحظة: أدخل معرف القسم لمطابقة الرابط القسمي وتمكين التمرير إلى القسم."
+            },
+            "style": {
+              "enable_border_title": "عرض حدود العنوان",
+              "enable_style_italic": "إضافة نص العنوان بخط عريض",
+              "enable_des_hover": "عرض الوصف عند التمرير",
+              "enable_plus_icon": "عرض الرمز + عند التمرير",
+              "color_plus_icon": "لون الرمز +",
+              "enable_button_custom_border": "عرض حدود مخصصة",
+              "button_width": "عرض الزر",
+              "font_size_countdown_number": "حجم الخط للعداد",
+              "font_size_countdown_text": "حجم الخط للنص العداد",
+              "color_countdown": "لون العداد",
+              "color_countdown_bg": "لون خلفية العداد",
+              "color_countdown_mb": "لون العداد على الجهاز المحمول",
+              "countdown_margin_bottom": "الهامش السفلي للعداد",
+              "sub_title_above": "فوق العنوان",
+              "sub_title_below": "تحت العنوان",
+              "style_bg": "نمط الخلفية",
+              "none": "بلا",
+              "for_img": "عرض ثلث العرض",
+              "info__1": "ينطبق على الزر الأول والثاني"
+            }
+          }
+        },
+        "smallImg": {
+          "name": "الصورة الصغيرة",
+          "settings": {
+            "row_reverse": "عرض الصور على اليمين",
+            "flying_effect": "تأثير الطيران للصور",
+            "box_max_width": "أقصى عرض الصندوق",
+            "button_2": {
+              "label": "الزر 2",
+              "info": "ينطبق فقط عندما يكون إعداد إعداد النمط القسمي محدد إلى النمط 2.",
+              "button_spacing_top": "الهامش العلوي للزر الثاني"
+            },
+            "style": {
+              "label": "نمط القسم",
+              "enable_divider": "عرض خط الفصل",
+              "divider_info": "ينطبق فقط عندما يكون إعداد إعداد النمط القسمي محدد إلى النمط 2.",
+              "divider_bg_color": "لون خط الفصل",
+              "divider_position_from_center": "موقع خط الفصل من المركز",
+              "button_spacing_left": "الهامش الأيسر للزر",
+              "button_position_from_center": "موقع الزر من المركز",
+              "content_spacing_right": "الهامش الأيمن للمحتوى",
+              "content_position_from_center": "موقع المحتوى من المركز",
+              "banner_bg_color": "لون خلفية البنر",
+              "info": "ينطبق فقط عندما يكون إعداد إعداد النمط القسمي محدد إلى النمط 4.",
+              "info_1": "ينطبق فقط عندما يكون إعداد إعداد الزر محدد إلى النمط 1.",
+              "enable_content_border": "عرض حدود المحتوى",
+              "content_border_color": "لون حدود المحتوى",
+              "image_above_the_content": "الصورة فوق المحتوى",
+              "justify_content": {
+                "label": "تسهيل المحتوى",
+                "option_1": "المسافة بين",
+                "option_2": "البدء",
+                "option_3": "النهاية",
+                "option_4": "المركز"
+              }
+            },
+            "video": {
+              "content": "الفيديو",
+              "color_icon": "لون الأيقونة",
+              "bg_color_icon": "لون خلفية الأيقونة",
+              "adaptive_height_video": "نسبة العرض (الوحدة %)"
+            }
+          }
+        },
+        "customImg": {
+          "name": "الصورة المخصصة",
+          "settings": {
+            "item_1": "العنصر الأول",
+            "item_2": "العنصر الثاني",
+            "item_3": "العنصر الثالث",
+            "item_4": "العنصر الرابع",
+            "content_item_1": "محتوى العنصر الأول",
+            "content_item_2": "محتوى العنصر الثاني",
+            "settings_video_item_1": "الفيديو العنصر الأول",
+            "settings_video_item_2": "الفيديو العنصر الثاني",
+            "button_item_1": "الزر العنصر الأول",
+            "button_item_2": "الزر العنصر الثاني"
+          }
+        },
+        "specialImg": {
+          "name": "الصورة الخاصة",
+          "settings": {
+            "label__3": "العنوان",
+            "label__6": "ارتفاع العنصر",
+            "label__7": "المسافة بين العناصر",
+            "label__8": "أطراف العنصر",
+            "label__9": "غموض الخلفية",
+            "label__10": "حجم الخط للأرقام",
+            "label__11": "حجم الخط للأرقام على الجهاز المحمول",
+            "label__12": "حجم الخط للأرقام",
+            "label__13": "لون الأرقام",
+            "label__14": "حجم الخط للنص",
+            "label__15": "حجم الخط للنص على الجهاز المحمول",
+            "mg_bottom": "الهامش السفلي",
+            "unit": "%",
+            "video": {
+              "color_icon": "لون الأيقونة",
+              "bg_color_icon": "لون خلفية الأيقونة"
+            }
+          }
+        },
+        "image_scrolling_text": {
+          "name": "الصورة المتحركة",
+          "settings": {
+            "scrolling_text": "النص المتحرك"
+          }
+        }
+      },
+      "settings": {
+        "general": {
+          "display": {
+            "list": "قائمة",
+            "slide": "شريحة"
+          },
+          "arrows_position": "موقع السهم (الوحدة % أو px)",
+          "info": "ينطبق فقط عندما يكون إعداد التخطيط القسمي محدد إلى التخطيط الشريحة.",
+          "list_grid_gap": "المسافة بين كل قسم لتخطيط القائمة"
+        }
+      },
+      "presets": {
+        "name": "الصورة البنر"
+      }
+    },
+    "spotlight_block": {
+      "name": "القسم المضيء",
+      "blocks": {
+        "image": {
+          "name": "الصورة",
+          "smallImg": "الصورة الصغيرة",
+          "largeImg": "الصورة الكبيرة",
+          "BlockImg": "الصورة المكتوبة",
+          "enable_absolute": "عرض المحتوى على الصورة",
+          "enable_absolute_desktop": "إظهار المحتوى على الصورة لسطح المكتب فقط",
+          "enable_border_title": "عرض حدود العنوان",
+          "enable_custom_position_title": "تمكين تخصيص الموقع",
+          "border_sub_title": "عرض حدود العنوان الفرعي",
+          "link": {
+            "label": "الرابط",
+            "info": "لتنشيط إعداد الإستشارة المخصصة، يرجى استخدام هذا الرابط: #contact-us"
+          },
+          "button": "الزر",
+          "enable_image": "عرض الصورة"
+        }
+      },
+      "settings": {
+        "icon": "الأيقونة",
+        "color_icon_slider": "لون السهم",
+        "info_color_icon_slider": "ينطبق فقط عندما يكون إعداد التخطيط القسمي محدد إلى التخطيط الشريحة.",
+        "content_spacing": "الهامش الداخلي للمحتوى",
+        "align_items_spacing_top": "الهامش العلوي للمحتوى",
+        "align_items_spacing_bottom": "الهامش السفلي للمحتوى",
+        "align_items_spacing_lr": "الهامش الأيسر\/الأيمن للمحتوى",
+        "align_items_spacing_top_bottom_position": "الهامش العلوي\/السفلي للمحتوى",
+        "align_items_spacing_top_bottom_position_mb": "الهامش العلوي\/السفلي للمحتوى على الجهاز المحمول",
+        "content_1": "العناصر المكتوبة",
+        "enable_shadow": "عرض ظل الصندوق",
+        "use_special_header_layout": "استخدام تخطيط خاص",
+        "enable_content_border": "عرض حدود المحتوى"
+      },
+      "presets": {
+        "name": "القسم المضيء",
+        "section": "القسم المضيء"
+      }
+    },
+    "featured_blog": {
+      "name": "المنشورات المميزة",
+      "settings": {
+        "blog": {
+          "header": "المنشورات",
+          "blog_posts": "المنشورات",
+          "post_limit": "عدد المنشورات المعروضة",
+          "blog_show_des": "عرض الوصف",
+          "blog_show_more": "عرض زر القراءة المزيد",
+          "blog_show_more_pos": "موقع زر القراءة المزيد",
+          "blog_show_more_icon": "الأيقونة على زر القراءة المزيد",
+          "text_by": "النص 'بواسطة'",
+          "text_on": "النص 'على'",
+          "date_format": "تنسيق تاريخ المنشورات",
+          "date_format_option_1": "Ex: Feb 21, 2024",
+          "date_format_option_2": "Ex: February 21, 2024",
+          "bg_info": "ينطبق على المحتوى على الصورة",
+          "view_all_pos": "محاذاة المزيد",
+          "under_title": "تحت العنوان",
+          "under_content": "تحت المحتوى",
+          "right_title": "إلى اليمين من العنوان",
+          "blog_post_des_length": "طول الوصف للمنشورات"
+        },
+        "settings_item": {
+          "header": "عناصر المنشورات",
+          "enable_border_box": "عرض حدود الصندوق",
+          "color_border_box": "لون حدود الصندوق",
+          "margin_bottom_info": "الهامش السفلي للمعلومات",
+          "margin_bottom_image": "الهامش السفلي للصورة",
+          "link_text_transform": "أسلوب الرابط 'عرض التفاصيل'",
+          "link_fw": "وزن الخط للرابط 'عرض التفاصيل'",
+          "author_date_position": "إظهار المؤلف والتاريخ",
+          "above_title": "فوق العنوان",
+          "below_title": "أسفل العنوان",
+          "blog_title_style": "أسلوب العنوان للمنشورات",
+          "blog_style_1": "تحت الصورة",
+          "blog_style_2": "تطويق الصورة",
+          "show_link_as": "عرض الرابط 'عرض التفاصيل' كزر",
+          "link_button_color": "لون الرابط\/الزر",
+          "link_button_hover_color": "لون الرابط\/الزر عند التمرير"
+        }
+      },
+      "presets": {
+        "name": "المنشورات المميزة"
+      }
+    },
+    "policies_block": {
+      "name": "قسم السياسات",
+      "blocks": {
+        "image": {
+          "title": "العنوان"
+        },
+        "filter": "[الشريط الجانبي] قسم السياسات"
+      },
+      "settings": {
+        "setting_block": {
+          "image_block": "الصورة المكتوبة",
+          "enable_block": "عرض قسم السياسات",
+          "color_block": "لون النص",
+          "icon_mg_right": "الهامش الأيمن للأيقونة",
+          "icon_type": "استخدام الصورة أو الأيقونة SVG",
+          "enable_item_distance": "عرض المسافة بين العناصر",
+          "enable_hover_box_shadow": "عرض ظل الصندوق عند التمرير",
+          "enable_hover_effects_top": "تمكين التحريك عند التمرير",
+          "content_custom": "المحتوى السفلي",
+          "enable_custom": "عرض المحتوى السفلي",
+          "spacing_tablet": "المسافة بين العناصر على الجهاز اللوحي",
+          "spacing_mobile": "المسافة بين العناصر على الهاتف المحمول",
+          "info": "فقط لتخطيط التمرير على الهاتف المحمول",
+          "show_first_item": "عرض العنصر الأول",
+          "show_second_item": "عرض العنصر الثاني",
+          "show_third_item": "عرض العنصر الثالث"
+        }
+      },
+      "presets": {
+        "name": "قسم السياسات"
+      }
+    },
+    "custom_service_block": {
+      "name": "قسم الخدمات المخصصة",
+      "settings": {
+        "block_items": "عناصر الصندوق"
+      }
+    },
+    "collapsible_content": {
+      "name": "محتوى مطوي",
+      "settings": {
+        "collapsible_row": "محتوى مطوي",
+        "collapsible_row_2": "محتوى مطوي",
+        "collapsible_content": "محتوى من الصفحة"
+      }
+    },
+    "brand": {
+      "name": "شريحة العلامات التجارية",
+      "name_2": "عرض العلامات التجارية",
+      "blocks": {
+        "image": {
+          "info": "الصورة الموصى بها: العرض x الارتفاع (186 x 74)px"
+        }
+      },
+      "settings": {
+        "brand_rows": {
+          "option_mb": "عدد العناصر في الصف على الجهاز المحمول",
+          "option1": "1",
+          "option2": "2",
+          "option3": "3",
+          "option4": "4",
+          "option5": "5",
+          "option6": "6",
+          "option7": "7",
+          "option8": "8",
+          "option9": "9"
+        },
+        "brand_item": "عنصر العلامة التجارية"
+      },
+      "presets": {
+        "name": "شريحة العلامات التجارية"
+      }
+    },
+    "brand_tab": {
+      "name": "صورة متعددة الأذرع",
+      "blocks": {
+        "tab": {
+          "name": "عنصر القسم",
+          "show_image": "عرض صورة القسم",
+          "info": "حدد عنصر التنقل لعرض عناصر القسم. [تعلم المزيد عن كيفية تحميل الصور لقسم صورة متعددة الأذرع.](https:\/\/halosoft.gitbook.io\/ella-documentation\/sections\/all-sections-in-theme\/brand-tab#how-to-show-images-for-brand-tab-section)"
+        }
+      },
+      "settings": {
+        "layout_block": {
+          "header": "عنصر القسم",
+          "maximum_brands_to_show": "العناصر القابلة للعرض الأقصى"
+        }
+      },
+      "presets": {
+        "name": "صورة متعددة الأذرع"
+      }
+    },
+    "custom_text": {
+      "name": "نص مخصص",
+      "settings": {
+        "layout_block": {
+          "header": "عنصر النص",
+          "padding_vertical": "الهامش العمودي",
+          "padding_hozi": "الهامش الأفقي"
+        }
+      },
+      "presets": {
+        "name": "نص مخصص"
+      }
+    },
+    "customer_testimonial": {
+      "name": "شهادة العميل",
+      "blocks": {
+        "name": "شهادة"
+      },
+      "presets": {
+        "name": "شهادة العميل"
+      }
+    },
+    "custom_map": {
+      "name": "Google map",
+      "settings": {
+        "header__2": "المحتوى",
+        "label__1": "عرض المحتوى الأقصى",
+        "info": "ينطبق فقط عندما يكون إعداد توزيع المحتوى محدد إلى المحتوى المركز.",
+        "enable_map": "عرض الخريطة Google",
+        "map_iframe": "إدراج خريطة",
+        "info__1": "يجب أن تذهب إلى [خريطة Google](https:\/\/www.google.com\/maps) للحصول على رمز HTML للإدراج.",
+        "button": {
+          "label__8": "عرض الزر الأقصى"
+        }
+      },
+      "presets": {
+        "name": "Google map"
+      }
+    },
+    "instagram": {
+      "name": "Instagram",
+      "blocks": {
+        "instagram": {
+          "name": "Instagram",
+          "enable": "تمكين"
+        },
+        "typing_text": {
+          "name": "ربط النص",
+          "settings": {
+            "label__1": "النص 1",
+            "label__2": "النص 2",
+            "label__3": "النص 3"
+          }
+        }
+      },
+      "settings": {
+        "display_icon_more": "عرض زر المزيد",
+        "info_icon_more": "انقر على هذا الزر لتكبير الصورة.",
+        "plus_button_color": "لون زر المزيد",
+        "plus_button_border_color": "لون حدود زر المزيد",
+        "plus_button_bg_color": "لون خلفية زر المزيد",
+        "plus_button_bg_gradient": "تدرج خلفية زر المزيد",
+        "hide_image_portion": "إظهار المنصة خارج حاوية القسم",
+        "type_instagram": {
+          "option": "نوع Instagram",
+          "option1": "استخدام رمز التطبيق",
+          "option2": "استخدام جلالة الصور",
+          "grid": "شبكة",
+          "masonry": "ماسوري",
+          "slider": "شريحة"
+        },
+        "type_button_more": {
+          "option": "نوع الزر",
+          "option1": "زر المزيد",
+          "option2": "إعادة توجيه إلى الرابط",
+          "info": "خيار زر المزيد لا ينطبق عند تحديد إعداد التسليق اللانهائي.",
+          "info__2": "ينطبق عند تحديد إعداد 'نوع الزر' إلى رابط."
+        },
+        "type_app": {
+          "content": "رمز التطبيق",
+          "embed_code": "إدراج رمز التطبيق"
+        },
+        "type_image": {
+          "embed_code": "إدراج رمز JavaScript",
+          "type_instagram_by_gallery": {
+            "option": "العمل عند الضغط على الصورة",
+            "option1": "إعادة توجيه إلى الرابط",
+            "option2": "فتح fancybox"
+          }
+        },
+        "limit": "تحديد عدد الصور المعروضة",
+        "images_per_row": {
+          "option": "عدد العناصر في الصف",
+          "option0": "2",
+          "option1": "3",
+          "option2": "4",
+          "option3": "5",
+          "option4": "6",
+          "option5": "7",
+          "option6": "8",
+          "option7": "9",
+          "option8": "10"
+        },
+        "slide_ins": {
+          "option": "نوع الشريحة",
+          "option2": "افتراضي",
+          "icon_on_image": "الأيقونة على الصورة عند التمرير"
+        },
+        "display_arrow_hover": "عرض السهام التنقل عند التمرير",
+        "enable_infinite": "تمكين التسليق اللانهائي",
+        "display_product_outside_container": "عرض المنتج خارج الحاوية",
+        "slide_rows": {
+          "option": "صفوف الشريحة:",
+          "option1": "1",
+          "option2": "2"
+        },
+        "content": "المحتوى",
+        "layout": "توزيع المحتوى",
+        "effects_image": "تأثير الصورة عند التمرير"
+      },
+      "presets": {
+        "name": "Instagram"
+      }
+    },
+    "mobile_menu": {
+      "name": "القائمة المحمولة (البطايق 1)",
+      "name_2": "القائمة المحمولة (البطايق 2)",
+      "name_3": "القائمة المحمولة (البطايق 3)",
+      "settings": {
+        "header__2": {
+          "content": "أسلوب الخط"
+        },
+        "header__3": {
+          "content": "عنصر"
+        },
+        "general": {
+          "label__2": "عرض الأيقونات على يسار عناصر القائمة",
+          "label__3": "نوع الأيقونة",
+          "label__4": "نوع الصورة",
+          "label__5": "العرض",
+          "label__6": "الارتفاع",
+          "label__7": "عرض الصور أسفل عناصر القائمة الفرعية",
+          "label__8": "أسلوب الصورة",
+          "label__9": "أسلوب الأيقونة",
+          "label__10": "استخدام أسلوب مخصص",
+          "label__11": "القائمة",
+          "label__12": "عرض رابط القائمة الكلية",
+          "label__13": "البنر المستوى 2",
+          "label__14": "البنر المستوى 3",
+          "label__15": "أسلوب الصورة للمستوى 3",
+          "unit": "px",
+          "options__1": "SVG icon",
+          "options__2": "صورة",
+          "options__3": "استخدام صورة مع الصيغة PNG",
+          "options__4": "استخدام صورة مع الصيغة JPG",
+          "options__5": "دائرة",
+          "options__6": "مستطيل",
+          "paragraph__1": {
+            "content": "الأيقونات على يسار عناصر القائمة"
+          },
+          "paragraph__2": {
+            "content": "الصور أسفل عناصر القائمة الفرعية"
+          }
+        },
+        "typography": {
+          "paragraph__1": {
+            "content": "القائمة المستوى 1"
+          },
+          "paragraph__2": {
+            "content": "القائمة المستوى 2, 3"
+          },
+          "paragraph__3": {
+            "content": "عنوان القائمة"
+          },
+          "paragraph__4": {
+            "content": "رابط القائمة الكلية"
+          }
+        }
+      },
+      "blocks": {
+        "menu-1": {
+          "name": "عنصر القائمة",
+          "settings": {
+            "general": {
+              "label__2": "رابط",
+              "label__3": "القائمة",
+              "label__4": "العنوان",
+              "label__5": "الأيقونة SVG",
+              "label__6": "الصورة"
+            },
+            "style": {
+              "paragraph__2": {
+                "content": "العنوان"
+              }
+            }
+          }
+        },
+        "menu-2": {
+          "name": "عنصر الرابط",
+          "settings": {
+            "general": {
+              "label__2": "رابط",
+              "label__3": "العنوان",
+              "label__4": "الأيقونة",
+              "label__5": "الصورة"
+            },
+            "item": {
+              "label__1": "عرض هذا العنصر",
+              "label__2": "الصورة",
+              "label__3": "العنوان",
+              "label__4": "رابط",
+              "paragraph__1": {
+                "content": "عنصر القائمة"
+              },
+              "paragraph__2": {
+                "content": "عنصر القائمة"
+              },
+              "paragraph__3": {
+                "content": "عنصر القائمة"
+              },
+              "paragraph__4": {
+                "content": "عنصر القائمة"
+              },
+              "paragraph__5": {
+                "content": "عنصر القائمة"
+              },
+              "paragraph__6": {
+                "content": "عنصر القائمة"
+              },
+              "paragraph__7": {
+                "content": "عنصر القائمة"
+              },
+              "paragraph__8": {
+                "content": "عنصر القائمة"
+              },
+              "paragraph__9": {
+                "content": "عنصر القائمة"
+              },
+              "paragraph__10": {
+                "content": "عنصر القائمة"
+              }
+            },
+            "style": {
+              "paragraph__2": {
+                "content": "العنوان"
+              }
+            }
+          }
+        },
+        "menu-3": {
+          "name": "قائمة القائمة"
+        }
+      }
+    },
+    "instagram_special": {
+      "name": "Instagram خاص",
+      "presets": {
+        "name": "Instagram خاص"
+      }
+    },
+    "customer_review": {
+      "name": "تقييم العميل",
+      "settings": {
+        "layout_block": {
+          "header": "كتلة التقييم",
+          "color_date": "لون التاريخ",
+          "color_content": "لون المحتوى",
+          "color_icon": "لون الأيقونة",
+          "name": "الاسم",
+          "date": "التاريخ",
+          "body": "المحتوى",
+          "icon": "Icon",
+          "avatar": "الصورة الشخصية",
+          "show_avatar": "عرض الصورة الشخصية",
+          "heading_margin_bottom": "الهامش السفلي للعنوان",
+          "margin_bottom": "الهامش السفلي",
+          "star": "النجمة",
+          "star_color": "لون النجمة",
+          "star_empty_color": "لون النجمة الفارغة",
+          "enable_heading_position": "عرض العنوان فوق محتوى التقييم",
+          "info": "لا ينطبق على التخطيط 3",
+          "info__2": "لا ينطبق على التخطيط 1",
+          "info__3": "ينطبق فقط على التخطيط 2",
+          "block_layout_style": {
+            "option": "تخطيط الكتلة",
+            "option1": "تخطيط 1",
+            "option2": "تخطيط 2",
+            "option4": "التخطيط 4",
+            "option3": "تخطيط 3"
+          },
+          "review_rows": {
+            "option": "عدد التقيمات في الصف"
+          }
+        }
+      },
+      "blocks": {
+        "review": {
+          "name": "تقييم",
+          "settings": {
+            "avatar": "الصورة الشخصية",
+            "enable": "تمكين",
+            "rating": "التقييم",
+            "name": "الاسم",
+            "date": "التاريخ",
+            "body": "المحتوى"
+          }
+        }
+      },
+      "presets": {
+        "name": "تقييم العميل"
+      }
+    },
+    "custom-liquid": {
+      "name": "كود مخصص",
+      "settings": {
+        "custom_liquid": {
+          "label": "Custom liquid",
+          "info": "إضافة مقطعات التطبيق أو أي كود مخصص لإنشاء تخصيصات متقدمة."
+        }
+      },
+      "presets": {
+        "name": "Custom liquid"
+      }
+    },
+    "featured-collection": {
+      "name": "فئات مميزة",
+      "settings": {
+        "swipe_on_mobile": {
+          "label": "تمكين التسليق على الجوال",
+          "category": "فئة",
+          "info": "حدد القائمة لعرض قائمة الفرعية عند التمرير على الصورة."
+        }
+      }
+    },
+    "spotlight-products": {
+      "name": "منتجات الإنضغاط"
+    },
+    "custom-product-widget": {
+      "name": "وحدة منتج مخصصة"
+    },
+    "feature_product": {
+      "sale_price": "لون سعر البيع",
+      "info_1": "للحصول على سعر مقارن للمنتجات",
+      "info_2": "للنمط 2."
+    },
+    "faqs": {
+      "name": "الأسئلة الشائعة",
+      "presets": {
+        "name": "الأسئلة الشائعة"
+      }
+    },
+    "product_block": {
+      "name": "كتلة المنتج",
+      "settings": {
+        "header__2": {
+          "content": "تخطيط الشبكة",
+          "product_slider": "شريحة المنتج",
+          "product_block_02": "كتلة المنتج الزوجية",
+          "feature_product": "منتج مميز",
+          "feature_product_unsymmetrical": "منتج مركز",
+          "info_tablet_mobile": "استخدم للجوال\/الجهاز اللوحي"
+        },
+        "product_block_layout": {
+          "option": "تخطيط",
+          "option1": "شبكة",
+          "option2": "شريحة",
+          "option3": "تمرير"
+        },
+        "block_banner": {
+          "content": "كتلة البنر",
+          "width_banner": "عرض",
+          "custom_horizontal_mb": "موضع الأيقونة الأفقي على الجوال (وحدة %)",
+          "custom_vertical_mb": "موضع الأيقونة العمودي على الجوال (وحدة %)"
+        },
+        "countdown": {
+          "countdown_margin_left": "هامش العداد السفلي"
+        },
+        "style_block_header": {
+          "name": "عنوان الكتلة"
+        },
+        "style_separation": {
+          "option": "أسلوب الفصل"
+        },
+        "separation": "عرض الفاصل بين عناوين الشريحة",
+        "dropdown_option": "قائمة منسدلة",
+        "scroll_title": "تمكين التمرير لعناوين الشريحة على الجوال",
+        "heading_style_info": "ينطبق فقط على الأسلوب 4 ولها حد أعلى.",
+        "heading_style_info_2": "ينطبق فقط على الأسلوب 2",
+        "info_banner": "استخدم لكتلة البنر",
+        "min_width": "العرض الأدنى",
+        "color_separation": "لون الفصل",
+        "line_height_mb": "ارتفاع الخط على الجوال",
+        "info_button_show_more": "ينطبق فقط على تخطيط الشبكة",
+        "general": {
+          "label__1": "عرض كتلة المنتج",
+          "label__5": "تخطيط",
+          "label__6": "عنوان",
+          "options__5": "شبكة",
+          "options__6": "شريحة",
+          "pb_style_info": "الأسلوب 3 يستخدم فقط عندما يكون 'عدد المنتجات في الصف' 1",
+          "enable_minus_spacing_top": "تمكين الهامش السالب العلوي",
+          "minus_spacing_top_info": "قم بتحريك هذا القسم لتجاوز القسم الموجود أعلاه.",
+          "minus_spacing_top": "هامش سالب علوي",
+          "minus_spacing_bottom": "هامش سفلي سالب",
+          "minus_spacing_top_desktop": "هامش سالب علوي على الجهاز اللوحي"
+        },
+        "spacing_between_title": "هامش بين عناوين الشريحة",
+        "grid": {
+          "product_block_per_row": "عدد المنتجات في الصف",
+          "enable_product_card_pd_bottom": "تمكين الهامش السفلي لكرت المنتج",
+          "product_card_pd_bottom": "الهامش السفلي لكرت المنتج"
+        },
+        "slider": {
+          "content": "تخطيط الشريحة",
+          "product_block_dots": "عرض النقاط التنقل",
+          "product_block_dots_desk": "عرض النقاط التنقل على الجهاز اللوحي",
+          "product_block_dots_mb": "عرض النقاط التنقل على الجوال\/الجهاز اللوحي",
+          "product_block_dots_spacing_top": "هامش سفلي للنقاط التنقل",
+          "product_block_arrows": "عرض الأسهم التنقل",
+          "product_block_arrows_desk": "عرض الأسهم التنقل على الجهاز اللوحي",
+          "product_block_arrows_mb": "عرض الأسهم التنقل على الجوال\/الجهاز اللوحي",
+          "product_block_arrows_position": "تمكين تحديد موضع الأسهم التنقل على الجهاز اللوحي",
+          "use_special_arrow_position": "استخدم موضع السهم الخاص",
+          "enable_progress_bar": "عرض شريط التمرير",
+          "enable_counter_number": "عرض عداد الشريحة"
+        },
+        "scroll": {
+          "content": "تخطيط التمرير",
+          "show_half": "عرض جزء من المنتج على الجانب الأيمن",
+          "scroll_name": "شريط التمرير",
+          "scroll_height": "الارتفاع",
+          "scroll_track_bg": "لون سطح التتبع",
+          "scroll_thumb_color": "لون سطح التمرير",
+          "scroll_thumb_hover_color": "لون سطح التمرير عند التمرير"
+        },
+        "layout_card": {
+          "header": "تخطيط كرت مميز",
+          "enable_layout_special": "تمكين تخطيط كرت مميز",
+          "padding_card": "هامش",
+          "border_layout_card": {
+            "option": "أسلوب الحد",
+            "option1": "حد على جميع الجوانب",
+            "option2": "حد سفلي"
+          },
+          "settings_for_collection_01": "الفئة 01",
+          "settings_for_collection_02": "الفئة 02",
+          "collection_02": "الفئة 02",
+          "enable_custom_color": "تمكين اللون المخصص"
+        },
+        "product_block": "أسلوب كتلة المنتج"
+      },
+      "blocks": {
+        "banner": {
+          "position": {
+            "option": "موضع الجهاز اللوحي",
+            "info__1": "يتم تحسين الموضع تلقائيًا للجوال."
+          },
+          "name": "البنر",
+          "align_items_spacing_tb": "هامش سفلي\/علوي للمحتوى",
+          "align_items_spacing_lr": "هامش أيسر\/أيمن للمحتوى",
+          "position_vertical_arrow": "موضع عمودي (وحدة % أو px)",
+          "info__1": "ينطبق فقط عندما يكون 'موضع المحتوى' معرف إلى الأعلى أو الأسفل.",
+          "info__2": "ينطبق فقط عندما يكون 'موضع المحتوى' معرف إلى اليسار أو اليمين."
+        },
+        "colletions_list": {
+          "name": "الفئات",
+          "info_block_collection": "كتلة الفئات",
+          "enable_collection": "عرض كتلة الفئات"
+        }
+      },
+      "presets": {
+        "name": "كتلة المنتج"
+      }
+    },
+    "product_block_vetical": {
+      "name": "منتج عمودي",
+      "settings": {
+        "settings_item": {
+          "header": "كتلة الفئة"
+        }
+      }
+    },
+    "product_tab_block": {
+      "name": "أشرطة المنتج",
+      "block_name": "أشرطة المنتج"
+    },
+    "promo_banner_with_product_grid": {
+      "name": "بانر ترويجي مع شبكة منتجات",
+      "settings": {
+        "paragraph_1": "عنوان المنتج",
+        "paragraph_2": "سعر المنتج",
+        "font_size": "حجم الخط",
+        "font_size_mb": "حجم الخط على الجوال",
+        "color": "اللون",
+        "price_color": "لون السعر",
+        "price_bg_color": "لون خلفية السعر",
+        "price_color_hover": "لون السعر عند التمرير",
+        "price_bg_color_hover": "لون خلفية السعر عند التمرير"
+      }
+    },
+    "video": {
+      "name": "فيديو",
+      "settings": {
+        "cover_image": {
+          "label": "صورة التغطية",
+          "info": "يتم عرضها عندما يكون 'تشغيل الفيديو تلقائيًا' معطلاً."
+        },
+        "video_url": {
+          "label": "فيديو من YouTube أو Vimeo على الجهاز اللوحي",
+          "label_mb": "فيديو من YouTube أو Vimeo على الجوال",
+          "info": "استخدم رابط YouTube أو Vimeo"
+        },
+        "description": {
+          "label": "نص الفيديو",
+          "info": "وصف الفيديو لجعله متاحًا للعملاء المستخدمين للقراءات الشاشة."
+        },
+        "full_width": {
+          "label": "جعل القسم عرضًا شاملًا"
+        },
+        "style_video": {
+          "option": "نوع الفيديو",
+          "option1": "YouTube أو Vimeo",
+          "option2": "MP4"
+        },
+        "url_mp4": {
+          "label": "فيديو MP4 على الجهاز اللوحي",
+          "label_mb": "فيديو MP4 على الجوال",
+          "info": "استخدم رابط MP4"
+        },
+        "autoplay": {
+          "label": "تشغيل تلقائي"
+        },
+        "sound": {
+          "label": "صوت الفيديو",
+          "infor": "غير قابل للتطبيق على الفيديو التلقائي"
+        },
+        "video_height": {
+          "label": "ارتفاع الفيديو (وحدة %)",
+          "label_1": "ارتفاع الفيديو على الجوال (وحدة %)",
+          "info": "الوحدة: %"
+        }
+      },
+      "presets": {
+        "name": "فيديو"
+      }
+    },
+    "video-carousel": {
+      "name": "عرض فيديو متحرك",
+      "blocks": {
+        "name": "فيديو",
+        "settings": {
+          "label": "فيديو",
+          "content": "فيديو مستضاف على Shopify"
+        }
+      },
+      "presets": {
+        "name": "عرض فيديو متحرك"
+      }
+    },
+    "sticky_toolbar_mobile": {
+      "name": "أشرطة سليمة على الجوال",
+      "blocks": {
+        "link": {
+          "name": "إضافة روابط إلى صفحة"
+        },
+        "content": {
+          "name": "عرض المحتوى"
+        },
+        "action": {
+          "name": "إضافة إجراء",
+          "action_to": {
+            "option": "الإجراء إلى",
+            "option1": "سلة",
+            "option2": "حساب",
+            "option3": "بحث"
+          }
+        }
+      },
+      "settings": {
+        "paragraph": "يستخدم القسم فقط للجوال",
+        "color_icon": "لون النص والرمز"
+      }
+    },
+    "footer": {
+      "name": "الأرضية",
+      "blocks": {
+        "link_list": {
+          "name": "قائمة الروابط",
+          "settings": {
+            "heading": {
+              "info": "يتطلب عنوانًا لعرض القائمة."
+            },
+            "menu": {
+              "label": "قائمة الروابط",
+              "info": "يظهر فقط عناصر قائمة الروابط الرئيسية."
+            }
+          }
+        },
+        "text": {
+          "settings": {
+            "show_border_left": "إظهار الحدود اليسرى",
+            "show_border_right": "إظهار الحدود اليمنى",
+            "logo_margin_bottom": "هامش سفلي للصورة",
+            "logo_margin_top": "هامش علوي للصورة",
+            "spacing_between_items": "هامش بين العناصر",
+            "block_bottom_margin": "هامش سفلي للكتلة"
+          }
+        },
+        "big_logo": {
+          "name": "شعار كبير"
+        },
+        "newsletter": {
+          "name": "أشرطة النشر",
+          "settings": {
+            "input_color": "لون الإدخال",
+            "input_color_bg": "لون خلفية الإدخال",
+            "input_color_border": "لون حدود الإدخال",
+            "enable_top": "موضع على الأعلى",
+            "newsletter_margin_bottom": "هامش سفلي للكتلة",
+            "newsletter_padding_bottom": "هامش سفلي (مع الحدود)",
+            "spacing_input": "هامش بين الإدخال والزر",
+            "newsletter_form_width": "عرض أشرطة النشر",
+            "newsletter_form_radius": "زوايا أشرطة النشر",
+            "enable_custom_position_icon": "تخصيص موضع الرمز (وحدة %)",
+            "info__1": "ينطبق فقط على تخطيط الكتلة 'الصف'",
+            "checkbox": {
+              "content": "مربع الاختيار",
+              "check_input_color": "لون المربع الاختياري"
+            },
+            "background_color": {
+              "info": "يتم استخدام هذه الإعدادات فقط عندما يكون 'موضع على الأعلى' مفعلاً"
+            },
+            "input_width": "عرض الإدخال الأقصى",
+            "input_border_radius": "زوايا الإدخال",
+            "input_behavior": "عرض الإدخال",
+            "limited_width": "محدود في العرض",
+            "spacing_left_border": "هامش أيسر الحدود",
+            "spacing_right_border": "هامش أيمن الحدود",
+            "swap_social_position": "تبديل موضع الروابط الاجتماعية",
+            "show_input_field": "عرض الحقل الإدخال",
+            "hidden_input_field": "حقل إدخال مخفي",
+            "title_margin_top": "هامش العنوان العلوي",
+            "title_margin_bottom": "هامش العنوان السفلي"
+          }
+        },
+        "policy": {
+          "name": "سياسة الخصوصية",
+          "content": "إعدادات سياسة الخصوصية"
+        }
+      },
+      "settings": {
+        "padding_full_width": "هامش لخيار 'عرض شامل'",
+        "icon_color": "لون الرمز",
+        "background_color": "لون الخلفية",
+        "icon_hover_color": "لون الرمز عند التمرير",
+        "box_shadow_hover_color": "لون الظل عند التمرير",
+        "social_media_link": {
+          "content": "رموز الوسائل الاجتماعية",
+          "info": "لعرض حسابات الوسائل الاجتماعية الخاصة بك، قم بربطها في [إعدادات النظام](\/editor?context=theme&category=social%20media).",
+          "show_social": "عرض رموز الوسائل الاجتماعية",
+          "enable_background_social": "عرض الخلفيات على رموز الوسائل الاجتماعية",
+          "social_position": {
+            "option": "رموز الوسائل الاجتماعية تحت الكتلة:",
+            "option1": "1",
+            "option2": "2",
+            "option3": "3",
+            "option4": "4",
+            "option5": "5",
+            "option6": "6",
+            "option7": "Top"
+          },
+          "social_box_hover_color": "ظل الخلفية عند التمرير",
+          "social_margin_top": "هامش علوي",
+          "social_width": "عرض",
+          "social_padding": "هامش داخلي",
+          "social_border_width": "عرض الحدود",
+          "social_margin_left": "هامش أيمن",
+          "column_reverse": "عكس الأعمدة"
+        },
+        "custom_width": {
+          "label": "عرض مخصص على الجهاز اللوحي (وحدة %)",
+          "image": "صورة"
+        },
+        "footer_top": {
+          "content": "الأرضية العلوية",
+          "promotion": "أشرطة النشر",
+          "footer_top_color_link_hover": "لون الرابط عند التمرير",
+          "footer_top_bg_img": "صورة",
+          "show_footer_top_bg_img": "عرض صورة الخلفية",
+          "footer_top_bg_position_x": {
+            "option": "موضع الصورة الأفقي"
+          },
+          "footer_top_bg_position_y": {
+            "option": "موضع الصورة العمودي"
+          },
+          "footer_top_bg_repeat": {
+            "option": "تكرار الصورة",
+            "option1": "عمودي وأفقي",
+            "option2": "أفقي فقط",
+            "option3": "عمودي فقط",
+            "option4": "لا يتم تكراره"
+          },
+          "footer_top_bg_attachment": {
+            "option": "حركة الصورة",
+            "option1": "تمرير",
+            "option2": "ثابت",
+            "option3": "متحرك",
+            "movable_layout": "تخطيط متحرك"
+          },
+          "footer_top_bg_size": {
+            "option": "حجم صورة الخلفية",
+            "option1": "تحتوي",
+            "option2": "تلقائي",
+            "option3": "تغطية"
+          },
+          "footer_top_text_align": {
+            "option": "محاذاة المحتوى"
+          }
+        },
+        "security_trust": {
+          "content": "ثقة أمان",
+          "enable_trust": "تمكين",
+          "image_trust": "صورة",
+          "trust_position": {
+            "option": "صورة الثقة تحت الكتلة:",
+            "option5": "شامل"
+          }
+        },
+        "footer_bottom": {
+          "content": "الأرضية السفلية"
+        },
+        "copy_right": {
+          "content": "حقوق الملكية",
+          "show_copyright": "عرض حقوق الملكية",
+          "copyright_content": "نص",
+          "enable_layout_grid": "عرض شبكة التخطيط"
+        },
+        "payment": {
+          "content": "طرق الدفع",
+          "show_payment": "عرض أيقونات الدفع",
+          "payment_type": {
+            "option": "أيقونات الدفع",
+            "option1": "Default",
+            "option2": "مخصص",
+            "info": "عند اختيار \"الافتراضي\"، لإضافة أيقونات الدفع، قم بالذهاب إلى [إعدادات الدفع.](\/admin\/settings\/payments)"
+          },
+          "payment_position": {
+            "option": "موضع الدفع",
+            "option1": "كتلة 1",
+            "option2": "كتلة 2",
+            "option3": "كتلة 3",
+            "option4": "كتلة 4",
+            "option5": "كتلة 5",
+            "option7": "كتلة 6",
+            "option6": "الأرضية السفلية"
+          }
+        },
+        "footer_layout": {
+          "content": "تخطيط الأرضية",
+          "layout": "تخطيط:",
+          "label__1": "الأرضية 01",
+          "label__2": "الأرضية 02",
+          "label__3": "الأرضية 03",
+          "label__4": "الأرضية 04",
+          "label__5": "الأرضية 05",
+          "label__6": "الأرضية 06",
+          "label__7": "الأرضية 07"
+        }
+      }
+    },
+    "header": {
+      "name": "الرأس",
+      "layouts": {
+        "classic": {
+          "label": "الرأس - الافتراضي",
+          "presets": "الرأس - الافتراضي"
+        }
+      },
+      "settings": {
+        "header__1": {
+          "content": "الرأس العلوي",
+          "content_2": "الرأس المتوسط"
+        },
+        "header__2": {
+          "header": "الرأس",
+          "content": "الرأس السفلي"
+        },
+        "header__3": {
+          "content": "الرأس الجوال"
+        },
+        "header__4": {
+          "content": "الصورة الرمزية"
+        },
+        "header__6": {
+          "menu_lv_1": "عناصر القائمة المستوى 1",
+          "menu_lv_2": "عناصر القائمة المستوى 2",
+          "menu_lv_3": "عناصر القائمة المستوى 3",
+          "info_1": "أدخل اسماء العناصر التي تريد عرض التسمية الجديدة. قم بفصل العناصر بفواصل.",
+          "info_2": "أدخل اسماء العناصر التي تريد عرض التسمية التخفيض. قم بفصل العناصر بفواصل.",
+          "info_3": "أدخل اسماء العناصر التي تريد عرض التسمية الساخنة. قم بفصل العناصر بفواصل."
+        },
+        "header__9": {
+          "content": "قائمة القسم"
+        },
+        "header__10": {
+          "content": "العناصر المضيئة"
+        },
+        "header__11": {
+          "content": "التسمية على القائمة"
+        },
+        "sale_item": {
+          "info": "أدخل اسماء العناصر التي تريد عرضها كعناصر مضيئة. قم بفصل العناصر بفواصل.",
+          "label__1": "عناصر القائمة المستوى 1",
+          "label__2": "عناصر القائمة المستوى 2",
+          "label__3": "عناصر القائمة المستوى 3",
+          "label__4": "لون النص"
+        },
+        "menu_label": {
+          "label": "عرض تأثير التلميح",
+          "info": "هذا الخيار ينطبق فقط على القائمة المستوى 2 والمستوى 3",
+          "paragraph__1": {
+            "content": "تسمية جديدة"
+          },
+          "paragraph__2": {
+            "content": "تسمية تخفيض"
+          },
+          "paragraph__3": {
+            "content": "تسمية ساخنة"
+          }
+        },
+        "header_top": {
+          "show_giftcards": "عرض بطايق الهدايا",
+          "text_giftcards": "نص بطايق الهدايا",
+          "link_giftcards": "رابط بطايق الهدايا",
+          "display_customer_service": "عرض خدمة العملاء",
+          "display_customer_text_list": "عرض قائمة النص المخصص",
+          "customer_service_text": "نص خدمة العملاء",
+          "customer_list_text": "نص قائمة مخصصة",
+          "help": "معلومات المساعدة",
+          "display_help": "عرض المساعدة",
+          "help_text": "نص المساعدة",
+          "help_text_link": "رابط المساعدة",
+          "help_icon": "رمز المساعدة",
+          "first_content": "المحتوى الأول",
+          "second_content": "المحتوى الثاني",
+          "third_content": "المحتوى الثالث",
+          "fourth_content": "المحتوى الرابع",
+          "search": "البحث",
+          "search_color_bg_gradient_icon": "لون الرمز الخلفي المتدرج",
+          "search_border_radius": "أطراف البحث",
+          "cart": "العربة",
+          "background_color_items_cart": "لون العنصر",
+          "background_gradient_items_cart": "لون العنصر الخلفي المتدرج",
+          "color_items_cart": "لون العنصر",
+          "background_color_items_cart_mb": "لون العنصر على الجهاز اللوحي",
+          "color_items_cart_mb": "لون العنصر على الجهاز اللوحي",
+          "font_size_cart_item": "حجم النص في العنصر",
+          "language_currency": "اللغة\/العملة",
+          "label__2": "لون النص\/الرمز 1",
+          "label__3": "لون النص\/الرمز 2",
+          "label__3_1": "لون النص\/الرمز 3",
+          "label__4": "لون النص\/الرمز",
+          "label__5": "لون النص\/الرمز عند التمرير",
+          "label__6": "لون حدود الرمز",
+          "label__7": "استخدم الآلة الكاتبة",
+          "label__8": "عرض المحتوى الأول على الهاتف المحمول",
+          "search_input_color": "لون الإدخال",
+          "search_input_bg_color": "لون الخلفية للإدخال",
+          "search_input_border": "لون حدود الإدخال",
+          "search_button_bg_color": "لون الزر",
+          "search_button_bg_color_gradient": "لون الزر الخلفي المتدرج",
+          "search_button_border": "لون حدود الزر",
+          "input_font_size": "حجم النص في الإدخال",
+          "input_text_transform": "أنماط النص في الإدخال",
+          "input_font_weight": "حجم النص في الإدخال",
+          "style_search": {
+            "option": "أنماط البحث"
+          },
+          "show_left_button": "عرض الزر على اليسار",
+          "first_text_color": "لون النص الأول",
+          "second_text_color": "لون النص الثاني"
+        },
+        "header_bottom": {
+          "bg_bottom": "الخلفية السفلية",
+          "mg_top": "هامش علوي للقائمة",
+          "mg_bottom": "هامش سفلي للقائمة",
+          "spacing_left_right": "هامش العناصر على اليسار\/اليمين",
+          "spacing_left_menu": "هامش القائمة على اليسار",
+          "spacing_right_menu": "هامش القائمة على اليمين"
+        },
+        "header_mobile": {
+          "menu_tabs_info": "ينطبق فقط على \"قائمة القسم\"",
+          "text_color_active": "لون النص المفعل",
+          "text_bg_color_active": "لون الخلفية المفعل",
+          "text_bg_gradient_color_active": "لون الخلفية المتدرج المفعل",
+          "text_border_color_active": "لون حدود النص المفعل"
+        },
+        "header_layout": {
+          "content": "الرأس الكمبيوتر",
+          "style": "أنماط الرأس"
+        },
+        "header_tab": {
+          "content": "قائمة القسم",
+          "padding_vertical": "هامش علوي\/سفلي",
+          "padding_vertical_mb": "هامش علوي\/سفلي على الجهاز اللوحي",
+          "padding_hozi": "هامش أفقي",
+          "padding_hozi_mb": "هامش أفقي على الجهاز اللوحي",
+          "enable_separation_tab": "تمكين الفصل"
+        },
+        "header_service": {
+          "content": "المحتوى العلوي",
+          "customer_service_text": "نص المحتوى"
+        },
+        "live_help": {
+          "content": "المساعدة الحية",
+          "ask_an_expert": "عرض طلب المساعدة",
+          "contact_us": "عرض الاتصال بنا"
+        },
+        "product_card_layout": {
+          "enable_background_button_card": "تمكين الخلفية للزر",
+          "disable_product_card_border": "تعطيل الحدود",
+          "enable_custom_layout_card": "تمكين التخطيط المخصص",
+          "enable_infor_on_image": "تمكين معلومات المنتج على الصورة",
+          "enable_custom_position_swatch_layout_card": "تمكين التخطيط المخصص للملونات",
+          "enable_countdown_layout_card": "تمكين العداد",
+          "label__1": "بطايق المنتج 01",
+          "label__2": "بطايق المنتج 02",
+          "label__3": "بطايق المنتج 03",
+          "label__4": "بطايق المنتج 04",
+          "label__5": "بطايق المنتج 05",
+          "label__6": "بطايق المنتج 06",
+          "label__7": "بطايق المنتج 07",
+          "label__8": "بطايق المنتج 08",
+          "label__9": "بطايق المنتج 09",
+          "paragraph_1": "أزرار البطايق لبطايق المنتج 06"
+        },
+        "collections_layout": {
+          "content": "المجموعات",
+          "layout": "صفحات المجموعات",
+          "label__1": "افتراضي",
+          "label__2": "طلب مباشر",
+          "label__3": "عرض شبكي",
+          "label__4": "ماسونري",
+          "label__5": "الشريط الجانبي الصحيح",
+          "label__6": "إعلان اللوحة"
+        },
+        "list_collections_layout": {
+          "layout": "صفحات قائمة المجموعات",
+          "label__1": "افتراضي",
+          "label__2": "قائمة",
+          "label__3": "ماسونري",
+          "label__4": "شبكي",
+          "label__5": "عرض شبكي"
+        },
+        "parallax": {
+          "parallax": "رأس شفاف",
+          "ennable_parallax": "تمكين على الصفحة الرئيسية",
+          "sticky_transparent": "تمكين على الرأس المتصل",
+          "info": "هذا الخيار ينطبق فقط عند تمكين خيار \"تمكين على الصفحة الرئيسية\"",
+          "logo_transparent": "صورة الشعار على الرأس الشفاف"
+        },
+        "logo": {
+          "label__1": "صورة الشعار",
+          "label__2": "صورة الشعار على الجهاز اللوحي",
+          "label__3": "موضع الشعار على الكمبيوتر",
+          "label__fixed": "صورة الشعار للرأس المتصل\/الرأس المتصل",
+          "label__7": "نص الشعار أو رمز SVG",
+          "label__8": "لون نص الشعار أو رمز SVG",
+          "logo_info": "سيتم عرض هذا الشعار عند عدم إضافة قائمة القسم",
+          "unit": "px",
+          "option__1": "العلوي الأيسر",
+          "option__2": "العلوي المركزي",
+          "option__3": "المتوسط الأيسر",
+          "option__4": "المتوسط المركزي",
+          "option__5": "السفلي الأيسر",
+          "option__6": "السفلي الأيمن"
+        },
+        "logo_width": {
+          "unit": "px",
+          "label__1": "عرض الشعار",
+          "label__2": "عرض الشعار على الجهاز اللوحي",
+          "label__4": "هامش لوجو السفلي",
+          "label__3": "عرض الشعار على الرأس المتصل"
+        },
+        "menu": {
+          "label__1": "القائمة",
+          "label__2": "عرض قائمة القسم",
+          "label__3": "عرض القائمة الميجا",
+          "label__4": "القائمة اليمنى"
+        },
+        "show_line_separator": {
+          "label": "عرض خط الفصل"
+        },
+        "enable_sticky_header": {
+          "name": "رأس متصل",
+          "label_1": "دائما",
+          "label_2": "عند التمرير للأعلى"
+        },
+        "vertical_menu": {
+          "title": "قائمة عمودية",
+          "menu": "القائمة",
+          "title_category": "عنوان الفئات",
+          "menu_hover_bg": "لون النص عند التمرير",
+          "menu_hover_bg_gradient": "لون النص الخلفي المتدرج عند التمرير"
+        },
+        "header_top_custom": {
+          "title": "المحتوى العلوي المخصص",
+          "info": "ينطبق فقط على الأنماط 2.",
+          "info_3": "ينطبق فقط على الأنماط 3.",
+          "info_1_3": "ينطبق فقط على الأنماط 1 والأنماط 3.",
+          "info_store": "معلومات المتجر",
+          "icon_1": "الرمز 1",
+          "icon_2": "الرمز 2",
+          "icon_3": "الرمز 3",
+          "icon_4": "الرمز 4",
+          "text_1": "النص 1",
+          "text_2": "النص 2",
+          "free_shipping": "الشحن مجاني",
+          "free_shipping_text": "نص الشحن مجاني",
+          "header_link": "رابط الرأس",
+          "header_text_1": "نص الرأس 1",
+          "header_text_2": "نص الرأس 2",
+          "header_link_1": "رابط الرأس 1",
+          "header_link_2": "رابط الرأس 2"
+        },
+        "header_icons": {
+          "label__1": "عرض قائمة الرغبات",
+          "label__2": "عرض حسابات العملاء",
+          "label__3": "عرض البحث",
+          "label__4": "عرض العربة",
+          "label__5": "عرض الشعار",
+          "label__6": "عرض عدد عناصر قائمة الرغبات",
+          "label__7": "عرض عدد عناصر قائمة الرغبات في القائمة المحمولة",
+          "label__8": "عرض موضع الرقم المخصص",
+          "label__9": "الرموز",
+          "label__10": "إظهار فقاعة عدد عربات التسوق",
+          "label__11": "إظهار رقم السلة",
+          "search_1": "العين الصغيرة",
+          "search_2": "العين المتوسطة",
+          "search_3": "العين الكبيرة",
+          "customer": "حسابات العملاء",
+          "customer_1": "نص 'تسجيل الدخول'",
+          "customer_2": "المستخدم - مستدير",
+          "customer_3": "المستخدم - مستقيم",
+          "customer_4": "المستخدم - دائري",
+          "customer_5": "المستخدم - دائري ضعيف",
+          "customer_6": "المستخدم - مدور 2",
+          "wishlist_1": "قلب - مفتوح",
+          "wishlist_2": "قلب - مغلق",
+          "cart_1": "أمر التسوق - منحني",
+          "cart_2": "أمر التسوق - منحني - كبير",
+          "cart_3": "أمر التسوق - كلاسيكي",
+          "cart_4": "أمر التسوق - محدب",
+          "cart_5": "أمر التسوق - منحني",
+          "cart_6": "أمر التسوق - كلاسيكي",
+          "cart_7": "أمر التسوق",
+          "cart_8": "أمر التسوق - كلاسيكي 2",
+          "cart_9": "أمر التسوق - كلاسيكي 3",
+          "cart_10": "حقيبة تسوق - مدورة 2",
+          "delivery_1": "الشاحنة - كلاسيكي",
+          "delivery_2": "الشاحنة - غامق",
+          "delivery_3": "الموبيل",
+          "delivery_4": "الشاحنة - الحاوية",
+          "delivery_5": "الشاحنة - المسمار",
+          "lang_cur_1": "الهامبرجر",
+          "lang_cur_2": "الكرة الأرضية",
+          "lang_cur_3": "هامبورجر 2",
+          "search_input": "استخدم مدخلات البحث",
+          "search_input_style": "نمط إدخال البحث"
+        },
+        "menu_tab": {
+          "label__1": "صورة الشعار",
+          "label__2": "صورة الشعار على الجهاز اللوحي",
+          "label__3": "نص الشعار",
+          "label__4": "القائمة",
+          "label__8": "لون النص المفعل",
+          "label__9": "لون الخلفية المفعل"
+        },
+        "mega_menu": {
+          "label__2": "عنصر القائمة الميجا",
+          "label__3": "عدد الأعمدة",
+          "label__4": "عرض النص المخصص",
+          "label__5": "العنوان",
+          "label__8": "الرابط",
+          "label__9": "عرض البنر",
+          "label__10": "الصورة 1",
+          "label__11": "العنوان 1",
+          "label__12": "نص الرابط 1",
+          "label__13": "الصورة الرابط 1",
+          "label__14": "الصورة 2",
+          "label__15": "العنوان 2",
+          "label__16": "نص الرابط 2",
+          "label__17": "الصورة الرابط 2",
+          "label__18": "الصورة 3",
+          "label__19": "العنوان 3",
+          "label__20": "نص الرابط 3",
+          "label__21": "الرابط 3",
+          "label__22": "الصورة 4",
+          "label__23": "العنوان 4",
+          "label__24": "نص الرابط 4",
+          "label__25": "الرابط 4",
+          "label__26": "عرض علامات العلوية",
+          "label__27": "عرض حزمة المنتجات",
+          "label__28": "المنتج",
+          "label__29": "الحد",
+          "label__30": "عدد المنتجات في الصف",
+          "label__31": "البنر الأول",
+          "label__32": "البنر الثاني",
+          "label__33": "البنر الثالث",
+          "label__34": "البنر الرابع",
+          "label__35": "العرض",
+          "label__36": "عرض البنر 5",
+          "label__37": "الصورة 5",
+          "label__38": "الرابط 5",
+          "label__39": "البنر الخامس",
+          "banner__img": "الصورة",
+          "first_image": "الصورة الأولى",
+          "second_image": "الصورة الثانية",
+          "third_image": "الصورة الثالثة",
+          "mega_menu": "القائمة الميجا",
+          "product_limit": "حد المنتجات",
+          "info_style_4": "استخدام للقائمة الميجا الأنماط 4",
+          "info_style_4_5": "استخدام للقائمة الميجا الأنماط 4 والأنماط 5",
+          "list_menu": "قائمة مخصصة",
+          "list_menu_sale": "العناصر المضيئة على قائمة مخصصة",
+          "list_menu_info": "أدخل اسماء العناصر المراد عرضها كعناصر مضيئة. قم بفصل العناصر بفواصل.",
+          "a_to_z_brands": "علامات A to Z",
+          "show_brands": "عرض علامات A to Z",
+          "title": "العنوان",
+          "link_text": "نص الزر",
+          "color_link_text": "لون نص الزر",
+          "url": "رابط الزر",
+          "info": "الوحدة: % أو px",
+          "info__2": "أدخل اسم العنصر المراد تطبيقه على هذه القائمة الميجا."
+        },
+        "navigation": {
+          "name_1": "رأس القائمة - بسيط",
+          "name_2": "رأس القائمة - مضغوط",
+          "name_3": "رأس القائمة - الهامبرجر",
+          "name_4": "رأس القائمة - مفيش",
+          "name_5": "رأس القائمة - العمودي",
+          "name_6": "رأس القائمة - العناصر الكاملة",
+          "name_7": "رأس القائمة - منسقة إلى اليسار",
+          "name_8": "رأس القائمة - بسيط",
+          "name_9": "رأس القائمة - متعدد المواقع",
+          "label_2": "القائمة الميجا\/القائمة المنسدلة",
+          "label_3": "عرض اللغة\/العملة",
+          "label_5": "عرض على القائمة الرئيسية",
+          "label_6": "عرض على القائمة المتصلة",
+          "label_7": "عرض الكل",
+          "label_8": "القائمة المنسدلة 1",
+          "option_1": "رأس الأيقونات",
+          "option_2": "التهديم الأيسر",
+          "option_3": "التهديم الأيمن",
+          "cart_count_bubble": "عدد أمر التسوق",
+          "search_input": "نمط إدخال البحث 2",
+          "cart_wishlist_count_bubble": "عدد أمر التسوق\/قائمة الرغبات",
+          "wishlist_count_bubble": "عدد قائمة الرغبات",
+          "search_dropdown": "البحث المنسدل",
+          "search_dropdown_style": "أنماط البحث المنسدل",
+          "nav_style_1": "توازن طرفي القائمة",
+          "nav_style_2": "توازن طرفي الشعار"
+        }
+      },
+      "blocks": {
+        "header__1": {
+          "content": "القائمة المخصصة"
+        },
+        "header__2": {
+          "content": "الشعار"
+        },
+        "header__3": {
+          "content": "القائمة"
+        },
+        "header__4": {
+          "content": "القائمة الميجا",
+          "menu_menu_1": "أنماط القائمة الميجا 1",
+          "menu_menu_2": "أنماط القائمة الميجا 2",
+          "menu_menu_3": "أنماط القائمة الميجا 3",
+          "menu_menu_4": "أنماط القائمة الميجا 4",
+          "menu_menu_5": "أنماط القائمة الميجا 5"
+        },
+        "header__6": {
+          "content": "القائمة المنسدلة"
+        },
+        "header__7": {
+          "content": "النص المخصص"
+        },
+        "header__8": {
+          "content": "البنر"
+        },
+        "header__9": {
+          "content": "علامات A to Z"
+        },
+        "header__10": {
+          "content": "كتلة المنتج"
+        }
+      }
+    },
+    "main-sub-collection-page": {
+      "name": "الصفحة الفرعية للمجموعة"
+    },
+    "main_wishlist": {
+      "name": "قائمة الرغبات",
+      "settings": {
+        "header__1": "قائمة الرغبات"
+      }
+    },
+    "main-about-page": {
+      "name": "الصفحة المعلوماتية",
+      "blocks": {
+        "content": {
+          "name": "المحتوى",
+          "settings": {
+            "header__1": {
+              "content": "المعلومات"
+            },
+            "information": {
+              "label__2": "المحتوى"
+            },
+            "content_max_width": "عرض المحتوى الأقصى",
+            "content_alignment": "محاذاة المحتوى",
+            "text_color": "لون المحتوى"
+          }
+        },
+        "image": {
+          "name": "البنر",
+          "settings": {
+            "header__1": {
+              "content": "الصورة 1"
+            },
+            "header__2": {
+              "content": "الصورة 2"
+            },
+            "header__3": {
+              "content": "الصورة 3"
+            },
+            "general": {
+              "label__1": "العنوان"
+            },
+            "image": {
+              "label__1": "رفع الصورة",
+              "label__2": "الرابط"
+            }
+          }
+        },
+        "page_menu": {
+          "name": "قائمة الصفحات",
+          "settings": {
+            "content": {
+              "choose_menu": "اختر القائمة",
+              "menu_bar_bg_color": "لون لوحة القائمة",
+              "menu_bar_border_color": "لون حدود لوحة القائمة",
+              "menu_item_bg_color": "لون لوحة القائمة",
+              "menu_item_color": "لون نص قائمة العناصر",
+              "menu_item_bg_color_hover": "لون لوحة القائمة عند التمرير",
+              "menu_item_color_hover": "لون نص قائمة العناصر عند التمرير"
+            }
+          }
+        }
+      },
+      "settings": {
+        "bg_image_height": "ارتفاع الصورة الخلفية",
+        "bg_image_parallax": "تمكين تأثير المنصف",
+        "bg_img_info": "استخدم إذا تم إضافة الصورة الخلفية"
+      }
+    },
+    "main-404": {
+      "name": "الصفحة 404",
+      "settings": {
+        "padding-content": {
+          "label__1": "البيضاء العلوي للمحتوى",
+          "label__2": "البيضاء السفلي للمحتوى",
+          "unit": "px"
+        }
+      }
+    },
+    "main-article": {
+      "name": "المقال",
+      "settings": {
+        "header__2": {
+          "content": "المحتوى"
+        },
+        "general": {
+          "label__1": "عرض المؤلف",
+          "label__2": "عرض التاريخ",
+          "label__3": "عرض المشاركة",
+          "label__4": "عرض المقال التالي\/السابق",
+          "label__5": "عرض الصورة الرئيسية",
+          "label__6": "عرض العلامات"
+        }
+      }
+    },
+    "main-blog": {
+      "name": "المدونة",
+      "settings": {
+        "content": {
+          "label__1": "المقالات القصوى في الصفحة",
+          "info": "لا يستخدم لتخطيطات المدونة: الافتراضية، الشاملة، والقائمة"
+        }
+      }
+    },
+    "main-collection-banner": {
+      "name": "بنر المجموعة"
+    },
+    "main-collection-product-grid": {
+      "name": "المجموعة",
+      "settings": {
+        "header__2": {
+          "content": "الشريط الجانبي"
+        },
+        "header__3": {
+          "content": "التصفية"
+        },
+        "header__4": {
+          "content": "المنتجات"
+        },
+        "header__5": {
+          "content": "بنر المنتجات في المجموعة",
+          "info": "استخدم لتخطيط 'بنر المجموعة الإعلاني'"
+        },
+        "header__6": {
+          "content": "الشبكة"
+        },
+        "general": {
+          "label__1": "عرض التمرير اللانهائي",
+          "label__2": "الترقيم",
+          "pagination": "الترقيم",
+          "btn_show_more": "زر عرض المزيد",
+          "infinite_scrolling": "التمرير اللانهائي",
+          "info": "عند تحديد خيار 'التمرير اللانهائي'، سيتم تعيين حاوية القسم تلقائيًا إلى العرض الكامل ولن يكون لها بيضاء.",
+          "scroll_from": "التمرير من",
+          "scroll_speed": "سرعة التمرير",
+          "ltr": "من اليسار إلى اليمين",
+          "rtl": "من اليمين إلى اليسار",
+          "info_2": "هذا الإعداد يعمل فقط مع خيار 'التمرير اللانهائي' للإعداد أعلاه.",
+          "info_3": "خيار 'الترقيم' ينطبق فقط على نوع 'جميع المجموعات'",
+          "info_4": "هذا الإعداد لا ينطبق على 'عرض الكل' الترقيم"
+        },
+        "filter": {
+          "label__1": "عرض تصفية المنتجات",
+          "label__2": "نمط المنسوجة للتصفية",
+          "label__3": "نوع المنسوجة",
+          "label__4": "نمط المستطيل للتصفية",
+          "label__5": "العناصر القصوى لكل تصفية",
+          "label__6": "عرض التصفية",
+          "label__7": "تطبيق تصفية العلامات المخفية",
+          "label__8": "تسمية التصفية لجميع العلامات",
+          "swatch_layout": "نمط المنسوجة",
+          "swatch_layout_1": "منسوجة باللون",
+          "swatch_layout_2": "منسوجة باللون والاسم",
+          "swatch_layout_3": "منسوجة باللون والعدد",
+          "options__1": "اللون الأساسي (استخدم اسم اللون)",
+          "options__2": "اللون المتقدم (استخدم صورة مع الصيغة PNG)",
+          "options__3": "التمرير",
+          "info__1": "[Customize filters](\/admin\/apps\/search-and-discovery)",
+          "info__2": "أدخل اسم التصفية لعرض نمط المنسوجة",
+          "info__3": "أدخل اسم التصفية لعرض نمط المستطيل",
+          "info__4": "مستخدم لعرض التصفية: زر عرض المزيد",
+          "info__5": "عند استخدام اسم غير التسمية 'المزيد من التصفيات'، يرجى إدخال التسمية وفقًا للاسم الذي قمت بتعيينه في هذا الإعداد."
+        },
+        "product": {
+          "label__1": "العناصر القصوى لكل صفحة",
+          "label__2": "تخطيط",
+          "label__3": "عرض زر 'إضافة إلى السلة'",
+          "label__4": "المسافة بين العمودي",
+          "label__5": "المسافة بين العمودي على الجوال",
+          "label__6": "المسافة بين الأفقي",
+          "label__7": "المسافة بين الأفقي على الجوال",
+          "options__1": "قائمة",
+          "options__2": "شبكة 2",
+          "options__3": "شبكة 3",
+          "options__4": "شبكة 4",
+          "options__5": "شبكة 5",
+          "enable_banner": "تمكين البنر",
+          "enable_banner_1": "تمكين البنر #1",
+          "enable_banner_2": "تمكين البنر #2",
+          "enable_banner_3": "تمكين البنر #3",
+          "banner_position_1": "موضع البنر #1",
+          "banner_position_2": "موضع البنر #2",
+          "banner_position_3": "موضع البنر #3",
+          "info_1": "موضع البنر الافتراضي هو: 4",
+          "info_2": "موضع البنر الافتراضي هو: 5",
+          "info_3": "موضع البنر الافتراضي هو: 12"
+        }
+      }
+    },
+    "main-list-collections": {
+      "name": "قائمة المجموعات",
+      "blocks": {
+        "collection": {
+          "name": "المجموعة المخصصة",
+          "settings": {
+            "label__1": "شارة المجموعة المخصصة",
+            "label__2": "لون شارة المجموعة المخصصة",
+            "label__3": "خلفية شارة المجموعة المخصصة",
+            "header__1": {
+              "content": "المحتوى المخصص"
+            },
+            "general": {
+              "label__1": "اختر المجموعة",
+              "label__2": "رفع الصورة",
+              "label__5": "العنوان",
+              "label__11": "حجم الرقم",
+              "label__12": "حجم الرقم على الجوال",
+              "label__13": "حجم الرقم",
+              "label__14": "لون الرقم",
+              "label__15": "حجم خط نص الوقت",
+              "label__16": "حجم خط نص الوقت على الهاتف المحمول",
+              "label__17": "سمك خط نص الوقت",
+              "label__18": "لون نص الوقت",
+              "label__19": "لون عداد الشريحة",
+              "label__20": "حجم عداد الشريحة",
+              "height": "ارتفاع العنصر",
+              "unit": "%",
+              "radius": "طول زوايا العنصر"
+            }
+          }
+        }
+      },
+      "settings": {
+        "header__2": {
+          "content": "قائمة المجموعات"
+        },
+        "header__3": {
+          "content": "صورة المجموعة"
+        },
+        "header__4": {
+          "content": "المحتوى المخصص"
+        },
+        "header__5": {
+          "content": "العنوان"
+        },
+        "header__6": {
+          "content": "عدد المنتجات"
+        },
+        "header__7": {
+          "content_limit": "طول الوصف"
+        },
+        "header__8": {
+          "content": "زر"
+        },
+        "collection-list": {
+          "label__4": "المجموعات القصوى لعرضها",
+          "label__5": "عرض زر 'عرض المزيد'",
+          "label__6": "عدد العناصر في الصف على الجوال",
+          "label__7": "تمكين التمرير السريع على الهاتف المحمول",
+          "options__1": "جميع المجموعات",
+          "options__2": "المجموعات المخصصة",
+          "info": "ينطبق على خيار 'جميع المجموعات'",
+          "info__1": "تطبيق على تخطيط 'الشبكة'",
+          "info__2": "تطبيق على عنوان القسم 'النمط 1'"
+        },
+        "image": {
+          "paragraph": {
+            "content": "لإضافة الصور، [قم بتعديل مجموعاتك](https:\/\/help.shopify.com\/en\/manual\/products\/collections)"
+          }
+        },
+        "grid": {
+          "label__2": "ترتيب حسب",
+          "options__1": "أبجدياً، من A إلى Z",
+          "options__2": "أبجدياً، من Z إلى A",
+          "options__3": "بحسب التاريخ، من حديث إلى قديم",
+          "options__4": "بحسب التاريخ، من قديم إلى حديث",
+          "options__5": "بحسب عدد المنتجات، من عديد إلى قليل",
+          "options__6": "بحسب عدد المنتجات، من قليل إلى عديد"
+        },
+        "content": {
+          "label__2": "عرض عنوان المجموعة",
+          "label__3": "عرض عدد المنتجات في المجموعة"
+        },
+        "button": {
+          "label": "زر",
+          "fontsize_button": "حجم النص في الزر",
+          "fontweight_button": "وزن النص في الزر"
+        }
+      }
+    },
+    "main-page": {
+      "name": "الصفحة",
+      "title": "عنوان الصفحة"
+    },
+    "main_cart": {
+      "name": "السلة",
+      "settings": {
+        "header__1": "العناصر",
+        "header__2": "صور الثقة",
+        "header__3": "زر التنقل",
+        "content__1": "عندما يكون لديك عناصر في السلة",
+        "content__2": "عندما تكون السلة فارغة",
+        "label__1": "عرض صور الثقة",
+        "label__2": "زر 'استمرار التسوق': التوجه",
+        "label__3": "زر 'استمرار التسوق': الرابط",
+        "option__1": "رابط الزر",
+        "option__2": "العودة للصفحة السابقة",
+        "enabled_sticky_button": "تمكين زر الدفع على الجوال",
+        "enable_dropdown": "تمكين التسلسل ل'تقدير الشحن' و'رمز الخصم'"
+      }
+    },
+    "main_contact": {
+      "name": "صفحة الاتصال",
+      "settings": {
+        "header__2": "صفحة الاتصال",
+        "header__3": "معلومات الاتصال",
+        "label__2": "ارتفاع صورة الخلفية",
+        "label__3": "تمكين تأثير المنصف",
+        "label__4": "تخطيط صفحة الاتصال",
+        "label__5": "محاذاة المحتوى",
+        "label__6": "العرض الأقصى للمحتوى",
+        "label__8": "ارتفاع صورة الخلفية على الجوال",
+        "info": "استخدم إذا تم إضافة صورة خلفية",
+        "info__2": "استخدم فقط لمحاذاة المحتوى المركزية",
+        "contact_form": {
+          "label__3": "عنوان صفحة الاتصال",
+          "label__4": "عنوان صفحة الاتصال",
+          "label__5": "وصف صفحة الاتصال",
+          "label__6": "محاذاة العنوان"
+        },
+        "pages_menu": {
+          "name": "قائمة الصفحات",
+          "menu_bar_bg": "لون خلفية قائمة التنقل",
+          "menu_bar_border_color": "لون حدود قائمة التنقل",
+          "menu_item_bg": "لون خلفية العنصر",
+          "menu_item_text_color": "لون النص في العنصر",
+          "menu_item_bg_hover": "لون خلفية العنصر عند التمرير",
+          "menu_item_text_color_hover": "لون النص في العنصر عند التمرير"
+        },
+        "contact_info": {
+          "label__1": "عرض معلومات الاتصال",
+          "label__3": "رسالة الاتصال",
+          "label__4": "العنوان",
+          "label__5": "المحتوى 1",
+          "label__6": "المحتوى 2",
+          "label__7": "عنوان معلومات الاتصال",
+          "label__8": "وصف معلومات الاتصال",
+          "label__9": "لون خلفية معلومات الاتصال",
+          "label__10": "تمكين الحد العلوي للمحتوى 2",
+          "label__11": "النص",
+          "button": {
+            "label__8": "العرض الأقصى لزر الدفع"
+          },
+          "contact_info_heading_color": "لون عنوان معلومات الاتصال",
+          "contact_message_color": "لون رسالة الاتصال",
+          "contact_content_color": "لون المحتوى"
+        }
+      }
+    },
+    "main-brands": {
+      "name": "صفحة العلامات التجارية",
+      "settings": {
+        "label__1": "رابط تشعبي",
+        "label__2": "عرض منزلق العلامات التجارية",
+        "label__3": "نوع رابط العلامة التجارية",
+        "option__1": "العلامة التجارية",
+        "option__2": "المجموعة"
+      },
+      "blocks": {
+        "brand-image": {
+          "name": "صورة العلامة التجارية",
+          "settings": {
+            "label__1": "إدراج الصورة",
+            "label__2": "اسم العلامة التجارية",
+            "label__3": "رابط العلامة التجارية"
+          }
+        }
+      }
+    },
+    "main_faqs": {
+      "name": "صفحة الأسئلة الشائعة",
+      "settings": {
+        "header__2": "محتوى الأسئلة الشائعة",
+        "header__3": "رسالة الأسئلة الشائعة",
+        "header__4": "زر الاتصال",
+        "faqs": {
+          "label__1": "عرض تصفية الأسئلة الشائعة",
+          "label__5": "صندوق الأيقونة",
+          "label__6": "طريقة الرسالة الأيقونة 1",
+          "label__7": "رابط الأيقونة 1",
+          "label__8": "طريقة الرسالة الأيقونة 2",
+          "label__9": "رابط الأيقونة 2",
+          "label__10": "نص الأيقونة 1",
+          "label__11": "نص الأيقونة 2"
+        },
+        "contact_button": {
+          "label__11": "نص الاتصال"
+        }
+      },
+      "blocks": {
+        "paragraph": {
+          "name": "الفقرة",
+          "settings": {
+            "header__1": "المعلومات",
+            "header__2": "السؤال والإجابة 1",
+            "header__3": "السؤال والإجابة 2",
+            "header__4": "السؤال والإجابة 3",
+            "header__5": "السؤال والإجابة 4",
+            "header__6": "السؤال والإجابة 5",
+            "header__7": "السؤال والإجابة 6",
+            "header__8": "السؤال والإجابة 7",
+            "header__9": "السؤال والإجابة 8",
+            "header__10": "السؤال والإجابة 9",
+            "header__11": "السؤال والإجابة 10",
+            "question": {
+              "label__1": "السؤال",
+              "label__2": "الإجابة"
+            }
+          }
+        }
+      }
+    },
+    "main_portfolio_page": {
+      "name": "صفحة المعرض",
+      "settings": {
+        "header__2": "الشبكة",
+        "header__3": "التصفية",
+        "header__4": "أسلوب شريط التصفية",
+        "label__1": "عرض التصفية",
+        "label__2": "لون خلفية العنصر",
+        "label__3": "لون خلفية العنصر عند التمرير",
+        "grid": {
+          "label__1": "عدد العناصر المعرضة",
+          "info": "ينطبق على خيار 'التمرير المستمر'"
+        },
+        "hover_icon": {
+          "header__1": "أيقونة التمرير"
+        }
+      },
+      "blocks": {
+        "name": "معرض المعرض",
+        "settings": {
+          "header__1": "المعرض",
+          "header__2": "مجموعات المعرض",
+          "label__1": "اسم المعرض",
+          "groups": {
+            "label_1": "الصورة المصغرة",
+            "label_2": "إجراء الصورة المصغرة",
+            "label_3": "الإلتصاق بالرابط",
+            "label_4": "عرض الصور",
+            "link_info": "ينطبق على خيار 'إجراء الصورة المصغرة: الإلتصاق بالرابط'"
+          }
+        }
+      }
+    },
+    "main_lookbook_page": {
+      "name": "صفحة الكتاب المعروض",
+      "settings": {
+        "header__2": "الكتاب المعروض",
+        "header__5": "اختيار المنتجات المعروضة",
+        "style": "أسلوب النافذة",
+        "style_1": "نافذة صغيرة",
+        "style_2": "نافذة كبيرة بالصورة المنتج"
+      }
+    },
+    "main-password": {
+      "name": "صفحة كلمة المرور",
+      "settings": {
+        "header__2": {
+          "content": "الشعار"
+        },
+        "header__3": {
+          "content": "البنر"
+        },
+        "header__5": {
+          "content": "نموذج النشرة الإخبارية"
+        },
+        "header__6": {
+          "content": "وسائل التواصل الاجتماعي"
+        },
+        "header__8": {
+          "content": "شريط الإعلانات"
+        },
+        "header__9": {
+          "content": "نموذج كلمة المرور"
+        },
+        "header__10": {
+          "content": "الرأس"
+        },
+        "logo": {
+          "label__1": "استخدام الصورة أو النص للشعار",
+          "label__2": "نص الشعار",
+          "label__3": "لون النص",
+          "label__4": "صورة الشعار",
+          "label__5": "حجم النص",
+          "options__2": "الصورة"
+        },
+        "banner": {
+          "label__1": "تحميل الصورة",
+          "label__2": "تحميل الصورة على الجوال"
+        },
+        "social-media": {
+          "label__1": "عرض وسائل التواصل الاجتماعي",
+          "label__2": "لون النص\/الأيقونة"
+        },
+        "countdown": {
+          "label__1": "الوقت",
+          "label__3": "لون خلفية الرقم",
+          "label__4": "لون النص",
+          "label__5": "لون النص"
+        },
+        "term": {
+          "label__1": "عرض الحقل المربع",
+          "label__2": "نص الشروط والأحكام",
+          "label__3": "نص الرابط",
+          "label__4": "المحتوى"
+        },
+        "newsletter": {
+          "paragraph": {
+            "content": "لعرض \"العنوان\" و\"الوصف\"، اترك \"رسالة لزوارك\" فارغة في تفضيلات الإدارة"
+          },
+          "label__1": "عرض النشرة الإخبارية"
+        },
+        "announcement-bar": {
+          "label__1": "عرض شريط الإعلانات"
+        },
+        "general": {
+          "label__3": "لون الحقل",
+          "label__21": "لون النص في الحقل المربع",
+          "label__22": "لون الرابط في الحقل المربع",
+          "label__23": "لون خلفية الحقل",
+          "label__24": "لون حدود الحقل",
+          "label__25": "لون النص في الحقل"
+        }
+      }
+    },
+    "main-product": {
+      "name": "معلومات المنتج",
+      "settings": {
+        "header__2": {
+          "content": "الوسائط",
+          "label__1": "عرض",
+          "option__1": "واسطة",
+          "option__2": "كبير",
+          "info": "تعلم المزيد عن [أنواع الوسائط](https:\/\/help.shopify.com\/manual\/products\/product-media)"
+        },
+        "header__3": {
+          "content": "العلامات"
+        },
+        "header__5": {
+          "content": "تم البيع في الفترة الماضية"
+        },
+        "header__6": {
+          "content": "الوصف المختصر"
+        },
+        "header__7": {
+          "content": "المعلومات"
+        },
+        "header__8": {
+          "content": "الإصدارات"
+        },
+        "header__9": {
+          "content": "الكمية"
+        },
+        "header__10": {
+          "content": "المجموع الفرعي"
+        },
+        "header__11": {
+          "content": "مشاهدة الزوار"
+        },
+        "header__12": {
+          "content": "الصور الموثوقة",
+          "paragraph": "تعرض الصور الموثوقة فقط الصور المعتمدة ذات الجودة العالية على صفحات المنتجات، مما يعزز الثقة في العملاء ويدعم الإشراف على الإقتراحات المستنيرة. [تعلم المزيد](https:\/\/halosoft.gitbook.io\/ella-documentation\/theme-settings\/general\/trust-image)"
+        },
+        "header__14": {
+          "content": "زرات الديناميكية"
+        },
+        "header__15": {
+          "content": "المنتج التالي\/السابق"
+        },
+        "header__16": {
+          "content": "مخطط الحجم"
+        },
+        "header__17": {
+          "content": "إمكانية الاستلام من المتجر",
+          "paragraph": "يعرض المتاجر المتاحة للاستلام خارجيًا للإصدار المختار. [تعلم المزيد](https:\/\/help.shopify.com\/en\/manual\/fulfillment\/setup\/delivery-methods\/pickup-in-store)"
+        },
+        "header__18": {
+          "content": "مقارنة الألوان"
+        },
+        "header__19": {
+          "content": "زر الإضافة إلى السلة"
+        },
+        "header__20": {
+          "content": "الأقسام"
+        },
+        "header__21": {
+          "content": "معلومات الإصدار",
+          "paragraph": "عرض المحتوى المخصص للإصدار في علامة التبويب الوصف، من خلال تقديم محتوى مخصص بناءً على الإصدار المختار. [تعلم المزيد](https:\/\/halosoft.gitbook.io\/ella-documentation\/product-page\/product-information\/how-to-set-up-product-description-for-each-variant)"
+        },
+        "header__22": {
+          "content": "المنتجات المتكاملة"
+        },
+        "header__23": {
+          "content": "حزمة الإيجابيات",
+          "paragraph": "تم تصميم حزمة الإيجابيات لتشجيع المشتريات بإظهار رسائل تحفيزية مثل '60 شخص مشترك 2+ مرات' أو '37 مبيعات في الساعة الماضية' بتنسيق متدفق باستمرار، مما يؤدي إلى ضغوط وتشجيع الطلب على المنتج. [تعلم المزيد](https:\/\/halosoft.gitbook.io\/ella-documentation\/product-page\/product-information\/positive-vibes-bundle)"
+        },
+        "header__24": {
+          "content": "وقت التوصيل",
+          "label__1": "نص التوصيل",
+          "label__2": "بدء التاريخ من التاريخ الحالي",
+          "label__3": "نهاية التاريخ من التاريخ الحالي",
+          "label__4": "استبعاد الأيام",
+          "label__5": "تنسيق التاريخ",
+          "label__6": "التقديم",
+          "label__7": "نص الساعات",
+          "label__8": "نص الدقائق",
+          "label__9": "استبعاد الأيام من",
+          "label__10": "فقط التوصيل",
+          "label__11": "التوصيل + التوصيل",
+          "info__1": "مثال: 'طلب في الساعة القادمة حتى تستلمه. التوصيل المقدر بين [date_start] و [date_end]' أو 'طلب في الساعة القادمة حتى تستلمه بين [date_start] و [date_end]' أو 'طلب في الساعة القادمة حتى تستلمه بتاريخ [date_end]' أو 'طلب في الساعة القادمة حتى تستلمه قريبا'",
+          "info__2": "من التاريخ الحالي",
+          "info__3": "استخدم 'MON','TUE','WED','THU','FRI','SAT' و 'SUN'. قم بفصل الأيام المستبعدة بفاصلة (,)",
+          "info__4": "أرقام فقط (24 ساعة - 16:00:00 يعني 4 مساءً)"
+        },
+        "header__25": {
+          "content": "عرض التفاصيل",
+          "text": "نص"
+        },
+        "general": {
+          "label__1": "تمكين المعلومات المتصلة بالمنتج على الكمبيوتر\/الجهاز اللوحي",
+          "label__2": "تخطيط الكمبيوتر",
+          "label__3": "موضع الصورة الرئيسية",
+          "options__1": "عرض الصور المصغرة على اليسار",
+          "options__2": "عرض الصور المصغرة على اليمين",
+          "options__3": "عرض الصور المصغرة على الأسفل",
+          "options__4": "إخفاء الصور المصغرة",
+          "options__5": "اليسار",
+          "options__6": "اليمين",
+          "show_title": "عرض العنوان",
+          "perks": "حزمة الإيجابيات",
+          "buy_buttons": "زروات الشراء",
+          "show_gift_card_recipient": {
+            "label": "عرض حقل المستلم لمنتجات الهدية",
+            "info": "يسمح للمشترين بإرسال هدايا على تاريخ محدد مع رسالة خاصة. [تعلم المزيد](https:\/\/help.shopify.com\/en\/manual\/online-store\/themes\/customizing-themes\/add-gift-card-recipient-fields)"
+          },
+          "share": "المشاركة",
+          "vendor": "المورد",
+          "spacing": "مسافة القسم",
+          "block_spacing": "مسافة الكتلة",
+          "word_number": "عدد الكلمات في الوصف المختصر",
+          "word_number_info": "مثال: 17.",
+          "show_full": "عرض الكل",
+          "line_clamp_1": "تقليص الخط: 1",
+          "show_thumbnail_mobile": "عرض الصور المصغرة على الجهاز اللوحي",
+          "main_image": "الصور الرئيسية",
+          "thumbnail": "الصور المصغرة",
+          "main_image_arrows_desktop": "عرض الأسهم التنقل على الكمبيوتر",
+          "main_image_arrows_mobile": "عرض الأسهم التنقل على الجهاز اللوحي",
+          "main_image_counter_mobile": "عرض عداد الشريحة على الجهاز اللوحي",
+          "main_image_enable_parallax_mb": "عرض التأثير المترابط على الجهاز اللوحي",
+          "main_image_show_zoom_icon_mb": "عرض زر التكبير على الجهاز اللوحي",
+          "main_image_show_1_column_mb": "عرض عنصر واحد على الجهاز اللوحي",
+          "meta": "Meta",
+          "share_info": "يمكن أن يتم تحريك كتلة المشاركة فقط إلى الأعلى أو الأسفل عندما يتم تعيين 'تخطيط' إلى 'قائمة الأيقونات المتصفحة'.",
+          "breadcrumb_info": "لا يمكن تغيير موضع الخطوط المتعلقة بالمنتج إذا تم تحديد 'الأنماط' إلى 'الأنماط 1'.",
+          "qty_info": "لا يمكن تحريك كتلة الكمية إلى الأعلى أو الأسفل إذا تم تعيين 'تخطيط' إلى 'ثابت'.",
+          "thumbnail_to_show": "الصور المصغرة القابلة للعرض",
+          "custom_cursor_label": "المؤشر",
+          "main_image_show_custom_cursor": "تمكين المؤشر المخصص",
+          "custom_cursor_info": "عند تمكين إعداد 'تمكين المؤشر المخصص'، يتم تعطيل ميزة تكبير الصور.",
+          "visible_content_height": "إرضاء المحتوى المرئي",
+          "visible_content_height_info": "عندما يتجاوز ارتفاع المحتوى الكلي هذا الحد، سيظهر زر 'اقرأ المزيد'.",
+          "info_enable_des_show_more": "ينطبق فقط على 'تبويب الوصف'",
+          "animation": "الرسوم المتحركة",
+          "image_behavior": { 
+            "label": "سلوك الصورة",
+            "info": "'تكبير على التمرير' مع تمكين 'رسوم متحركة تحميل'.",
+            "option__1": "حركة محيطية",
+            "option__2": "موضع خلفية محدد",
+            "option__3": "تكبير على التمرير"
+          },
+          "shake": "Shake",
+          "shine": "Shine",
+          "tilt_shaking": "تذبذب الانحناء",
+          "vertical_shaking": "تذبذب عمودي",
+          "horizontal_shaking": "تذبذب أفقي",
+          "open_tab_mobile": "توسيع على الجهاز اللوحي",
+          "info_for_horizontal_vertical": "ينطبق فقط عندما يتم تعيين 'تخطيط الجهاز اللوحي' لتبويب القسم في إعدادات القسم إلى 'عمودي'.",
+          "custom_information": "المعلومات المخصصة",
+          "content_popup": "المحتوى المتجه",
+          "product_tab_source": "مصدر المحتوى",
+          "product_tab_source_info": "ينطبق فقط عندما يتم تعيين 'عرض المحتوى ل' إلى 'منتجات معينة باستخدام الحقل المعرف بالحقول'.",
+          "dynamic_source": "مصدر ديناميكي",
+          "key_text_source": "مفتاح الحقل المعرف بالحقول للمنتج",
+          "product_tab_key_info": "ينطبق فقط عندما يتم تعيين 'عرض المحتوى ل' إلى 'منتجات معينة باستخدام الحقل المعرف بالحقول' و'مصدر المحتوى' إلى 'مفتاح الحقل المعرف بالحقول للمنتج'. [تعلم المزيد](https:\/\/halosoft.gitbook.io\/ella-documentation\/product-page\/product-information\/product-tabs#setup-custom-tabs-by-metafields)",
+          "product_thumbnail_color": "لون الصورة المصغرة المفعلة",
+          "navigation_arrows_color_mobile": "لون الأسهم التنقل على الجهاز اللوحي",
+          "read_more": "اقرأ المزيد",
+          "enable_read_more": "تمكين اقرأ المزيد"
+        },
+        "media": {
+          "label__1": "نسبة الصورة المنتج",
+          "label__3": "تمكين تكبير الصورة",
+          "label__4": "نمط تكبير الصورة",
+          "label__5": "تكييف الوسائط",
+          "label__6": "تكييف الصورة",
+          "options__4": "لا يوجد",
+          "options__5": "فرشاة جميلة",
+          "options__6": "أصلي",
+          "options__7": "تكييف المحتوى",
+          "options__8": "تعبأة",
+          "options__9": "عند التمرير على الصور الرئيسية",
+          "unit": "%",
+          "layout_video": "تخطيط الفيديو",
+          "info__1": "تعلم المزيد عن [تكييف الوسائط](https:\/\/halosoft.gitbook.io\/ella-documentation\/sections\/all-sections-in-theme\/featured-product#media)",
+          "info__2": "لا ينطبق عند تعيين إعداد 'تكييف الوسائط' إلى 'أصلي'.",
+          "info__3": "ينطبق فقط على خيار الصورة المنتج المناسب."
+        },
+        "badge": {
+          "label": "عرض علامات المنتج"
+        },
+        "sold_in_last": {
+          "label__1": "تمكين المبيعات في الفترة الماضية",
+          "label__2": "قائمة الكمية المنتج",
+          "label__3": "ساعات",
+          "info__1": "مثال: 3,5,6,7,8,10,12,15. قم بفصل الساعات بفاصلة (,)",
+          "info__2": "مثال: 10,15,16,17,18,20,25,35. قم بفصل الساعات بفاصلة (,)",
+          "info__3": "مثال: 283, 100, 59, 11, 14, 185. قم بفصل الكميات بفاصلة (,)."
+        },
+        "short_description": {
+          "label": "تمكين الوصف المختصر"
+        },
+        "info": {
+          "label__1": "عرض المورد",
+          "label__2": "عرض الرمز المنتج",
+          "label__3": "عرض الاستلام",
+          "label__4": "عرض نوع المنتج",
+          "label__5": "عرض الباركود",
+          "stock_level_display": "مستوى المخزون",
+          "not_show_stock": "إخفاء مستوى المخزون",
+          "show_stock": "عرض مستوى المخزون",
+          "product_info": "معلومات المنتج"
+        },
+        "variant_step_by_step": {
+          "label__1": "منتقي المتغيرات خطوة بخطوة",
+          "bg_color_variant": "لون خلفية المتغير",
+          "options__1": "عنصر التبويب",
+          "info": "تستخدم خيارات التخصيص لجمع معلومات التخصيص لأي عنصر يضاف إلى سلة التسوق.",
+          "info__1": "أدخل اسم عنصر التبويب الذي ترغب في تطبيقه على مخطط المقاسات هذا.",
+          "info__2": "أدخل اسم عنصر التبويب الذي ترغب في تطبيقه على مقارنة الألوان هذه.",
+          "info__3": "أدخل اسم عنصر التبويب الذي ترغب في تطبيقه على خيار التخصيص هذا."
+        },
+        "variant": {
+          "label__2": "تمكين صور الإصدار المجمعة",
+          "options__1": "القائمة",
+          "options__2": "مربع\/مستطيل\/مخطط",
+          "variant_picker": "منتج الإصدار"
+        },
+        "quantity": {
+          "label": "عرض الكمية"
+        },
+        "sub_total": {
+          "label": "عرض المجموع الفرعي"
+        },
+        "customer_viewing": {
+          "label__1": "عرض وظيفة المشاهد العميل",
+          "label__2": "قائمة العدد المشاهد",
+          "label__3": "تبديل الوقت",
+          "unit": "s"
+        },
+        "trust_image": {
+          "label": "عرض الصورة الموثوقة"
+        },
+        "share": {
+          "options__1": "قائمة الأيقونات الاجتماعية",
+          "options__2": "أيقونة المشاركة على اليمين من عنوان المنتج",
+          "options__3": "أيقونة المشاركة على اليمين من زر الإضافة إلى السلة"
+        },
+        "dynamic_checkout": {
+          "label": "عرض زروات الدفع الديناميكية",
+          "info": "باستخدام طرق الدفع المتاحة على متجرك، سيرى العملاء خيارهم المفضل، مثل باي بال أو أبل باي. [تعلم المزيد](https:\/\/help.shopify.com\/manual\/using-themes\/change-the-layout\/dynamic-checkout)"
+        },
+        "next_prev_product": {
+          "label": "عرض المنتج التالي\/السابق",
+          "info": "عرض المنتج التالي\/السابق في المجموعة"
+        },
+        "size_chart": {
+          "label__1": "تمكين جدول الأحجام",
+          "label__2": "نوع جدول الأحجام",
+          "label__3": "نوع الصورة",
+          "label__4": "تحميل الصورة",
+          "info__1": "ينطبق فقط عندما يتم تعيين إعداد 'نوع جدول الأحجام' إلى 'نوع المنتج' أو 'مورد المنتج'.",
+          "info__2": "ينطبق فقط عندما يتم تعيين إعداد 'نوع جدول الأحجام' إلى 'صورة تخصيصية'.",
+          "info__3": "ينطبق فقط عندما يتم تعيين إعداد 'نوع جدول الأحجام' إلى 'صفحة تخصيصية'.",
+          "options__1": "نوع المنتج",
+          "options__2": "مورد المنتج",
+          "options__3": "حقل معرف بالحقول",
+          "options__4": "صورة تخصيصية",
+          "options__5": "استخدام الصورة بصيغة PNG",
+          "options__6": "استخدام الصورة بصيغة JPG",
+          "options__7": "صفحة تخصيصية",
+          "options__8": "رابط صفحة تخصيصية",
+          "options__9": "حقل معرف بالحقول للمنتج"
+        },
+        "pick_up_availability": {
+          "label": "عرض جودة الاستلام"
+        },
+        "compare_color": {
+          "label__1": "تمكين مقارنة الألوان",
+          "label__2": "تمكين التحريك والإسقاط على الكمبيوتر",
+          "options__1": "عرض في المحتوى",
+          "options__2": "عرض على الصور الرئيسية"
+        },
+        "sticky_add_to_cart": {
+          "label": "تمكين زر الإضافة إلى السلة",
+          "label__1": "عرض زر الإضافة إلى السلة دائما على الجهاز اللوحي",
+          "info__1": "ينطبق فقط عندما يتم تعيين إعداد 'النمط' إلى 'النمط 1'."
+        },
+        "quick_order_list": {
+          "name": "قائمة الطلب السريع",
+          "show_quick_order_list": "عرض قائمة الطلب السريع",
+          "show_image": "عرض الصور",
+          "show_sku": "عرض الرموز المنتج"
+        },
+        "tab": {
+          "label__1": "عرض الأنابيب",
+          "label__2": "تخطيط",
+          "label__3": "تخطيط الكمبيوتر",
+          "label__4": "تخطيط الجهاز اللوحي",
+          "options__1": "عمودي",
+          "options__2": "أفقي",
+          "options__3": "متجه",
+          "options__4": "عمودي مع جانبية"
+        },
+        "price": {
+          "name": "السعر",
+          "show_price": "عرض السعر",
+          "saved_price": "السعر المحفوظ",
+          "show_saved_price": "عرض السعر المحفوظ"
+        },
+        "complementary": {
+          "label": "المنتجات المكملة",
+          "layout_style": "تخطيط",
+          "default": "شبكة",
+          "custom": "قائمة",
+          "product_show_grid": "الحد الأقصى لعرض المنتجات لتخطيط الشبكة",
+          "product_show_list": "الحد الأقصى لعرض المنتجات لتخطيط القائمة",
+          "media_fit": "تكييف الوسائط",
+          "none": "لا يوجد",
+          "contain": "تحميل",
+          "cover": "تغطية",
+          "enabled_button_atc": "تمكين زر الإضافة إلى السلة",
+          "label__1": "عرض المنتج المكمل",
+          "label__2": "نمط المنتج المكمل 1",
+          "label__3": "نمط المنتج المكمل 2",
+          "info__1": "لتحديد المنتجات المكملة، قم بإضافة تطبيق البحث والاكتشاف. [تعلم المزيد](https:\/\/shopify.dev\/themes\/product-merchandising\/recommendations)"
+        }
+      },
+      "blocks": {
+        "description": {
+          "name": "الأنابيب الوصف",
+          "settings": {
+            "label": "العنوان"
+          }
+        },
+        "review": {
+          "name": "الأنابيب التقييم",
+          "settings": {
+            "label": "العنوان"
+          }
+        },
+        "custom": {
+          "name": "الأنابيب المخصصة",
+          "settings": {
+            "label__1": "العنوان",
+            "label__2": "عرض المحتوى ل",
+            "label__3": "المحتوى",
+            "options__1": "جميع المنتجات",
+            "options__2": "منتجات معينة باستخدام الحقل المعرف بالحقول",
+            "info_1": "ينطبق فقط عندما يتم تعيين إعداد 'عرض المحتوى ل' إلى 'جميع المنتجات'.",
+            "info_2": "[تعلم المزيد عن كيفية إعداد أنابيب مخصصة باستخدام الحقل المعرف بالحقول](https:\/\/halosoft.gitbook.io\/ella-documentation\/product-page\/product-information\/product-tabs#setup-custom-tabs-by-metafields)"
+          }
+        },
+        "grouped_product": {
+          "name": "المنتج المجمع",
+          "settings": {
+            "block_info": "عند تحديد المنتج المجمع: سيتم تعطيل الحزمة المنتجية، وزر الشراء، منتج الإصدار، والمزايا، وأنابيب المشاركة في المنتج المجمع لتجنب التكرار. يجب إزالة المنتج المجمع إذا لم يتم إضافة أي معرف منتج صالح في الحقل المعرف بالحقول 'grouped_sub_product'."
+          }
+        }
+      }
+    },
+    "main_search": {
+      "name": "نتائج البحث",
+      "settings": {
+        "article_and_page": {
+          "header": "نتائج المقالات والصفحات",
+          "label": "المقالات والصفحات في الصفحة"
+        }
+      }
+    },
+    "multicolumn": {
+      "name": "الأنابيب المتعددة",
+      "blocks": {
+        "column": {
+          "name": "عدد الأعمدة الكمبيوتر",
+          "name_mb": "عدد الأعمدة الجهاز اللوحي",
+          "info": "استخدام لتخطيط القائمة المتحركة",
+          "info_1": "ليس لتخطيط 'collections 03 masonry'"
+        }
+      },
+      "presets": {
+        "name": "الأنابيب المتعددة"
+      }
+    },
+    "product-recommendations": {
+      "name": "المنتجات الموصى بها"
+    },
+    "product-recently-viewed": {
+      "name": "المنتجات المشاهدة مؤخرا",
+      "settings": {
+        "general": {
+          "label__1": "عرض حزمة المنتج",
+          "label__5": "تخطيط",
+          "label__6": "العنوان",
+          "label__7": "محاذاة العنوان",
+          "unit": "px",
+          "info": "تستخدم الحاويات لإضافة المحتوى داخلها"
+        }
+      }
+    },
+    "rich-text": {
+      "name": "نص منسق",
+      "enabled_column": "تمكين تخطيط العمود",
+      "blocks": {
+        "sub_heading": {
+          "settings": {
+            "heading_size": {
+              "margin_top_sub_heading": "مسافة أعلى العنوان الفرعي"
+            }
+          }
+        },
+        "text": {
+          "settings": {
+            "text": {
+              "font_weight": "وزن الخط للوصف",
+              "content_width": "عرض المحتوى",
+              "info__1": "يمكنك إدخال العرض بوحدات % أو px. على سبيل المثال: 60% أو 800px. إذا ترك العرض المحتوى فارغًا ، فسيكون عرض المحتوى 100% من حاوية المحتوى التي تحتوي على المحتوى."
+            }
+          }
+        },
+        "content": {
+          "name": "المحتوى",
+          "settings": {
+            "content": {
+              "label_top": "الوصف الأول",
+              "label_bottom": "الوصف الثاني",
+              "label_bottom_info": "سيتم عرض هذا المحتوى عند الضغط على زر 'اقرأ المزيد'.",
+              "font_size": "حجم الخط للزر",
+              "content_width": "عرض المحتوى",
+              "read_more": "اقرأ المزيد",
+              "read_more_info": "يتم عرض زر 'اقرأ المزيد' عندما يتم تعبأة الإعداد 'الوصف الثاني'.",
+              "read_less": "اقرأ أقل",
+              "read_less_info": "سيتم استبدال النص الموجود في زر 'اقرأ المزيد' عند الضغط عليه.",
+              "pd_top_button_text": "مسافة أعلى الزر",
+              "pd_bottom_button_text": "مسافة أسفل الزر"
+            }
+          }
+        },
+        "button": {
+          "name": "الزر",
+          "settings": {
+            "button_style_secondary": {
+              "label": "استخدام أزرار الخط المخطط"
+            },
+            "button_bg": "لون خلفية الزر",
+            "button_bg_gradient": "تدرج خلفية الزر",
+            "button_border": "لون حدود الزر",
+            "button_color_hover": "لون النص عند التحديث",
+            "button_bg_hover": "لون خلفية الزر عند التحديث",
+            "button_bg_gradient_hover": "تدرج خلفية الزر عند التحديث",
+            "button_border_hover": "لون حدود الزر عند التحديث",
+            "button_width": "عرض الزر",
+            "label_color": "لون النص",
+            "label_hover_color": "لون النص عند التحديث",
+            "margin_top_button": "مسافة أعلى الزر",
+            "button_enable_underline": "عرض خط تحت الزر",
+            "width_info": "عرض (وحدة % أو px)",
+            "info__1": "العرض الافتراضي هو 270px. يمكنك إدخال العرض بوحدات % أو px. على سبيل المثال: 30% أو 270px. إذا ترك العرض فارغًا ، فسيكون عرض المحتوى 100% من حاوية المحتوى التي تحتوي على المحتوى."
+          }
+        },
+        "social_media": {
+          "name": "وسائل التواصل الاجتماعي",
+          "settings": {
+            "label__1": "لون الحلقة"
+          }
+        }
+      },
+      "presets": {
+        "name": "نص منسق"
+      }
+    },
+    "custom_image_banner_block": {
+      "name": "صورة مخصصة بنص",
+      "settings": {
+        "spacing_top": "تباعد المحتوى من الأعلى",
+        "spacing_bottom": "تباعد من الأسفل",
+        "spacing_right": "تباعد من اليمين",
+        "vertical_spacing": "تباعد عمودي بين العناصر",
+        "horizontal_spacing": "تباعد أفقي بين العناصر",
+        "label": "عرض الكتلة اليسرى",
+        "label_1": "التخطيط على الهاتف المحمول",
+        "image_width": "عرض الصورة",
+        "info": "ينطبق على 'موضع المحتوى' الذي يكون 'نسبي'",
+        "info_2": "يتم حساب الكتلة اليمنى تلقائيًا",
+        "title_align": "محاذاة المحتوى",
+        "align_items_spacing_tb": "المحتوى: مسافة أعلى\/مسافة أسفل",
+        "align_items_spacing_lr": "المحتوى: مسافة أيسر\/مسافة أيمن",
+        "enable_item_1": "تمكين العنصر 1",
+        "enable_item_2": "تمكين العنصر 2",
+        "enable_item_3": "تمكين العنصر 3",
+        "enable_item_4": "تمكين العنصر 4"
+      },
+      "presets": {
+        "name": "صورة مخصصة بنص",
+        "section": "صورة مخصصة بنص",
+        "section_2": "حركة صورة"
+      }
+    },
+    "main-sidebar": {
+      "name": "شريط الصفحة",
+      "settings": {
+        "header__1": {
+          "content": "شريط الصفحة"
+        },
+        "general": {
+          "label__1": "عرض شريط الصفحة",
+          "label__2": "عرض الكتلة المنسكولة",
+          "label__3": "نوع",
+          "label__4": "منسكول",
+          "label__5": "تمكين شريط الصفحة",
+          "label__6": "نمط الكتلة المنسكولة",
+          "options__1": "عمودي",
+          "options__2": "أفقي",
+          "options__3": "مفتوح بشكل افتراضي",
+          "options__4": "مغلق بشكل افتراضي",
+          "options__6": "التمرير إلى اليمين (على الجهاز اللوحي)",
+          "options__7": "لا يوجد",
+          "paragraph__1": "يتم عرض شريط الصفحة عند إضافة كتل بالبادئة [الشريط الجانبي].",
+          "paragraph__2": "عنوان الكتلة",
+          "layout": "تخطيط",
+          "layout_1": "تخطيط 1",
+          "layout_2": "تخطيط 2",
+          "use_for_sidebar": "استخدام لشريط الصفحة"
+        }
+      },
+      "blocks": {
+        "filter": {
+          "name": "[الشريط الجانبي] التصفية",
+          "settings": {
+            "general": {
+              "label__1": "عرض هذه الكتلة",
+              "info": "افصل بفواصل, على سبيل المثال 'red,blue,yellow'.",
+              "show_image": "تمكين صورة البنر"
+            }
+          }
+        },
+        "category": {
+          "name": "[الشريط الجانبي] الفئات",
+          "settings": {
+            "general": {
+              "label__1": "عرض الفئات",
+              "label__4": "القائمة",
+              "options__1": "أحد المستويات",
+              "options__2": "جميع المستويات",
+              "options__3": "جميع المجموعات",
+              "type": "عمق القائمة"
+            }
+          }
+        },
+        "recent-post": {
+          "name": "[الشريط الجانبي] المنشورات الأخيرة",
+          "settings": {
+            "general": {
+              "label__1": "عرض المنشورات الأخيرة",
+              "label__3": "الحد الأقصى لعرض المنشورات"
+            }
+          }
+        },
+        "recent-tags": {
+          "name": "[الشريط الجانبي] العلامات الأخيرة",
+          "settings": {
+            "general": {
+              "label__1": "عرض العلامات الأخيرة",
+              "label__3": "الحد الأقصى لعرض العلامات",
+              "label__4": "عرض عدد العلامات"
+            }
+          }
+        },
+        "product_block": {
+          "name": "[الشريط الجانبي] المنتجات",
+          "settings": {
+            "general": {
+              "label__1": "عرض المنتجات",
+              "label__3": "المجموعة",
+              "label__4": "الرابط",
+              "layout": "تخطيط",
+              "grid": "شبكة",
+              "slider": "منقل",
+              "position": "الموضع",
+              "sidebar": "شريط الصفحة",
+              "content": "المحتوى"
+            }
+          }
+        },
+        "image": {
+          "name": "[الشريط الجانبي] صورة CMS",
+          "settings": {
+            "general": {
+              "label__1": "Show CMS image",
+              "label__3": "الصورة",
+              "label__4": "الرابط",
+              "info": "الصورة الموصى بها: 340x400px"
+            }
+          }
+        },
+        "text": {
+          "name": "[الشريط الجانبي] نص مخصص CMS",
+          "settings": {
+            "general": {
+              "label__1": "عرض نص مخصص CMS",
+              "label__3": "المحتوى",
+              "show_image": "تمكين صورة البنر"
+            }
+          }
+        },
+        "image_gallery": {
+          "name": "صورة معرض",
+          "settings": {
+            "general": {
+              "image_gallery_swipe_on_mobile": "تخطيط الجهاز اللوحي",
+              "list": "قائمة",
+              "scroll_snap": "التمرير المتصل",
+              "slider": "منقل",
+              "column": "عمود",
+              "title": "العنوان",
+              "border_radius": "طوق الزاوية",
+              "image_1": "صورة 1",
+              "image_2": "صورة 2",
+              "image_3": "صورة 3",
+              "image_4": "صورة 4",
+              "image_5": "صورة 5",
+              "image_6": "صورة 6",
+              "image_7": "صورة 7",
+              "image_8": "صورة 8",
+              "show_image_1": "عرض صورة 1",
+              "show_image_2": "عرض صورة 2",
+              "show_image_3": "عرض صورة 3",
+              "show_image_4": "عرض صورة 4",
+              "show_image_5": "عرض صورة 5",
+              "show_image_6": "عرض صورة 6",
+              "show_image_7": "عرض صورة 7",
+              "show_image_8": "عرض صورة 8",
+              "link_1": "الرابط 1",
+              "link_2": "الرابط 2",
+              "link_3": "الرابط 3",
+              "link_4": "الرابط 4",
+              "link_5": "الرابط 5",
+              "link_6": "الرابط 6",
+              "link_7": "الرابط 7",
+              "link_8": "الرابط 8",
+              "type_link": "إعادة توجيه إلى الرابط",
+              "type_popup": "فتح fancybox",
+              "lb_product": "اختر المنتج"
+            }
+          }
+        },
+        "lookbook_banner": {
+          "name": "بنر",
+          "settings": {
+            "general": {
+              "image": "صورة",
+              "link": "الرابط",
+              "margin_bottom": "مسافة أسفل",
+              "title": "العنوان",
+              "info": "سيتم عرض هذه الصورة عندما لا يتم إضافة صورة في صورة المجموعة"
+            }
+          }
+        },
+        "block_quote": {
+          "name": "عبارة بلوك",
+          "settings": {
+            "general": {
+              "title": "Title",
+              "content": "المحتوى",
+              "margin_bottom": "مسافة أسفل",
+              "bg_color_content": "لون خلفية المحتوى",
+              "bg_gradient_color_content": "تدرج خلفية المحتوى",
+              "fontsize_content": "حجم الخط للمحتوى",
+              "enable_bg_color": "تمكين لون خلفية المحتوى"
+            }
+          }
+        }
+      }
+    },
+    "main-header-collection": {
+      "name": "رأس المجموعة",
+      "blocks": {
+        "image": {
+          "name": "صورة المجموعة",
+          "settings": {
+            "paragraph": {
+              "content": "لتغيير وصف المجموعة أو صورة المجموعة، [قم بتعديل مجموعاتك.](\/admin\/collections)"
+            },
+            "general": {
+              "label__1": "عرض بنر التصوير المترابط",
+              "label__2": "عرض غطاء الخلفية",
+              "label__4": "رفع صورة",
+              "label__5": "رفع صورة للجهاز اللوحي",
+              "label__6": "لون غطاء الخلفية",
+              "options__1": "مخصص",
+              "info__1": "يمكنك أن تناسب صورك بحيث تكون ملائمة للجهاز اللوحي."
+            }
+          }
+        },
+        "description": {
+          "name": "وصف المجموعة",
+          "settings": {
+            "header__2": {
+              "content": "المجموعة الفرعية"
+            },
+            "description": {
+              "label__1": "عرض وصف المجموعة",
+              "label__2": "عرض 'اقرأ المزيد\/اقرأ أقل'",
+              "label__3": "الموضع",
+              "label__4": "عرض عنوان المجموعة",
+              "label__5": "محاذاة وصف المجموعة",
+              "options__1": "نسبي",
+              "options__2": "مطلق",
+              "info_2": "ينطبق فقط على 'الموضع: مطلق'"
+            },
+            "sub-collection": {
+              "label__1": "عرض المجموعة الفرعية",
+              "label__2": "عرض",
+              "options__1": "كل المجموعات الفرعية",
+              "options__2": "بعض المجموعات الفرعية",
+              "options__3": "عرض صورة المجموعة الفرعية",
+              "options__4": "تخطيط المجموعة الفرعية",
+              "info": "استخدام لتخطيط الشبكة"
+            }
+          }
+        }
+      },
+      "settings": {
+        "general": {
+          "label__1": "تخطيط"
+        }
+      }
+    },
+    "main-toolbar": {
+      "name": "شريط الأدوات",
+      "settings": {
+        "header__1": {
+          "content": "شريط الأدوات"
+        },
+        "general": {
+          "label__1": "عرض شريط الأدوات",
+          "label__2": "عرض الفرز",
+          "label__3": "عرض 'عدد العناصر في الصفحة'",
+          "label__4": "عرض 'عرض كما'"
+        }
+      }
+    },
+    "product-bundle": {
+      "name": "مجموعة المنتجات",
+      "settings": {
+        "header__2": {
+          "content": "تخطيط المنقل"
+        },
+        "header__3": {
+          "content": "منتج"
+        },
+        "header__4": {
+          "content": "خصم",
+          "label__2": "الشحن والتوصيل"
+        },
+        "header__5": {
+          "content": "زر إضافة كل شيء إلى السلة"
+        },
+        "header__6": {
+          "content": "عناصر المنتجات"
+        },
+        "general": {
+          "label": "تمكين مجموعة المنتجات",
+          "info": "تعلم المزيد [مجموعة المنتجات](https:\/\/halosoft.gitbook.io\/ella-documentation\/product-page\/product-bundle)"
+        },
+        "discount": {
+          "label__1": "تمكين خصم المجموعة",
+          "info": "استخدام [خصم] لعرض نسبة الخصم"
+        }
+      }
+    },
+    "search_block": {
+      "presets": {
+        "name": "بلوك البحث"
+      },
+      "name": "بلوك البحث",
+      "settings": {
+        "search_block_placeholder": "نص المكان المطلوب",
+        "search_field": "حقل البحث"
+      }
+    },
+    "custom_press_banner": {
+      "presets": {
+        "name": "بنر الإعلام المخصص"
+      },
+      "name": "بنر الإعلام المخصص",
+      "settings": {
+        "label_2": "شعار الإعلام",
+        "label_3": "المسافة بين الصورة والمحتوى",
+        "label_4": "عرض القسم الأيسر",
+        "label_5": "عرض الصورة"
+      }
+    },
+    "collection_lookbook": {
+      "name": "كتاب المعرض البصري",
+      "settings": {
+        "content_1": "كتاب الصور المنقل",
+        "content_2": "عرض زر الكل",
+        "content_3": "المنقل",
+        "label_1": "عرض الرمز المثبت على الجهاز اللوحي",
+        "label_2": "عرض الرمز المثبت على الجهاز اللوحي",
+        "label_3": "لون ظل الرمز المثبت",
+        "label_4": "لون حدود الرمز المثبت",
+        "label_5": "عرض الرقم على الرمز المثبت على الجهاز اللوحي",
+        "label_6": "عرض الرقم على الرمز المثبت على الجهاز اللوحي",
+        "label_7": "لون الرمز المثبت",
+        "label_8": "حجم الخط على الرمز المثبت على الجهاز اللوحي",
+        "label_9": "حجم الخط على الرمز المثبت على الجهاز اللوحي",
+        "label_10": "عرض نص 'عرض المنتج'",
+        "label_11": "عرض نص 'إخفاء المنتج'",
+        "label_12": "ارتفاع الزر",
+        "label_13": "تمكين أقصى عرض لنافذة المعرض البصري",
+        "label_14": "أقصى عرض لنافذة المعرض البصري",
+        "label_15": "مسافة أعلى لزر عرض الكل",
+        "label_16": "تقطيع عنوان المنتج إلى",
+        "label_17": "أقصى عرض",
+        "label_18": "نمط داخلي للنقطة",
+        "label_19": "عرض علامة الجمع على الرمز المثبت",
+        "option_1": "دائرة داخلية",
+        "option_2": "رقم",
+        "option_3": "خط واحد",
+        "option_4": "خطين",
+        "info__1": "ينطبق فقط عندما يكون معظم إعدادات 'عرض رقم على الرمز المثبت على الجهاز اللوحي' و'عرض رقم على الرمز المثبت على الجهاز اللوحي' معطلة."
+      },
+      "blocks": {
+        "collection": {
+          "name": "المجموعة",
+          "link": {
+            "link_fs": "حجم الخط للرابط",
+            "link_fs_mb": "حجم الخط للرابط على الجهاز اللوحي",
+            "link_hover_color": "لون الرابط عند التمرير",
+            "link_font_weight": "حجم الخط للرابط",
+            "link_underline": "عرض خط النص",
+            "link_mg_top": "مسافة أعلى"
+          }
+        },
+        "lookbook": {
+          "name": "صورة المعرض البصري",
+          "settings": {
+            "content_1": "المنتج 1",
+            "content_2": "المنتج 2",
+            "content_3": "المنتج 3",
+            "content_4": "المنتج 4",
+            "content_5": "الرابط",
+            "label_2": "موضع الرمز المثبت أفقيا (%)",
+            "label_3": "موضع الرمز المثبت عموديا (%)",
+            "label_4": "موضع إطلالة المعرض البصري",
+            "option_1": "إلى اليمين من الرمز المثبت",
+            "option_2": "إلى اليسار من الرمز المثبت",
+            "option_3": "فوق الرمز المثبت",
+            "option_4": "تحت الرمز المثبت"
+          }
+        }
+      }
+    },
+    "large_lookbook_banner": {
+      "name": "كتاب الصور المنقل"
+    },
+    "app_partner": {
+      "name": "شريك التطبيق",
+      "enable_promotion": "تمكين عرض PageFly الترويجي",
+      "label_1": "1. لوظيفة المراجعة: استخدم [تطبيق Loox](https:\/\/shopify.pxf.io\/y2D52b) واحصل على تجربة مجانية لمدة 30 يومًا. [كيفية إعداد Loox؟](https:\/\/docs.google.com\/document\/d\/168AUIxIHClZrhTGNk3eVg8eEF4ZiBa6heRDgTB1PZYU\/edit?usp=sharing)",
+      "label_2": "2. عرض حصري: 3 أشهر باستخدام 20 صفحة من PageFly مقابل 1 دولار فقط شهريًا. [اطلب العرض الآن](https:\/\/pagefly.io\/pages\/halothemes-pagefly-offer?utm_source=halo-pf-deal&utm_medium=ella-theme-editor&utm_content=theme-settings)",
+      "label_3": "3. استخدم [UpPromote للشركاء والإحالات](https:\/\/partners.secomapp.com\/apps\/20off\/affiliate\/halothemes) واحصل على خصم 20٪.",
+      "label_4": "4. عزز أداء موقعك باستخدام [Avada SEO suite](https:\/\/apps.shopify.com\/avada-seo-suite?utm_source=partnership&utm_medium=halothemes&utm_campaign=themeeditor)."
+    },
+    "slidable_spotlight": {
+      "name": "المنقل المتحرك",
+      "blocks": {
+        "name": "صورة"
+      }
+    },
+    "counter_positions_image_banner": {
+      "name": "صورة العدادات الموضعية",
+      "settings": {
+        "content__1": "المحتوى 1",
+        "content__2": "المحتوى 2",
+        "banner__1": "البنر الأول",
+        "banner__2": "البنر الثاني",
+        "image_text": {
+          "name": "صورة النص",
+          "font_size": "حجم الخط للنص",
+          "font_size_mb": "حجم الخط للنص على الجهاز اللوحي",
+          "font_weight": "حجم الخط للنص",
+          "color": "لون النص"
+        },
+        "button_text_underline": "عرض خط النص للزر",
+        "full_width_underline": "تمكين خط تحت بعرض كامل",
+        "content_2_padding_right": "مسافة إلى اليمين للكتلة 2"
+      }
+    },
+    "puzzled_image_banner": {
+      "name": "صورة العدادات الموضعية",
+      "settings": {
+        "block_left": "كتلة اليسار",
+        "block_right": "كتلة اليمين",
+        "section": "القسم"
+      }
+    },
+    "blog_posts_list": {
+      "name": "قائمة المنشورات المدونة",
+      "settings": {
+        "posts_content_des": "طول الوصف للمنشورات",
+        "info_left_margin": "مسافة إلى اليسار للمعلومات"
+      }
+    },
+    "blog_posts_slider": {
+      "name": "قائمة المنشورات المدونة المنقلة"
+    },
+    "newsletter": {
+      "name": "النشرة الإخبارية",
+      "description_font_weight": "حجم الخط للوصف",
+      "show_social_media_icons": "عرض أيقونات الوسائل الاجتماعية أسفل حقل النشرة الإخبارية",
+      "info__1": "ينطبق فقط عندما يتم إضافة حقل أيقونات الوسائل الاجتماعية.",
+      "special_text": "نص خاص",
+      "special_text_info": "أضف النص الموجود في العنوان",
+      "special_text_info_2": "إضافة نص وارد في العنوان الرئيسي",
+      "enable_custom_width": "تمكين العرض المخصص",
+      "width_info": "العرض على الجوال (وحدة % أو بكسل)",
+      "show_between_input_and_button": "إظهار بين حقل الإدخال والزر"
+    },
+    "instagram_grid": {
+      "name": "شبكة الصور المنقلة",
+      "settings": {
+        "info__1": "مسافة بين الكتلة والصورة"
+      }
+    },
+    "newsletter_with_countdown": {
+      "name": "النشرة الإخبارية مع العداد",
+      "blocks": {
+        "text_typing": {
+          "name": "نص الكتابة"
+        },
+        "email_form": {
+          "name": "حقل البريد الإلكتروني"
+        }
+      }
+    },
+    "newsletter_with_banner_collapsible": {
+      "name": "النشرة الإخبارية مع البنرات المنقلة"
+    },
+    "store_locator": {
+      "name": "موقع المتجر",
+      "settings": {
+        "content__1": "الخريطة والمواقع"
+      },
+      "block": {
+        "name": "معلومات المتجر",
+        "settings": {
+          "phone": "رقم الهاتف",
+          "city": "المدينة",
+          "country": "البلد",
+          "cross_street": "المنصة",
+          "postal_code": "الرمز البريدي",
+          "state": "المنطقة\/المنصة",
+          "info": "مثل: (202) 387-9338",
+          "map_iframe": "إدراج إطار Google map"
+        }
+      }
+    },
+    "tiktok_embedder": {
+      "name": "فيديو TikTok",
+      "settings": {
+        "columns_per_row": "عدد الأعمدة في الصف",
+        "container_info": "لتضمين المزيد من الفيديوهات في صف، يكون التخطيط أوسع مناسب",
+        "arrow_button_size": "حجم السهم",
+        "videos_margin_top": "مسافة أعلى للفيديوهات"
+      },
+      "blocks": {
+        "tiktok_video": {
+          "name": "فيديو TikTok",
+          "embed_code": "معرف الفيديو",
+          "info__1": "[إرشادات للحصول على معرف الفيديو TikTok](https:\/\/help.agencyanalytics.com\/en\/articles\/4771078-embed-tiktok-videos)"
+        }
+      }
+    },
+    "image_comparison": {
+      "name": "الصورة المقارنة قبل\/بعد",
+      "settings": {
+        "content_position": "موضع المحتوى",
+        "above": "فوق الصور المقارنة",
+        "right": "إلى اليمين من الصور المقارنة",
+        "left": "إلى اليسار من الصور المقارنة",
+        "content_style": "أنماط المحتوى",
+        "content_style_info": "تنطبق عند تحديد خيار 'إلى اليسار من الصور المقارنة' أو 'إلى اليمين من الصور المقارنة'.",
+        "content_style_2": "أنماط المحتوى 2 اللون",
+        "custom_border_color": "لون الحدود المخصص",
+        "images_to_compare": "الصور المقارنة"
+      }
+    },
+    "marquee": {
+      "name": "المنقل المتحرك",
+      "settings": {
+        "gap_blocks": "مسافة بين الكتل",
+        "center_banner": "بانر مركزي"
+      },
+      "blocks": {
+        "name": "المحتوى"
+      },
+      "presets": {
+        "name": "المنقل المتحرك"
+      }
+    },
+    "special_banner": {
+      "name": "البنر الخاص",
+      "settings": {
+        "rotating_text": "نص التدوير",
+        "image_rotating_text": "صورة مع نص التدوير",
+        "image_with_text": "صورة مع النص",
+        "loading_effect": "تأثير التحميل",
+        "lookbook_banner": "بنر كتاب الصور",
+        "info": "تنطبق هذا الإعداد عند تحديد خيار 'التخطيط' الذي يحدد 'المنقل'"
+      }
+    },
+    "quick-order-list": {
+      "name": "قائمة الطلب السريع",
+      "settings": {
+        "show_image": {
+          "label": "عرض الصور"
+        },
+        "show_sku": {
+          "label": "عرض الرموز التجارية"
+        }
+      },
+      "presets": {
+        "name": "قائمة الطلب السريع"
+      }
+    }
+  },
+  "icons": {
+    "show_icon": "عرض الأيقونة",
+    "icon_position": "موضع الأيقونة",
+    "play_icon_position": "موضع أيقونة التشغيل",
+    "envelope": "البريد الإلكتروني",
+    "envelope_outline": "البريد الإلكتروني المحيط",
+    "envelope_outline_2": "البريد الإلكتروني المحيط 2",
+    "message": "الرسالة",
+    "message_2": "الرسالة 2",
+    "address": "العنوان",
+    "phone": "الهاتف"
+  },
+  "flex_section": {
+    "categories": {
+      "basic": "أساسي",
+      "layout": "تخطيط"
+    },
+    "content": {
+      "appearance": "المظهر",
+      "layout": "التخطيط",
+      "typography": "الطباعة"
+    },
+    "names": {
+      "button": "زر",
+      "custom_section": "قسم مخصص",
+      "heading": "عنوان",
+      "image": "صورة",
+      "media": "وسائط",
+      "text": "نص"
+    },
+    "options": {
+      "auto": "تلقائي",
+      "bottom": "أسفل",
+      "center": "وسط",
+      "contain": "احتواء",
+      "cover": "تغطية",
+      "custom": "مخصص",
+      "down": "لأسفل",
+      "full": "كامل",
+      "full_screen": "ملء الشاشة",
+      "fit": "ملاءمة",
+      "gradient": "تدرج",
+      "horizontal": "أفقي",
+      "image": "صورة",
+      "large": "كبير",
+      "left": "يسار",
+      "medium": "متوسط",
+      "narrow": "ضيق",
+      "none": "لا شيء",
+      "right": "يمين",
+      "small": "صغير",
+      "solid": "صلب",
+      "space_between": "مسافة بينية",
+      "square": "مربع",
+      "top": "أعلى",
+      "up": "لأعلى",
+      "vertical": "عمودي",
+      "video": "فيديو"
+    },
+    "settings": {
+      "alignment": "محاذاة",
+      "align_baseline": "محاذاة خط الأساس",
+      "background": "الخلفية",
+      "background_color": "لون الخلفية",
+      "background_overlay": "تراكب الخلفية",
+      "background_media": "وسائط الخلفية",
+      "background_image": "صورة الخلفية",
+      "corner_radius": "نصف قطر الزاوية",
+      "custom_height": "ارتفاع مخصص",
+      "direction": "الاتجاه",
+      "gap": "فجوة",
+      "gradient_direction": "اتجاه التدرج",
+      "height": "الارتفاع",
+      "icon": "أيقونة",
+      "image": "صورة",
+      "image_position": "موضع الصورة",
+      "overlay_color": "لون التراكب",
+      "overlay_style": "نمط التراكب",
+      "open_new_tab": "فتح الرابط في علامة تبويب جديدة",
+      "position": "الموضع",
+      "vertical_on_mobile": "عمودي على الهاتف",
+      "video": "فيديو",
+      "video_position": "موضع الفيديو"
+    }
+  }
+}

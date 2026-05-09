@@ -1,0 +1,30 @@
+{%- liquid
+    assign app_store_heading = block.settings.app_store_heading
+    assign app_store_img_1 = block.settings.app_store_img_1
+    assign app_store_link_1 = block.settings.app_store_link_1
+    assign app_store_img_2 = block.settings.app_store_img_2
+    assign app_store_link_2 = block.settings.app_store_link_2
+    assign top_spacing = 16
+    assign heading_bottom_margin = 20
+    if block.settings.top_spacing != blank
+        assign top_spacing = block.settings.top_spacing
+    endif
+    if block.settings.heading_bottom_margin != blank
+    assign heading_bottom_margin = block.settings.heading_bottom_margin
+    endif
+-%}
+<div class="footer-block__app-store" style="--top-spacing: {{ top_spacing }}px;--heading-bottom-margin: {{ heading_bottom_margin }}px;">
+    {%- if app_store_heading != blank -%}
+        <h2 class="footer-block__heading">{{- app_store_heading | escape -}}</h2>       
+    {%- endif -%}
+    <div class="item clearfix">
+        {%- if app_store_img_1 != blank -%}
+            {%- assign preview_img_1 = app_store_img_1 -%}
+            <a {% if app_store_link_1 == blank %} role="link" aria-disabled="true"{% else %} href="{{ app_store_link_1 }}" target="_blank"{% endif %}><img srcset="{{ preview_img_1 | img_url: '140x', crop: 'center' }}" src="{{ preview_img_1 | img_url: '140x', crop: 'center' }}" alt="{{ preview_img_1.alt | default: shop.name | escape }}"{% if settings.enable_lazyload %} loading="lazy"{% endif %}></a>
+        {%- endif -%}
+        {%- if app_store_img_2 != blank -%}
+            {%- assign preview_img_2 = app_store_img_2 -%}
+            <a {% if app_store_link_2 == blank %} role="link" aria-disabled="true"{% else %} href="{{ app_store_link_2 }}" target="_blank"{% endif %}><img srcset="{{ preview_img_2 | img_url: '140x', crop: 'center' }}" src="{{ preview_img_2 | img_url: '140x', crop: 'center' }}" alt="{{ preview_img_2.alt | default: shop.name | escape }}"{% if settings.enable_lazyload %} loading="lazy"{% endif %}></a>
+        {%- endif -%}
+    </div>  
+</div>

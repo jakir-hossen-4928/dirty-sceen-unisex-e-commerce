@@ -1,0 +1,83 @@
+{%- liquid
+    assign heading = block.settings.heading
+    assign collection = block.settings.product_block_collection
+    assign limit = block.settings.product_block_limit
+    assign dots = block.settings.product_block_dots
+    assign arrows = block.settings.product_block_arrows
+    assign layout = block.settings.product_block_layout
+
+    assign products_to_display = 0
+    if collections[collection].handle != ''
+        if collections[collection].all_products_count > limit
+            assign products_to_display = limit
+        else
+            assign products_to_display = collections[collection].all_products_count
+        endif 
+    else
+        assign products_to_display = limit
+    endif
+
+    if position == sidebar
+        assign column = 1
+    else
+        assign column = block.settings.column
+    endif
+-%}
+<div class="sidebarBlock sidebar-product position-{{ position }} sidebarBlock-{{show_collapse}}">
+    {%- if show_collapse == 'collapse' or show_collapse == 'slide'  -%}
+        <div class="sidebarBlock-headingWrapper{% if show_collapse == 'slide' %}-slide{% endif %}">
+    {%- endif -%}
+        {%- if heading != blank -%}
+            <h2 class="sidebarBlock-heading{% if show_collapse %}{% if sidebar_collapse == 'expand' %} is-clicked{% endif %}{% endif %}">{{ heading | escape }}</h2>
+        {%- else -%}
+            {%- if show_collapse == 'collapse' or show_collapse == 'slide'  -%}
+                <h2 class="sidebarBlock-heading{% if sidebar_collapse == 'expand' %} is-clicked{% endif %}">BLock Heading</h2>
+            {%- endif -%}
+        {%- endif -%}
+        {%- if show_collapse == 'slide' -%}
+            {% render 'icon-arrow-left' %}
+        {%- endif -%}
+    {%- if show_collapse == 'collapse' or show_collapse == 'slide' -%}
+        </div>
+    {%- endif -%}
+    {%- if show_collapse == 'collapse' -%}
+        <div class="sidebarBlock-contentWrapper" {% if sidebar_collapse == 'expand' %} style="display: block;"{% endif %}>
+    {%- endif -%}
+        <div class="sidebarBlock-content{% if show_collapse == 'slide' %} sidebarBlock-slide__content{% endif %}">
+            {%- if show_collapse == 'slide' -%}
+                <button type="button" class="sidebarBlock-slide__content-close">
+                    {% render 'icon-arrow-left' %}
+                    {%- if heading != blank -%}
+                        {{ heading | escape }}
+                    {%- else -%}
+                        BLock Heading
+                    {%- endif -%}
+                </button>
+            {%- endif -%}
+            <div class="sidebarBlock-product halo-product-block" data-limit="{{ limit }}{% if show_collapse == 'slide' %} sidebarBlock-slide__content-list{% endif %}">
+                <div class="{% if layout == 'slider' %}products-carousel{% else %}products-grid{% endif %} column-{{ column }}" {% if layout == 'slider' %}{% if position == 'content' %}data-product-slider-article{% else %}data-product-slider-sidebar{% endif %} data-layout="slider"{% endif %}{% if layout == 'slider' %} data-item-to-show="{{ column }}" data-item-dots="{{ dots }}" data-item-arrows="{{ arrows }}"{% endif %}>
+                    {%- for product in collections[collection].products limit: limit -%}
+                        <div class="product {% if layout == 'slider' %}slider__slide{% else %}grid__item{% endif %}">
+                            {% render 'product-grid-layout', 
+                                product_card_product: product, 
+                                media_size: image_ratio, 
+                                portrait_aspect_ratio: '133', 
+                                complementary_product_button_atc: true,
+                                loading: true 
+                            %}
+                        </div>
+                    {%- else -%}
+                        {%- for product in (1..limit) -%}
+                            <div class="product {% if layout == 'slider' %}slider__slide{% else %}grid__item{% endif %}">
+                                {%- capture current %}{% cycle 1, 2, 3, 4 %}{% endcapture -%}
+                                {% render 'product-card-placeholder', index: current %}
+                            </div>
+                        {%- endfor -%}
+                    {%- endfor -%}
+                </div>
+            </div>
+        </div>
+    {%- if show_collapse == 'collapse' -%}
+        </div>
+    {%- endif -%}
+</div>

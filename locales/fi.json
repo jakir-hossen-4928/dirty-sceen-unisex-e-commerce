@@ -1,0 +1,895 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin language editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "general": {
+    "breadcrumb": {
+      "home": "Kotiin"
+    },
+    "common": {
+      "close": "Lähellä",
+      "menu": "Valikko",
+      "categories": "Luokat",
+      "log_in": "Kirjaudu sisään",
+      "account": "Tili",
+      "search": "Haku",
+      "wishlist": "Toivelista",
+      "video": "Katso video napsauttamalla",
+      "video_alt": "Video alt",
+      "scroll_down": "Vieritä alas",
+      "lang_cur": "Kieli/valuutta-sivupalkki"
+    },
+    "password_page": {
+      "login_form_heading": "Siirry kauppaan salasanalla:",
+      "login_password_button": "Syötä salasanalla",
+      "login_form_password_label": "Salasana",
+      "login_form_password_placeholder": "Salasanasi",
+      "login_form_error": "Väärä salasana!",
+      "login_form_submit": "Enter",
+      "modal": "Salasana modaalinen",
+      "admin_link_html": "Oletko kaupan omistaja? <a href=\"/admin\" class=\"link underlined-link\">Kirjaudu sisään tästä</a>",
+      "powered_by_shopify_html": "Tämä kauppa saa virtansa {{ shopify }}",
+      "label": "Varhainen sisäänkirjautuminen",
+      "label_2": "Varhainen sisäänkirjautuminen*",
+      "input": "Varhaisen käytön salasana...",
+      "input_2": "Anna salasana",
+      "submit": "Enter"
+    },
+    "social": {
+      "alt_text": {
+        "share_on_facebook": "Jaa Facebookissa",
+        "share_on_twitter": "Twiittaa twitterissä",
+        "share_on_pinterest": "Kiinnitä pinterestiin"
+      },
+      "links": {
+        "twitter": "Viserrys",
+        "facebook": "Facebook",
+        "pinterest": "Pinterest",
+        "instagram": "Instagram",
+        "tumblr": "Tumblr",
+        "snapchat": "Snapchat",
+        "youtube": "YouTube",
+        "vimeo": "Vimeo",
+        "tiktok": "TikTok",
+        "google_plus": "Google plus",
+        "telegram": "Telegram",
+        "email": "Sähköposti",
+        "whatsapp": "Whatsapp"
+      }
+    },
+    "continue_shopping": "Jatka ostoksia",
+    "back_to_previous_page": "Palaa edelliselle sivulle",
+    "pagination": {
+      "label": "Sivunumerointi",
+      "page": "Sivu {{ number }}",
+      "next": "Seuraavaksi",
+      "previous": "Ed",
+      "prev": "Ed"
+    },
+    "search": {
+      "search": "Haku",
+      "title": "Haku",
+      "close": "Lähellä",
+      "search_product": "Hae tuotteita...",
+      "search_a_product": "Hae tuotetta...",
+      "search_the_store": "Etsi kaupasta",
+      "search_the_store_2": "Hae koko myymälästä täältä...",
+      "im_looking_for": "etsin",
+      "label": "Label Search",
+      "search_result_title": "Tuotetulokset",
+      "search_no_result": "Etsi",
+      "search_more": "Etsi lisää",
+      "view_all": "Näytä kaikki tulokset ({{ count }})"
+    },
+    "cart": {
+      "cart": "Kärry",
+      "shopping_cart": "Ostoskori",
+      "my_cart": "Minun kärryni",
+      "view": "Näytä ostoskorini ({{ count }})",
+      "item_added": "Tuote lisätty ostoskoriin",
+      "shipping_calculator_button": "Laske toimituskulut",
+      "shipping_calculator_calculating": "Lasketaan...",
+      "shipping_calculator_error_message": "Virhe: Anna oikeat toimitustiedot",
+      "shipping_calculator_success_many_rates": {
+        "there_are": "On",
+        "shipping_rates_available_for": "toimitushinnat saatavilla",
+        "starting_at": ", alkaen klo"
+      },
+      "shipping_calculator_success_one_rate": "Saatavilla on yksi toimitushinta",
+      "shipping_calculator_success_no_rate": "Tälle tilaukselle ja määränpäälle ei ole saatavilla toimitushintaa.",
+      "shipping_calculator_success_at": "klo",
+      "cart_countdown": "Ole hyvä ja pidä kiirettä! ",
+      "cart_countdown_minutes": "minuuttia.",
+      "note": "Lisäkommentteja",
+      "note_placeholder": "Erikoisohjeet myyjälle...",
+      "secure_text": "Turvalliset ostokset takuu",
+      "save": "Tallentaa",
+      "cancel": "Peruuttaa",
+      "gift_cart_add": "Lisätä",
+      "gift_cart_adding": "Lisätään...",
+      "add_a_gift_wrap": "Lisää lahjapaperi",
+      "order_summary": "Tilauksen yhteenveto",
+      "subtotal": "Välisumma",
+      "shipping": "Hanki toimitusarvio:",
+      "coupon_code": "Kuponkikoodi",
+      "total": "Kokonais:",
+      "coupon_code_text": "Kuponkikoodi käytetään kassalla",
+      "estimate_shipping": "Arvioi toimituskulut",
+      "country": "Maa/alue",
+      "state": "Osavaltio",
+      "zip_code": "Postinumero",
+      "postal_code": "Postinumero",
+      "enter_coupo_code": "Anna kuponkikoodi",
+      "soldout_text": "loppuunmyyty",
+      "already_text": "kaikki",
+      "are_saving": "Alennus:"
+    },
+    "share": {
+      "copy_to_clipboard": "Kopioi linkki",
+      "share": "Jakaa",
+      "share_url": "Linkki",
+      "success_message": "Linkki kopioitu leikepöydälle!"
+    },
+    "navigation": {
+      "go_to": "Siirry osoitteeseen",
+      "new_label": "Uusi",
+      "sale_label": "Myynti",
+      "hot_label": "Kuuma",
+      "all": "Kaikki"
+    },
+    "button_load_more": {
+      "default": "Näytä lisää",
+      "loading": "Ladataan...",
+      "view_all": "Näytä koko kokoelma",
+      "no_more": "Ei enää tuotetta",
+      "no_more_collection": "Ei enää kokoelmaa"
+    }
+  },
+  "brands_page": {
+    "general": {
+      "az_title": "Merkit A-Z",
+      "all": "Kaikki"
+    }
+  },
+  "newsletter": {
+    "label": "Sähköpostisi",
+    "placeholder": "anna sähköpostiosoitteesi",
+    "placeholder_2": "Sähköpostiosoitteesi",
+    "success": "Kiitos tilaamisesta!",
+    "error": "Tämä sähköposti on rekisteröity!",
+    "button_label": "Lähetä",
+    "button_label_2": "Ilmoittaudu mukaan",
+    "start_now": "Aloita nyt",
+    "dont_miss_out_this_sale": "älä missaa tätä myyntiä"
+  },
+  "accessibility": {
+    "skip_to_text": "Siirry sisältöön",
+    "skip_to_product_info": "Siirry tuotetietoihin",
+    "close": "Lähellä",
+    "unit_price_separator": "per",
+    "vendor": "Myyjä:",
+    "error": "Virhe",
+    "refresh_page": "Valinnan valitseminen johtaa koko sivun päivitykseen.",
+    "link_messages": {
+      "new_window": "Avautuu uuteen ikkunaan.",
+      "external": "Avaa ulkoisen verkkosivuston."
+    },
+    "of": "/",
+    "next_slide": "Liu'uta oikealle",
+    "previous_slide": "Liu'uta vasemmalle",
+    "loading": "Ladataan..."
+  },
+  "blogs": {
+    "article": {
+      "blog": "Blogi",
+      "read_more_title": "Lue lisää: {{ title }}",
+      "read_more": "Näytä tiedot",
+      "author": "{{ author }}",
+      "comments": {
+        "one": "{{ count }} kommentti",
+        "other": "{{ count }} kommentteja"
+      },
+      "moderated": "Huomaa, että kommentit on hyväksyttävä ennen kuin ne julkaistaan.",
+      "moderated-all": "Kaikki blogikommentit tarkistetaan ennen julkaisua",
+      "comment_form_title": "Jätä kommentti",
+      "name": "Nimi",
+      "email": "Sähköposti",
+      "message": "Kommentti",
+      "post": "Lähetä kommentti",
+      "back_to_blog": "Takaisin blogiin",
+      "share": "Jaa tämä artikkeli",
+      "success": "Kommenttisi lähetys onnistui! ",
+      "success_moderated": "Kommenttisi lähetys onnistui. ",
+      "on": "Päällä",
+      "by": "kirjoittaja",
+      "featured": "esillä",
+      "older_post": "Vanhempi postaus",
+      "newer_post": "Uudempi postaus",
+      "prev_post": "Edellinen viesti",
+      "next_post": "Seuraava postaus",
+      "tags": "Tunnisteet:"
+    }
+  },
+  "onboarding": {
+    "product_title": "Esimerkki tuotteen otsikosta",
+    "collection_title": "Kokoelman nimi"
+  },
+  "products": {
+    "product": {
+      "add_to_cart": "Lisää ostoskoriin",
+      "adding_to_cart": "Lisätään ostoskoriin...",
+      "add_all_to_cart": "Lisää kaikki ostoskoriin",
+      "adding_all_to_cart": "Lisätään kaikki ostoskoriin...",
+      "added_to_cart": "Lisätty ostoskoriin",
+      "add_to_cart_message": "Sinun on valittava vähintään yksi lisättävä tuote!",
+      "add_to_cart_success_message": "lisätään ostoskoriin.",
+      "add_to_cart_success_message_2": "Tuote lisätty ostoskoriin onnistuneesti",
+      "description": "Kuvaus",
+      "on_sale": "Myynti",
+      "product_variants": "Tuotevariaatiot",
+      "details": "Yksityiskohdat",
+      "submit": "Lähetä",
+      "cancel": "Peruuttaa",
+      "select_variant": "Valitse vaihtoehdot",
+      "more_sizes": "Lisää kokoja saatavilla",
+      "measurements": "Mittaukset",
+      "media": {
+        "media_alt": "Lataa mediaa gallerian katseluohjelmassa, {{ mediaAlt }}",
+        "video_alt": "Lataa video gallerian katseluohjelmassa, {{ mediaAlt }}",
+        "model_alt": "Lataa 3D-malli gallerian katseluohjelmaan, {{ mediaAlt }}"
+      },
+      "add": {
+        "label": "Lisää lisää",
+        "label__2": "Lisätä"
+      },
+      "quantity": {
+        "label": "Määrä",
+        "label_1": "Määrä:",
+        "label__2": "Määrä:",
+        "input_label": "Määrä varten {{ product }}",
+        "increase": "Lisää määrää varten {{ product }}",
+        "decrease": "Pienennä määrää: {{ product }}",
+        "minimum_of": "Vähintään {{ quantity }}",
+        "maximum_of": "Enintään {{ quantity }}",
+        "multiples_of": "Lisäykset {{ quantity }}",
+        "min_of": "Min {{ quantity }}",
+        "max_of": "Max {{ quantity }}",
+        "in_cart_html": "<span class=\"quantity-cart\">{{ quantity }}</span> kärryssä",
+        "note": "Katso määräsäännöt"
+      },
+      "volume_pricing": {
+        "title": "Volyymihinnoittelu",
+        "note": "Volyymihinnoittelu saatavilla",
+        "minimum": "{{ quantity }}+",
+        "price_at_each": "klo {{ price }}/ea",
+        "price_range": "{{ minimum }} - {{ maximum }}"
+      },
+      "pickup_availability": {
+        "view_store_info": "Katso myymälän tiedot",
+        "check_other_stores": "Tarkista saatavuus muista myymälöistä",
+        "pick_up_available": "Nouto saatavilla",
+        "pick_up_available_at_html": "Nouto saatavilla osoitteessa <span class=\"strong\">{{ location_name }}</span>",
+        "pick_up_unavailable_at_html": "Nouto ei tällä hetkellä saatavilla osoitteessa <span class=\"strong\">{{ location_name }}</span>",
+        "unavailable": "Noudon saatavuutta ei voitu ladata",
+        "refresh": "Päivitä"
+      },
+      "price": {
+        "from_price_html": "<span class=\"text\">From</span> {{ price }}",
+        "regular_price": "Normaali hinta",
+        "sale_price": "Myyntihinta",
+        "unit_price": "Yksikköhinta",
+        "saved_price_html": "Tallentaa {{ price }}"
+      },
+      "read_less": "Lue vähemmän",
+      "read_more": "Lue lisää",
+      "share": "Jaa tämä tuote",
+      "sold_out": "Loppuunmyyty",
+      "sold_out_message": "Tämä variantti on loppuunmyyty!",
+      "custom": "Mukautettu etiketti",
+      "new": "Uusi",
+      "bundle": "Nippu",
+      "unavailable": "Ei saatavilla",
+      "unavailable_message": "Tämä variantti ei ole saatavilla!",
+      "value_unavailable": "{{ option_value }} (ei saatavilla)",
+      "out_of_stock": "Loppunut varastosta",
+      "vendor": "Myyjä",
+      "video_exit_message": "{{ title }} avaa koko näytön videon samassa ikkunassa.",
+      "xr_button": "Katso omassa tilassasi",
+      "xr_button_label": "Näytä tilassasi, lataa kohteen lisätyn todellisuuden ikkunassa",
+      "pre_order": "Ennakkotilaus",
+      "quick_view": "Pikanäkymä",
+      "quick_view_2": "Pikanäkymä",
+      "quick_shop": "Nopea lisäys",
+      "select": "Valitse a {{ name }}",
+      "shop_now": "Osta nyt",
+      "select_options": "Valitse vaihtoehdot",
+      "select_options_plus": "+ Valitse vaihtoehdot",
+      "sub_total": "Lisää ostoskoriin - {{ value }}",
+      "hot_stock": "Pidä kiirettä!  {{ inventory }} vasemmalle",
+      "hot_stock_2": "Ole hyvä ja pidä kiirettä!  {{ inventory }} jäljellä varastossa",
+      "warning_quantity": "Enimmäismäärä: {{ inventory}}",
+      "in_stock": "Varastossa",
+      "many_in_stock": "Monet Varastossa",
+      "on_sale_text": "Myynti",
+      "off_text": " pois",
+      "description_placeholder": " Nam tempus turpis at metus scelerisque placerat nulla deumantos solicitud felis. ",
+      "color": "Väri:",
+      "hot_stock_text": "Kuuma varasto",
+      "new_arrivals": "Uusia tulokkaita",
+      "sold_in_last": {
+        "text_1": "myyty viimeksi",
+        "text_2": "tuntia"
+      },
+      "text": {
+        "sku": "SKU:",
+        "barcode": "Viivakoodi:",
+        "vendor": "Myyjä:",
+        "availability": "Saatavuus:",
+        "type": "Tuotetyyppi:"
+      },
+      "show_options": "Näytä muunnelmat",
+      "hide_options": "Piilota muunnelmat",
+      "adding": "Lisätään",
+      "thank_you": "Kiitos",
+      "add_more": "Lisää lisää",
+      "cart_feedback": "Lisätty",
+      "see_details": "Katso täydelliset tiedot",
+      "bundle_block": {
+        "add_all_to_cart": "Lisää kaikki ostoskoriin",
+        "add_item_to_cart": "Lisää ([tuote]) tuote ostoskoriin",
+        "add_items_to_cart": "Lisää ([tuote]) tuotteet ostoskoriin",
+        "include": "sisältää",
+        "included": "mukaan lukien",
+        "select_options": "Valitse vaihtoehto",
+        "total_price": "Hinta yhteensä:"
+      },
+      "view_full_details": "Katso täydelliset tiedot",
+      "step_by_step": {
+        "next": "Seuraava vaihe",
+        "previous": "Edellinen vaihe"
+      }
+    },
+    "modal": {
+      "label": "Media galleria"
+    }
+  },
+  "portfolio_page": {
+    "general": {
+      "all": "Kaikki"
+    }
+  },
+  "templates": {
+    "404": {
+      "title": "Oho! ",
+      "subtext": "404",
+      "description": "Anteeksi! ",
+      "button": "Palaa kauppaan"
+    },
+    "search": {
+      "no_results": "Ei tuloksia haulle \"{{ terms }}”. ",
+      "search_result_title_2": "On {{ count }} Sivu(t) ja artikkeli(t) haulle \"{{ terms }}'",
+      "view": "Näytä {{ type }}",
+      "page": "Sivu",
+      "results_with_count": {
+        "one": "{{ count }} tulos löytyi \"{{ terms }}”",
+        "other": "{{ count }} tuloksia haulle \"{{ terms }}”"
+      },
+      "results_pages_with_count": {
+        "one": "{{ count }} sivu",
+        "other": "{{ count }} sivuja"
+      },
+      "results_suggestions_with_count": {
+        "one": "{{ count }} ehdotus",
+        "other": "{{ count }} ehdotuksia"
+      },
+      "title": "Etsi tuotteita sivuiltamme",
+      "search_product_for": "Ei tuloksia haulle \"{{ terms }}”",
+      "search_product_check": "Tarkista oikeinkirjoitus tai käytä toista sanaa tai lausetta",
+      "search_for": "Hae \"{{ terms }}”",
+      "suggestions": "ehdotuksia",
+      "pages": "Sivut"
+    },
+    "cart": {
+      "cart": "Kärry"
+    },
+    "contact": {
+      "form": {
+        "name": "Nimi",
+        "email": "Sähköposti",
+        "phone": "Puhelinnumero",
+        "comment": "Kommentti",
+        "send": "Lähetä yhteystieto",
+        "post_success": "Kiitos yhteydenotostasi. ",
+        "error_heading": "Säädä seuraavaa:"
+      }
+    }
+  },
+  "faqs": {
+    "general": {
+      "all": "Kaikki",
+      "filter": "Suodata aiheen mukaan"
+    }
+  },
+  "portfolio": {
+    "filter": "Suodattaa",
+    "close": "Lähellä",
+    "tab_all": "Välilehti näyttää kaikki galleriat",
+    "tab": "Suodata galleria välilehdellä"
+  },
+  "sections": {
+    "header": {
+      "announcement": "Ilmoitus",
+      "menu": "Valikko",
+      "cart_count": {
+        "one": "{{ count }} kohde",
+        "other": "{{ count }} kohteita"
+      }
+    },
+    "term_condition": "Ehdot",
+    "cart": {
+      "title": "Ostoskorisi",
+      "caption": "Ostoskori tuotteet",
+      "checkout": "Kassalle",
+      "proceed_to_checkout": "Siirry kassalle",
+      "my_cart": "Ostoskori",
+      "items": "kohteita",
+      "item": "kohde",
+      "item_99": "99+",
+      "view_cart": "Näytä ostoskori",
+      "edit_title": "Poistaa {{ title }}",
+      "edit_cart_title": "Muokkaa vaihtoehtoa",
+      "remove_title": "Poistaa {{ title }}",
+      "items_in_your_cart": "{{ count }} tuotteita ostoskorissasi",
+      "subtotal": "Välisumma",
+      "new_subtotal": "Uusi välisumma",
+      "note": "Tilaa erikoisohjeet",
+      "continue_shopping": "Jatka ostoksia",
+      "shipping": "Toimitus",
+      "shipping_text": "Verot ja toimituskulut lasketaan kassalla",
+      "empty": "Ostoskorisi on tyhjä",
+      "title_collection": "Saatat myös pitää",
+      "cart_error": "Ostoskoriasi päivitettäessä tapahtui virhe. ",
+      "cart_quantity_error_html": "Voit lisätä vain [määrä] tästä tuotteesta ostoskoriin.",
+      "cart_quantity_error_alert": "Voit vain lisätä {{maxQuantity}} tästä tuotteesta ostoskoriin",
+      "cart_quantity_error_alert_2": "Tämän tuotteen määrä on riittämätön.",
+      "quick_cart": "Nopea kärry",
+      "taxes_and_shipping_policy_at_checkout_html": "Verot ja <a href=\"{{ link }}\">toimitus</a> lasketaan kassalla",
+      "taxes_included_but_shipping_at_checkout": "Sisältää verot ja toimituskulut lasketaan kassalla",
+      "taxes_included_and_shipping_policy_html": "Sisältää verot. <a href=\"{{ link }}\">Toimitus</a> lasketaan kassalla.",
+      "taxes_and_shipping_at_checkout": "Verot ja toimituskulut lasketaan kassalla",
+      "taxes_included_shipping_at_checkout_without_policy": "Verot sisältyvät. ",
+      "duties_and_taxes_included_shipping_at_checkout_with_policy_html": "Mukana tullit ja verot.  <a href=\"{{ link }}\">toimitus</a> lasketaan kassalla.",
+      "duties_and_taxes_included_shipping_at_checkout_without_policy": "Mukana tullit ja verot. ",
+      "taxes_included_shipping_at_checkout_with_policy_html": "Verot sisältyvät.  <a href=\"{{ link }}\">toimitus</a> lasketaan kassalla.",
+      "duties_included_taxes_at_checkout_shipping_at_checkout_with_policy_html": "Tehtävät sisältyvät.  <a href=\"{{ link }}\">toimitus</a> lasketaan kassalla.",
+      "duties_included_taxes_at_checkout_shipping_at_checkout_without_policy": "Tehtävät sisältyvät. ",
+      "taxes_at_checkout_shipping_at_checkout_with_policy_html": "Verot, alennukset ja <a href=\"{{ link }}\">toimitus</a> lasketaan kassalla.",
+      "taxes_at_checkout_shipping_at_checkout_without_policy": "Verot, alennukset ja toimituskulut lasketaan kassalla.",
+      "headings": {
+        "product": "Tuote",
+        "price": "Hinta",
+        "total": "Kokonais",
+        "quantity": "Määrä"
+      },
+      "update": "Päivittää",
+      "upsell": "Seuraavat tuotteet on lisätty ostoskoriin:",
+      "your_order": "Sinun tilauksesi",
+      "more_than_99": "99+"
+    },
+    "footer": {
+      "payment": "Maksutavat"
+    },
+    "featured_blog": {
+      "view_all": "Näytä kaikki",
+      "onboarding_title": "Blogikirjoitus",
+      "onboarding_content": "Anna asiakkaillesi yhteenveto blogikirjoituksestasi"
+    },
+    "featured_collection": {
+      "view_all": "Näytä kaikki",
+      "view_all_label": "Katso kaikki tuotteet osoitteessa {{ collection_name }} kokoelma"
+    },
+    "collection_list": {
+      "title": "Kokoelmat",
+      "view_all": "Näytä kaikki",
+      "shop_the_collection": "Osta kokoelma",
+      "count": "{{ count }} tuotteita"
+    },
+    "collection_template": {
+      "all_tags": "Kaikki tuotteet",
+      "apply": "Käytä",
+      "clear": "Selkeä",
+      "clear_all": "Tyhjennä kaikki",
+      "empty": "Tuotteita ei löytynyt",
+      "end_count": " / {{ count }} kokonais-",
+      "from": "From",
+      "filter_and_sort": "Suodata ja lajittele",
+      "filter_by_label": "Suodatusperuste",
+      "filter_button": "Suodattaa",
+      "filters_selected": "{{ count }} valittu",
+      "product_count_simple": {
+        "one": "{{ count }} tuote",
+        "other": "{{ count }} tuotteita"
+      },
+      "item_per_page": "Kohteita per sivu",
+      "load_more": "Lataa lisää",
+      "show_more": "Näytä lisää",
+      "show_less": "Näytä vähemmän",
+      "show_all": "Näytä kaikki",
+      "loading_more": "Ladataan lisää",
+      "no_more": "Ei enää tuotetta",
+      "max": "Max",
+      "max_price": "Korkein hinta on {{ price }}",
+      "min": "Min",
+      "product_count": "Näytetään {{ count }} / {{ total }} tuotteita",
+      "read_more": "Lue lisää",
+      "read_less": "Lue vähemmän",
+      "refined_by": "Tarkentunut",
+      "reset": "Selkeä",
+      "start_count": "Näytetään",
+      "sort_button": "Järjestellä",
+      "sort_by_label": "Lajitteluperuste",
+      "title": "Kokoelma",
+      "to": "kohtaan",
+      "use_fewer_filters_html": "Käytä vähemmän suodattimia tai <a class=\"{{ class }}\" href=\"{{ link }}\">tyhjentää kaikki</a>",
+      "view_as": "Näytä nimellä",
+      "image": "Kuvat",
+      "product": "Tuote",
+      "price": "Hinta",
+      "qty": "Määrä",
+      "options": "Vaihtoehdot",
+      "show_variants": "Näytä muunnelmat",
+      "results": "tuloksia"
+    },
+    "collection_list_template": {
+      "product_count": "{{ count }} tuotteita"
+    },
+    "sidebar": {
+      "title": "Sivupalkki"
+    },
+    "quick_order_list": {
+      "product_total": "Tuotteen välisumma",
+      "view_cart": "Näytä ostoskori",
+      "each": "/ea",
+      "product": "Tuote",
+      "variant": "Variantti",
+      "variant_total": "Variantti yhteensä",
+      "items_added": {
+        "one": "{{ quantity }} kohde lisätty",
+        "other": "{{ quantity }} lisättyjä kohteita"
+      },
+      "items_removed": {
+        "one": "{{ quantity }} kohde poistettu",
+        "other": "{{ quantity }} kohteita poistettu"
+      },
+      "product_variants": "Tuotevariaatiot",
+      "total_items": "Kohteita yhteensä",
+      "remove_all_single_item_confirmation": "Poistetaanko 1 tuote ostoskorista?",
+      "remove_all_items_confirmation": "Poista kaikki {{ quantity }} tuotteita ostoskoristasi?",
+      "remove_all": "Poista kaikki",
+      "cancel": "Peruuttaa",
+      "min_error": "Tällä tuotteella on vähintään {{ min }}",
+      "max_error": "Tällä tuotteella on enintään {{ max }}",
+      "step_error": "Voit lisätä tämän kohteen vain askelin {{ step }}"
+    }
+  },
+  "localization": {
+    "country_label": "Maa/alue",
+    "language_label": "Kieli",
+    "update_language": "Päivitä kieli",
+    "update_country": "Päivitä maa/alue"
+  },
+  "currency": {
+    "change_text": "Myymälän valuutta muuttui",
+    "currency": "Valuutta"
+  },
+  "customer": {
+    "account": {
+      "welcome": "Hei, {{ name }}",
+      "title": "Tili",
+      "my_account": "Minun tilini",
+      "details": "Tilin tiedot",
+      "view_addresses": "Näytä osoitteet",
+      "return": "Palaa tilitietoihin"
+    },
+    "account_fallback": "Tili",
+    "activate_account": {
+      "title": "Aktivoi tili",
+      "subtext": "Luo salasana aktivoidaksesi tilisi.",
+      "password": "Salasana",
+      "password_confirm": "Vahvista salasana",
+      "submit": "Aktivoi tili",
+      "cancel": "Hylkää kutsu"
+    },
+    "addresses": {
+      "title": "Osoitteet",
+      "default": "Oletus",
+      "address_book": "Asiakkaan osoitekirja",
+      "add_new": "Lisää uusi osoite",
+      "edit_address": "Muokkaa osoitetta",
+      "first_name": "Etunimi",
+      "last_name": "Sukunimi",
+      "company": "Yritys",
+      "address1": "Osoite 1",
+      "address2": "Osoite 2",
+      "city": "Kaupunki",
+      "country": "Maa/alue",
+      "province": "maakunta",
+      "zip": "Postinumero",
+      "phone": "Puhelin",
+      "set_default": "Aseta oletusosoitteeksi",
+      "add": "Lisää osoite",
+      "update": "Päivitä osoite",
+      "cancel": "Peruuttaa",
+      "edit": "Muokata",
+      "delete": "Poistaa",
+      "delete_confirm": "Haluatko varmasti poistaa tämän osoitteen?",
+      "none": "Aseta koti- ja työosoitteesi, jos et ole jo tehnyt niin."
+    },
+    "forgot_password": "Unohditko salasanasi?",
+    "log_in": "Kirjaudu sisään",
+    "sign_in": "Kirjaudu sisään",
+    "or": "tai",
+    "create_account": "Luo tili",
+    "log_out": "Kirjaudu ulos",
+    "hello": "Hei",
+    "my_account": "Minun tilini",
+    "login_page": {
+      "cancel": "Peruuttaa",
+      "create_account": "Luo tili",
+      "email": "Sähköpostiosoite",
+      "forgot_password": "Unohditko salasanasi?",
+      "guest_continue": "Jatkaa",
+      "guest_title": "Jatka vieraana",
+      "password": "Salasana",
+      "title": "Kirjaudu sisään",
+      "sign_in": "Kirjaudu sisään",
+      "submit": "Lähetä",
+      "register": "Rekisteröidy",
+      "text": "Kirjoita sähköpostiosoitteesi ja salasanasi alle päästäksesi tilillesi"
+    },
+    "order": {
+      "title": "Tilata {{ name }}",
+      "date_html": "Asetettu päälle {{ date }}",
+      "cancelled_html": "Tilaus peruutettu {{ date }}",
+      "cancelled_reason": "Syy: {{ reason }}",
+      "billing_address": "Laskutusosoite",
+      "payment_status": "Maksun tila",
+      "shipping_address": "Toimitusosoite",
+      "fulfillment_status": "Toteutustila",
+      "discount": "Alennus",
+      "shipping": "Toimitus",
+      "tax": "Verottaa",
+      "product": "Tuote",
+      "sku": "SKU",
+      "price": "Hinta",
+      "quantity": "Määrä",
+      "total": "Kokonais",
+      "fulfilled_at_html": "Täytetty {{ date }}",
+      "track_shipment": "Seuraa lähetystä",
+      "tracking_url": "Seuranta linkki",
+      "tracking_company": "Kuljettaja",
+      "tracking_number": "Seurantanumero",
+      "subtotal": "Välisumma"
+    },
+    "orders": {
+      "title": "Tilaushistoria",
+      "order_number": "Tilata",
+      "order_number_link": "Tilausnumero {{ number }}",
+      "date": "Päivämäärä",
+      "payment_status": "Maksun tila",
+      "fulfillment_status": "Toteutustila",
+      "total": "Kokonais",
+      "none": "Et ole vielä tehnyt tilauksia."
+    },
+    "recover_password": {
+      "title": "Palauta salasanasi",
+      "subtext": "Lähetämme sinulle sähköpostin salasanan vaihtamiseksi",
+      "success": "Olemme lähettäneet sinulle sähköpostin, jossa on linkki salasanasi päivittämistä varten."
+    },
+    "register": {
+      "title": "Luo tili",
+      "first_name": "Etunimi",
+      "last_name": "Sukunimi",
+      "email": "Sähköposti",
+      "you_email": "Sähköpostiosoitteesi",
+      "password": "Salasana",
+      "you_password": "Salasanasi",
+      "register": "Rekisteröidy",
+      "submit": "Luo tili",
+      "text": "Rekisteröidy alla luodaksesi tilin",
+      "subscribe": "Tilaa sähköpostimarkkinointi"
+    },
+    "reset_password": {
+      "title": "Palauta tilin salasana",
+      "subtext": "Anna uusi salasana kohteelle {{ email }}",
+      "password": "Salasana",
+      "password_confirm": "Vahvista salasana",
+      "submit": "Palauta salasana"
+    }
+  },
+  "gift_cards": {
+    "issued": {
+      "title": "Tässä on sinun {{ value }} lahjakortti varten {{ shop }}!",
+      "subtext": "Lahjakorttisi",
+      "gift_card_code": "Lahjakortin koodi",
+      "shop_link": "Jatka ostoksia",
+      "remaining_html": "Jäljellä {{ balance }}",
+      "add_to_apple_wallet": "Lisää Applen lompakkoon",
+      "qr_image_alt": "QR-koodi – lunasta lahjakortti skannaamalla",
+      "copy_code": "Kopioi koodi",
+      "expired": "Vanhentunut",
+      "copy_code_success": "Koodi kopioitu onnistuneesti",
+      "print_gift_card": "Painaa"
+    }
+  },
+  "wishlist": {
+    "general": {
+      "wishlist": "Toivelistat",
+      "title": "Oma toivelistani",
+      "text_icon": "Omat toivelistat",
+      "added": "Lisätty toivelistalle",
+      "product_image": "Kuva",
+      "product_name": "Tuotteen nimi",
+      "price": "Hinta",
+      "add_1": "Lisätä",
+      "add": "Lisää toivelistaan",
+      "remove": "Poistaa",
+      "share": "Jaa toivelistani sähköpostitse",
+      "empty": "Yhtään tuotetta ei ole lisätty toivelistallesi",
+      "continue_shopping": "Jatka ostoksia"
+    }
+  },
+  "compare": {
+    "general": {
+      "title": "Vertaa",
+      "add": "Lisää vertailuun",
+      "added": "Lisätty vertailuun",
+      "remove_compare": "Poista vertailu",
+      "remove_all": "Poista kaikki",
+      "product": "Tuote",
+      "sku": "SKU",
+      "review": "Luokitus",
+      "description": "Kuvaus",
+      "collection": "Kokoelma",
+      "availability": "Saatavuus",
+      "product_type": "Tuotetyyppi",
+      "other_details": "Muut tiedot",
+      "message": "Sinun on valittava vähintään kaksi tuotetta vertailuun!"
+    }
+  },
+  "someone_purcharse": {
+    "general": {
+      "text_1": "Joku osti äskettäin a",
+      "ago": "sitten,",
+      "from": "alkaen"
+    }
+  },
+  "before_you_leave": {
+    "general": {
+      "recommended_product": "Suositeltava",
+      "back_to_store": "Takaisin kauppaan",
+      "continue_shopping": "Jatka ostoksia"
+    }
+  },
+  "recently_viewed": {
+    "general": {
+      "product_title": "Äskettäin katsottu",
+      "no_product": "Valitettavasti tuotteita ei ole.",
+      "share_title": "Sosiaalinen",
+      "newsletter": "Uutiskirjeen tilaaminen"
+    }
+  },
+  "calculator_free_shipping_message": {
+    "general": {
+      "free_shipping_message": "Ilmainen toimitus kaikille tilauksille",
+      "free_shipping_message_1": "Olet oikeutettu ilmaiseen toimitukseen!",
+      "free_shipping_message_2": "Vain",
+      "free_shipping_message_3": "poispäin",
+      "free_shipping_message_4": "ilmainen toimitus",
+      "free_shipping_1": "Ilmainen",
+      "free_shipping_2": "TBD"
+    }
+  },
+  "notify_form": {
+    "general": {
+      "label": "Ilmoita minulle",
+      "title": "Jätä sähköpostiosoitteesi, niin ilmoitamme heti kun tuotetta/versiota on taas varastossa",
+      "placeholder": "Lisää sähköpostiosoitteesi",
+      "submit": "Tilaa",
+      "success": "Kiitos! ",
+      "error": "Käytä kelvollista sähköpostiosoitetta, kuten john@example.com."
+    }
+  },
+  "ask_an_expert": {
+    "general": {
+      "text": "Kysy asiantuntijalta",
+      "name": "Sinun nimesi",
+      "mail": "Sinun postisi",
+      "phone": "Puhelimesi",
+      "message": "Mitä voin auttaa tänään?",
+      "submit": "Lähetä kysymys",
+      "success": "Kiitos. ",
+      "button": "Klikkaa nähdäksesi kysy asiantuntijalomake"
+    }
+  },
+  "countdown": {
+    "general": {
+      "text": "Rajoitetun ajan tarjoukset, päättyy:",
+      "day": "D",
+      "hour": "H",
+      "min": "M",
+      "sec": "S",
+      "d": "d",
+      "h": "h",
+      "m": "m",
+      "s": "s",
+      "day_2": "päivää",
+      "hour_2": "Tuntia",
+      "min_2": "Min",
+      "sec_2": "Sekuntia",
+      "days": "päivää",
+      "hours": "Tuntia",
+      "mins": "Min",
+      "secs": "Sekuntia"
+    }
+  },
+  "customer_viewing": {
+    "general": {
+      "text": "{{ number }} asiakkaat katselevat tätä tuotetta"
+    }
+  },
+  "size_chart": {
+    "general": {
+      "title": "Kokotaulukko",
+      "text": "Koko opas"
+    }
+  },
+  "compare_color": {
+    "general": {
+      "title": "Vertaa väriä",
+      "text": "Napsauta väriä/kuviota vertaillaksesi, napsauta ja vedä kuvat järjestykseen uudelleen"
+    }
+  },
+  "lookbook": {
+    "view_all": "Näytä koko ulkoasu",
+    "shop_look": "Osta ulkoasua"
+  },
+  "bulk_editor_page": {
+    "general": {
+      "all_collection": "Kaikki tuotteet",
+      "select_collection": "Valitse kategoria",
+      "submit": "Lähetä editori",
+      "edit_metafields": "Muokkaa metakenttää tuotteissa."
+    }
+  },
+  "find_a_store": {
+    "no_stores": "Anteeksi, olemme parhaillaan työstämässä myymälämme esittelyä! "
+  },
+  "recipient": {
+    "form": {
+      "checkbox": "Haluan lähettää tämän lahjaksi",
+      "email_label": "Vastaanottajan sähköposti",
+      "email_label_optional": "Vastaanottajan sähköpostiosoite (valinnainen)",
+      "email": "Sähköposti",
+      "name_label": "Vastaanottajan nimi (valinnainen)",
+      "name": "Nimi",
+      "message_label": "Viesti (valinnainen)",
+      "message": "Viesti",
+      "max_characters": "{{ max_chars }} merkkiä max",
+      "send_on": "VVVV-KK-PP",
+      "send_on_label": "Lähetä (valinnainen)"
+    }
+  },
+  "popup": {
+    "promotion": {
+      "copy": "Kopioi",
+      "success_message_copy": "Kopioitu"
+    }
+  }
+}

@@ -1,0 +1,9 @@
+{% layout none %}
+
+<div class="productView-price no-js-hidden clearfix" id="product-price-{{ product.id }}">
+	{%- render 'price',
+	    product: product,
+	    use_variant: true,
+	    price_class: 'price--medium'
+	-%}
+</div>

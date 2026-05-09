@@ -1,0 +1,31 @@
+{%- liquid
+    assign custom_fields = product.metafields.custom.combined_products_listing
+-%}
+{%- if custom_fields != blank -%}
+<div class="swatch-custom">
+    <p class="form__label-combined">{{ 'products.product.color' | t }}<span>{{product.metafields.custom.combined_products_listing_name_color}}</span></p>
+    <ul class="list-unstyled d-flex flex-align-center flex-wrap">
+        {%- for referenced_product in custom_fields.value -%}
+            {%- liquid
+                assign image_custom = referenced_product.metafields.custom.combined_products_listing_image.value
+            -%}
+            <li class="item-custom{% if referenced_product.id == product.id %} current-item{% endif %}">
+                <div class="item-custom--image">
+                    <{% if referenced_product.id == product.id %}span{% else %}a href ="{{shop.url | append: "/products/" | append: referenced_product.handle }}"{% endif %}  
+                        class="item-custom--inner"
+                        style="
+                            {%- if image_custom != blank -%}
+                                background: url({{ image_custom | img_url: 'medium' }});
+                            {%- else -%}
+                                background: url({{ referenced_product.featured_image | img_url: 'medium' }});
+                            {%- endif -%}
+                            background-size: cover;"
+                        title="{{referenced_product.title}}"
+                    >
+                    </{% if referenced_product.id == product.id %}span{% else %}a{% endif %}>
+                </div>
+            </li>
+        {%- endfor -%}
+    </ul>
+</div>
+{%- endif -%}

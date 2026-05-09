@@ -1,0 +1,202 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "type": "footer",
+  "name": "Footer Group",
+  "sections": {
+    "footer_04_jhimKA": {
+      "type": "footer-04",
+      "blocks": {
+        "text_MQEeb9": {
+          "type": "text",
+          "settings": {
+            "custom_width": "30",
+            "heading": "Contact Info",
+            "logo_margin_bottom": 28,
+            "subtext": "<p>23 Conjola Place<br/>Gymea Bay NSW 2227<br/>Australia<br/><br/>Contact: <a href=\"mailto:info@dirtysceneclothing.com.au\" title=\"mailto:info@dirtysceneclothing.com.au\">info@dirtysceneclothing.com.au</a><br/></p>",
+            "address_icon": "point_icon",
+            "show_address_icon": false,
+            "address_text": "",
+            "phone_icon": "message_icon",
+            "show_phone_icon": false,
+            "phone_text": "",
+            "email_icon": "envelope_icon",
+            "show_email_icon": false,
+            "email_text": "",
+            "icon_size": 16,
+            "icon_color": "",
+            "content_spacing": 1,
+            "mg_bottom": 0
+          }
+        },
+        "link_list_fL4T4W": {
+          "type": "link_list",
+          "settings": {
+            "custom_width": "20",
+            "heading": "Information",
+            "menu": "footer",
+            "mg_bottom": 0
+          }
+        },
+        "link_list_r6K66Y": {
+          "type": "link_list",
+          "settings": {
+            "custom_width": "20",
+            "heading": "Legal Policies",
+            "menu": "footer_dev",
+            "mg_bottom": 0
+          }
+        },
+        "newsletter_with_social_MJJHpW": {
+          "type": "newsletter_with_social",
+          "settings": {
+            "custom_width": "30",
+            "show_newsletter": true,
+            "heading": "GET FIRST ACCESS",
+            "subtext": "<p>Be the first to discover new drops, special offers and all things</p>",
+            "mg_top_des": 21,
+            "mg_bottom_des": 22,
+            "spacing_input": 10,
+            "newsletter_form_width": 420,
+            "newsletter_form_radius": 0,
+            "input_text": "Email address",
+            "input_color": "#646464",
+            "input_color_bg": "#ffffff",
+            "input_color_border": "#ffffff",
+            "button_text": "GET ON LIST",
+            "button_width": 150,
+            "enable_deep_button_border": false,
+            "button_color": "#ffffff",
+            "button_color_border": "#ffffff",
+            "button_color_bg": "#000000",
+            "button_color_bg_gradient": "",
+            "button_color_hover": "#000000",
+            "button_color_border_hover": "#000000",
+            "button_color_bg_hover": "#ffffff",
+            "button_color_bg_gradient_hover": "",
+            "check_text": "",
+            "check_text_color": "#808080",
+            "check_text_fontsize": 14,
+            "check_input_color": "#ffffff",
+            "show_social": false,
+            "swap_social_position": false,
+            "social_heading": "Follow Us",
+            "enable_bg_social": false,
+            "social_margin_top": 0,
+            "social_icon_width": 22,
+            "social_icon_padding": 12,
+            "social_icon_border_width": 1,
+            "social_icon_margin_right": 15,
+            "column_reverse": false,
+            "social_color": "#282828",
+            "social_border_color": "rgba(0,0,0,0)",
+            "social_background_color": "rgba(0,0,0,0)",
+            "social_background_color_gradient": "",
+            "social_color_hover": "#282828",
+            "social_border_color_hover": "#ffffff",
+            "social_background_color_hover": "#ffffff",
+            "social_background_color_gradient_hover": "",
+            "social_box_hover_color": "#ffffff",
+            "newsletter_margin_bottom": 45
+          }
+        },
+        "footer_bottom_CU7b6d": {
+          "type": "footer_bottom",
+          "settings": {
+            "pdtop_footer_bottom": 10,
+            "pdbottom_footer_bottom": 30,
+            "border_top": true,
+            "footer_bottom_color": "#000000",
+            "border_top_color": "#282828",
+            "footer_bottom_bg": "#ffffff",
+            "footer_bottom_bg_gradient": "",
+            "show_copyright": true,
+            "enable_layout_grid": true,
+            "copyright_content": "<p>© 2026 Dirty Scene Clothing. All rights reserved.</p>",
+            "copyright_content_color": "#000000",
+            "show_payment": true,
+            "payment_margin_top": 0,
+            "heading_payment": "",
+            "payment_type": "custom",
+            "show_payment_visa": true,
+            "show_payment_master": true,
+            "show_payment_maestro": true,
+            "show_payment_american_express": true,
+            "show_payment_apple_pay": true,
+            "show_payment_bitcoin": false,
+            "show_payment_dankort": false,
+            "show_payment_diners_club": false,
+            "show_payment_discover": false,
+            "show_payment_paypal": false,
+            "show_payment_dogecoin": false,
+            "show_payment_dwolla": false,
+            "show_payment_forbrugsforeningen": false,
+            "show_payment_jcb": false,
+            "show_payment_litecoin": false,
+            "show_payment_afterpay": false,
+            "show_payment_google_pay": false,
+            "show_payment_ideal": false,
+            "show_payment_klarna": false,
+            "show_payment_klarna-pay-later": false,
+            "show_payment_shopify_pay": false,
+            "show_payment_sofort": false
+          }
+        }
+      },
+      "block_order": [
+        "text_MQEeb9",
+        "link_list_fL4T4W",
+        "link_list_r6K66Y",
+        "newsletter_with_social_MJJHpW",
+        "footer_bottom_CU7b6d"
+      ],
+      "custom_css": [
+        ".item.clearfix {max-width: 400px;}"
+      ],
+      "name": "Footer 04",
+      "settings": {
+        "container": "1770",
+        "padding_full_width": 0,
+        "type_footer_heading": "font_1",
+        "type_footer_heading_font_size": 16,
+        "type_footer_heading_line_height": 22,
+        "type_footer_heading_font_weight": "700",
+        "type_footer_heading_text_transform": "uppercase",
+        "type_footer_heading_margin_bottom": 25,
+        "type_footer_heading_letter_spacing": ".0",
+        "type_footer_link": "font_1",
+        "type_footer_link_font_size": 16,
+        "type_footer_link_font_weight": "400",
+        "type_footer_link_text_transform": "capitalize",
+        "type_footer_link_line_height": 33,
+        "type_footer_link_letter_spacing": ".0",
+        "enable_border_footer_top": false,
+        "border_footer_top_color": "#000000",
+        "pdtop_footer_top": 70,
+        "pdbottom_footer_top": 60,
+        "footer_top_bg": "#000000",
+        "footer_top_bg_gradient": "",
+        "show_footer_top_bg_img": false,
+        "footer_top_bg_position_x": "center",
+        "footer_top_bg_position_y": "center",
+        "footer_top_bg_repeat": "no-repeat",
+        "footer_top_bg_attachment": "fixed",
+        "footer_top_bg_size": "contain",
+        "footer_top_text_align": "left",
+        "footer_top_title_color": "#ffffff",
+        "footer_top_color_link": "#f2f2f2",
+        "footer_top_color_link_hover": "#9c9c9c"
+      }
+    }
+  },
+  "order": [
+    "footer_04_jhimKA"
+  ]
+}

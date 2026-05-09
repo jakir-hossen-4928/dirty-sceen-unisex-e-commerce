@@ -1,0 +1,35 @@
+{% liquid
+  assign type = block.settings.type
+  assign background = block.settings.background
+  assign background_gradient = block.settings.background_gradient
+%}
+<style>
+    .footer__logo-row {background: {% if background_gradient != blank %}{{ background_gradient }}{% else %}{{ background }}{% endif %}}
+
+    .footer__logo-row {
+        padding: {{ block.settings.padding_top | append: 'px' }} {{ block.settings.padding_lr | append: 'px' }} {{ block.settings.padding_bottom | append: 'px' }};
+    }
+
+    @media (min-width: 1025px) {
+        .footer .footer__logo-row .container-full {
+            padding: 0;
+        }
+    }
+</style>
+<div class="footer__logo-row">
+  <div class="container container-full">
+    <div class="footer-block__logo"{%- if type == 'text' -%} style="--text-color: {{ block.settings.color }};--text-font-size: {{ block.settings.font_size }}px;"{%- endif -%}>
+        {%- if type == 'image' -%}
+            {% if block.settings.image != blank %}
+            <img class="logo" src="{{ block.settings.image | img_url: "master" }}" alt="{{ block.settings.image.alt | default: shop.name | escape }}"/>
+            {% else %}
+            <div class="placeholder" style="--height_placeholder: 280px;">
+                {{ 'hero-apparel-2' | placeholder_svg_tag: 'placeholder-svg' }}
+            </div>
+            {% endif %}
+        {%- else -%}
+            <div class="logo-text">{{ block.settings.text }}</div>
+        {%- endif -%}
+    </div>
+  </div>
+</div>

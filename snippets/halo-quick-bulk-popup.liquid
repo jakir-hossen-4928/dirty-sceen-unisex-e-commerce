@@ -1,0 +1,17 @@
+<link rel="stylesheet" href="{{ 'component-quickshop-popup-option-3.css' | asset_url }}" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="{{ 'quick-order-list.css' | asset_url }}" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="{{ 'quantity-popover.css' | asset_url }}" media="print" onload="this.media='all'">
+<noscript>{{ 'component-quickshop-popup-option-3.css' | asset_url | stylesheet_tag }}</noscript>
+<noscript>{{ 'quick-order-list.css' | asset_url | stylesheet_tag }}</noscript>
+<noscript>{{ 'quantity-popover.css' | asset_url | stylesheet_tag }}</noscript>
+
+<div class="halo-popup halo-quick-bulk-popup" data-halo-quick-bulk-popup id="halo-quick-bulk-popup">
+	<div class="halo-popup-wrapper">
+		<button type="button" class="halo-popup-close clearfix" data-close-quick-shop-popup aria-label="{{ 'general.common.close' | t }}">
+	        {% render 'icon-close' %}
+	    </button>
+	    <div class="halo-popup-content is-quick-bulk halo-popup-scroll custom-scrollbar"></div>
+	</div>
+</div>
+
+<script src="{{ 'quick-add-bulk.js' | asset_url }}" defer="defer"></script>

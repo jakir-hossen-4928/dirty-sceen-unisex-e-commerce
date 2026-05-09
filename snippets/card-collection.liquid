@@ -1,0 +1,104 @@
+{% comment %}
+  Renders a collection card
+
+  Accepts:
+  - card_collection: {Object} Collection Liquid object
+  - media_aspect_ratio: {String} Size of the product image card. Values are "square" and "portrait". Default is "square" (optional)
+  - columns: {Number}
+  - extend_height: {Boolean} Card height extends to available container space. Default: false (optional)
+  - wrapper_class: {String} Wrapper class for card (optional)
+  - placeholder_image: {String} Placeholder image when collection is empty (optional)
+
+  Usage:
+  {% render 'card-collection' %}
+{% endcomment %}
+
+<div class="card-wrapper collection-card-wrapper">
+    <div class="card__inner o-hidden p-relative">
+      {%- if card_collection.featured_image -%}
+        <div class="card__media">
+          <div class="media media--transparent media--hover-effect">
+            <a class="image image-{{ image_ratio }} adaptive_height image-zoom" href="{{ card_collection.url }}"{% if image_ratio == 'adapt' %} style="padding-bottom: {{ 1 | divided_by: card_collection.featured_image.aspect_ratio | times: 100 }}%;"{% elsif image_ratio == 'square' %} style="padding-bottom: 100%;"{% elsif image_ratio == 'portrait' %}{% if portrait_aspect_ratio != blank %} style="padding-bottom: {{ portrait_aspect_ratio | append: '%' }};"{% endif %}{% endif %}>
+              <img {% if settings.enable_lazyload %}data-{% endif %}srcset="{{ card_collection.featured_image | img_url: 'master' }}" {% unless settings.enable_lazyload %}src="{{ card_collection.featured_image | img_url: 'master' }}"{% endunless %} alt="{{ card_collection.featured_image.alt | default: shop.name | escape }}"{% if settings.enable_lazyload %} class="lazyload" loading="lazy"{% endif %}>
+              {%- if settings.enable_lazyload -%}<span class="data-lazy-loading"></span>{%- endif -%}
+            </a>
+          </div>
+        </div>
+      {%- endif -%}
+      {%- if card_collection == blank -%}
+        <div class="card__media">
+          {{ placeholder_image | placeholder_svg_tag: 'placeholder-svg' }}
+        </div>
+        <div class="card__content">
+          <div class="card__information text-{{collection_align}}">
+            <h3 class="card__heading">
+              {{ 'onboarding.collection_title' | t }}
+            </h3>
+            {%- if button_co_title != blank -%}
+              <a
+                {% if card_collection == blank %}
+                  role="link" aria-disabled="true"
+                {% else %}
+                  href="{{ card_collection.url }}"
+                {% endif %}
+                class="full-unstyled-link"
+              >
+                {{ 'sections.collection_list.shop_the_collection' | t }}
+              </a>
+            {%- endif -%}
+          </div>
+        </div>
+      {%- endif -%}
+      {%- if custom_collection_badge -%}
+        <div class="collection-badge p-absolute left-0 right-0 zi-1 {{ class_custom_collection_badge }}" style="--badge-color: {{ custom_collection_badge_color }}; --badge-background: {{ custom_collection_badge_background }};">
+          <div class="badge-box d-flex o-hidden">
+              <div class="banner-badge p-absolute banner-badge--show d-flex flex-align-center flex-jc-center">
+                <span class="banner-badge__item f-italic">
+                  {{ custom_collection_badge_text }}
+                </span>
+              </div>
+              <div class="banner-badge banner-badge--hide d-flex flex-align-center gap-15">
+                  {%- for i in (1..10) -%}
+                      <span class="banner-badge__item f-italic">
+                          {{ custom_collection_badge_text }}
+                      </span>
+                  {%- endfor -%}
+              </div>
+              <div class="banner-badge banner-badge--hide d-flex flex-align-center gap-15">
+                  {%- for i in (1..10) -%}
+                      <span class="banner-badge__item f-italic">
+                          {{ custom_collection_badge_text }}
+                      </span>
+                  {%- endfor -%}
+              </div>
+          </div>
+      </div>
+      {%- endif -%}
+    </div>
+    {%- if card_collection != blank -%}
+      <div class="card__content">
+        <div class="card_information text-{{collection_align}}">
+          <h3 class="card__heading">
+            {{- card_collection.title | escape -}}
+          </h3>
+          {%- if show_co_description -%}
+            <p class="card__description">
+              {{ card_collection.description | strip_html | truncatewords: limit_co_content_des }}
+            </p>
+          {%- endif -%}
+          {%- if button_co_title != blank -%}
+            <a
+              {% if card_collection == blank %}
+                role="link" aria-disabled="true"
+              {% else %}
+                href="{{ card_collection.url }}"
+              {% endif %}
+              class="full-unstyled-link"
+            >
+              {{ button_co_title }}
+            </a>
+          {%- endif -%}
+        </div>
+      </div>
+    {%- endif -%}
+</div>
